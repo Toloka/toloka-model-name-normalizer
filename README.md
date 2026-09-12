@@ -31,18 +31,18 @@ from toloka_model_name_normalizer import Normalizer, Rules
 
 norm = Normalizer(Rules.default())
 
-name = norm.parse_pair("openrouter", "openai/gpt-6-astra")   # the task.yaml form, never lossy
-name.canonical        # "openai/gpt-6-astra"
-name.routed           # "openrouter/openai/gpt-6-astra"
-name.slug             # "openrouter__openai_gpt-6-astra"
-name.family, name.generation, name.variant   # "gpt", "6", "astra"
-name.tags()           # ["model:openai/gpt-6-astra", "model_vendor:openai", "model_family:gpt"]
-name.fields()         # every descriptive field with an explicit None
-name.provenance       # rules version, identity and fields fingerprints, resolver fingerprint, lookup flag
+name = norm.parse_pair("openrouter", "openai/gpt-6-astra")  # the task.yaml form, never lossy
+name.canonical  # "openai/gpt-6-astra"
+name.routed  # "openrouter/openai/gpt-6-astra"
+name.slug  # "openrouter__openai_gpt-6-astra"
+name.family, name.generation, name.variant  # "gpt", "6", "astra"
+name.tags()  # ["model:openai/gpt-6-astra", "model_vendor:openai", "model_family:gpt"]
+name.fields()  # every descriptive field with an explicit None
+name.provenance  # rules version, identity and fields fingerprints, resolver fingerprint, lookup flag
 
-norm.parse_canonical("openai/gpt-6-astra")                    # route None
+norm.parse_canonical("openai/gpt-6-astra")  # route None
 norm.parse_routed("litellm/openrouter/anthropic/claude-opus-5")  # routes ("litellm", "openrouter")
-norm.parse("platform_openai/gpt-6-astra")                     # generic: peelable route, vendor openai
+norm.parse("platform_openai/gpt-6-astra")  # generic: peelable route, vendor openai
 ```
 
 The carrier decides the grammar, so there is one entry point per carrier:
@@ -109,9 +109,10 @@ which rules produced a value.
 ```python
 from toloka_model_name_normalizer import CallableResolver, Normalizer, Rules
 
-catalogue = CallableResolver(lambda bare: ["meta/muse-spark-1.1"] if bare == "muse-spark-1.1" else [],
-                             fingerprint="catalogue-2026-09")
-Normalizer(Rules.default(), resolver=catalogue).parse("muse-spark-1.1").canonical   # "meta/muse-spark-1.1"
+catalogue = CallableResolver(
+    lambda bare: ["meta/muse-spark-1.1"] if bare == "muse-spark-1.1" else [], fingerprint="catalogue-2026-09"
+)
+Normalizer(Rules.default(), resolver=catalogue).parse("muse-spark-1.1").canonical  # "meta/muse-spark-1.1"
 ```
 
 Zero candidates raise `UnknownVendor`, several raise `AmbiguousModelName`; the resolver's fingerprint lands in
