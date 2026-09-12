@@ -7,8 +7,8 @@
   "error_slug_MalformedName": 46,
   "error_text+resolver_AmbiguousModelName": 3,
   "error_text+resolver_UnknownVendor": 2,
-  "error_text_MalformedName": 15,
-  "error_text_UnknownVendor": 61
+  "error_text_MalformedName": 16,
+  "error_text_UnknownVendor": 60
  },
  "fill": {
   "A": {

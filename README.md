@@ -96,7 +96,10 @@ why = "the one name the grammar cannot read"
 
 Rule groups: `routes`, `vendor_aliases`, `bare_names`, `lookup`, `policy`, `render`, `fields.separators`,
 `fields.suffixes`, `fields.shapes`, `fields.dates`, `fields.vocab`, `fields.vendor.<vendor>`. The schema is
-closed: an unknown key, an unsupported `schema_version` or a `lookup` entry without `why` is a `RulesError`.
+closed and checked on the override file itself: an unknown key at any level, a wrong type, an unsupported
+`schema_version`, a `lookup` entry without `why`, a regex that matches the empty string or a shape regex that
+does not fit its kind's token layout is a `RulesError`. Rules files are trusted input all the same: a pathological
+regex in a rules file can make parsing slow, so load rules only from sources you control.
 Every rule set has two fingerprints, `identity_fingerprint` (what decides vendor, model, route, family) and
 `fields_fingerprint` (everything else); every value carries both in its `provenance`, so consumers record
 which rules produced a value.

@@ -1,6 +1,6 @@
 [project]
 name = "toloka-model-name-normalizer"
-version = "0.1.0"
+dynamic = ["version"]
 description = "One identity and rule-derived descriptive fields for every LLM model reference. Every parsing rule is configuration."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -28,6 +28,10 @@ toloka-model-name-normalizer = "toloka_model_name_normalizer.__main__:main"
 [build-system]
 requires = ["hatchling>=1.25"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+# one source of truth: __version__ in the package
+path = "src/toloka_model_name_normalizer/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/toloka_model_name_normalizer"]

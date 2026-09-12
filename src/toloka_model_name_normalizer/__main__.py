@@ -36,20 +36,16 @@ def main(argv: Sequence[str] | None = None) -> int:
     except (RulesError, OSError) as exc:
         print(f"rules error: {exc}", file=sys.stderr)
         return 2
-    normalizer = Normalizer(rules)
     if args.command == "rules":
-        print(
-            json.dumps(
-                {
-                    "version": rules.version,
-                    "schema_version": rules.schema_version,
-                    "identity_fingerprint": rules.identity_fingerprint,
-                    "fields_fingerprint": rules.fields_fingerprint,
-                },
-                indent=2,
-            )
-        )
+        summary = {
+            "version": rules.version,
+            "schema_version": rules.schema_version,
+            "identity_fingerprint": rules.identity_fingerprint,
+            "fields_fingerprint": rules.fields_fingerprint,
+        }
+        print(json.dumps(summary, indent=2))
         return 0
+    normalizer = Normalizer(rules)
     try:
         if args.command == "parse":
             name = normalizer.parse(args.text)

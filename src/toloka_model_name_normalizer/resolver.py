@@ -30,7 +30,10 @@ class CallableResolver:
     fingerprint: str | None = None
 
     def candidates(self, bare_name: str) -> Sequence[str]:
-        return tuple(self.function(bare_name))
+        result = self.function(bare_name)
+        if isinstance(result, str):
+            raise TypeError("a resolver returns a sequence of candidates, not one string")
+        return tuple(result)
 
 
 def vendor_of_candidate(candidate: str) -> str:

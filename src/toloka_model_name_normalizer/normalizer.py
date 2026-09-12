@@ -42,9 +42,7 @@ class Normalizer:
         fields = classify(self.rules, ident.vendor, ident.model)
         if self.rules.policy.fields == "strict" and fields.unresolved:
             raise UnresolvedFields(f"{ident.vendor}/{ident.model}", fields.unresolved)
-        resolver_fingerprint = (
-            self.resolver.fingerprint if (ident.resolved and self.resolver is not None) else None
-        )
+        resolver_fingerprint = getattr(self.resolver, "fingerprint", None) if ident.resolved else None
         return ModelName(
             ident.vendor,
             ident.model,

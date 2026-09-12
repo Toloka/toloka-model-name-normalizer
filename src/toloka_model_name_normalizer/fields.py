@@ -1,6 +1,6 @@
 """The token classifier: descriptive fields from the model name, fully driven by ``rules.fields``. Walks the
-tokens left to right; a token no rule claims lands in ``variant``; a second token of a single-valued kind is
-kept in ``variant`` and reported in ``unresolved``."""
+tokens left to right; a token no rule claims lands in ``variant``; a second generation-shaped token is kept in
+``variant`` and reported in ``unresolved``; a second snapshot or API version is only reported."""
 
 from __future__ import annotations
 
@@ -77,21 +77,21 @@ def _valid_date(year: int | None, month: int | None, day: int | None) -> bool:
     )
 
 
-def _match_date(layout: DateLayout, tokens: list[str], index: int, draft: _Draft) -> tuple[bool, int]:
-    """Try ``layout`` at ``index``; returns (consumed, count). A matching but impossible date is consumed
-    and reported in ``unresolved``, never stored as a snapshot."""
+def _match_date(layout: DateLayout, tokens: list[str], index: int, draft: _Draft) -> int:
+    """Tokens consumed by ``layout`` at ``index`` (0 when it does not match). A matching but impossible
+    date is consumed and reported in ``unresolved``, never stored as a snapshot."""
     if layout.requires_generation and draft.generation is None:
-        return False, 0
+        return 0
     if index + len(layout.tokens) > len(tokens):
-        return False, 0
+        return 0
     values: dict[str, str] = {}
     for offset, component in enumerate(layout.tokens):
         token = tokens[index + offset]
         if component == "YYYY":
             if not _YEAR_RE.match(token):
-                return False, 0
+                return 0
         elif not _TWO_DIGITS_RE.match(token):
-            return False, 0
+            return 0
         values[component] = token
     year = int(values["YYYY"]) if "YYYY" in values else (2000 + int(values["YY"]) if "YY" in values else None)
     month = int(values["MM"]) if "MM" in values else None
@@ -101,7 +101,7 @@ def _match_date(layout: DateLayout, tokens: list[str], index: int, draft: _Draft
         draft.set_snapshot(rendered)
     else:
         draft.unresolved.append(f"bad-date:{rendered}")
-    return True, len(layout.tokens)
+    return len(layout.tokens)
 
 
 def _shape(rules: Rules, token: str) -> str | None:
@@ -109,6 +109,10 @@ def _shape(rules: Rules, token: str) -> str | None:
         if any(pattern.match(token) for pattern in patterns):
             return kind
     return None
+
+
+def _is_snapshot_shaped(rules: Rules, token: str) -> bool:
+    return _shape(rules, token) in ("snapshot4", "snapshot8")
 
 
 def _four_digit(token: str, switches: VendorSwitches, draft: _Draft) -> str | None:
@@ -127,6 +131,20 @@ def _four_digit(token: str, switches: VendorSwitches, draft: _Draft) -> str | No
     return None
 
 
+def _extract_compounds(rules: Rules, rest: list[str], draft: _Draft) -> list[str]:
+    """Remove every configured compound that appears as a run of whole tokens; longer compounds first."""
+    for compound, target in sorted(rules.fields.compounds.items(), key=lambda item: -len(item[0])):
+        parts = compound.split("-")
+        index = 0
+        while index + len(parts) <= len(rest):
+            if rest[index : index + len(parts)] == parts:
+                draft.add(target, compound)
+                rest = rest[:index] + rest[index + len(parts) :]
+            else:
+                index += 1
+    return rest
+
+
 def classify(rules: Rules, vendor: str, model: str) -> FieldSet:
     """Decompose ``model`` (of ``vendor``) into descriptive fields under ``rules``."""
     switches = rules.fields.switches(vendor)
@@ -134,31 +152,23 @@ def classify(rules: Rules, vendor: str, model: str) -> FieldSet:
     base, _, suffix = lower.partition(":")
     raw = [token for token in rules.fields.separators.split(base) if token]
     draft = _Draft()
-    if not raw:
+    if not raw:  # unreachable through the parsers, whose grammar requires a letter or digit before the suffix
         draft.unresolved.append("empty")
         return _freeze(draft, rules, vendor, model)
     glued = _GLUED_RE.match(raw[0])
     tokens = ([glued.group(1), glued.group(2)] + raw[1:]) if glued else raw
     draft.family = tokens[0]
-    rest = tokens[1:]
-    for compound, target in rules.fields.compounds.items():
-        joined = "-".join(rest)
-        if compound in joined:
-            draft.add(target, compound)
-            rest = [
-                token for token in joined.replace(compound, "\x00").split("-") if token and token != "\x00"
-            ]
+    rest = _extract_compounds(rules, tokens[1:], draft)
     index = 0
     while index < len(rest):
         token = rest[index]
-        consumed = False
+        consumed = 0
         for layout in rules.fields.dates:
-            matched, count = _match_date(layout, rest, index, draft)
-            if matched:
-                index += count
-                consumed = True
+            consumed = _match_date(layout, rest, index, draft)
+            if consumed:
                 break
         if consumed:
+            index += consumed
             continue
         if (
             switches.dash_minor_version
@@ -166,7 +176,8 @@ def classify(rules: Rules, vendor: str, model: str) -> FieldSet:
             and index + 1 < len(rest)
             and _DIGITS_RE.match(rest[index + 1])
             and draft.generation is None
-            and len(token) != 4
+            and not _is_snapshot_shaped(rules, token)
+            and not _is_snapshot_shaped(rules, rest[index + 1])
         ):
             draft.generation = f"{token}.{rest[index + 1]}"
             index += 2
@@ -178,6 +189,12 @@ def classify(rules: Rules, vendor: str, model: str) -> FieldSet:
             index += 1
             continue
         kind = _shape(rules, token)
+        if kind == "snapshot4" and not (len(token) == 4 and token.isdigit()):
+            kind = "unresolved-shape"
+        if kind == "snapshot8" and not (len(token) == 8 and token.isdigit()):
+            kind = "unresolved-shape"
+        if kind == "api3" and not (len(token) == 3 and token.isdigit()):
+            kind = "unresolved-shape"
         if kind == "snapshot4":
             kind = _four_digit(token, switches, draft)
             if kind is None:

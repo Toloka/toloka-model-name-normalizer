@@ -22,7 +22,18 @@ from toloka_model_name_normalizer.normalizer import (
     reset_default,
 )
 from toloka_model_name_normalizer.resolver import CallableResolver, Resolver
-from toloka_model_name_normalizer.rules import RULES_ENV_VAR, Rules
+from toloka_model_name_normalizer.rules import (
+    RULES_ENV_VAR,
+    DateLayout,
+    FieldRules,
+    LookupEntry,
+    Policy,
+    Render,
+    Route,
+    Rules,
+    Suffix,
+    VendorSwitches,
+)
 
 __version__ = "0.1.0"
 
@@ -30,17 +41,25 @@ __all__ = [
     "RULES_ENV_VAR",
     "AmbiguousModelName",
     "CallableResolver",
+    "DateLayout",
+    "FieldRules",
+    "LookupEntry",
     "MalformedName",
     "ModelName",
     "ModelNameError",
     "Normalizer",
+    "Policy",
     "Provenance",
+    "Render",
     "Resolver",
+    "Route",
     "Rules",
     "RulesError",
+    "Suffix",
     "UnknownRoute",
     "UnknownVendor",
     "UnresolvedFields",
+    "VendorSwitches",
     "__version__",
     "default_normalizer",
     "generation_key",

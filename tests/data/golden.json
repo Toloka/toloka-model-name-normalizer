@@ -19191,8 +19191,8 @@
    "input": "openrouter/*",
    "expected": null,
    "error": {
-    "type": "UnknownVendor",
-    "message": "bare name '*' and no resolver"
+    "type": "MalformedName",
+    "message": "no letter or digit before the suffix: 'openrouter/*'"
    },
    "classes": [
     "route_form"

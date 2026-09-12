@@ -4,12 +4,11 @@ here is read from :class:`~toloka_model_name_normalizer.rules.Rules`."""
 from __future__ import annotations
 
 import fnmatch
-import unicodedata
 from dataclasses import dataclass
 
 from toloka_model_name_normalizer.errors import AmbiguousModelName, MalformedName, UnknownRoute, UnknownVendor
 from toloka_model_name_normalizer.resolver import Resolver, vendor_of_candidate
-from toloka_model_name_normalizer.rules import _SEGMENT_RE, Rules
+from toloka_model_name_normalizer.rules import SEGMENT_RE, Rules, check_model_grammar
 
 
 @dataclass(frozen=True)
@@ -22,33 +21,31 @@ class Identity:
     resolved: bool
 
 
-def _text(rules: Rules, value: object) -> str:
+def _text(rules: Rules, value: object, *, what: str, allow_leading_slash: bool) -> str:
+    """The input as a string: never trimmed (outer whitespace is an error); a leading slash is tolerated
+    only on a text carrier under ``policy.leading_slash = "tolerate"``."""
     if not isinstance(value, str):
-        raise TypeError(f"model reference must be str, got {type(value).__name__}")
-    text = value.strip()
-    if text.startswith("/"):
+        raise TypeError(f"{what} must be str, got {type(value).__name__}")
+    if value != value.strip():
+        raise MalformedName(f"{what} has outer whitespace: {value!r}")
+    if allow_leading_slash and value.startswith("/"):
         if rules.policy.leading_slash == "reject":
             raise MalformedName(f"leading slash: {value!r}")
-        text = text.lstrip("/")
-    return text
+        return value.lstrip("/")
+    return value
 
 
 def _check_segment(segment: str, what: str, text: str) -> None:
-    if not _SEGMENT_RE.match(segment):
-        raise MalformedName(f"{what} charset: {text!r}")
+    if not SEGMENT_RE.match(segment):
+        raise MalformedName(
+            f"{what} {segment!r} breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: {text!r}"
+        )
 
 
 def _check_model(rules: Rules, model: str, text: str) -> None:
-    if not model:
-        raise MalformedName(f"empty model name: {text!r}")
-    if "/" in model:
-        raise MalformedName(f"slash inside the model name: {text!r}")
-    if model != model.strip():
-        raise MalformedName(f"model name has outer whitespace: {text!r}")
-    if rules.render.route_sep in model:
-        raise MalformedName(f"looks like a slug, which is render-only: {text!r}")
-    if any(unicodedata.category(char) in ("Cc", "Cf") for char in model):
-        raise MalformedName(f"control or format character in the model name: {text!r}")
+    problem = check_model_grammar(model, rules.render.route_sep)
+    if problem is not None:
+        raise MalformedName(f"{problem}: {text!r}")
 
 
 def _route(rules: Rules, segment: str) -> str | None:
@@ -61,12 +58,23 @@ def _peelable(rules: Rules, route: str) -> bool:
     return rules.routes[route].peelable
 
 
+def _case(rules: Rules, vendor: str, model: str, text: str) -> tuple[str, str]:
+    if rules.policy.case == "reject" and (vendor != vendor.lower() or model != model.lower()):
+        raise MalformedName(f"mixed case refused by policy: {text!r}")
+    if rules.policy.case == "fold":
+        return vendor.lower(), model.lower()
+    return vendor, model
+
+
 def _lookup(rules: Rules, key: str, route: str | None, chain: tuple[str, ...]) -> Identity | None:
+    """A lookup identity. It bypasses the segment and route checks on purpose (the entry exists to allow what
+    the grammar refuses, such as a route name as vendor) but not the case policy."""
     entry = rules.lookup.get(key.lower())
     if entry is None or not entry.has_identity:
         return None
     assert entry.vendor is not None and entry.model is not None
-    return Identity(entry.vendor, entry.model, route, chain, lookup=True, resolved=False)
+    vendor, model = _case(rules, entry.vendor, entry.model, key)
+    return Identity(vendor, model, route, chain, lookup=True, resolved=False)
 
 
 def _finish(
@@ -78,15 +86,33 @@ def _finish(
     text: str,
     *,
     resolved: bool = False,
+    route_as_vendor: bool = False,
 ) -> Identity:
+    """Every non-lookup identity ends here: grammar, alias fold, route-as-vendor check, case policy.
+    ``route_as_vendor`` is the one exception to that check: ``policy.bare_name = "provider_as_vendor"`` asks
+    for the route name as vendor explicitly."""
     _check_segment(vendor, "vendor", text)
     _check_model(rules, model, text)
     vendor = rules.vendor_aliases.get(vendor.lower(), vendor)
-    if rules.policy.case == "reject" and (vendor != vendor.lower() or model != model.lower()):
-        raise MalformedName(f"mixed case refused by policy: {text!r}")
-    if rules.policy.case == "fold":
-        vendor, model = vendor.lower(), model.lower()
+    named_route = _route(rules, vendor)
+    if named_route is not None and _peelable(rules, named_route) and not route_as_vendor:
+        raise MalformedName(f"{vendor!r} is a route, not a vendor: {text!r}")
+    vendor, model = _case(rules, vendor, model, text)
     return Identity(vendor, model, route, chain, lookup=False, resolved=resolved)
+
+
+def _split(
+    rules: Rules, value: str, implied: str | None, route: str | None, chain: tuple[str, ...], text: str
+) -> Identity:
+    """``vendor/model`` under a route that may imply a vendor."""
+    vendor, model = value.split("/", 1)
+    if "/" in model:
+        raise MalformedName(f"slash inside the model name: {text!r}")
+    if implied and vendor.lower() != implied and rules.policy.implied_vendor_mismatch == "error":
+        raise MalformedName(
+            f"route {route!r} implies vendor {implied!r} but the name says {vendor!r}: {text!r}"
+        )
+    return _finish(rules, vendor, model, route, chain, text)
 
 
 def _resolve_bare(
@@ -98,9 +124,11 @@ def _resolve_bare(
             return _finish(rules, vendor, bare, route, chain, text)
     policy = rules.policy.bare_name
     if policy == "provider_as_vendor" and route is not None:
-        return _finish(rules, route, bare, route, chain, text)
+        return _finish(rules, route, bare, route, chain, text, route_as_vendor=True)
     if policy == "error" or (policy == "provider_as_vendor" and route is None):
-        raise UnknownVendor(f"bare name {bare!r}: no route implies a vendor and the policy is {policy!r}")
+        raise UnknownVendor(
+            f"bare name {bare!r}: no route implies a vendor and policy.bare_name is {policy!r}"
+        )
     if resolver is None:
         raise UnknownVendor(f"bare name {bare!r} and no resolver")
     candidates = tuple(resolver.candidates(bare))
@@ -113,84 +141,84 @@ def _resolve_bare(
 
 def parse_canonical(rules: Rules, text: str) -> Identity:
     """``vendor/model`` with no route: pricing keys, ``model:`` tags, collector ids."""
-    value = _text(rules, text)
+    value = _text(rules, text, what="model reference", allow_leading_slash=True)
     hit = _lookup(rules, value, None, ())
     if hit:
         return hit
     parts = value.split("/")
     if len(parts) != 2 or not parts[0]:
         raise MalformedName(f"canonical form needs vendor/model: {text!r}")
-    route = _route(rules, parts[0])
-    if route is not None and _peelable(rules, route):
-        raise MalformedName(f"{parts[0]!r} is a route, not a vendor: {text!r}")
     return _finish(rules, parts[0], parts[1], None, (), text)
 
 
 def parse_routed(rules: Rules, text: str, resolver: Resolver | None = None) -> Identity:
     """The wire form: the first segment must be a declared route, direct-vendor routes included. The lookup
-    runs on ``innermost_route/remainder`` after peeling, so a lookup identity keeps the route it travelled on
-    (``openrouter/auto`` read here is the wire form of ``(openrouter, auto)``, route ``openrouter``)."""
-    value = _text(rules, text)
+    runs on ``innermost_route/remainder`` after peeling, so a lookup identity keeps its route."""
+    value = _text(rules, text, what="model reference", allow_leading_slash=True)
     parts = value.split("/")
-    first = _route(rules, parts[0]) if len(parts) >= 2 else None
+    first = _route(rules, parts[0])
     if first is None:
-        raise UnknownRoute(f"first segment is not a declared route: {text!r}")
+        raise UnknownRoute(
+            f"first segment {parts[0]!r} is not a declared route "
+            f"({', '.join(sorted(rules.routes))}): {text!r}"
+        )
+    if len(parts) == 1:
+        raise MalformedName(f"empty model name after route {first!r}: {text!r}")
     chain: list[str] = []
     while len(parts) >= 2:
         route = _route(rules, parts[0])
         if route is None:
             break
-        if chain and not (rules.routes[chain[-1]].nestable and _peelable(rules, route)):
-            break
         if chain and chain[-1] == route:
             raise MalformedName(f"repeated route {route!r}: {text!r}")
+        if chain and not (rules.routes[chain[-1]].nestable and _peelable(rules, route)):
+            break
         chain.append(route)
         parts = parts[1:]
-        implied = rules.routes[route].implies_vendor
         if len(parts) == 1:
             found = _lookup(rules, f"{route}/{parts[0]}", chain[0], tuple(chain))
             if found:
                 return found
+            implied = rules.routes[route].implies_vendor
             if implied:
                 return _finish(rules, implied, parts[0], chain[0], tuple(chain), text)
             return _resolve_bare(rules, parts[0], resolver, chain[0], tuple(chain), text)
         if not rules.routes[route].nestable:
             break
     if len(parts) > 2:
+        if _route(rules, parts[0]) == chain[-1]:
+            raise MalformedName(f"repeated route {chain[-1]!r}: {text!r}")
         raise MalformedName(f"slash inside the model name: {text!r}")
-    inner = _route(rules, parts[0])
-    if inner is not None and _peelable(rules, inner):
-        raise MalformedName(f"{parts[0]!r} is a route, not a vendor: {text!r}")
-    implied = rules.routes[chain[-1]].implies_vendor
-    if implied and parts[0].lower() != implied and rules.policy.implied_vendor_mismatch == "error":
-        raise MalformedName(
-            f"route {chain[-1]!r} implies vendor {implied!r} but the name says {parts[0]!r}: {text!r}"
-        )
-    return _finish(rules, parts[0], parts[1], chain[0], tuple(chain), text)
+    found = _lookup(rules, f"{chain[-1]}/{'/'.join(parts)}", chain[0], tuple(chain))
+    if found:
+        return found
+    return _split(
+        rules, "/".join(parts), rules.routes[chain[-1]].implies_vendor, chain[0], tuple(chain), text
+    )
 
 
 def parse_text(rules: Rules, text: str, resolver: Resolver | None = None) -> Identity:
     """Generic: lookup, then routed when the first segment is a peelable route, then canonical, then the
     resolver for a single segment."""
-    value = _text(rules, text)
+    value = _text(rules, text, what="model reference", allow_leading_slash=True)
     hit = _lookup(rules, value, None, ())
     if hit:
         return hit
     parts = value.split("/")
     first = _route(rules, parts[0]) if len(parts) >= 2 else None
     if first is not None and _peelable(rules, first):
-        return parse_routed(rules, text, resolver)
+        return parse_routed(rules, value, resolver)
     if len(parts) > 2:
         raise MalformedName(f"slash inside the model name: {text!r}")
     if len(parts) == 2:
-        return parse_canonical(rules, text)
+        return parse_canonical(rules, value)
     return _resolve_bare(rules, parts[0], resolver, None, (), text)
 
 
 def parse_pair(rules: Rules, provider: str, name: str, resolver: Resolver | None = None) -> Identity:
     """The ``task.yaml`` form: the provider is the route, the name ``vendor/model`` or bare; never lossy."""
-    prov = _text(rules, provider)
-    value = _text(rules, name)
+    prov = _text(rules, provider, what="provider", allow_leading_slash=False)
+    value = _text(rules, name, what="model name", allow_leading_slash=False)
     if not prov:
         raise MalformedName("empty provider")
     _check_segment(prov, "provider", provider)
@@ -203,18 +231,12 @@ def parse_pair(rules: Rules, provider: str, name: str, resolver: Resolver | None
     if route_key in rules.routes:
         implied = rules.routes[route_key].implies_vendor
         if "/" in value:
-            vendor, model = value.split("/", 1)
-            if implied and vendor.lower() != implied and rules.policy.implied_vendor_mismatch == "error":
-                raise MalformedName(
-                    f"provider {provider!r} implies vendor {implied!r} but the name says {vendor!r}"
-                )
-            return _finish(rules, vendor, model, route_key, (route_key,), name)
+            return _split(rules, value, implied, route_key, (route_key,), name)
         if implied:
             return _finish(rules, implied, value, route_key, (route_key,), name)
         return _resolve_bare(rules, value, resolver, route_key, (route_key,), name)
     if rules.policy.unknown_provider == "error":
-        raise UnknownRoute(f"unknown provider {provider!r}")
+        raise UnknownRoute(f"unknown provider {provider!r} ({', '.join(sorted(rules.routes))} are declared)")
     if "/" in value:
-        vendor, model = value.split("/", 1)
-        return _finish(rules, vendor, model, route_key, (route_key,), name)
+        return _split(rules, value, None, route_key, (route_key,), name)
     return _finish(rules, prov, value, route_key, (route_key,), name)
