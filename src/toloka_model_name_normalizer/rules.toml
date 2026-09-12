@@ -1,0 +1,223 @@
+# The Toloka default rule set of toloka-model-name-normalizer.
+#
+# Every parsing decision of the library is read from a file of this shape. Override it from outside with
+# Rules.load(path) or the environment variable TOLOKA_MODEL_NAME_NORMALIZER_RULES; an override merges over
+# this file (tables replace entry by entry, vocabulary lists extend, scalars overwrite) unless it declares
+# `extends = false`. Design and the survey behind every entry: the workspace document
+# docs/model-name-canonicaliser/DESIGN.md and the golden corpus CORPUS.md.
+#
+# Never in this file: a model catalogue, prices, capabilities, effort variants, config stems. Per-name
+# overrides live only in [lookup], each with a `why`.
+
+schema_version = 1        # the rule primitives this file uses; the library states which versions it reads
+version = "2026.09.12"    # this rule set's own version, recorded by every consumer next to its values
+
+# --- routes ------------------------------------------------------------------------------------------------
+# A route is a transport namespace that may prefix a model name on the wire, or the `provider` of the
+# pair form. `implies_vendor`: the wire name omits the vendor, so a bare name after this route belongs to
+# that vendor. A route whose name equals its implied vendor is a direct-vendor route: valid as a provider,
+# never peeled from a string (`openai/gpt-6-astra` keeps reading as canonical vendor/model).
+
+[routes.openrouter]                       # peelable: openrouter/x/y is the wire form of (openrouter, x/y)
+
+[routes.litellm]
+nestable = true                           # litellm/openrouter/x/y keeps the chain ("litellm", "openrouter")
+
+[routes.mock]                             # the engine's mock provider
+
+[routes.platform_openai]
+implies_vendor = "openai"                 # LiteLLM gateway route for the direct OpenAI API
+
+[routes.gemini]
+implies_vendor = "google"                 # the engine's provider binding for the direct Google API
+
+[routes.openai]
+implies_vendor = "openai"                 # direct API: the pair (openai, gpt-6-astra)
+
+[routes.anthropic]
+implies_vendor = "anthropic"              # direct API: the pair (anthropic, claude-opus-4-6)
+
+[routes.meta]
+implies_vendor = "meta"                   # Muse on its own API: the pair (meta, muse-spark-1.2)
+
+[routes.nova]
+implies_vendor = "nova"                   # the engine's own Nova namespace: the pair (nova, nova-pro-v1)
+
+# --- vendor aliases and bare names ----------------------------------------------------------------------
+# Empty by decision: a spelling fold changes identity, so a deployment declares it consciously. The engine's
+# transition override carries xai = "x-ai", moonshot = "moonshotai", mistral = "mistralai" and today's
+# prefix heuristics as ordered bare-name patterns (first match in file order, fnmatch wildcards).
+
+[vendor_aliases]
+
+[bare_names]
+
+# --- policy ------------------------------------------------------------------------------------------------
+
+[policy]
+unknown_provider = "vendor"               # (xai, x-ai/grok-4): the provider becomes the route, the vendor comes from the name
+bare_name = "resolver"                    # a bare name without an implying route goes to the caller's resolver
+case = "preserve"                         # the engine looks pricing keys up by exact match: nova/Nova Pro v3
+leading_slash = "tolerate"                # /openrouter/openai/gpt-6-astra
+implied_vendor_mismatch = "error"         # (openai, anthropic/claude-opus-4-6) is a config error, not a parse
+fields = "best_effort"                    # "strict" raises on any unresolved token
+
+# --- render ------------------------------------------------------------------------------------------------
+# The slug follows the engine's model_id_slug: unsafe runs collapse to one underscore, ends stripped,
+# route and wire name joined by a double underscore. Render-only: no parser accepts a slug.
+
+[render]
+route_sep = "__"
+unsafe = "[^A-Za-z0-9._-]+"
+unsafe_replacement = "_"
+route_less = "unknown"                    # unknown__<wire name> when the value has no route; "omit" drops the route part
+
+# --- fields ------------------------------------------------------------------------------------------------
+
+[fields]
+separators = '[-/\s()]+'                  # identity-side: family depends on it; ':' introduces a suffix instead
+
+# OpenRouter ':suffix' variants stay in the identity (they are priced, distinct ids) and are classified here.
+# A suffix never reaches `stage`; an unknown suffix lands in `variant` and in `unresolved`.
+[fields.suffixes]
+thinking = { field = "capability" }       # anthropic/claude-3.7-sonnet:thinking
+free = { field = "variant" }
+beta = { field = "variant" }              # a moderation variant, not a release stage
+extended = { field = "variant" }
+online = { field = "variant" }
+exacto = { field = "variant" }
+nitro = { field = "variant", transport = true }   # provider-routing preference, transport rather than model
+floor = { field = "variant", transport = true }
+
+# Token shapes, one regex list per kind. Kinds are evaluated in this fixed order: size, snapshot8,
+# snapshot4, api3, context, generation; within a kind the first matching regex wins.
+[fields.shapes]
+size = ['^\d+x\d+(\.\d+)?[bt]$', '^\d+(\.\d+)?[bt]$', '^[ae]\d+(\.\d+)?[bt]$']   # 8x22b, 120b, 550b-a55b, e4b
+snapshot8 = ['^(19|20)\d{6}$']                                                   # 20241022
+snapshot4 = ['^\d{4}$']              # read per fields.vendor.<v>.four_digit_snapshot; a generation elsewhere
+api3 = ['^\d{3}$']                   # api_version where three_digit_api_version is set, else a generation
+context = ['^\d+[km]$']              # 16k, 1m: kept in variant, no field of its own
+generation = ['^[a-z]?\d+(\.\d+)*[a-z]?$']                                       # 6, 5.6, v4, k2.7, 4o, 5v
+
+# Multi-token dates; layouts are tried in this order at every position.
+[fields.dates.iso]
+tokens = ["YYYY", "MM", "DD"]             # gpt-4o-2024-05-13
+[fields.dates.month_year]
+tokens = ["MM", "YYYY"]                   # command-r-08-2024, stored as 2024-08
+[fields.dates.month_day]
+tokens = ["MM", "DD"]                     # qwen3.5-flash-02-23, only once a generation is known
+requires_generation = true
+
+# Vocabularies. One source per word so the list is a definition, not a fit.
+[fields.vocab]
+tier = [
+  "pro",        # openai/gpt-5.4-pro, google/gemini-3.1-pro
+  "flash",      # google/gemini-3.7-flash, deepseek/deepseek-v4-flash
+  "lite",       # amazon/nova-2-lite-v1, google/gemini-2.5-flash-lite
+  "mini",       # openai/gpt-4o-mini
+  "nano",       # openai/gpt-5-nano
+  "max",        # qwen/qwen3.8-max
+  "plus",       # qwen/qwen3.6-plus, cohere/command-a-plus
+  "turbo",      # openai/gpt-4-turbo, z-ai/glm-5-turbo
+  "ultra",      # nvidia/nemotron-3-ultra-550b-a55b
+  "super",      # nvidia/nemotron-3-super-120b-a12b
+  "micro",      # amazon/nova-micro-v1
+  "premier",    # amazon/nova-premier-v1
+  "large",      # mistralai/mistral-large
+  "medium",     # mistralai/mistral-medium-3-5
+  "small",      # mistralai/mistral-small
+  "fast",       # x-ai/grok-4-fast, anthropic/claude-opus-4.6-fast
+  "opus",       # anthropic/claude-opus-5
+  "sonnet",     # anthropic/claude-sonnet-4.6
+  "haiku",      # anthropic/claude-haiku-4.5
+  "fable",      # anthropic/claude-fable-5.1
+  "edge",       # rekaai/reka-edge (Reka's Edge / Flash / Core ladder)
+]
+stage = [
+  "preview",    # google/gemini-3-flash-preview
+  "exp",        # deepseek/deepseek-v3.2-exp
+  "experimental",
+  "beta",       # x-ai/grok-3-beta
+  "alpha",
+  "rc",
+  "latest",     # openai/chatgpt-4o-latest
+  "nightly",
+]
+capability = [
+  "it",         # google/gemma-4-31b-it
+  "instruct",   # meta-llama/llama-3.3-70b-instruct
+  "code",       # moonshotai/kimi-k2.7-code
+  "coder",      # qwen/qwen3-coder
+  "codex",      # openai/gpt-5-codex
+  "thinking",   # qwen/qwen3-max-thinking
+  "think",      # allenai/olmo-3-32b-think
+  "reasoning",  # perplexity/sonar-reasoning-pro
+  "chat",       # openai/gpt-5-chat
+  "vision",     # meta-llama/llama-3.2-11b-vision-instruct
+  "vl",         # qwen/qwen-vl-max
+  "omni",       # xiaomi/mimo-v2-omni
+  "image",      # openai/gpt-5-image
+  "audio",      # openai/gpt-4o-audio-preview
+  "search",     # openai/gpt-4o-search-preview
+  "embedding",  # openai/text-embedding-3-large
+  "guard",      # meta-llama/llama-guard-4-12b
+  "safeguard",  # openai/gpt-oss-safeguard-20b
+  "ocr",        # baidu/qianfan-ocr-fast
+  "tts",
+  "prover",     # deepseek/deepseek-prover-v2
+]
+
+[fields.vocab.compounds]
+"deep-research" = "capability"           # openai/o3-deep-research
+"code-fast" = "capability"               # x-ai/grok-code-fast-1
+"multi-agent" = "variant"                # x-ai/grok-4.20-multi-agent
+"non-reasoning" = "variant"              # x-ai/grok-4.1-fast-non-reasoning: a negation must not read as capability reasoning
+
+# Per-vendor switches. A vendor that follows the common family-generation-tier shape needs no entry.
+[fields.vendor.openai]
+four_digit_snapshot = "MMDD"              # gpt-4-0314, gpt-3.5-turbo-0613, gpt-4-1106-preview
+[fields.vendor.anthropic]
+dash_minor_version = true                 # claude-3-5-sonnet, claude-sonnet-4-6
+[fields.vendor.google]
+three_digit_api_version = true            # gemini-2.0-flash-001
+[fields.vendor.deepseek]
+four_digit_snapshot = "MMDD"              # deepseek-v4-flash-0731, deepseek-r1-0528
+[fields.vendor.amazon]
+trailing_v_is_api_version = true          # nova-2-lite-v1, nova-pro-v1
+[fields.vendor.moonshotai]
+four_digit_snapshot = "MMDD"              # kimi-k2-0905
+[fields.vendor.mistralai]
+dash_minor_version = true                 # mistral-medium-3-5
+four_digit_snapshot = "YYMM"              # mistral-large-2512, codestral-2508
+[fields.vendor.qwen]
+four_digit_snapshot = "YYMM"              # qwen3-235b-a22b-2507
+[fields.vendor.cohere]
+letter_generations = ["r", "a"]           # command-r, command-a-plus, command-r7b
+four_digit_snapshot = "YYMM"
+
+# --- lookup ------------------------------------------------------------------------------------------------
+# Per-name overrides, the last resort. An entry sets the identity (vendor and model together), descriptive
+# fields (an empty string clears a computed value), or both. Every entry needs a `why`.
+
+[lookup."openrouter/auto"]
+vendor = "openrouter"
+model = "auto"
+why = "pricing.json key; OpenRouter's own router model, no upstream vendor"
+
+[lookup."openrouter/bodybuilder"]
+vendor = "openrouter"
+model = "bodybuilder"
+why = "pricing.json key; OpenRouter's own router model, no upstream vendor"
+
+[lookup."openrouter/pareto-code"]
+vendor = "openrouter"
+model = "pareto-code"
+why = "pricing.json key; OpenRouter's own router model, no upstream vendor"
+
+[lookup."azure_ai/cohere-command-a-plus-05-2026"]
+family = "command"
+generation = "a"
+tier = "plus"
+variant = ""
+snapshot = "2026-05"
+why = "Azure deployment name embeds the upstream vendor as the first token"

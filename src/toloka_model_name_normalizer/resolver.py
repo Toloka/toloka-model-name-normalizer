@@ -1,0 +1,38 @@
+"""The resolver contract for bare names. The library never guesses a vendor; the caller's catalogue does,
+and says which version of itself answered."""
+
+from __future__ import annotations
+
+from collections.abc import Callable, Sequence
+from dataclasses import dataclass
+from typing import Protocol, runtime_checkable
+
+
+@runtime_checkable
+class Resolver(Protocol):
+    """A catalogue that names the vendors a bare model name may belong to.
+
+    ``candidates`` returns canonical ``vendor/model`` strings (or bare vendor names) for an exact model
+    match; zero means unknown, one resolves, more than one is ambiguous and the parse fails closed.
+    ``fingerprint`` identifies the catalogue version and is recorded in the value's provenance.
+    """
+
+    fingerprint: str | None
+
+    def candidates(self, bare_name: str) -> Sequence[str]: ...
+
+
+@dataclass(frozen=True)
+class CallableResolver:
+    """Adapts a plain function to the :class:`Resolver` protocol."""
+
+    function: Callable[[str], Sequence[str]]
+    fingerprint: str | None = None
+
+    def candidates(self, bare_name: str) -> Sequence[str]:
+        return tuple(self.function(bare_name))
+
+
+def vendor_of_candidate(candidate: str) -> str:
+    """The vendor named by a resolver candidate, which may be ``vendor/model`` or a bare vendor."""
+    return candidate.split("/", 1)[0]

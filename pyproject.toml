@@ -1,0 +1,65 @@
+[project]
+name = "toloka-model-name-normalizer"
+version = "0.1.0"
+description = "One identity and rule-derived descriptive fields for every LLM model reference. Every parsing rule is configuration."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Toloka" }]
+keywords = ["llm", "model-name", "normalizer", "canonical", "langfuse", "tolokaforge"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = [
+    # tomllib is in the standard library from 3.11; this is the single dependency below that.
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.scripts]
+toloka-model-name-normalizer = "toloka_model_name_normalizer.__main__:main"
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/toloka_model_name_normalizer"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "pyproject.toml"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "mypy>=1.10",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "W"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+packages = ["toloka_model_name_normalizer"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+# tomli is only imported on Python 3.10; the type checker runs on newer interpreters without it installed.
+module = "tomli"
+ignore_missing_imports = true
