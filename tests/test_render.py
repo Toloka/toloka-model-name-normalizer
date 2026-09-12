@@ -43,49 +43,59 @@ def test_undeclared_provider_renders_but_only_the_pair_reads_it_back(row: dict) 
     )
 
 
-def test_route_less_value_renders_canonical_and_unknown_slug() -> None:
+def test_route_less_value_renders_canonical_and_slug() -> None:
     name = norm.parse_canonical("openai/gpt-6-astra")
     assert name.routed == "openai/gpt-6-astra"
-    assert name.slug == "unknown__openai_gpt-6-astra"
+    assert name.slug == "openai_gpt-6-astra"
 
 
-def test_route_less_omit_policy() -> None:
-    omit = Normalizer(Rules.from_dict({"render": {"route_less": "omit"}}, base=Rules.default()))
-    assert omit.parse_canonical("openai/gpt-6-astra").slug == "openai_gpt-6-astra"
-
-
-def test_vendor_implying_route_omits_the_vendor_on_the_wire() -> None:
+def test_slug_is_the_identity_whatever_the_route() -> None:
+    """The route is a property of the value, never part of the slug (owner decision 2026-09-12)."""
+    for name in (
+        norm.parse_pair("openrouter", "openai/gpt-6-astra"),
+        norm.parse("platform_openai/gpt-6-astra"),
+        norm.parse_routed("litellm/openrouter/openai/gpt-6-astra"),
+        norm.parse_canonical("openai/gpt-6-astra"),
+    ):
+        assert name.slug == "openai_gpt-6-astra"
+    assert norm.parse_pair("meta", "muse-spark-1.2").slug == "meta_muse-spark-1.2"
+    assert norm.parse_pair("anthropic", "claude-fable-5.1").slug == "anthropic_claude-fable-5.1"
     assert norm.parse_pair("meta", "muse-spark-1.2").routed == "meta/muse-spark-1.2"
-    assert norm.parse_pair("meta", "muse-spark-1.2").slug == "meta__muse-spark-1.2"
-    assert norm.parse("platform_openai/gpt-6-astra").slug == "platform_openai__gpt-6-astra"
 
 
-def test_slug_agrees_with_model_id_slug_on_the_engine_shapes() -> None:
-    assert (
-        norm.parse_pair("openrouter", "anthropic/claude-opus-4.7").slug
-        == "openrouter__anthropic_claude-opus-4.7"
-    )
-    assert norm.parse_pair("openai", "gpt-5.5").slug == "openai__gpt-5.5"
-    assert norm.parse_pair("nova", "amazon-nova-micro-1_0").slug == "nova__amazon-nova-micro-1_0"
-    assert norm.parse_pair("xai", "x-ai/grok-4").slug == "xai__x-ai_grok-4"
-    assert (
-        norm.parse_pair("anthropic", "anthropic/claude-sonnet-4.7-20260101").slug
-        == "anthropic__claude-sonnet-4.7-20260101"
-    )
+ENGINE = Normalizer(Rules.from_dict({"render": {"route_in_slug": True}}, base=Rules.default()))
+
+
+def test_route_in_slug_agrees_with_model_id_slug_on_the_engine_shapes() -> None:
+    cases = {
+        ("openrouter", "anthropic/claude-opus-4.7"): "openrouter__anthropic_claude-opus-4.7",
+        ("openai", "gpt-5.5"): "openai__gpt-5.5",
+        ("nova", "amazon-nova-micro-1_0"): "nova__amazon-nova-micro-1_0",
+        ("xai", "x-ai/grok-4"): "xai__x-ai_grok-4",
+        ("anthropic", "anthropic/claude-sonnet-4.7-20260101"): "anthropic__claude-sonnet-4.7-20260101",
+        ("meta", "muse-spark-1.2"): "meta__muse-spark-1.2",
+    }
+    for (provider, name), expected in cases.items():
+        assert ENGINE.parse_pair(provider, name).slug == expected
+    assert ENGINE.parse("platform_openai/gpt-6-astra").slug == "platform_openai__gpt-6-astra"
+
+
+def test_route_in_slug_never_invents_a_route() -> None:
+    # the engine's model_id_slug("", name) says unknown__<name>; the library never writes a placeholder
+    assert ENGINE.parse_canonical("openai/gpt-6-astra").slug == "openai_gpt-6-astra"
+    assert ENGINE.parse("anthropic/claude-3.7-sonnet:thinking").slug == "anthropic_claude-3.7-sonnet_thinking"
 
 
 def test_slug_documented_divergences_from_model_id_slug() -> None:
     # The engine renders the raw pair (openai__openai_gpt-5.5); the library renders the identity.
-    assert norm.parse_pair("openai", "openai/gpt-5.5").slug == "openai__gpt-5.5"
-    assert norm.parse_pair("qwen", "qwen/qwen3-next").slug == "qwen__qwen3-next"
+    assert ENGINE.parse_pair("openai", "openai/gpt-5.5").slug == "openai__gpt-5.5"
+    assert ENGINE.parse_pair("qwen", "qwen/qwen3-next").slug == "qwen__qwen3-next"
 
 
 def test_unsafe_characters_collapse() -> None:
-    assert norm.parse_pair("nova", "Nova Pro v3.4 (Suez)").slug == "nova__Nova_Pro_v3.4_Suez"
-    assert (
-        norm.parse("anthropic/claude-3.7-sonnet:thinking").slug
-        == "unknown__anthropic_claude-3.7-sonnet_thinking"
-    )
+    assert norm.parse_pair("nova", "Nova Pro v3.4 (Suez)").slug == "nova_Nova_Pro_v3.4_Suez"
+    assert norm.parse("anthropic/claude-3.7-sonnet:thinking").slug == "anthropic_claude-3.7-sonnet_thinking"
+    assert ENGINE.parse_pair("nova", "Nova Pro v3.4 (Suez)").slug == "nova__Nova_Pro_v3.4_Suez"
 
 
 def test_slugs_are_never_parsed() -> None:

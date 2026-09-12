@@ -44,7 +44,7 @@ _POLICY_VALUES: dict[str, tuple[str, ...]] = {
     "implied_vendor_mismatch": ("error", "name_wins"),
     "fields": ("best_effort", "strict"),
 }
-_RENDER_KEYS = ("route_sep", "unsafe", "unsafe_replacement", "route_less")
+_RENDER_KEYS = ("route_sep", "unsafe", "unsafe_replacement", "route_in_slug")
 _VENDOR_SWITCHES = (
     "dash_minor_version",
     "four_digit_snapshot",
@@ -126,7 +126,7 @@ class Render:
     route_sep: str
     unsafe: re.Pattern[str]
     unsafe_replacement: str
-    route_less: str
+    route_in_slug: bool
 
 
 @dataclass(frozen=True)
@@ -271,7 +271,7 @@ class Rules:
             route_sep=render_doc["route_sep"],
             unsafe=re.compile(render_doc["unsafe"]),
             unsafe_replacement=render_doc["unsafe_replacement"],
-            route_less=render_doc["route_less"],
+            route_in_slug=render_doc["route_in_slug"],
         )
         fields_doc = doc["fields"]
         vocab = fields_doc.get("vocab", {})
@@ -411,7 +411,10 @@ def _check_shape(doc: Mapping[str, Any]) -> None:
     render = _table(doc.get("render", {}), "render")
     _check_keys(render, _RENDER_KEYS, "render")
     for key, value in render.items():
-        _require(isinstance(value, str), f"render.{key} must be a string")
+        if key == "route_in_slug":
+            _require(isinstance(value, bool), "render.route_in_slug must be a boolean")
+        else:
+            _require(isinstance(value, str), f"render.{key} must be a string")
     fields = _table(doc.get("fields", {}), "fields")
     _check_keys(fields, _FIELDS_KEYS, "fields")
     if "separators" in fields:
@@ -619,7 +622,7 @@ def _validate(doc: Mapping[str, Any]) -> None:
     render = doc["render"]
     for key in _RENDER_KEYS:
         _require(key in render, f"render.{key} is required")
-    _require(render["route_less"] in ("unknown", "omit"), "render.route_less must be 'unknown' or 'omit'")
+    _require(isinstance(render["route_in_slug"], bool), "render.route_in_slug must be a boolean")
     _require(
         bool(render["route_sep"]) and bool(render["unsafe_replacement"]),
         "render.route_sep and render.unsafe_replacement must be non-empty",

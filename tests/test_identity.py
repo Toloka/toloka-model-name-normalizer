@@ -32,7 +32,7 @@ class TestCarriers:
         name = norm.parse_pair("openai", "gpt-6-astra")
         assert (name.vendor, name.model, name.route) == ("openai", "gpt-6-astra", "openai")
         assert name.routed == "openai/gpt-6-astra"
-        assert name.slug == "openai__gpt-6-astra"
+        assert name.slug == "openai_gpt-6-astra"
 
     def test_routed_reads_a_direct_vendor_route(self, norm: Normalizer) -> None:
         assert norm.parse_routed("openai/gpt-6-astra").route == "openai"

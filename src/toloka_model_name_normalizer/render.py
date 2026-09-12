@@ -30,17 +30,16 @@ def routed(rules: Rules, vendor: str, model: str, routes: tuple[str, ...]) -> st
 
 
 def slug(rules: Rules, vendor: str, model: str, route: str | None) -> str:
-    """``<route>__<wire name>`` with unsafe characters collapsed, the same rules as the engine's
-    ``model_id_slug``; ``unknown__`` or no route part when there is no route, per ``render.route_less``."""
+    """The identity as one filesystem-safe token: ``<vendor>_<model>`` with unsafe characters collapsed. The
+    route is a property of the value, not part of the slug; ``render.route_in_slug`` switches to the engine's
+    ``model_id_slug`` shape ``<route>__<wire name>`` when there is a route. Never a placeholder route."""
 
     def component(text: str) -> str:
         return rules.render.unsafe.sub(rules.render.unsafe_replacement, text).strip(
             rules.render.unsafe_replacement
         )
 
-    name = component(wire_name(rules, vendor, model, route)) or "unnamed"
-    if route is None:
-        if rules.render.route_less == "omit":
-            return name
-        return f"unknown{rules.render.route_sep}{name}"
-    return f"{component(route)}{rules.render.route_sep}{name}"
+    if route is not None and rules.render.route_in_slug:
+        name = component(wire_name(rules, vendor, model, route)) or "unnamed"
+        return f"{component(route)}{rules.render.route_sep}{name}"
+    return component(f"{vendor}/{model}") or "unnamed"

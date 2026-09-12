@@ -146,10 +146,10 @@ class TestMerge:
 
     def test_scalars_overwrite(self) -> None:
         rules = Rules.from_dict(
-            {"version": "2027.01.01", "policy": {"case": "fold"}, "render": {"route_less": "omit"}},
+            {"version": "2027.01.01", "policy": {"case": "fold"}, "render": {"route_in_slug": True}},
             base=Rules.default(),
         )
-        assert (rules.version, rules.policy.case, rules.render.route_less) == ("2027.01.01", "fold", "omit")
+        assert (rules.version, rules.policy.case, rules.render.route_in_slug) == ("2027.01.01", "fold", True)
 
     def test_load_from_file(self, tmp_path: Path) -> None:
         path = tmp_path / "rules.toml"

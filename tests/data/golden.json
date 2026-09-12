@@ -15,7 +15,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "openrouter/openai/gpt-6-astra",
-    "slug": "openrouter__openai_gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -52,7 +52,7 @@
     "routes": [],
     "canonical": "acme/agent-1",
     "routed": "acme/agent-1",
-    "slug": "unknown__acme_agent-1",
+    "slug": "acme_agent-1",
     "fields": {
      "family": "agent",
      "generation": "1",
@@ -89,7 +89,7 @@
     "routes": [],
     "canonical": "acme/agent-2",
     "routed": "acme/agent-2",
-    "slug": "unknown__acme_agent-2",
+    "slug": "acme_agent-2",
     "fields": {
      "family": "agent",
      "generation": "2",
@@ -126,7 +126,7 @@
     "routes": [],
     "canonical": "acme/judge-9",
     "routed": "acme/judge-9",
-    "slug": "unknown__acme_judge-9",
+    "slug": "acme_judge-9",
     "fields": {
      "family": "judge",
      "generation": "9",
@@ -163,7 +163,7 @@
     "routes": [],
     "canonical": "acme/legacy",
     "routed": "acme/legacy",
-    "slug": "unknown__acme_legacy",
+    "slug": "acme_legacy",
     "fields": {
      "family": "legacy",
      "generation": null,
@@ -200,7 +200,7 @@
     "routes": [],
     "canonical": "acme/other",
     "routed": "acme/other",
-    "slug": "unknown__acme_other",
+    "slug": "acme_other",
     "fields": {
      "family": "other",
      "generation": null,
@@ -237,7 +237,7 @@
     "routes": [],
     "canonical": "acme/replay-judge",
     "routed": "acme/replay-judge",
-    "slug": "unknown__acme_replay-judge",
+    "slug": "acme_replay-judge",
     "fields": {
      "family": "replay",
      "generation": null,
@@ -274,7 +274,7 @@
     "routes": [],
     "canonical": "ai21/jamba-large-1.7",
     "routed": "ai21/jamba-large-1.7",
-    "slug": "unknown__ai21_jamba-large-1.7",
+    "slug": "ai21_jamba-large-1.7",
     "fields": {
      "family": "jamba",
      "generation": "1.7",
@@ -311,7 +311,7 @@
     "routes": [],
     "canonical": "aion-labs/aion-1.0",
     "routed": "aion-labs/aion-1.0",
-    "slug": "unknown__aion-labs_aion-1.0",
+    "slug": "aion-labs_aion-1.0",
     "fields": {
      "family": "aion",
      "generation": "1.0",
@@ -348,7 +348,7 @@
     "routes": [],
     "canonical": "aion-labs/aion-1.0-mini",
     "routed": "aion-labs/aion-1.0-mini",
-    "slug": "unknown__aion-labs_aion-1.0-mini",
+    "slug": "aion-labs_aion-1.0-mini",
     "fields": {
      "family": "aion",
      "generation": "1.0",
@@ -385,7 +385,7 @@
     "routes": [],
     "canonical": "aion-labs/aion-2.0",
     "routed": "aion-labs/aion-2.0",
-    "slug": "unknown__aion-labs_aion-2.0",
+    "slug": "aion-labs_aion-2.0",
     "fields": {
      "family": "aion",
      "generation": "2.0",
@@ -422,7 +422,7 @@
     "routes": [],
     "canonical": "aion-labs/aion-rp-llama-3.1-8b",
     "routed": "aion-labs/aion-rp-llama-3.1-8b",
-    "slug": "unknown__aion-labs_aion-rp-llama-3.1-8b",
+    "slug": "aion-labs_aion-rp-llama-3.1-8b",
     "fields": {
      "family": "aion",
      "generation": "3.1",
@@ -459,7 +459,7 @@
     "routes": [],
     "canonical": "alfredpros/codellama-7b-instruct-solidity",
     "routed": "alfredpros/codellama-7b-instruct-solidity",
-    "slug": "unknown__alfredpros_codellama-7b-instruct-solidity",
+    "slug": "alfredpros_codellama-7b-instruct-solidity",
     "fields": {
      "family": "codellama",
      "generation": null,
@@ -496,7 +496,7 @@
     "routes": [],
     "canonical": "alibaba/tongyi-deepresearch-30b-a3b",
     "routed": "alibaba/tongyi-deepresearch-30b-a3b",
-    "slug": "unknown__alibaba_tongyi-deepresearch-30b-a3b",
+    "slug": "alibaba_tongyi-deepresearch-30b-a3b",
     "fields": {
      "family": "tongyi",
      "generation": null,
@@ -533,7 +533,7 @@
     "routes": [],
     "canonical": "allenai/olmo-3-32b-think",
     "routed": "allenai/olmo-3-32b-think",
-    "slug": "unknown__allenai_olmo-3-32b-think",
+    "slug": "allenai_olmo-3-32b-think",
     "fields": {
      "family": "olmo",
      "generation": "3",
@@ -570,7 +570,7 @@
     "routes": [],
     "canonical": "allenai/olmo-3.1-32b-instruct",
     "routed": "allenai/olmo-3.1-32b-instruct",
-    "slug": "unknown__allenai_olmo-3.1-32b-instruct",
+    "slug": "allenai_olmo-3.1-32b-instruct",
     "fields": {
      "family": "olmo",
      "generation": "3.1",
@@ -607,7 +607,7 @@
     "routes": [],
     "canonical": "alpindale/goliath-120b",
     "routed": "alpindale/goliath-120b",
-    "slug": "unknown__alpindale_goliath-120b",
+    "slug": "alpindale_goliath-120b",
     "fields": {
      "family": "goliath",
      "generation": null,
@@ -644,7 +644,7 @@
     "routes": [],
     "canonical": "amazon/nova",
     "routed": "amazon/nova",
-    "slug": "unknown__amazon_nova",
+    "slug": "amazon_nova",
     "fields": {
      "family": "nova",
      "generation": null,
@@ -683,7 +683,7 @@
     ],
     "canonical": "amazon/nova-2-lite-v1",
     "routed": "openrouter/amazon/nova-2-lite-v1",
-    "slug": "openrouter__amazon_nova-2-lite-v1",
+    "slug": "amazon_nova-2-lite-v1",
     "fields": {
      "family": "nova",
      "generation": "2",
@@ -726,7 +726,7 @@
     "routes": [],
     "canonical": "amazon/nova-2-lite-v1",
     "routed": "amazon/nova-2-lite-v1",
-    "slug": "unknown__amazon_nova-2-lite-v1",
+    "slug": "amazon_nova-2-lite-v1",
     "fields": {
      "family": "nova",
      "generation": "2",
@@ -769,7 +769,7 @@
     "routes": [],
     "canonical": "amazon/nova-lite-v1",
     "routed": "amazon/nova-lite-v1",
-    "slug": "unknown__amazon_nova-lite-v1",
+    "slug": "amazon_nova-lite-v1",
     "fields": {
      "family": "nova",
      "generation": null,
@@ -806,7 +806,7 @@
     "routes": [],
     "canonical": "amazon/nova-micro-v1",
     "routed": "amazon/nova-micro-v1",
-    "slug": "unknown__amazon_nova-micro-v1",
+    "slug": "amazon_nova-micro-v1",
     "fields": {
      "family": "nova",
      "generation": null,
@@ -843,7 +843,7 @@
     "routes": [],
     "canonical": "amazon/nova-premier-v1",
     "routed": "amazon/nova-premier-v1",
-    "slug": "unknown__amazon_nova-premier-v1",
+    "slug": "amazon_nova-premier-v1",
     "fields": {
      "family": "nova",
      "generation": null,
@@ -880,7 +880,7 @@
     "routes": [],
     "canonical": "amazon/nova-pro-v1",
     "routed": "amazon/nova-pro-v1",
-    "slug": "unknown__amazon_nova-pro-v1",
+    "slug": "amazon_nova-pro-v1",
     "fields": {
      "family": "nova",
      "generation": null,
@@ -917,7 +917,7 @@
     "routes": [],
     "canonical": "anthracite-org/magnum-v4-72b",
     "routed": "anthracite-org/magnum-v4-72b",
-    "slug": "unknown__anthracite-org_magnum-v4-72b",
+    "slug": "anthracite-org_magnum-v4-72b",
     "fields": {
      "family": "magnum",
      "generation": "v4",
@@ -969,7 +969,7 @@
     "routes": [],
     "canonical": "anthropic/canon-opus",
     "routed": "anthropic/canon-opus",
-    "slug": "unknown__anthropic_canon-opus",
+    "slug": "anthropic_canon-opus",
     "fields": {
      "family": "canon",
      "generation": null,
@@ -1006,7 +1006,7 @@
     "routes": [],
     "canonical": "anthropic/claude",
     "routed": "anthropic/claude",
-    "slug": "unknown__anthropic_claude",
+    "slug": "anthropic_claude",
     "fields": {
      "family": "claude",
      "generation": null,
@@ -1043,7 +1043,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3-5-sonnet",
     "routed": "anthropic/claude-3-5-sonnet",
-    "slug": "unknown__anthropic_claude-3-5-sonnet",
+    "slug": "anthropic_claude-3-5-sonnet",
     "fields": {
      "family": "claude",
      "generation": "3.5",
@@ -1080,7 +1080,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3-haiku",
     "routed": "anthropic/claude-3-haiku",
-    "slug": "unknown__anthropic_claude-3-haiku",
+    "slug": "anthropic_claude-3-haiku",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -1119,7 +1119,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3-haiku-20240307",
     "routed": "anthropic/claude-3-haiku-20240307",
-    "slug": "unknown__anthropic_claude-3-haiku-20240307",
+    "slug": "anthropic_claude-3-haiku-20240307",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -1156,7 +1156,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3-opus",
     "routed": "anthropic/claude-3-opus",
-    "slug": "unknown__anthropic_claude-3-opus",
+    "slug": "anthropic_claude-3-opus",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -1195,7 +1195,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3-opus-20240229",
     "routed": "anthropic/claude-3-opus-20240229",
-    "slug": "unknown__anthropic_claude-3-opus-20240229",
+    "slug": "anthropic_claude-3-opus-20240229",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -1232,7 +1232,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3-sonnet",
     "routed": "anthropic/claude-3-sonnet",
-    "slug": "unknown__anthropic_claude-3-sonnet",
+    "slug": "anthropic_claude-3-sonnet",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -1269,7 +1269,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3-sonnet-20240229",
     "routed": "anthropic/claude-3-sonnet-20240229",
-    "slug": "unknown__anthropic_claude-3-sonnet-20240229",
+    "slug": "anthropic_claude-3-sonnet-20240229",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -1306,7 +1306,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.5-haiku",
     "routed": "anthropic/claude-3.5-haiku",
-    "slug": "unknown__anthropic_claude-3.5-haiku",
+    "slug": "anthropic_claude-3.5-haiku",
     "fields": {
      "family": "claude",
      "generation": "3.5",
@@ -1343,7 +1343,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.5-haiku-20241022",
     "routed": "anthropic/claude-3.5-haiku-20241022",
-    "slug": "unknown__anthropic_claude-3.5-haiku-20241022",
+    "slug": "anthropic_claude-3.5-haiku-20241022",
     "fields": {
      "family": "claude",
      "generation": "3.5",
@@ -1380,7 +1380,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.5-sonnet",
     "routed": "anthropic/claude-3.5-sonnet",
-    "slug": "unknown__anthropic_claude-3.5-sonnet",
+    "slug": "anthropic_claude-3.5-sonnet",
     "fields": {
      "family": "claude",
      "generation": "3.5",
@@ -1419,7 +1419,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.5-sonnet-20240620",
     "routed": "anthropic/claude-3.5-sonnet-20240620",
-    "slug": "unknown__anthropic_claude-3.5-sonnet-20240620",
+    "slug": "anthropic_claude-3.5-sonnet-20240620",
     "fields": {
      "family": "claude",
      "generation": "3.5",
@@ -1456,7 +1456,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.7-sonnet",
     "routed": "anthropic/claude-3.7-sonnet",
-    "slug": "unknown__anthropic_claude-3.7-sonnet",
+    "slug": "anthropic_claude-3.7-sonnet",
     "fields": {
      "family": "claude",
      "generation": "3.7",
@@ -1493,7 +1493,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.7-sonnet:thinking",
     "routed": "anthropic/claude-3.7-sonnet:thinking",
-    "slug": "unknown__anthropic_claude-3.7-sonnet_thinking",
+    "slug": "anthropic_claude-3.7-sonnet_thinking",
     "fields": {
      "family": "claude",
      "generation": "3.7",
@@ -1532,7 +1532,7 @@
     ],
     "canonical": "anthropic/claude-fable-5",
     "routed": "openrouter/anthropic/claude-fable-5",
-    "slug": "openrouter__anthropic_claude-fable-5",
+    "slug": "anthropic_claude-fable-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -1577,7 +1577,7 @@
     "routes": [],
     "canonical": "anthropic/claude-fable-5",
     "routed": "anthropic/claude-fable-5",
-    "slug": "unknown__anthropic_claude-fable-5",
+    "slug": "anthropic_claude-fable-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -1624,7 +1624,7 @@
     ],
     "canonical": "anthropic/claude-fable-5.1",
     "routed": "openrouter/anthropic/claude-fable-5.1",
-    "slug": "openrouter__anthropic_claude-fable-5.1",
+    "slug": "anthropic_claude-fable-5.1",
     "fields": {
      "family": "claude",
      "generation": "5.1",
@@ -1669,7 +1669,7 @@
     "routes": [],
     "canonical": "anthropic/claude-fable-5.1",
     "routed": "anthropic/claude-fable-5.1",
-    "slug": "unknown__anthropic_claude-fable-5.1",
+    "slug": "anthropic_claude-fable-5.1",
     "fields": {
      "family": "claude",
      "generation": "5.1",
@@ -1714,7 +1714,7 @@
     "routes": [],
     "canonical": "anthropic/claude-haiku-4-5",
     "routed": "anthropic/claude-haiku-4-5",
-    "slug": "unknown__anthropic_claude-haiku-4-5",
+    "slug": "anthropic_claude-haiku-4-5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -1751,7 +1751,7 @@
     "routes": [],
     "canonical": "anthropic/claude-haiku-4.5",
     "routed": "anthropic/claude-haiku-4.5",
-    "slug": "unknown__anthropic_claude-haiku-4.5",
+    "slug": "anthropic_claude-haiku-4.5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -1790,7 +1790,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4",
     "routed": "anthropic/claude-opus-4",
-    "slug": "unknown__anthropic_claude-opus-4",
+    "slug": "anthropic_claude-opus-4",
     "fields": {
      "family": "claude",
      "generation": "4",
@@ -1827,7 +1827,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4-8",
     "routed": "anthropic/claude-opus-4-8",
-    "slug": "unknown__anthropic_claude-opus-4-8",
+    "slug": "anthropic_claude-opus-4-8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -1864,7 +1864,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.1",
     "routed": "anthropic/claude-opus-4.1",
-    "slug": "unknown__anthropic_claude-opus-4.1",
+    "slug": "anthropic_claude-opus-4.1",
     "fields": {
      "family": "claude",
      "generation": "4.1",
@@ -1901,7 +1901,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.5",
     "routed": "anthropic/claude-opus-4.5",
-    "slug": "unknown__anthropic_claude-opus-4.5",
+    "slug": "anthropic_claude-opus-4.5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -1942,7 +1942,7 @@
     ],
     "canonical": "anthropic/claude-opus-4.6",
     "routed": "openrouter/anthropic/claude-opus-4.6",
-    "slug": "openrouter__anthropic_claude-opus-4.6",
+    "slug": "anthropic_claude-opus-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -1991,7 +1991,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.6",
     "routed": "anthropic/claude-opus-4.6",
-    "slug": "unknown__anthropic_claude-opus-4.6",
+    "slug": "anthropic_claude-opus-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -2040,7 +2040,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.6-fast",
     "routed": "anthropic/claude-opus-4.6-fast",
-    "slug": "unknown__anthropic_claude-opus-4.6-fast",
+    "slug": "anthropic_claude-opus-4.6-fast",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -2096,7 +2096,7 @@
     ],
     "canonical": "anthropic/claude-opus-4.7",
     "routed": "openrouter/anthropic/claude-opus-4.7",
-    "slug": "openrouter__anthropic_claude-opus-4.7",
+    "slug": "anthropic_claude-opus-4.7",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -2143,7 +2143,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.7",
     "routed": "anthropic/claude-opus-4.7",
-    "slug": "unknown__anthropic_claude-opus-4.7",
+    "slug": "anthropic_claude-opus-4.7",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -2190,7 +2190,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.7-20260301",
     "routed": "anthropic/claude-opus-4.7-20260301",
-    "slug": "unknown__anthropic_claude-opus-4.7-20260301",
+    "slug": "anthropic_claude-opus-4.7-20260301",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -2227,7 +2227,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.7-fast",
     "routed": "anthropic/claude-opus-4.7-fast",
-    "slug": "unknown__anthropic_claude-opus-4.7-fast",
+    "slug": "anthropic_claude-opus-4.7-fast",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -2264,7 +2264,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.7-preview",
     "routed": "anthropic/claude-opus-4.7-preview",
-    "slug": "unknown__anthropic_claude-opus-4.7-preview",
+    "slug": "anthropic_claude-opus-4.7-preview",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -2303,7 +2303,7 @@
     ],
     "canonical": "anthropic/claude-opus-4.8",
     "routed": "openrouter/anthropic/claude-opus-4.8",
-    "slug": "openrouter__anthropic_claude-opus-4.8",
+    "slug": "anthropic_claude-opus-4.8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -2350,7 +2350,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.8",
     "routed": "anthropic/claude-opus-4.8",
-    "slug": "unknown__anthropic_claude-opus-4.8",
+    "slug": "anthropic_claude-opus-4.8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -2397,7 +2397,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-4.9",
     "routed": "anthropic/claude-opus-4.9",
-    "slug": "unknown__anthropic_claude-opus-4.9",
+    "slug": "anthropic_claude-opus-4.9",
     "fields": {
      "family": "claude",
      "generation": "4.9",
@@ -2436,7 +2436,7 @@
     ],
     "canonical": "anthropic/claude-opus-5",
     "routed": "openrouter/anthropic/claude-opus-5",
-    "slug": "openrouter__anthropic_claude-opus-5",
+    "slug": "anthropic_claude-opus-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -2483,7 +2483,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-5",
     "routed": "anthropic/claude-opus-5",
-    "slug": "unknown__anthropic_claude-opus-5",
+    "slug": "anthropic_claude-opus-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -2530,7 +2530,7 @@
     "routes": [],
     "canonical": "anthropic/claude-opus-canon",
     "routed": "anthropic/claude-opus-canon",
-    "slug": "unknown__anthropic_claude-opus-canon",
+    "slug": "anthropic_claude-opus-canon",
     "fields": {
      "family": "claude",
      "generation": null,
@@ -2567,7 +2567,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4",
     "routed": "anthropic/claude-sonnet-4",
-    "slug": "unknown__anthropic_claude-sonnet-4",
+    "slug": "anthropic_claude-sonnet-4",
     "fields": {
      "family": "claude",
      "generation": "4",
@@ -2606,7 +2606,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4-5",
     "routed": "anthropic/claude-sonnet-4-5",
-    "slug": "unknown__anthropic_claude-sonnet-4-5",
+    "slug": "anthropic_claude-sonnet-4-5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -2645,7 +2645,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4-6",
     "routed": "anthropic/claude-sonnet-4-6",
-    "slug": "unknown__anthropic_claude-sonnet-4-6",
+    "slug": "anthropic_claude-sonnet-4-6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -2686,7 +2686,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4.5",
     "routed": "anthropic/claude-sonnet-4.5",
-    "slug": "unknown__anthropic_claude-sonnet-4.5",
+    "slug": "anthropic_claude-sonnet-4.5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -2727,7 +2727,7 @@
     ],
     "canonical": "anthropic/claude-sonnet-4.6",
     "routed": "openrouter/anthropic/claude-sonnet-4.6",
-    "slug": "openrouter__anthropic_claude-sonnet-4.6",
+    "slug": "anthropic_claude-sonnet-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -2832,7 +2832,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4.6",
     "routed": "anthropic/claude-sonnet-4.6",
-    "slug": "unknown__anthropic_claude-sonnet-4.6",
+    "slug": "anthropic_claude-sonnet-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -2937,7 +2937,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4.7",
     "routed": "anthropic/claude-sonnet-4.7",
-    "slug": "unknown__anthropic_claude-sonnet-4.7",
+    "slug": "anthropic_claude-sonnet-4.7",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -2974,7 +2974,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4.7-20260101",
     "routed": "anthropic/claude-sonnet-4.7-20260101",
-    "slug": "unknown__anthropic_claude-sonnet-4.7-20260101",
+    "slug": "anthropic_claude-sonnet-4.7-20260101",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -3011,7 +3011,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-4.8",
     "routed": "anthropic/claude-sonnet-4.8",
-    "slug": "unknown__anthropic_claude-sonnet-4.8",
+    "slug": "anthropic_claude-sonnet-4.8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -3050,7 +3050,7 @@
     ],
     "canonical": "anthropic/claude-sonnet-5",
     "routed": "openrouter/anthropic/claude-sonnet-5",
-    "slug": "openrouter__anthropic_claude-sonnet-5",
+    "slug": "anthropic_claude-sonnet-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -3093,7 +3093,7 @@
     "routes": [],
     "canonical": "anthropic/claude-sonnet-5",
     "routed": "anthropic/claude-sonnet-5",
-    "slug": "unknown__anthropic_claude-sonnet-5",
+    "slug": "anthropic_claude-sonnet-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -3136,7 +3136,7 @@
     "routes": [],
     "canonical": "anthropic/gemini",
     "routed": "anthropic/gemini",
-    "slug": "unknown__anthropic_gemini",
+    "slug": "anthropic_gemini",
     "fields": {
      "family": "gemini",
      "generation": null,
@@ -3233,7 +3233,7 @@
     "routes": [],
     "canonical": "arcee-ai/coder-large",
     "routed": "arcee-ai/coder-large",
-    "slug": "unknown__arcee-ai_coder-large",
+    "slug": "arcee-ai_coder-large",
     "fields": {
      "family": "coder",
      "generation": null,
@@ -3270,7 +3270,7 @@
     "routes": [],
     "canonical": "arcee-ai/maestro-reasoning",
     "routed": "arcee-ai/maestro-reasoning",
-    "slug": "unknown__arcee-ai_maestro-reasoning",
+    "slug": "arcee-ai_maestro-reasoning",
     "fields": {
      "family": "maestro",
      "generation": null,
@@ -3307,7 +3307,7 @@
     "routes": [],
     "canonical": "arcee-ai/spotlight",
     "routed": "arcee-ai/spotlight",
-    "slug": "unknown__arcee-ai_spotlight",
+    "slug": "arcee-ai_spotlight",
     "fields": {
      "family": "spotlight",
      "generation": null,
@@ -3344,7 +3344,7 @@
     "routes": [],
     "canonical": "arcee-ai/trinity-large-preview",
     "routed": "arcee-ai/trinity-large-preview",
-    "slug": "unknown__arcee-ai_trinity-large-preview",
+    "slug": "arcee-ai_trinity-large-preview",
     "fields": {
      "family": "trinity",
      "generation": null,
@@ -3381,7 +3381,7 @@
     "routes": [],
     "canonical": "arcee-ai/trinity-large-thinking",
     "routed": "arcee-ai/trinity-large-thinking",
-    "slug": "unknown__arcee-ai_trinity-large-thinking",
+    "slug": "arcee-ai_trinity-large-thinking",
     "fields": {
      "family": "trinity",
      "generation": null,
@@ -3418,7 +3418,7 @@
     "routes": [],
     "canonical": "arcee-ai/trinity-mini",
     "routed": "arcee-ai/trinity-mini",
-    "slug": "unknown__arcee-ai_trinity-mini",
+    "slug": "arcee-ai_trinity-mini",
     "fields": {
      "family": "trinity",
      "generation": null,
@@ -3455,7 +3455,7 @@
     "routes": [],
     "canonical": "arcee-ai/virtuoso-large",
     "routed": "arcee-ai/virtuoso-large",
-    "slug": "unknown__arcee-ai_virtuoso-large",
+    "slug": "arcee-ai_virtuoso-large",
     "fields": {
      "family": "virtuoso",
      "generation": null,
@@ -3522,7 +3522,7 @@
     "routes": [],
     "canonical": "azure_ai/cohere-command-a-plus-05-2026",
     "routed": "azure_ai/cohere-command-a-plus-05-2026",
-    "slug": "unknown__azure_ai_cohere-command-a-plus-05-2026",
+    "slug": "azure_ai_cohere-command-a-plus-05-2026",
     "fields": {
      "family": "command",
      "generation": "a",
@@ -3559,7 +3559,7 @@
     "routes": [],
     "canonical": "baidu/ernie-4.5-21b-a3b",
     "routed": "baidu/ernie-4.5-21b-a3b",
-    "slug": "unknown__baidu_ernie-4.5-21b-a3b",
+    "slug": "baidu_ernie-4.5-21b-a3b",
     "fields": {
      "family": "ernie",
      "generation": "4.5",
@@ -3596,7 +3596,7 @@
     "routes": [],
     "canonical": "baidu/ernie-4.5-21b-a3b-thinking",
     "routed": "baidu/ernie-4.5-21b-a3b-thinking",
-    "slug": "unknown__baidu_ernie-4.5-21b-a3b-thinking",
+    "slug": "baidu_ernie-4.5-21b-a3b-thinking",
     "fields": {
      "family": "ernie",
      "generation": "4.5",
@@ -3633,7 +3633,7 @@
     "routes": [],
     "canonical": "baidu/ernie-4.5-300b-a47b",
     "routed": "baidu/ernie-4.5-300b-a47b",
-    "slug": "unknown__baidu_ernie-4.5-300b-a47b",
+    "slug": "baidu_ernie-4.5-300b-a47b",
     "fields": {
      "family": "ernie",
      "generation": "4.5",
@@ -3670,7 +3670,7 @@
     "routes": [],
     "canonical": "baidu/ernie-4.5-vl-28b-a3b",
     "routed": "baidu/ernie-4.5-vl-28b-a3b",
-    "slug": "unknown__baidu_ernie-4.5-vl-28b-a3b",
+    "slug": "baidu_ernie-4.5-vl-28b-a3b",
     "fields": {
      "family": "ernie",
      "generation": "4.5",
@@ -3707,7 +3707,7 @@
     "routes": [],
     "canonical": "baidu/ernie-4.5-vl-424b-a47b",
     "routed": "baidu/ernie-4.5-vl-424b-a47b",
-    "slug": "unknown__baidu_ernie-4.5-vl-424b-a47b",
+    "slug": "baidu_ernie-4.5-vl-424b-a47b",
     "fields": {
      "family": "ernie",
      "generation": "4.5",
@@ -3744,7 +3744,7 @@
     "routes": [],
     "canonical": "baidu/qianfan-ocr-fast",
     "routed": "baidu/qianfan-ocr-fast",
-    "slug": "unknown__baidu_qianfan-ocr-fast",
+    "slug": "baidu_qianfan-ocr-fast",
     "fields": {
      "family": "qianfan",
      "generation": null,
@@ -3781,7 +3781,7 @@
     "routes": [],
     "canonical": "bytedance-seed/seed-1.6",
     "routed": "bytedance-seed/seed-1.6",
-    "slug": "unknown__bytedance-seed_seed-1.6",
+    "slug": "bytedance-seed_seed-1.6",
     "fields": {
      "family": "seed",
      "generation": "1.6",
@@ -3818,7 +3818,7 @@
     "routes": [],
     "canonical": "bytedance-seed/seed-1.6-flash",
     "routed": "bytedance-seed/seed-1.6-flash",
-    "slug": "unknown__bytedance-seed_seed-1.6-flash",
+    "slug": "bytedance-seed_seed-1.6-flash",
     "fields": {
      "family": "seed",
      "generation": "1.6",
@@ -3855,7 +3855,7 @@
     "routes": [],
     "canonical": "bytedance-seed/seed-2.0-lite",
     "routed": "bytedance-seed/seed-2.0-lite",
-    "slug": "unknown__bytedance-seed_seed-2.0-lite",
+    "slug": "bytedance-seed_seed-2.0-lite",
     "fields": {
      "family": "seed",
      "generation": "2.0",
@@ -3892,7 +3892,7 @@
     "routes": [],
     "canonical": "bytedance-seed/seed-2.0-mini",
     "routed": "bytedance-seed/seed-2.0-mini",
-    "slug": "unknown__bytedance-seed_seed-2.0-mini",
+    "slug": "bytedance-seed_seed-2.0-mini",
     "fields": {
      "family": "seed",
      "generation": "2.0",
@@ -3929,7 +3929,7 @@
     "routes": [],
     "canonical": "bytedance/ui-tars-1.5-7b",
     "routed": "bytedance/ui-tars-1.5-7b",
-    "slug": "unknown__bytedance_ui-tars-1.5-7b",
+    "slug": "bytedance_ui-tars-1.5-7b",
     "fields": {
      "family": "ui",
      "generation": "1.5",
@@ -4036,7 +4036,7 @@
     ],
     "canonical": "anthropic/claude-opus-4-6",
     "routed": "anthropic/claude-opus-4-6",
-    "slug": "anthropic__claude-opus-4-6",
+    "slug": "anthropic_claude-opus-4-6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -4092,7 +4092,7 @@
     ],
     "canonical": "anthropic/claude-opus-4-8",
     "routed": "anthropic/claude-opus-4-8",
-    "slug": "anthropic__claude-opus-4-8",
+    "slug": "anthropic_claude-opus-4-8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -4275,7 +4275,7 @@
     "routes": [],
     "canonical": "cohere/command-a",
     "routed": "cohere/command-a",
-    "slug": "unknown__cohere_command-a",
+    "slug": "cohere_command-a",
     "fields": {
      "family": "command",
      "generation": "a",
@@ -4314,7 +4314,7 @@
     "routes": [],
     "canonical": "cohere/command-a-plus",
     "routed": "cohere/command-a-plus",
-    "slug": "unknown__cohere_command-a-plus",
+    "slug": "cohere_command-a-plus",
     "fields": {
      "family": "command",
      "generation": "a",
@@ -4351,7 +4351,7 @@
     "routes": [],
     "canonical": "cohere/command-a-plus-05-2026",
     "routed": "cohere/command-a-plus-05-2026",
-    "slug": "unknown__cohere_command-a-plus-05-2026",
+    "slug": "cohere_command-a-plus-05-2026",
     "fields": {
      "family": "command",
      "generation": "a",
@@ -4388,7 +4388,7 @@
     "routes": [],
     "canonical": "cohere/command-r",
     "routed": "cohere/command-r",
-    "slug": "unknown__cohere_command-r",
+    "slug": "cohere_command-r",
     "fields": {
      "family": "command",
      "generation": "r",
@@ -4425,7 +4425,7 @@
     "routes": [],
     "canonical": "cohere/command-r-08-2024",
     "routed": "cohere/command-r-08-2024",
-    "slug": "unknown__cohere_command-r-08-2024",
+    "slug": "cohere_command-r-08-2024",
     "fields": {
      "family": "command",
      "generation": "r",
@@ -4462,7 +4462,7 @@
     "routes": [],
     "canonical": "cohere/command-r-plus-08-2024",
     "routed": "cohere/command-r-plus-08-2024",
-    "slug": "unknown__cohere_command-r-plus-08-2024",
+    "slug": "cohere_command-r-plus-08-2024",
     "fields": {
      "family": "command",
      "generation": "r",
@@ -4499,7 +4499,7 @@
     "routes": [],
     "canonical": "cohere/command-r7b-12-2024",
     "routed": "cohere/command-r7b-12-2024",
-    "slug": "unknown__cohere_command-r7b-12-2024",
+    "slug": "cohere_command-r7b-12-2024",
     "fields": {
      "family": "command",
      "generation": "r",
@@ -4551,7 +4551,7 @@
     "routes": [],
     "canonical": "deepcogito/cogito-v2.1-671b",
     "routed": "deepcogito/cogito-v2.1-671b",
-    "slug": "unknown__deepcogito_cogito-v2.1-671b",
+    "slug": "deepcogito_cogito-v2.1-671b",
     "fields": {
      "family": "cogito",
      "generation": "v2.1",
@@ -4697,7 +4697,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-chat",
     "routed": "deepseek/deepseek-chat",
-    "slug": "unknown__deepseek_deepseek-chat",
+    "slug": "deepseek_deepseek-chat",
     "fields": {
      "family": "deepseek",
      "generation": null,
@@ -4734,7 +4734,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-chat-v3-0324",
     "routed": "deepseek/deepseek-chat-v3-0324",
-    "slug": "unknown__deepseek_deepseek-chat-v3-0324",
+    "slug": "deepseek_deepseek-chat-v3-0324",
     "fields": {
      "family": "deepseek",
      "generation": "v3",
@@ -4771,7 +4771,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-chat-v3.1",
     "routed": "deepseek/deepseek-chat-v3.1",
-    "slug": "unknown__deepseek_deepseek-chat-v3.1",
+    "slug": "deepseek_deepseek-chat-v3.1",
     "fields": {
      "family": "deepseek",
      "generation": "v3.1",
@@ -4808,7 +4808,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-prover-v2",
     "routed": "deepseek/deepseek-prover-v2",
-    "slug": "unknown__deepseek_deepseek-prover-v2",
+    "slug": "deepseek_deepseek-prover-v2",
     "fields": {
      "family": "deepseek",
      "generation": "v2",
@@ -4845,7 +4845,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-r1",
     "routed": "deepseek/deepseek-r1",
-    "slug": "unknown__deepseek_deepseek-r1",
+    "slug": "deepseek_deepseek-r1",
     "fields": {
      "family": "deepseek",
      "generation": "r1",
@@ -4884,7 +4884,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-r1-0528",
     "routed": "deepseek/deepseek-r1-0528",
-    "slug": "unknown__deepseek_deepseek-r1-0528",
+    "slug": "deepseek_deepseek-r1-0528",
     "fields": {
      "family": "deepseek",
      "generation": "r1",
@@ -4921,7 +4921,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-r1-distill-llama-70b",
     "routed": "deepseek/deepseek-r1-distill-llama-70b",
-    "slug": "unknown__deepseek_deepseek-r1-distill-llama-70b",
+    "slug": "deepseek_deepseek-r1-distill-llama-70b",
     "fields": {
      "family": "deepseek",
      "generation": "r1",
@@ -4958,7 +4958,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-r1-distill-qwen-32b",
     "routed": "deepseek/deepseek-r1-distill-qwen-32b",
-    "slug": "unknown__deepseek_deepseek-r1-distill-qwen-32b",
+    "slug": "deepseek_deepseek-r1-distill-qwen-32b",
     "fields": {
      "family": "deepseek",
      "generation": "r1",
@@ -4995,7 +4995,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-reasoner",
     "routed": "deepseek/deepseek-reasoner",
-    "slug": "unknown__deepseek_deepseek-reasoner",
+    "slug": "deepseek_deepseek-reasoner",
     "fields": {
      "family": "deepseek",
      "generation": null,
@@ -5032,7 +5032,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v3.1-terminus",
     "routed": "deepseek/deepseek-v3.1-terminus",
-    "slug": "unknown__deepseek_deepseek-v3.1-terminus",
+    "slug": "deepseek_deepseek-v3.1-terminus",
     "fields": {
      "family": "deepseek",
      "generation": "v3.1",
@@ -5069,7 +5069,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v3.2",
     "routed": "deepseek/deepseek-v3.2",
-    "slug": "unknown__deepseek_deepseek-v3.2",
+    "slug": "deepseek_deepseek-v3.2",
     "fields": {
      "family": "deepseek",
      "generation": "v3.2",
@@ -5110,7 +5110,7 @@
     ],
     "canonical": "deepseek/deepseek-v3.2-exp",
     "routed": "openrouter/deepseek/deepseek-v3.2-exp",
-    "slug": "openrouter__deepseek_deepseek-v3.2-exp",
+    "slug": "deepseek_deepseek-v3.2-exp",
     "fields": {
      "family": "deepseek",
      "generation": "v3.2",
@@ -5155,7 +5155,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v3.2-exp",
     "routed": "deepseek/deepseek-v3.2-exp",
-    "slug": "unknown__deepseek_deepseek-v3.2-exp",
+    "slug": "deepseek_deepseek-v3.2-exp",
     "fields": {
      "family": "deepseek",
      "generation": "v3.2",
@@ -5200,7 +5200,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v3.2-speciale",
     "routed": "deepseek/deepseek-v3.2-speciale",
-    "slug": "unknown__deepseek_deepseek-v3.2-speciale",
+    "slug": "deepseek_deepseek-v3.2-speciale",
     "fields": {
      "family": "deepseek",
      "generation": "v3.2",
@@ -5237,7 +5237,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v4",
     "routed": "deepseek/deepseek-v4",
-    "slug": "unknown__deepseek_deepseek-v4",
+    "slug": "deepseek_deepseek-v4",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -5276,7 +5276,7 @@
     ],
     "canonical": "deepseek/deepseek-v4-flash",
     "routed": "openrouter/deepseek/deepseek-v4-flash",
-    "slug": "openrouter__deepseek_deepseek-v4-flash",
+    "slug": "deepseek_deepseek-v4-flash",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -5321,7 +5321,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v4-flash",
     "routed": "deepseek/deepseek-v4-flash",
-    "slug": "unknown__deepseek_deepseek-v4-flash",
+    "slug": "deepseek_deepseek-v4-flash",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -5368,7 +5368,7 @@
     ],
     "canonical": "deepseek/deepseek-v4-flash-0731",
     "routed": "openrouter/deepseek/deepseek-v4-flash-0731",
-    "slug": "openrouter__deepseek_deepseek-v4-flash-0731",
+    "slug": "deepseek_deepseek-v4-flash-0731",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -5413,7 +5413,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v4-flash-0731",
     "routed": "deepseek/deepseek-v4-flash-0731",
-    "slug": "unknown__deepseek_deepseek-v4-flash-0731",
+    "slug": "deepseek_deepseek-v4-flash-0731",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -5460,7 +5460,7 @@
     ],
     "canonical": "deepseek/deepseek-v4-pro",
     "routed": "openrouter/deepseek/deepseek-v4-pro",
-    "slug": "openrouter__deepseek_deepseek-v4-pro",
+    "slug": "deepseek_deepseek-v4-pro",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -5505,7 +5505,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v4-pro",
     "routed": "deepseek/deepseek-v4-pro",
-    "slug": "unknown__deepseek_deepseek-v4-pro",
+    "slug": "deepseek_deepseek-v4-pro",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -5550,7 +5550,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v4.1",
     "routed": "deepseek/deepseek-v4.1",
-    "slug": "unknown__deepseek_deepseek-v4.1",
+    "slug": "deepseek_deepseek-v4.1",
     "fields": {
      "family": "deepseek",
      "generation": "v4.1",
@@ -5723,7 +5723,7 @@
     "routes": [],
     "canonical": "essentialai/rnj-1-instruct",
     "routed": "essentialai/rnj-1-instruct",
-    "slug": "unknown__essentialai_rnj-1-instruct",
+    "slug": "essentialai_rnj-1-instruct",
     "fields": {
      "family": "rnj",
      "generation": "1",
@@ -6440,7 +6440,7 @@
     "routes": [],
     "canonical": "google/gemini-1.5-flash",
     "routed": "google/gemini-1.5-flash",
-    "slug": "unknown__google_gemini-1.5-flash",
+    "slug": "google_gemini-1.5-flash",
     "fields": {
      "family": "gemini",
      "generation": "1.5",
@@ -6477,7 +6477,7 @@
     "routes": [],
     "canonical": "google/gemini-1.5-pro",
     "routed": "google/gemini-1.5-pro",
-    "slug": "unknown__google_gemini-1.5-pro",
+    "slug": "google_gemini-1.5-pro",
     "fields": {
      "family": "gemini",
      "generation": "1.5",
@@ -6516,7 +6516,7 @@
     "routes": [],
     "canonical": "google/gemini-2",
     "routed": "google/gemini-2",
-    "slug": "unknown__google_gemini-2",
+    "slug": "google_gemini-2",
     "fields": {
      "family": "gemini",
      "generation": "2",
@@ -6553,7 +6553,7 @@
     "routes": [],
     "canonical": "google/gemini-2.0-flash",
     "routed": "google/gemini-2.0-flash",
-    "slug": "unknown__google_gemini-2.0-flash",
+    "slug": "google_gemini-2.0-flash",
     "fields": {
      "family": "gemini",
      "generation": "2.0",
@@ -6592,7 +6592,7 @@
     "routes": [],
     "canonical": "google/gemini-2.0-flash-001",
     "routed": "google/gemini-2.0-flash-001",
-    "slug": "unknown__google_gemini-2.0-flash-001",
+    "slug": "google_gemini-2.0-flash-001",
     "fields": {
      "family": "gemini",
      "generation": "2.0",
@@ -6629,7 +6629,7 @@
     "routes": [],
     "canonical": "google/gemini-2.0-flash-lite-001",
     "routed": "google/gemini-2.0-flash-lite-001",
-    "slug": "unknown__google_gemini-2.0-flash-lite-001",
+    "slug": "google_gemini-2.0-flash-lite-001",
     "fields": {
      "family": "gemini",
      "generation": "2.0",
@@ -6666,7 +6666,7 @@
     "routes": [],
     "canonical": "google/gemini-2.5-flash",
     "routed": "google/gemini-2.5-flash",
-    "slug": "unknown__google_gemini-2.5-flash",
+    "slug": "google_gemini-2.5-flash",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -6705,7 +6705,7 @@
     "routes": [],
     "canonical": "google/gemini-2.5-flash-image",
     "routed": "google/gemini-2.5-flash-image",
-    "slug": "unknown__google_gemini-2.5-flash-image",
+    "slug": "google_gemini-2.5-flash-image",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -6742,7 +6742,7 @@
     "routes": [],
     "canonical": "google/gemini-2.5-flash-lite",
     "routed": "google/gemini-2.5-flash-lite",
-    "slug": "unknown__google_gemini-2.5-flash-lite",
+    "slug": "google_gemini-2.5-flash-lite",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -6781,7 +6781,7 @@
     "routes": [],
     "canonical": "google/gemini-2.5-flash-lite-preview-09-2025",
     "routed": "google/gemini-2.5-flash-lite-preview-09-2025",
-    "slug": "unknown__google_gemini-2.5-flash-lite-preview-09-2025",
+    "slug": "google_gemini-2.5-flash-lite-preview-09-2025",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -6818,7 +6818,7 @@
     "routes": [],
     "canonical": "google/gemini-2.5-pro",
     "routed": "google/gemini-2.5-pro",
-    "slug": "unknown__google_gemini-2.5-pro",
+    "slug": "google_gemini-2.5-pro",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -6857,7 +6857,7 @@
     "routes": [],
     "canonical": "google/gemini-2.5-pro-preview",
     "routed": "google/gemini-2.5-pro-preview",
-    "slug": "unknown__google_gemini-2.5-pro-preview",
+    "slug": "google_gemini-2.5-pro-preview",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -6894,7 +6894,7 @@
     "routes": [],
     "canonical": "google/gemini-2.5-pro-preview-05-06",
     "routed": "google/gemini-2.5-pro-preview-05-06",
-    "slug": "unknown__google_gemini-2.5-pro-preview-05-06",
+    "slug": "google_gemini-2.5-pro-preview-05-06",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -6931,7 +6931,7 @@
     "routes": [],
     "canonical": "google/gemini-3",
     "routed": "google/gemini-3",
-    "slug": "unknown__google_gemini-3",
+    "slug": "google_gemini-3",
     "fields": {
      "family": "gemini",
      "generation": "3",
@@ -6970,7 +6970,7 @@
     ],
     "canonical": "google/gemini-3-flash-preview",
     "routed": "openrouter/google/gemini-3-flash-preview",
-    "slug": "openrouter__google_gemini-3-flash-preview",
+    "slug": "google_gemini-3-flash-preview",
     "fields": {
      "family": "gemini",
      "generation": "3",
@@ -7017,7 +7017,7 @@
     "routes": [],
     "canonical": "google/gemini-3-flash-preview",
     "routed": "google/gemini-3-flash-preview",
-    "slug": "unknown__google_gemini-3-flash-preview",
+    "slug": "google_gemini-3-flash-preview",
     "fields": {
      "family": "gemini",
      "generation": "3",
@@ -7064,7 +7064,7 @@
     "routes": [],
     "canonical": "google/gemini-3-pro",
     "routed": "google/gemini-3-pro",
-    "slug": "unknown__google_gemini-3-pro",
+    "slug": "google_gemini-3-pro",
     "fields": {
      "family": "gemini",
      "generation": "3",
@@ -7103,7 +7103,7 @@
     "routes": [],
     "canonical": "google/gemini-3-pro-image-preview",
     "routed": "google/gemini-3-pro-image-preview",
-    "slug": "unknown__google_gemini-3-pro-image-preview",
+    "slug": "google_gemini-3-pro-image-preview",
     "fields": {
      "family": "gemini",
      "generation": "3",
@@ -7140,7 +7140,7 @@
     "routes": [],
     "canonical": "google/gemini-3-pro-preview",
     "routed": "google/gemini-3-pro-preview",
-    "slug": "unknown__google_gemini-3-pro-preview",
+    "slug": "google_gemini-3-pro-preview",
     "fields": {
      "family": "gemini",
      "generation": "3",
@@ -7177,7 +7177,7 @@
     "routes": [],
     "canonical": "google/gemini-3.0-flash",
     "routed": "google/gemini-3.0-flash",
-    "slug": "unknown__google_gemini-3.0-flash",
+    "slug": "google_gemini-3.0-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.0",
@@ -7218,7 +7218,7 @@
     "routes": [],
     "canonical": "google/gemini-3.1-flash-image-preview",
     "routed": "google/gemini-3.1-flash-image-preview",
-    "slug": "unknown__google_gemini-3.1-flash-image-preview",
+    "slug": "google_gemini-3.1-flash-image-preview",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -7255,7 +7255,7 @@
     "routes": [],
     "canonical": "google/gemini-3.1-flash-lite",
     "routed": "google/gemini-3.1-flash-lite",
-    "slug": "unknown__google_gemini-3.1-flash-lite",
+    "slug": "google_gemini-3.1-flash-lite",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -7292,7 +7292,7 @@
     "routes": [],
     "canonical": "google/gemini-3.1-flash-lite-preview",
     "routed": "google/gemini-3.1-flash-lite-preview",
-    "slug": "unknown__google_gemini-3.1-flash-lite-preview",
+    "slug": "google_gemini-3.1-flash-lite-preview",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -7329,7 +7329,7 @@
     "routes": [],
     "canonical": "google/gemini-3.1-pro",
     "routed": "google/gemini-3.1-pro",
-    "slug": "unknown__google_gemini-3.1-pro",
+    "slug": "google_gemini-3.1-pro",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -7372,7 +7372,7 @@
     ],
     "canonical": "google/gemini-3.1-pro-preview",
     "routed": "openrouter/google/gemini-3.1-pro-preview",
-    "slug": "openrouter__google_gemini-3.1-pro-preview",
+    "slug": "google_gemini-3.1-pro-preview",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -7419,7 +7419,7 @@
     "routes": [],
     "canonical": "google/gemini-3.1-pro-preview",
     "routed": "google/gemini-3.1-pro-preview",
-    "slug": "unknown__google_gemini-3.1-pro-preview",
+    "slug": "google_gemini-3.1-pro-preview",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -7466,7 +7466,7 @@
     "routes": [],
     "canonical": "google/gemini-3.1-pro-preview-customtools",
     "routed": "google/gemini-3.1-pro-preview-customtools",
-    "slug": "unknown__google_gemini-3.1-pro-preview-customtools",
+    "slug": "google_gemini-3.1-pro-preview-customtools",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -7505,7 +7505,7 @@
     ],
     "canonical": "google/gemini-3.5-flash",
     "routed": "openrouter/google/gemini-3.5-flash",
-    "slug": "openrouter__google_gemini-3.5-flash",
+    "slug": "google_gemini-3.5-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.5",
@@ -7552,7 +7552,7 @@
     "routes": [],
     "canonical": "google/gemini-3.5-flash",
     "routed": "google/gemini-3.5-flash",
-    "slug": "unknown__google_gemini-3.5-flash",
+    "slug": "google_gemini-3.5-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.5",
@@ -7601,7 +7601,7 @@
     ],
     "canonical": "google/gemini-3.6-flash",
     "routed": "openrouter/google/gemini-3.6-flash",
-    "slug": "openrouter__google_gemini-3.6-flash",
+    "slug": "google_gemini-3.6-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.6",
@@ -7651,7 +7651,7 @@
     "routes": [],
     "canonical": "google/gemini-3.6-flash",
     "routed": "google/gemini-3.6-flash",
-    "slug": "unknown__google_gemini-3.6-flash",
+    "slug": "google_gemini-3.6-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.6",
@@ -7703,7 +7703,7 @@
     ],
     "canonical": "google/gemini-3.7-flash",
     "routed": "openrouter/google/gemini-3.7-flash",
-    "slug": "openrouter__google_gemini-3.7-flash",
+    "slug": "google_gemini-3.7-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.7",
@@ -7750,7 +7750,7 @@
     "routes": [],
     "canonical": "google/gemini-3.7-flash",
     "routed": "google/gemini-3.7-flash",
-    "slug": "unknown__google_gemini-3.7-flash",
+    "slug": "google_gemini-3.7-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.7",
@@ -7797,7 +7797,7 @@
     "routes": [],
     "canonical": "google/gemini-pro",
     "routed": "google/gemini-pro",
-    "slug": "unknown__google_gemini-pro",
+    "slug": "google_gemini-pro",
     "fields": {
      "family": "gemini",
      "generation": null,
@@ -7834,7 +7834,7 @@
     "routes": [],
     "canonical": "google/gemini-pro-latest",
     "routed": "google/gemini-pro-latest",
-    "slug": "unknown__google_gemini-pro-latest",
+    "slug": "google_gemini-pro-latest",
     "fields": {
      "family": "gemini",
      "generation": null,
@@ -7871,7 +7871,7 @@
     "routes": [],
     "canonical": "google/gemma",
     "routed": "google/gemma",
-    "slug": "unknown__google_gemma",
+    "slug": "google_gemma",
     "fields": {
      "family": "gemma",
      "generation": null,
@@ -7908,7 +7908,7 @@
     "routes": [],
     "canonical": "google/gemma-2-27b-it",
     "routed": "google/gemma-2-27b-it",
-    "slug": "unknown__google_gemma-2-27b-it",
+    "slug": "google_gemma-2-27b-it",
     "fields": {
      "family": "gemma",
      "generation": "2",
@@ -7945,7 +7945,7 @@
     "routes": [],
     "canonical": "google/gemma-2-9b-it",
     "routed": "google/gemma-2-9b-it",
-    "slug": "unknown__google_gemma-2-9b-it",
+    "slug": "google_gemma-2-9b-it",
     "fields": {
      "family": "gemma",
      "generation": "2",
@@ -7982,7 +7982,7 @@
     "routes": [],
     "canonical": "google/gemma-3-12b-it",
     "routed": "google/gemma-3-12b-it",
-    "slug": "unknown__google_gemma-3-12b-it",
+    "slug": "google_gemma-3-12b-it",
     "fields": {
      "family": "gemma",
      "generation": "3",
@@ -8019,7 +8019,7 @@
     "routes": [],
     "canonical": "google/gemma-3-27b-it",
     "routed": "google/gemma-3-27b-it",
-    "slug": "unknown__google_gemma-3-27b-it",
+    "slug": "google_gemma-3-27b-it",
     "fields": {
      "family": "gemma",
      "generation": "3",
@@ -8058,7 +8058,7 @@
     "routes": [],
     "canonical": "google/gemma-3-4b-it",
     "routed": "google/gemma-3-4b-it",
-    "slug": "unknown__google_gemma-3-4b-it",
+    "slug": "google_gemma-3-4b-it",
     "fields": {
      "family": "gemma",
      "generation": "3",
@@ -8095,7 +8095,7 @@
     "routes": [],
     "canonical": "google/gemma-3n-e4b-it",
     "routed": "google/gemma-3n-e4b-it",
-    "slug": "unknown__google_gemma-3n-e4b-it",
+    "slug": "google_gemma-3n-e4b-it",
     "fields": {
      "family": "gemma",
      "generation": "3n",
@@ -8132,7 +8132,7 @@
     "routes": [],
     "canonical": "google/gemma-4-26b-a4b-it",
     "routed": "google/gemma-4-26b-a4b-it",
-    "slug": "unknown__google_gemma-4-26b-a4b-it",
+    "slug": "google_gemma-4-26b-a4b-it",
     "fields": {
      "family": "gemma",
      "generation": "4",
@@ -8169,7 +8169,7 @@
     "routes": [],
     "canonical": "google/gemma-4-31b",
     "routed": "google/gemma-4-31b",
-    "slug": "unknown__google_gemma-4-31b",
+    "slug": "google_gemma-4-31b",
     "fields": {
      "family": "gemma",
      "generation": "4",
@@ -8208,7 +8208,7 @@
     ],
     "canonical": "google/gemma-4-31b-it",
     "routed": "openrouter/google/gemma-4-31b-it",
-    "slug": "openrouter__google_gemma-4-31b-it",
+    "slug": "google_gemma-4-31b-it",
     "fields": {
      "family": "gemma",
      "generation": "4",
@@ -8253,7 +8253,7 @@
     "routes": [],
     "canonical": "google/gemma-4-31b-it",
     "routed": "google/gemma-4-31b-it",
-    "slug": "unknown__google_gemma-4-31b-it",
+    "slug": "google_gemma-4-31b-it",
     "fields": {
      "family": "gemma",
      "generation": "4",
@@ -9251,7 +9251,7 @@
     "routes": [],
     "canonical": "gryphe/mythomax-l2-13b",
     "routed": "gryphe/mythomax-l2-13b",
-    "slug": "unknown__gryphe_mythomax-l2-13b",
+    "slug": "gryphe_mythomax-l2-13b",
     "fields": {
      "family": "mythomax",
      "generation": "l2",
@@ -9383,7 +9383,7 @@
     "routes": [],
     "canonical": "ibm-granite/granite-4.0-h-micro",
     "routed": "ibm-granite/granite-4.0-h-micro",
-    "slug": "unknown__ibm-granite_granite-4.0-h-micro",
+    "slug": "ibm-granite_granite-4.0-h-micro",
     "fields": {
      "family": "granite",
      "generation": "4.0",
@@ -9420,7 +9420,7 @@
     "routes": [],
     "canonical": "ibm-granite/granite-4.1-8b",
     "routed": "ibm-granite/granite-4.1-8b",
-    "slug": "unknown__ibm-granite_granite-4.1-8b",
+    "slug": "ibm-granite_granite-4.1-8b",
     "fields": {
      "family": "granite",
      "generation": "4.1",
@@ -9457,7 +9457,7 @@
     "routes": [],
     "canonical": "inception/mercury-2",
     "routed": "inception/mercury-2",
-    "slug": "unknown__inception_mercury-2",
+    "slug": "inception_mercury-2",
     "fields": {
      "family": "mercury",
      "generation": "2",
@@ -9494,7 +9494,7 @@
     "routes": [],
     "canonical": "inclusionai/ling-1t",
     "routed": "inclusionai/ling-1t",
-    "slug": "unknown__inclusionai_ling-1t",
+    "slug": "inclusionai_ling-1t",
     "fields": {
      "family": "ling",
      "generation": null,
@@ -9531,7 +9531,7 @@
     "routes": [],
     "canonical": "inclusionai/ling-2.6-1t",
     "routed": "inclusionai/ling-2.6-1t",
-    "slug": "unknown__inclusionai_ling-2.6-1t",
+    "slug": "inclusionai_ling-2.6-1t",
     "fields": {
      "family": "ling",
      "generation": "2.6",
@@ -9568,7 +9568,7 @@
     "routes": [],
     "canonical": "inclusionai/ling-2.6-flash",
     "routed": "inclusionai/ling-2.6-flash",
-    "slug": "unknown__inclusionai_ling-2.6-flash",
+    "slug": "inclusionai_ling-2.6-flash",
     "fields": {
      "family": "ling",
      "generation": "2.6",
@@ -9605,7 +9605,7 @@
     "routes": [],
     "canonical": "inclusionai/ring-2.6-1t",
     "routed": "inclusionai/ring-2.6-1t",
-    "slug": "unknown__inclusionai_ring-2.6-1t",
+    "slug": "inclusionai_ring-2.6-1t",
     "fields": {
      "family": "ring",
      "generation": "2.6",
@@ -9642,7 +9642,7 @@
     "routes": [],
     "canonical": "inflection/inflection-3-pi",
     "routed": "inflection/inflection-3-pi",
-    "slug": "unknown__inflection_inflection-3-pi",
+    "slug": "inflection_inflection-3-pi",
     "fields": {
      "family": "inflection",
      "generation": "3",
@@ -9679,7 +9679,7 @@
     "routes": [],
     "canonical": "inflection/inflection-3-productivity",
     "routed": "inflection/inflection-3-productivity",
-    "slug": "unknown__inflection_inflection-3-productivity",
+    "slug": "inflection_inflection-3-productivity",
     "fields": {
      "family": "inflection",
      "generation": "3",
@@ -9936,7 +9936,7 @@
     "routes": [],
     "canonical": "kwaipilot/kat-coder-pro-v2",
     "routed": "kwaipilot/kat-coder-pro-v2",
-    "slug": "unknown__kwaipilot_kat-coder-pro-v2",
+    "slug": "kwaipilot_kat-coder-pro-v2",
     "fields": {
      "family": "kat",
      "generation": "v2",
@@ -9973,7 +9973,7 @@
     "routes": [],
     "canonical": "liquid/lfm-2-24b-a2b",
     "routed": "liquid/lfm-2-24b-a2b",
-    "slug": "unknown__liquid_lfm-2-24b-a2b",
+    "slug": "liquid_lfm-2-24b-a2b",
     "fields": {
      "family": "lfm",
      "generation": "2",
@@ -10013,7 +10013,7 @@
     ],
     "canonical": "anthropic/claude-opus-5",
     "routed": "litellm/openrouter/anthropic/claude-opus-5",
-    "slug": "litellm__anthropic_claude-opus-5",
+    "slug": "anthropic_claude-opus-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -10101,7 +10101,7 @@
     "routes": [],
     "canonical": "mancer/weaver",
     "routed": "mancer/weaver",
-    "slug": "unknown__mancer_weaver",
+    "slug": "mancer_weaver",
     "fields": {
      "family": "weaver",
      "generation": null,
@@ -10138,7 +10138,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3-70b",
     "routed": "meta-llama/llama-3-70b",
-    "slug": "unknown__meta-llama_llama-3-70b",
+    "slug": "meta-llama_llama-3-70b",
     "fields": {
      "family": "llama",
      "generation": "3",
@@ -10175,7 +10175,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3-70b-instruct",
     "routed": "meta-llama/llama-3-70b-instruct",
-    "slug": "unknown__meta-llama_llama-3-70b-instruct",
+    "slug": "meta-llama_llama-3-70b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3",
@@ -10212,7 +10212,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3-8b-instruct",
     "routed": "meta-llama/llama-3-8b-instruct",
-    "slug": "unknown__meta-llama_llama-3-8b-instruct",
+    "slug": "meta-llama_llama-3-8b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3",
@@ -10249,7 +10249,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.1-405b-instruct",
     "routed": "meta-llama/llama-3.1-405b-instruct",
-    "slug": "unknown__meta-llama_llama-3.1-405b-instruct",
+    "slug": "meta-llama_llama-3.1-405b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.1",
@@ -10286,7 +10286,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.1-70b-instruct",
     "routed": "meta-llama/llama-3.1-70b-instruct",
-    "slug": "unknown__meta-llama_llama-3.1-70b-instruct",
+    "slug": "meta-llama_llama-3.1-70b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.1",
@@ -10323,7 +10323,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.1-8b-instruct",
     "routed": "meta-llama/llama-3.1-8b-instruct",
-    "slug": "unknown__meta-llama_llama-3.1-8b-instruct",
+    "slug": "meta-llama_llama-3.1-8b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.1",
@@ -10360,7 +10360,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.2-11b-vision-instruct",
     "routed": "meta-llama/llama-3.2-11b-vision-instruct",
-    "slug": "unknown__meta-llama_llama-3.2-11b-vision-instruct",
+    "slug": "meta-llama_llama-3.2-11b-vision-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.2",
@@ -10397,7 +10397,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.2-1b-instruct",
     "routed": "meta-llama/llama-3.2-1b-instruct",
-    "slug": "unknown__meta-llama_llama-3.2-1b-instruct",
+    "slug": "meta-llama_llama-3.2-1b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.2",
@@ -10434,7 +10434,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.2-3b-instruct",
     "routed": "meta-llama/llama-3.2-3b-instruct",
-    "slug": "unknown__meta-llama_llama-3.2-3b-instruct",
+    "slug": "meta-llama_llama-3.2-3b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.2",
@@ -10471,7 +10471,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.2-90b-vision-instruct",
     "routed": "meta-llama/llama-3.2-90b-vision-instruct",
-    "slug": "unknown__meta-llama_llama-3.2-90b-vision-instruct",
+    "slug": "meta-llama_llama-3.2-90b-vision-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.2",
@@ -10508,7 +10508,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-3.3-70b-instruct",
     "routed": "meta-llama/llama-3.3-70b-instruct",
-    "slug": "unknown__meta-llama_llama-3.3-70b-instruct",
+    "slug": "meta-llama_llama-3.3-70b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.3",
@@ -10547,7 +10547,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-4-maverick",
     "routed": "meta-llama/llama-4-maverick",
-    "slug": "unknown__meta-llama_llama-4-maverick",
+    "slug": "meta-llama_llama-4-maverick",
     "fields": {
      "family": "llama",
      "generation": "4",
@@ -10584,7 +10584,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-4-scout",
     "routed": "meta-llama/llama-4-scout",
-    "slug": "unknown__meta-llama_llama-4-scout",
+    "slug": "meta-llama_llama-4-scout",
     "fields": {
      "family": "llama",
      "generation": "4",
@@ -10621,7 +10621,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-guard-3-8b",
     "routed": "meta-llama/llama-guard-3-8b",
-    "slug": "unknown__meta-llama_llama-guard-3-8b",
+    "slug": "meta-llama_llama-guard-3-8b",
     "fields": {
      "family": "llama",
      "generation": "3",
@@ -10658,7 +10658,7 @@
     "routes": [],
     "canonical": "meta-llama/llama-guard-4-12b",
     "routed": "meta-llama/llama-guard-4-12b",
-    "slug": "unknown__meta-llama_llama-guard-4-12b",
+    "slug": "meta-llama_llama-guard-4-12b",
     "fields": {
      "family": "llama",
      "generation": "4",
@@ -10695,7 +10695,7 @@
     "routes": [],
     "canonical": "meta/muse-glimmer-30b",
     "routed": "meta/muse-glimmer-30b",
-    "slug": "unknown__meta_muse-glimmer-30b",
+    "slug": "meta_muse-glimmer-30b",
     "fields": {
      "family": "muse",
      "generation": null,
@@ -10734,7 +10734,7 @@
     ],
     "canonical": "meta/muse-spark-1.1",
     "routed": "openrouter/meta/muse-spark-1.1",
-    "slug": "openrouter__meta_muse-spark-1.1",
+    "slug": "meta_muse-spark-1.1",
     "fields": {
      "family": "muse",
      "generation": "1.1",
@@ -10779,7 +10779,7 @@
     "routes": [],
     "canonical": "meta/muse-spark-1.1",
     "routed": "meta/muse-spark-1.1",
-    "slug": "unknown__meta_muse-spark-1.1",
+    "slug": "meta_muse-spark-1.1",
     "fields": {
      "family": "muse",
      "generation": "1.1",
@@ -10824,7 +10824,7 @@
     "routes": [],
     "canonical": "meta/muse-spark-1.2",
     "routed": "meta/muse-spark-1.2",
-    "slug": "unknown__meta_muse-spark-1.2",
+    "slug": "meta_muse-spark-1.2",
     "fields": {
      "family": "muse",
      "generation": "1.2",
@@ -10863,7 +10863,7 @@
     "routes": [],
     "canonical": "meta/Muse-Spark-1.2",
     "routed": "meta/Muse-Spark-1.2",
-    "slug": "unknown__meta_Muse-Spark-1.2",
+    "slug": "meta_Muse-Spark-1.2",
     "fields": {
      "family": "muse",
      "generation": "1.2",
@@ -10900,7 +10900,7 @@
     "routes": [],
     "canonical": "meta/tolokaforge-canary-not-a-real-model",
     "routed": "meta/tolokaforge-canary-not-a-real-model",
-    "slug": "unknown__meta_tolokaforge-canary-not-a-real-model",
+    "slug": "meta_tolokaforge-canary-not-a-real-model",
     "fields": {
      "family": "tolokaforge",
      "generation": null,
@@ -10937,7 +10937,7 @@
     "routes": [],
     "canonical": "microsoft/phi-4",
     "routed": "microsoft/phi-4",
-    "slug": "unknown__microsoft_phi-4",
+    "slug": "microsoft_phi-4",
     "fields": {
      "family": "phi",
      "generation": "4",
@@ -10974,7 +10974,7 @@
     "routes": [],
     "canonical": "microsoft/phi-4-mini-instruct",
     "routed": "microsoft/phi-4-mini-instruct",
-    "slug": "unknown__microsoft_phi-4-mini-instruct",
+    "slug": "microsoft_phi-4-mini-instruct",
     "fields": {
      "family": "phi",
      "generation": "4",
@@ -11011,7 +11011,7 @@
     "routes": [],
     "canonical": "microsoft/wizardlm-2-8x22b",
     "routed": "microsoft/wizardlm-2-8x22b",
-    "slug": "unknown__microsoft_wizardlm-2-8x22b",
+    "slug": "microsoft_wizardlm-2-8x22b",
     "fields": {
      "family": "wizardlm",
      "generation": "2",
@@ -11153,7 +11153,7 @@
     "routes": [],
     "canonical": "minimax/minimax-01",
     "routed": "minimax/minimax-01",
-    "slug": "unknown__minimax_minimax-01",
+    "slug": "minimax_minimax-01",
     "fields": {
      "family": "minimax",
      "generation": "01",
@@ -11190,7 +11190,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m1",
     "routed": "minimax/minimax-m1",
-    "slug": "unknown__minimax_minimax-m1",
+    "slug": "minimax_minimax-m1",
     "fields": {
      "family": "minimax",
      "generation": "m1",
@@ -11227,7 +11227,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m2",
     "routed": "minimax/minimax-m2",
-    "slug": "unknown__minimax_minimax-m2",
+    "slug": "minimax_minimax-m2",
     "fields": {
      "family": "minimax",
      "generation": "m2",
@@ -11264,7 +11264,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m2-her",
     "routed": "minimax/minimax-m2-her",
-    "slug": "unknown__minimax_minimax-m2-her",
+    "slug": "minimax_minimax-m2-her",
     "fields": {
      "family": "minimax",
      "generation": "m2",
@@ -11301,7 +11301,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m2.1",
     "routed": "minimax/minimax-m2.1",
-    "slug": "unknown__minimax_minimax-m2.1",
+    "slug": "minimax_minimax-m2.1",
     "fields": {
      "family": "minimax",
      "generation": "m2.1",
@@ -11338,7 +11338,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m2.5",
     "routed": "minimax/minimax-m2.5",
-    "slug": "unknown__minimax_minimax-m2.5",
+    "slug": "minimax_minimax-m2.5",
     "fields": {
      "family": "minimax",
      "generation": "m2.5",
@@ -11377,7 +11377,7 @@
     ],
     "canonical": "minimax/minimax-m2.7",
     "routed": "openrouter/minimax/minimax-m2.7",
-    "slug": "openrouter__minimax_minimax-m2.7",
+    "slug": "minimax_minimax-m2.7",
     "fields": {
      "family": "minimax",
      "generation": "m2.7",
@@ -11421,7 +11421,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m2.7",
     "routed": "minimax/minimax-m2.7",
-    "slug": "unknown__minimax_minimax-m2.7",
+    "slug": "minimax_minimax-m2.7",
     "fields": {
      "family": "minimax",
      "generation": "m2.7",
@@ -11467,7 +11467,7 @@
     ],
     "canonical": "minimax/minimax-m3",
     "routed": "openrouter/minimax/minimax-m3",
-    "slug": "openrouter__minimax_minimax-m3",
+    "slug": "minimax_minimax-m3",
     "fields": {
      "family": "minimax",
      "generation": "m3",
@@ -11514,7 +11514,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m3",
     "routed": "minimax/minimax-m3",
-    "slug": "unknown__minimax_minimax-m3",
+    "slug": "minimax_minimax-m3",
     "fields": {
      "family": "minimax",
      "generation": "m3",
@@ -11561,7 +11561,7 @@
     "routes": [],
     "canonical": "minimax/minimax-m3-1m",
     "routed": "minimax/minimax-m3-1m",
-    "slug": "unknown__minimax_minimax-m3-1m",
+    "slug": "minimax_minimax-m3-1m",
     "fields": {
      "family": "minimax",
      "generation": "m3",
@@ -11598,7 +11598,7 @@
     "routes": [],
     "canonical": "minimax/minimax-test",
     "routed": "minimax/minimax-test",
-    "slug": "unknown__minimax_minimax-test",
+    "slug": "minimax_minimax-test",
     "fields": {
      "family": "minimax",
      "generation": null,
@@ -11711,7 +11711,7 @@
     "routes": [],
     "canonical": "mistral/mistral-large",
     "routed": "mistral/mistral-large",
-    "slug": "unknown__mistral_mistral-large",
+    "slug": "mistral_mistral-large",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -11770,7 +11770,7 @@
     "routes": [],
     "canonical": "mistralai/codestral-2508",
     "routed": "mistralai/codestral-2508",
-    "slug": "unknown__mistralai_codestral-2508",
+    "slug": "mistralai_codestral-2508",
     "fields": {
      "family": "codestral",
      "generation": null,
@@ -11809,7 +11809,7 @@
     "routes": [],
     "canonical": "mistralai/devstral-2512",
     "routed": "mistralai/devstral-2512",
-    "slug": "unknown__mistralai_devstral-2512",
+    "slug": "mistralai_devstral-2512",
     "fields": {
      "family": "devstral",
      "generation": null,
@@ -11846,7 +11846,7 @@
     "routes": [],
     "canonical": "mistralai/devstral-medium",
     "routed": "mistralai/devstral-medium",
-    "slug": "unknown__mistralai_devstral-medium",
+    "slug": "mistralai_devstral-medium",
     "fields": {
      "family": "devstral",
      "generation": null,
@@ -11883,7 +11883,7 @@
     "routes": [],
     "canonical": "mistralai/devstral-small",
     "routed": "mistralai/devstral-small",
-    "slug": "unknown__mistralai_devstral-small",
+    "slug": "mistralai_devstral-small",
     "fields": {
      "family": "devstral",
      "generation": null,
@@ -11922,7 +11922,7 @@
     "routes": [],
     "canonical": "mistralai/magistral-medium-2506",
     "routed": "mistralai/magistral-medium-2506",
-    "slug": "unknown__mistralai_magistral-medium-2506",
+    "slug": "mistralai_magistral-medium-2506",
     "fields": {
      "family": "magistral",
      "generation": null,
@@ -11961,7 +11961,7 @@
     "routes": [],
     "canonical": "mistralai/magistral-small-2506",
     "routed": "mistralai/magistral-small-2506",
-    "slug": "unknown__mistralai_magistral-small-2506",
+    "slug": "mistralai_magistral-small-2506",
     "fields": {
      "family": "magistral",
      "generation": null,
@@ -11998,7 +11998,7 @@
     "routes": [],
     "canonical": "mistralai/ministral-14b-2512",
     "routed": "mistralai/ministral-14b-2512",
-    "slug": "unknown__mistralai_ministral-14b-2512",
+    "slug": "mistralai_ministral-14b-2512",
     "fields": {
      "family": "ministral",
      "generation": null,
@@ -12035,7 +12035,7 @@
     "routes": [],
     "canonical": "mistralai/ministral-3b",
     "routed": "mistralai/ministral-3b",
-    "slug": "unknown__mistralai_ministral-3b",
+    "slug": "mistralai_ministral-3b",
     "fields": {
      "family": "ministral",
      "generation": null,
@@ -12072,7 +12072,7 @@
     "routes": [],
     "canonical": "mistralai/ministral-3b-2512",
     "routed": "mistralai/ministral-3b-2512",
-    "slug": "unknown__mistralai_ministral-3b-2512",
+    "slug": "mistralai_ministral-3b-2512",
     "fields": {
      "family": "ministral",
      "generation": null,
@@ -12109,7 +12109,7 @@
     "routes": [],
     "canonical": "mistralai/ministral-8b",
     "routed": "mistralai/ministral-8b",
-    "slug": "unknown__mistralai_ministral-8b",
+    "slug": "mistralai_ministral-8b",
     "fields": {
      "family": "ministral",
      "generation": null,
@@ -12146,7 +12146,7 @@
     "routes": [],
     "canonical": "mistralai/ministral-8b-2512",
     "routed": "mistralai/ministral-8b-2512",
-    "slug": "unknown__mistralai_ministral-8b-2512",
+    "slug": "mistralai_ministral-8b-2512",
     "fields": {
      "family": "ministral",
      "generation": null,
@@ -12183,7 +12183,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-7b-instruct-v0.1",
     "routed": "mistralai/mistral-7b-instruct-v0.1",
-    "slug": "unknown__mistralai_mistral-7b-instruct-v0.1",
+    "slug": "mistralai_mistral-7b-instruct-v0.1",
     "fields": {
      "family": "mistral",
      "generation": "v0.1",
@@ -12220,7 +12220,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-large",
     "routed": "mistralai/mistral-large",
-    "slug": "unknown__mistralai_mistral-large",
+    "slug": "mistralai_mistral-large",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12259,7 +12259,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-large-2407",
     "routed": "mistralai/mistral-large-2407",
-    "slug": "unknown__mistralai_mistral-large-2407",
+    "slug": "mistralai_mistral-large-2407",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12296,7 +12296,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-large-2411",
     "routed": "mistralai/mistral-large-2411",
-    "slug": "unknown__mistralai_mistral-large-2411",
+    "slug": "mistralai_mistral-large-2411",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12333,7 +12333,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-large-2512",
     "routed": "mistralai/mistral-large-2512",
-    "slug": "unknown__mistralai_mistral-large-2512",
+    "slug": "mistralai_mistral-large-2512",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12370,7 +12370,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-medium-3",
     "routed": "mistralai/mistral-medium-3",
-    "slug": "unknown__mistralai_mistral-medium-3",
+    "slug": "mistralai_mistral-medium-3",
     "fields": {
      "family": "mistral",
      "generation": "3",
@@ -12409,7 +12409,7 @@
     ],
     "canonical": "mistralai/mistral-medium-3-5",
     "routed": "openrouter/mistralai/mistral-medium-3-5",
-    "slug": "openrouter__mistralai_mistral-medium-3-5",
+    "slug": "mistralai_mistral-medium-3-5",
     "fields": {
      "family": "mistral",
      "generation": "3.5",
@@ -12454,7 +12454,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-medium-3-5",
     "routed": "mistralai/mistral-medium-3-5",
-    "slug": "unknown__mistralai_mistral-medium-3-5",
+    "slug": "mistralai_mistral-medium-3-5",
     "fields": {
      "family": "mistral",
      "generation": "3.5",
@@ -12499,7 +12499,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-medium-3.1",
     "routed": "mistralai/mistral-medium-3.1",
-    "slug": "unknown__mistralai_mistral-medium-3.1",
+    "slug": "mistralai_mistral-medium-3.1",
     "fields": {
      "family": "mistral",
      "generation": "3.1",
@@ -12536,7 +12536,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-medium-3.5",
     "routed": "mistralai/mistral-medium-3.5",
-    "slug": "unknown__mistralai_mistral-medium-3.5",
+    "slug": "mistralai_mistral-medium-3.5",
     "fields": {
      "family": "mistral",
      "generation": "3.5",
@@ -12573,7 +12573,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-nemo",
     "routed": "mistralai/mistral-nemo",
-    "slug": "unknown__mistralai_mistral-nemo",
+    "slug": "mistralai_mistral-nemo",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12610,7 +12610,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-saba",
     "routed": "mistralai/mistral-saba",
-    "slug": "unknown__mistralai_mistral-saba",
+    "slug": "mistralai_mistral-saba",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12647,7 +12647,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-small",
     "routed": "mistralai/mistral-small",
-    "slug": "unknown__mistralai_mistral-small",
+    "slug": "mistralai_mistral-small",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12684,7 +12684,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-small-24b-instruct-2501",
     "routed": "mistralai/mistral-small-24b-instruct-2501",
-    "slug": "unknown__mistralai_mistral-small-24b-instruct-2501",
+    "slug": "mistralai_mistral-small-24b-instruct-2501",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12721,7 +12721,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-small-2603",
     "routed": "mistralai/mistral-small-2603",
-    "slug": "unknown__mistralai_mistral-small-2603",
+    "slug": "mistralai_mistral-small-2603",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12758,7 +12758,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-small-3.1-24b-instruct",
     "routed": "mistralai/mistral-small-3.1-24b-instruct",
-    "slug": "unknown__mistralai_mistral-small-3.1-24b-instruct",
+    "slug": "mistralai_mistral-small-3.1-24b-instruct",
     "fields": {
      "family": "mistral",
      "generation": "3.1",
@@ -12795,7 +12795,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-small-3.2-24b-instruct",
     "routed": "mistralai/mistral-small-3.2-24b-instruct",
-    "slug": "unknown__mistralai_mistral-small-3.2-24b-instruct",
+    "slug": "mistralai_mistral-small-3.2-24b-instruct",
     "fields": {
      "family": "mistral",
      "generation": "3.2",
@@ -12832,7 +12832,7 @@
     "routes": [],
     "canonical": "mistralai/mistral-small-creative",
     "routed": "mistralai/mistral-small-creative",
-    "slug": "unknown__mistralai_mistral-small-creative",
+    "slug": "mistralai_mistral-small-creative",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -12869,7 +12869,7 @@
     "routes": [],
     "canonical": "mistralai/mixtral-8x22b-instruct",
     "routed": "mistralai/mixtral-8x22b-instruct",
-    "slug": "unknown__mistralai_mixtral-8x22b-instruct",
+    "slug": "mistralai_mixtral-8x22b-instruct",
     "fields": {
      "family": "mixtral",
      "generation": null,
@@ -12906,7 +12906,7 @@
     "routes": [],
     "canonical": "mistralai/mixtral-8x7b-instruct",
     "routed": "mistralai/mixtral-8x7b-instruct",
-    "slug": "unknown__mistralai_mixtral-8x7b-instruct",
+    "slug": "mistralai_mixtral-8x7b-instruct",
     "fields": {
      "family": "mixtral",
      "generation": null,
@@ -12943,7 +12943,7 @@
     "routes": [],
     "canonical": "mistralai/pixtral-large-2411",
     "routed": "mistralai/pixtral-large-2411",
-    "slug": "unknown__mistralai_pixtral-large-2411",
+    "slug": "mistralai_pixtral-large-2411",
     "fields": {
      "family": "pixtral",
      "generation": null,
@@ -12980,7 +12980,7 @@
     "routes": [],
     "canonical": "mistralai/voxtral-small-24b-2507",
     "routed": "mistralai/voxtral-small-24b-2507",
-    "slug": "unknown__mistralai_voxtral-small-24b-2507",
+    "slug": "mistralai_voxtral-small-24b-2507",
     "fields": {
      "family": "voxtral",
      "generation": null,
@@ -13032,7 +13032,7 @@
     "routes": [],
     "canonical": "moonshot/kimi-k2.5",
     "routed": "moonshot/kimi-k2.5",
-    "slug": "unknown__moonshot_kimi-k2.5",
+    "slug": "moonshot_kimi-k2.5",
     "fields": {
      "family": "kimi",
      "generation": "k2.5",
@@ -13088,7 +13088,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2",
     "routed": "moonshotai/kimi-k2",
-    "slug": "unknown__moonshotai_kimi-k2",
+    "slug": "moonshotai_kimi-k2",
     "fields": {
      "family": "kimi",
      "generation": "k2",
@@ -13127,7 +13127,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2-0905",
     "routed": "moonshotai/kimi-k2-0905",
-    "slug": "unknown__moonshotai_kimi-k2-0905",
+    "slug": "moonshotai_kimi-k2-0905",
     "fields": {
      "family": "kimi",
      "generation": "k2",
@@ -13164,7 +13164,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2-thinking",
     "routed": "moonshotai/kimi-k2-thinking",
-    "slug": "unknown__moonshotai_kimi-k2-thinking",
+    "slug": "moonshotai_kimi-k2-thinking",
     "fields": {
      "family": "kimi",
      "generation": "k2",
@@ -13203,7 +13203,7 @@
     ],
     "canonical": "moonshotai/kimi-k2.5",
     "routed": "openrouter/moonshotai/kimi-k2.5",
-    "slug": "openrouter__moonshotai_kimi-k2.5",
+    "slug": "moonshotai_kimi-k2.5",
     "fields": {
      "family": "kimi",
      "generation": "k2.5",
@@ -13248,7 +13248,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2.5",
     "routed": "moonshotai/kimi-k2.5",
-    "slug": "unknown__moonshotai_kimi-k2.5",
+    "slug": "moonshotai_kimi-k2.5",
     "fields": {
      "family": "kimi",
      "generation": "k2.5",
@@ -13295,7 +13295,7 @@
     ],
     "canonical": "moonshotai/kimi-k2.6",
     "routed": "openrouter/moonshotai/kimi-k2.6",
-    "slug": "openrouter__moonshotai_kimi-k2.6",
+    "slug": "moonshotai_kimi-k2.6",
     "fields": {
      "family": "kimi",
      "generation": "k2.6",
@@ -13342,7 +13342,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2.6",
     "routed": "moonshotai/kimi-k2.6",
-    "slug": "unknown__moonshotai_kimi-k2.6",
+    "slug": "moonshotai_kimi-k2.6",
     "fields": {
      "family": "kimi",
      "generation": "k2.6",
@@ -13389,7 +13389,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2.7",
     "routed": "moonshotai/kimi-k2.7",
-    "slug": "unknown__moonshotai_kimi-k2.7",
+    "slug": "moonshotai_kimi-k2.7",
     "fields": {
      "family": "kimi",
      "generation": "k2.7",
@@ -13428,7 +13428,7 @@
     ],
     "canonical": "moonshotai/kimi-k2.7-code",
     "routed": "openrouter/moonshotai/kimi-k2.7-code",
-    "slug": "openrouter__moonshotai_kimi-k2.7-code",
+    "slug": "moonshotai_kimi-k2.7-code",
     "fields": {
      "family": "kimi",
      "generation": "k2.7",
@@ -13475,7 +13475,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2.7-code",
     "routed": "moonshotai/kimi-k2.7-code",
-    "slug": "unknown__moonshotai_kimi-k2.7-code",
+    "slug": "moonshotai_kimi-k2.7-code",
     "fields": {
      "family": "kimi",
      "generation": "k2.7",
@@ -13522,7 +13522,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k2.7-code-moonshotai-pinned",
     "routed": "moonshotai/kimi-k2.7-code-moonshotai-pinned",
-    "slug": "unknown__moonshotai_kimi-k2.7-code-moonshotai-pinned",
+    "slug": "moonshotai_kimi-k2.7-code-moonshotai-pinned",
     "fields": {
      "family": "kimi",
      "generation": "k2.7",
@@ -13563,7 +13563,7 @@
     ],
     "canonical": "moonshotai/kimi-k3",
     "routed": "openrouter/moonshotai/kimi-k3",
-    "slug": "openrouter__moonshotai_kimi-k3",
+    "slug": "moonshotai_kimi-k3",
     "fields": {
      "family": "kimi",
      "generation": "k3",
@@ -13610,7 +13610,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k3",
     "routed": "moonshotai/kimi-k3",
-    "slug": "unknown__moonshotai_kimi-k3",
+    "slug": "moonshotai_kimi-k3",
     "fields": {
      "family": "kimi",
      "generation": "k3",
@@ -13657,7 +13657,7 @@
     "routes": [],
     "canonical": "moonshotai/kimi-k3-moonshotai-pinned",
     "routed": "moonshotai/kimi-k3-moonshotai-pinned",
-    "slug": "unknown__moonshotai_kimi-k3-moonshotai-pinned",
+    "slug": "moonshotai_kimi-k3-moonshotai-pinned",
     "fields": {
      "family": "kimi",
      "generation": "k3",
@@ -13696,7 +13696,7 @@
     "routes": [],
     "canonical": "morph/morph-v3-fast",
     "routed": "morph/morph-v3-fast",
-    "slug": "unknown__morph_morph-v3-fast",
+    "slug": "morph_morph-v3-fast",
     "fields": {
      "family": "morph",
      "generation": "v3",
@@ -13733,7 +13733,7 @@
     "routes": [],
     "canonical": "morph/morph-v3-large",
     "routed": "morph/morph-v3-large",
-    "slug": "unknown__morph_morph-v3-large",
+    "slug": "morph_morph-v3-large",
     "fields": {
      "family": "morph",
      "generation": "v3",
@@ -13803,7 +13803,7 @@
     ],
     "canonical": "meta/muse-spark-1.1",
     "routed": "meta/muse-spark-1.1",
-    "slug": "meta__muse-spark-1.1",
+    "slug": "meta_muse-spark-1.1",
     "fields": {
      "family": "muse",
      "generation": "1.1",
@@ -13863,7 +13863,7 @@
     ],
     "canonical": "meta/muse-spark-1.2",
     "routed": "meta/muse-spark-1.2",
-    "slug": "meta__muse-spark-1.2",
+    "slug": "meta_muse-spark-1.2",
     "fields": {
      "family": "muse",
      "generation": "1.2",
@@ -14033,7 +14033,7 @@
     "routes": [],
     "canonical": "nex-agi/deepseek-v3.1-nex-n1",
     "routed": "nex-agi/deepseek-v3.1-nex-n1",
-    "slug": "unknown__nex-agi_deepseek-v3.1-nex-n1",
+    "slug": "nex-agi_deepseek-v3.1-nex-n1",
     "fields": {
      "family": "deepseek",
      "generation": "v3.1",
@@ -14072,7 +14072,7 @@
     "routes": [],
     "canonical": "nousresearch/hermes-2-pro-llama-3-8b",
     "routed": "nousresearch/hermes-2-pro-llama-3-8b",
-    "slug": "unknown__nousresearch_hermes-2-pro-llama-3-8b",
+    "slug": "nousresearch_hermes-2-pro-llama-3-8b",
     "fields": {
      "family": "hermes",
      "generation": "2",
@@ -14111,7 +14111,7 @@
     "routes": [],
     "canonical": "nousresearch/hermes-3-llama-3.1-405b",
     "routed": "nousresearch/hermes-3-llama-3.1-405b",
-    "slug": "unknown__nousresearch_hermes-3-llama-3.1-405b",
+    "slug": "nousresearch_hermes-3-llama-3.1-405b",
     "fields": {
      "family": "hermes",
      "generation": "3",
@@ -14150,7 +14150,7 @@
     "routes": [],
     "canonical": "nousresearch/hermes-3-llama-3.1-70b",
     "routed": "nousresearch/hermes-3-llama-3.1-70b",
-    "slug": "unknown__nousresearch_hermes-3-llama-3.1-70b",
+    "slug": "nousresearch_hermes-3-llama-3.1-70b",
     "fields": {
      "family": "hermes",
      "generation": "3",
@@ -14189,7 +14189,7 @@
     "routes": [],
     "canonical": "nousresearch/hermes-4-405b",
     "routed": "nousresearch/hermes-4-405b",
-    "slug": "unknown__nousresearch_hermes-4-405b",
+    "slug": "nousresearch_hermes-4-405b",
     "fields": {
      "family": "hermes",
      "generation": "4",
@@ -14226,7 +14226,7 @@
     "routes": [],
     "canonical": "nousresearch/hermes-4-70b",
     "routed": "nousresearch/hermes-4-70b",
-    "slug": "unknown__nousresearch_hermes-4-70b",
+    "slug": "nousresearch_hermes-4-70b",
     "fields": {
      "family": "hermes",
      "generation": "4",
@@ -14421,7 +14421,7 @@
     "routes": [],
     "canonical": "nova/busan-v1",
     "routed": "nova/busan-v1",
-    "slug": "unknown__nova_busan-v1",
+    "slug": "nova_busan-v1",
     "fields": {
      "family": "busan",
      "generation": "v1",
@@ -14460,7 +14460,7 @@
     "routes": [],
     "canonical": "nova/model",
     "routed": "nova/model",
-    "slug": "unknown__nova_model",
+    "slug": "nova_model",
     "fields": {
      "family": "model",
      "generation": null,
@@ -14497,7 +14497,7 @@
     "routes": [],
     "canonical": "nova/mumbai-flintflex-reasoning-v3",
     "routed": "nova/mumbai-flintflex-reasoning-v3",
-    "slug": "unknown__nova_mumbai-flintflex-reasoning-v3",
+    "slug": "nova_mumbai-flintflex-reasoning-v3",
     "fields": {
      "family": "mumbai",
      "generation": "v3",
@@ -14534,7 +14534,7 @@
     "routes": [],
     "canonical": "nova/Nova Pro v3",
     "routed": "nova/Nova Pro v3",
-    "slug": "unknown__nova_Nova_Pro_v3",
+    "slug": "nova_Nova_Pro_v3",
     "fields": {
      "family": "nova",
      "generation": "v3",
@@ -14571,7 +14571,7 @@
     "routes": [],
     "canonical": "nova/Nova Pro v3.4 (Suez)",
     "routed": "nova/Nova Pro v3.4 (Suez)",
-    "slug": "unknown__nova_Nova_Pro_v3.4_Suez",
+    "slug": "nova_Nova_Pro_v3.4_Suez",
     "fields": {
      "family": "nova",
      "generation": "v3.4",
@@ -14608,7 +14608,7 @@
     "routes": [],
     "canonical": "nova/Nova Pro v3.4.1",
     "routed": "nova/Nova Pro v3.4.1",
-    "slug": "unknown__nova_Nova_Pro_v3.4.1",
+    "slug": "nova_Nova_Pro_v3.4.1",
     "fields": {
      "family": "nova",
      "generation": "v3.4.1",
@@ -14645,7 +14645,7 @@
     "routes": [],
     "canonical": "nova/nova-2-lite",
     "routed": "nova/nova-2-lite",
-    "slug": "unknown__nova_nova-2-lite",
+    "slug": "nova_nova-2-lite",
     "fields": {
      "family": "nova",
      "generation": "2",
@@ -14686,7 +14686,7 @@
     "routes": [],
     "canonical": "nova/nova-lite-v1",
     "routed": "nova/nova-lite-v1",
-    "slug": "unknown__nova_nova-lite-v1",
+    "slug": "nova_nova-lite-v1",
     "fields": {
      "family": "nova",
      "generation": "v1",
@@ -14723,7 +14723,7 @@
     "routes": [],
     "canonical": "nova/nova-lite-v2",
     "routed": "nova/nova-lite-v2",
-    "slug": "unknown__nova_nova-lite-v2",
+    "slug": "nova_nova-lite-v2",
     "fields": {
      "family": "nova",
      "generation": "v2",
@@ -14760,7 +14760,7 @@
     "routes": [],
     "canonical": "nova/nova-micro-v1",
     "routed": "nova/nova-micro-v1",
-    "slug": "unknown__nova_nova-micro-v1",
+    "slug": "nova_nova-micro-v1",
     "fields": {
      "family": "nova",
      "generation": "v1",
@@ -14797,7 +14797,7 @@
     "routes": [],
     "canonical": "nova/nova-orchestrator-v1",
     "routed": "nova/nova-orchestrator-v1",
-    "slug": "unknown__nova_nova-orchestrator-v1",
+    "slug": "nova_nova-orchestrator-v1",
     "fields": {
      "family": "nova",
      "generation": "v1",
@@ -14836,7 +14836,7 @@
     "routes": [],
     "canonical": "nova/nova-premier-v1",
     "routed": "nova/nova-premier-v1",
-    "slug": "unknown__nova_nova-premier-v1",
+    "slug": "nova_nova-premier-v1",
     "fields": {
      "family": "nova",
      "generation": "v1",
@@ -14873,7 +14873,7 @@
     "routes": [],
     "canonical": "nova/nova-pro-v1",
     "routed": "nova/nova-pro-v1",
-    "slug": "unknown__nova_nova-pro-v1",
+    "slug": "nova_nova-pro-v1",
     "fields": {
      "family": "nova",
      "generation": "v1",
@@ -14910,7 +14910,7 @@
     "routes": [],
     "canonical": "nova/rotterdam-flintflex-v2",
     "routed": "nova/rotterdam-flintflex-v2",
-    "slug": "unknown__nova_rotterdam-flintflex-v2",
+    "slug": "nova_rotterdam-flintflex-v2",
     "fields": {
      "family": "rotterdam",
      "generation": "v2",
@@ -14947,7 +14947,7 @@
     "routes": [],
     "canonical": "nova/some-nova-model",
     "routed": "nova/some-nova-model",
-    "slug": "unknown__nova_some-nova-model",
+    "slug": "nova_some-nova-model",
     "fields": {
      "family": "some",
      "generation": null,
@@ -15005,7 +15005,7 @@
     "routes": [],
     "canonical": "nvidia/llama-3.1-nemotron-70b-instruct",
     "routed": "nvidia/llama-3.1-nemotron-70b-instruct",
-    "slug": "unknown__nvidia_llama-3.1-nemotron-70b-instruct",
+    "slug": "nvidia_llama-3.1-nemotron-70b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.1",
@@ -15042,7 +15042,7 @@
     "routes": [],
     "canonical": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
     "routed": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-    "slug": "unknown__nvidia_llama-3.3-nemotron-super-49b-v1.5",
+    "slug": "nvidia_llama-3.3-nemotron-super-49b-v1.5",
     "fields": {
      "family": "llama",
      "generation": "3.3",
@@ -15081,7 +15081,7 @@
     "routes": [],
     "canonical": "nvidia/nemotron",
     "routed": "nvidia/nemotron",
-    "slug": "unknown__nvidia_nemotron",
+    "slug": "nvidia_nemotron",
     "fields": {
      "family": "nemotron",
      "generation": null,
@@ -15118,7 +15118,7 @@
     "routes": [],
     "canonical": "nvidia/nemotron-3-nano-30b-a3b",
     "routed": "nvidia/nemotron-3-nano-30b-a3b",
-    "slug": "unknown__nvidia_nemotron-3-nano-30b-a3b",
+    "slug": "nvidia_nemotron-3-nano-30b-a3b",
     "fields": {
      "family": "nemotron",
      "generation": "3",
@@ -15155,7 +15155,7 @@
     "routes": [],
     "canonical": "nvidia/nemotron-3-super",
     "routed": "nvidia/nemotron-3-super",
-    "slug": "unknown__nvidia_nemotron-3-super",
+    "slug": "nvidia_nemotron-3-super",
     "fields": {
      "family": "nemotron",
      "generation": "3",
@@ -15194,7 +15194,7 @@
     ],
     "canonical": "nvidia/nemotron-3-super-120b-a12b",
     "routed": "openrouter/nvidia/nemotron-3-super-120b-a12b",
-    "slug": "openrouter__nvidia_nemotron-3-super-120b-a12b",
+    "slug": "nvidia_nemotron-3-super-120b-a12b",
     "fields": {
      "family": "nemotron",
      "generation": "3",
@@ -15239,7 +15239,7 @@
     "routes": [],
     "canonical": "nvidia/nemotron-3-super-120b-a12b",
     "routed": "nvidia/nemotron-3-super-120b-a12b",
-    "slug": "unknown__nvidia_nemotron-3-super-120b-a12b",
+    "slug": "nvidia_nemotron-3-super-120b-a12b",
     "fields": {
      "family": "nemotron",
      "generation": "3",
@@ -15286,7 +15286,7 @@
     ],
     "canonical": "nvidia/nemotron-3-ultra-550b-a55b",
     "routed": "openrouter/nvidia/nemotron-3-ultra-550b-a55b",
-    "slug": "openrouter__nvidia_nemotron-3-ultra-550b-a55b",
+    "slug": "nvidia_nemotron-3-ultra-550b-a55b",
     "fields": {
      "family": "nemotron",
      "generation": "3",
@@ -15331,7 +15331,7 @@
     "routes": [],
     "canonical": "nvidia/nemotron-3-ultra-550b-a55b",
     "routed": "nvidia/nemotron-3-ultra-550b-a55b",
-    "slug": "unknown__nvidia_nemotron-3-ultra-550b-a55b",
+    "slug": "nvidia_nemotron-3-ultra-550b-a55b",
     "fields": {
      "family": "nemotron",
      "generation": "3",
@@ -15376,7 +15376,7 @@
     "routes": [],
     "canonical": "nvidia/nemotron-nano-12b-v2-vl",
     "routed": "nvidia/nemotron-nano-12b-v2-vl",
-    "slug": "unknown__nvidia_nemotron-nano-12b-v2-vl",
+    "slug": "nvidia_nemotron-nano-12b-v2-vl",
     "fields": {
      "family": "nemotron",
      "generation": "v2",
@@ -15413,7 +15413,7 @@
     "routes": [],
     "canonical": "nvidia/nemotron-nano-9b-v2",
     "routed": "nvidia/nemotron-nano-9b-v2",
-    "slug": "unknown__nvidia_nemotron-nano-9b-v2",
+    "slug": "nvidia_nemotron-nano-9b-v2",
     "fields": {
      "family": "nemotron",
      "generation": "v2",
@@ -15518,7 +15518,7 @@
     "routes": [],
     "canonical": "openai/busan-v1",
     "routed": "openai/busan-v1",
-    "slug": "unknown__openai_busan-v1",
+    "slug": "openai_busan-v1",
     "fields": {
      "family": "busan",
      "generation": "v1",
@@ -15555,7 +15555,7 @@
     "routes": [],
     "canonical": "openai/chatgpt-4o-latest",
     "routed": "openai/chatgpt-4o-latest",
-    "slug": "unknown__openai_chatgpt-4o-latest",
+    "slug": "openai_chatgpt-4o-latest",
     "fields": {
      "family": "chatgpt",
      "generation": "4o",
@@ -15592,7 +15592,7 @@
     "routes": [],
     "canonical": "openai/gpt-3.5-turbo",
     "routed": "openai/gpt-3.5-turbo",
-    "slug": "unknown__openai_gpt-3.5-turbo",
+    "slug": "openai_gpt-3.5-turbo",
     "fields": {
      "family": "gpt",
      "generation": "3.5",
@@ -15629,7 +15629,7 @@
     "routes": [],
     "canonical": "openai/gpt-3.5-turbo-0613",
     "routed": "openai/gpt-3.5-turbo-0613",
-    "slug": "unknown__openai_gpt-3.5-turbo-0613",
+    "slug": "openai_gpt-3.5-turbo-0613",
     "fields": {
      "family": "gpt",
      "generation": "3.5",
@@ -15666,7 +15666,7 @@
     "routes": [],
     "canonical": "openai/gpt-3.5-turbo-16k",
     "routed": "openai/gpt-3.5-turbo-16k",
-    "slug": "unknown__openai_gpt-3.5-turbo-16k",
+    "slug": "openai_gpt-3.5-turbo-16k",
     "fields": {
      "family": "gpt",
      "generation": "3.5",
@@ -15703,7 +15703,7 @@
     "routes": [],
     "canonical": "openai/gpt-3.5-turbo-instruct",
     "routed": "openai/gpt-3.5-turbo-instruct",
-    "slug": "unknown__openai_gpt-3.5-turbo-instruct",
+    "slug": "openai_gpt-3.5-turbo-instruct",
     "fields": {
      "family": "gpt",
      "generation": "3.5",
@@ -15740,7 +15740,7 @@
     "routes": [],
     "canonical": "openai/gpt-4",
     "routed": "openai/gpt-4",
-    "slug": "unknown__openai_gpt-4",
+    "slug": "openai_gpt-4",
     "fields": {
      "family": "gpt",
      "generation": "4",
@@ -15779,7 +15779,7 @@
     "routes": [],
     "canonical": "openai/gpt-4-0314",
     "routed": "openai/gpt-4-0314",
-    "slug": "unknown__openai_gpt-4-0314",
+    "slug": "openai_gpt-4-0314",
     "fields": {
      "family": "gpt",
      "generation": "4",
@@ -15816,7 +15816,7 @@
     "routes": [],
     "canonical": "openai/gpt-4-1106-preview",
     "routed": "openai/gpt-4-1106-preview",
-    "slug": "unknown__openai_gpt-4-1106-preview",
+    "slug": "openai_gpt-4-1106-preview",
     "fields": {
      "family": "gpt",
      "generation": "4",
@@ -15853,7 +15853,7 @@
     "routes": [],
     "canonical": "openai/gpt-4-turbo",
     "routed": "openai/gpt-4-turbo",
-    "slug": "unknown__openai_gpt-4-turbo",
+    "slug": "openai_gpt-4-turbo",
     "fields": {
      "family": "gpt",
      "generation": "4",
@@ -15892,7 +15892,7 @@
     "routes": [],
     "canonical": "openai/gpt-4-turbo-preview",
     "routed": "openai/gpt-4-turbo-preview",
-    "slug": "unknown__openai_gpt-4-turbo-preview",
+    "slug": "openai_gpt-4-turbo-preview",
     "fields": {
      "family": "gpt",
      "generation": "4",
@@ -15929,7 +15929,7 @@
     "routes": [],
     "canonical": "openai/gpt-4.1",
     "routed": "openai/gpt-4.1",
-    "slug": "unknown__openai_gpt-4.1",
+    "slug": "openai_gpt-4.1",
     "fields": {
      "family": "gpt",
      "generation": "4.1",
@@ -15966,7 +15966,7 @@
     "routes": [],
     "canonical": "openai/gpt-4.1-mini",
     "routed": "openai/gpt-4.1-mini",
-    "slug": "unknown__openai_gpt-4.1-mini",
+    "slug": "openai_gpt-4.1-mini",
     "fields": {
      "family": "gpt",
      "generation": "4.1",
@@ -16005,7 +16005,7 @@
     "routes": [],
     "canonical": "openai/gpt-4.1-nano",
     "routed": "openai/gpt-4.1-nano",
-    "slug": "unknown__openai_gpt-4.1-nano",
+    "slug": "openai_gpt-4.1-nano",
     "fields": {
      "family": "gpt",
      "generation": "4.1",
@@ -16042,7 +16042,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o",
     "routed": "openai/gpt-4o",
-    "slug": "unknown__openai_gpt-4o",
+    "slug": "openai_gpt-4o",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16083,7 +16083,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-2024-05-13",
     "routed": "openai/gpt-4o-2024-05-13",
-    "slug": "unknown__openai_gpt-4o-2024-05-13",
+    "slug": "openai_gpt-4o-2024-05-13",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16120,7 +16120,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-2024-08-06",
     "routed": "openai/gpt-4o-2024-08-06",
-    "slug": "unknown__openai_gpt-4o-2024-08-06",
+    "slug": "openai_gpt-4o-2024-08-06",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16157,7 +16157,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-2024-11-20",
     "routed": "openai/gpt-4o-2024-11-20",
-    "slug": "unknown__openai_gpt-4o-2024-11-20",
+    "slug": "openai_gpt-4o-2024-11-20",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16194,7 +16194,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-audio-preview",
     "routed": "openai/gpt-4o-audio-preview",
-    "slug": "unknown__openai_gpt-4o-audio-preview",
+    "slug": "openai_gpt-4o-audio-preview",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16231,7 +16231,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-mini",
     "routed": "openai/gpt-4o-mini",
-    "slug": "unknown__openai_gpt-4o-mini",
+    "slug": "openai_gpt-4o-mini",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16270,7 +16270,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-mini-2024-07-18",
     "routed": "openai/gpt-4o-mini-2024-07-18",
-    "slug": "unknown__openai_gpt-4o-mini-2024-07-18",
+    "slug": "openai_gpt-4o-mini-2024-07-18",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16307,7 +16307,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-mini-search-preview",
     "routed": "openai/gpt-4o-mini-search-preview",
-    "slug": "unknown__openai_gpt-4o-mini-search-preview",
+    "slug": "openai_gpt-4o-mini-search-preview",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16344,7 +16344,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o-search-preview",
     "routed": "openai/gpt-4o-search-preview",
-    "slug": "unknown__openai_gpt-4o-search-preview",
+    "slug": "openai_gpt-4o-search-preview",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -16381,7 +16381,7 @@
     "routes": [],
     "canonical": "openai/gpt-5",
     "routed": "openai/gpt-5",
-    "slug": "unknown__openai_gpt-5",
+    "slug": "openai_gpt-5",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16422,7 +16422,7 @@
     "routes": [],
     "canonical": "openai/gpt-5-chat",
     "routed": "openai/gpt-5-chat",
-    "slug": "unknown__openai_gpt-5-chat",
+    "slug": "openai_gpt-5-chat",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16459,7 +16459,7 @@
     "routes": [],
     "canonical": "openai/gpt-5-codex",
     "routed": "openai/gpt-5-codex",
-    "slug": "unknown__openai_gpt-5-codex",
+    "slug": "openai_gpt-5-codex",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16498,7 +16498,7 @@
     "routes": [],
     "canonical": "openai/gpt-5-image",
     "routed": "openai/gpt-5-image",
-    "slug": "unknown__openai_gpt-5-image",
+    "slug": "openai_gpt-5-image",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16535,7 +16535,7 @@
     "routes": [],
     "canonical": "openai/gpt-5-image-mini",
     "routed": "openai/gpt-5-image-mini",
-    "slug": "unknown__openai_gpt-5-image-mini",
+    "slug": "openai_gpt-5-image-mini",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16572,7 +16572,7 @@
     "routes": [],
     "canonical": "openai/gpt-5-mini",
     "routed": "openai/gpt-5-mini",
-    "slug": "unknown__openai_gpt-5-mini",
+    "slug": "openai_gpt-5-mini",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16613,7 +16613,7 @@
     "routes": [],
     "canonical": "openai/gpt-5-nano",
     "routed": "openai/gpt-5-nano",
-    "slug": "unknown__openai_gpt-5-nano",
+    "slug": "openai_gpt-5-nano",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16650,7 +16650,7 @@
     "routes": [],
     "canonical": "openai/gpt-5-pro",
     "routed": "openai/gpt-5-pro",
-    "slug": "unknown__openai_gpt-5-pro",
+    "slug": "openai_gpt-5-pro",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -16687,7 +16687,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.1",
     "routed": "openai/gpt-5.1",
-    "slug": "unknown__openai_gpt-5.1",
+    "slug": "openai_gpt-5.1",
     "fields": {
      "family": "gpt",
      "generation": "5.1",
@@ -16724,7 +16724,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.1-chat",
     "routed": "openai/gpt-5.1-chat",
-    "slug": "unknown__openai_gpt-5.1-chat",
+    "slug": "openai_gpt-5.1-chat",
     "fields": {
      "family": "gpt",
      "generation": "5.1",
@@ -16761,7 +16761,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.1-codex",
     "routed": "openai/gpt-5.1-codex",
-    "slug": "unknown__openai_gpt-5.1-codex",
+    "slug": "openai_gpt-5.1-codex",
     "fields": {
      "family": "gpt",
      "generation": "5.1",
@@ -16798,7 +16798,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.1-codex-max",
     "routed": "openai/gpt-5.1-codex-max",
-    "slug": "unknown__openai_gpt-5.1-codex-max",
+    "slug": "openai_gpt-5.1-codex-max",
     "fields": {
      "family": "gpt",
      "generation": "5.1",
@@ -16835,7 +16835,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.1-codex-mini",
     "routed": "openai/gpt-5.1-codex-mini",
-    "slug": "unknown__openai_gpt-5.1-codex-mini",
+    "slug": "openai_gpt-5.1-codex-mini",
     "fields": {
      "family": "gpt",
      "generation": "5.1",
@@ -16872,7 +16872,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.2",
     "routed": "openai/gpt-5.2",
-    "slug": "unknown__openai_gpt-5.2",
+    "slug": "openai_gpt-5.2",
     "fields": {
      "family": "gpt",
      "generation": "5.2",
@@ -16909,7 +16909,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.2-chat",
     "routed": "openai/gpt-5.2-chat",
-    "slug": "unknown__openai_gpt-5.2-chat",
+    "slug": "openai_gpt-5.2-chat",
     "fields": {
      "family": "gpt",
      "generation": "5.2",
@@ -16946,7 +16946,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.2-codex",
     "routed": "openai/gpt-5.2-codex",
-    "slug": "unknown__openai_gpt-5.2-codex",
+    "slug": "openai_gpt-5.2-codex",
     "fields": {
      "family": "gpt",
      "generation": "5.2",
@@ -16983,7 +16983,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.2-pro",
     "routed": "openai/gpt-5.2-pro",
-    "slug": "unknown__openai_gpt-5.2-pro",
+    "slug": "openai_gpt-5.2-pro",
     "fields": {
      "family": "gpt",
      "generation": "5.2",
@@ -17020,7 +17020,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.3-chat",
     "routed": "openai/gpt-5.3-chat",
-    "slug": "unknown__openai_gpt-5.3-chat",
+    "slug": "openai_gpt-5.3-chat",
     "fields": {
      "family": "gpt",
      "generation": "5.3",
@@ -17057,7 +17057,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.3-codex",
     "routed": "openai/gpt-5.3-codex",
-    "slug": "unknown__openai_gpt-5.3-codex",
+    "slug": "openai_gpt-5.3-codex",
     "fields": {
      "family": "gpt",
      "generation": "5.3",
@@ -17096,7 +17096,7 @@
     ],
     "canonical": "openai/gpt-5.4",
     "routed": "openrouter/openai/gpt-5.4",
-    "slug": "openrouter__openai_gpt-5.4",
+    "slug": "openai_gpt-5.4",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17146,7 +17146,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.4",
     "routed": "openai/gpt-5.4",
-    "slug": "unknown__openai_gpt-5.4",
+    "slug": "openai_gpt-5.4",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17196,7 +17196,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.4-high",
     "routed": "openai/gpt-5.4-high",
-    "slug": "unknown__openai_gpt-5.4-high",
+    "slug": "openai_gpt-5.4-high",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17233,7 +17233,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.4-image-2",
     "routed": "openai/gpt-5.4-image-2",
-    "slug": "unknown__openai_gpt-5.4-image-2",
+    "slug": "openai_gpt-5.4-image-2",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17272,7 +17272,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.4-mini",
     "routed": "openai/gpt-5.4-mini",
-    "slug": "unknown__openai_gpt-5.4-mini",
+    "slug": "openai_gpt-5.4-mini",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17309,7 +17309,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.4-nano",
     "routed": "openai/gpt-5.4-nano",
-    "slug": "unknown__openai_gpt-5.4-nano",
+    "slug": "openai_gpt-5.4-nano",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17348,7 +17348,7 @@
     ],
     "canonical": "openai/gpt-5.4-pro",
     "routed": "openrouter/openai/gpt-5.4-pro",
-    "slug": "openrouter__openai_gpt-5.4-pro",
+    "slug": "openai_gpt-5.4-pro",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17392,7 +17392,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.4-pro",
     "routed": "openai/gpt-5.4-pro",
-    "slug": "unknown__openai_gpt-5.4-pro",
+    "slug": "openai_gpt-5.4-pro",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17436,7 +17436,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.4-xhigh",
     "routed": "openai/gpt-5.4-xhigh",
-    "slug": "unknown__openai_gpt-5.4-xhigh",
+    "slug": "openai_gpt-5.4-xhigh",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -17477,7 +17477,7 @@
     ],
     "canonical": "openai/gpt-5.5",
     "routed": "openrouter/openai/gpt-5.5",
-    "slug": "openrouter__openai_gpt-5.5",
+    "slug": "openai_gpt-5.5",
     "fields": {
      "family": "gpt",
      "generation": "5.5",
@@ -17526,7 +17526,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.5",
     "routed": "openai/gpt-5.5",
-    "slug": "unknown__openai_gpt-5.5",
+    "slug": "openai_gpt-5.5",
     "fields": {
      "family": "gpt",
      "generation": "5.5",
@@ -17575,7 +17575,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.5-pro",
     "routed": "openai/gpt-5.5-pro",
-    "slug": "unknown__openai_gpt-5.5-pro",
+    "slug": "openai_gpt-5.5-pro",
     "fields": {
      "family": "gpt",
      "generation": "5.5",
@@ -17612,7 +17612,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.6",
     "routed": "openai/gpt-5.6",
-    "slug": "unknown__openai_gpt-5.6",
+    "slug": "openai_gpt-5.6",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17649,7 +17649,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.6-luna",
     "routed": "openai/gpt-5.6-luna",
-    "slug": "unknown__openai_gpt-5.6-luna",
+    "slug": "openai_gpt-5.6-luna",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17686,7 +17686,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.6-luna-pro",
     "routed": "openai/gpt-5.6-luna-pro",
-    "slug": "unknown__openai_gpt-5.6-luna-pro",
+    "slug": "openai_gpt-5.6-luna-pro",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17725,7 +17725,7 @@
     ],
     "canonical": "openai/gpt-5.6-sol",
     "routed": "openrouter/openai/gpt-5.6-sol",
-    "slug": "openrouter__openai_gpt-5.6-sol",
+    "slug": "openai_gpt-5.6-sol",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17773,7 +17773,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.6-sol",
     "routed": "openai/gpt-5.6-sol",
-    "slug": "unknown__openai_gpt-5.6-sol",
+    "slug": "openai_gpt-5.6-sol",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17821,7 +17821,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.6-sol-pro",
     "routed": "openai/gpt-5.6-sol-pro",
-    "slug": "unknown__openai_gpt-5.6-sol-pro",
+    "slug": "openai_gpt-5.6-sol-pro",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17860,7 +17860,7 @@
     ],
     "canonical": "openai/gpt-5.6-terra",
     "routed": "openrouter/openai/gpt-5.6-terra",
-    "slug": "openrouter__openai_gpt-5.6-terra",
+    "slug": "openai_gpt-5.6-terra",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17906,7 +17906,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.6-terra",
     "routed": "openai/gpt-5.6-terra",
-    "slug": "unknown__openai_gpt-5.6-terra",
+    "slug": "openai_gpt-5.6-terra",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17952,7 +17952,7 @@
     "routes": [],
     "canonical": "openai/gpt-5.6-terra-pro",
     "routed": "openai/gpt-5.6-terra-pro",
-    "slug": "unknown__openai_gpt-5.6-terra-pro",
+    "slug": "openai_gpt-5.6-terra-pro",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -17989,7 +17989,7 @@
     "routes": [],
     "canonical": "openai/gpt-6",
     "routed": "openai/gpt-6",
-    "slug": "unknown__openai_gpt-6",
+    "slug": "openai_gpt-6",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -18028,7 +18028,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "openrouter/openai/gpt-6-astra",
-    "slug": "openrouter__openai_gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -18075,7 +18075,7 @@
     "routes": [],
     "canonical": "openai/gpt-6-astra",
     "routed": "openai/gpt-6-astra",
-    "slug": "unknown__openai_gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -18122,7 +18122,7 @@
     "routes": [],
     "canonical": "openai/gpt-audio",
     "routed": "openai/gpt-audio",
-    "slug": "unknown__openai_gpt-audio",
+    "slug": "openai_gpt-audio",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18159,7 +18159,7 @@
     "routes": [],
     "canonical": "openai/gpt-audio-mini",
     "routed": "openai/gpt-audio-mini",
-    "slug": "unknown__openai_gpt-audio-mini",
+    "slug": "openai_gpt-audio-mini",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18196,7 +18196,7 @@
     "routes": [],
     "canonical": "openai/gpt-canon",
     "routed": "openai/gpt-canon",
-    "slug": "unknown__openai_gpt-canon",
+    "slug": "openai_gpt-canon",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18233,7 +18233,7 @@
     "routes": [],
     "canonical": "openai/gpt-chat-latest",
     "routed": "openai/gpt-chat-latest",
-    "slug": "unknown__openai_gpt-chat-latest",
+    "slug": "openai_gpt-chat-latest",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18270,7 +18270,7 @@
     "routes": [],
     "canonical": "openai/gpt-no-cache",
     "routed": "openai/gpt-no-cache",
-    "slug": "unknown__openai_gpt-no-cache",
+    "slug": "openai_gpt-no-cache",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18307,7 +18307,7 @@
     "routes": [],
     "canonical": "openai/gpt-oss",
     "routed": "openai/gpt-oss",
-    "slug": "unknown__openai_gpt-oss",
+    "slug": "openai_gpt-oss",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18346,7 +18346,7 @@
     ],
     "canonical": "openai/gpt-oss-120b",
     "routed": "openrouter/openai/gpt-oss-120b",
-    "slug": "openrouter__openai_gpt-oss-120b",
+    "slug": "openai_gpt-oss-120b",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18391,7 +18391,7 @@
     "routes": [],
     "canonical": "openai/gpt-oss-120b",
     "routed": "openai/gpt-oss-120b",
-    "slug": "unknown__openai_gpt-oss-120b",
+    "slug": "openai_gpt-oss-120b",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18436,7 +18436,7 @@
     "routes": [],
     "canonical": "openai/gpt-oss-20b",
     "routed": "openai/gpt-oss-20b",
-    "slug": "unknown__openai_gpt-oss-20b",
+    "slug": "openai_gpt-oss-20b",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18473,7 +18473,7 @@
     "routes": [],
     "canonical": "openai/gpt-oss-safeguard-20b",
     "routed": "openai/gpt-oss-safeguard-20b",
-    "slug": "unknown__openai_gpt-oss-safeguard-20b",
+    "slug": "openai_gpt-oss-safeguard-20b",
     "fields": {
      "family": "gpt",
      "generation": null,
@@ -18510,7 +18510,7 @@
     "routes": [],
     "canonical": "openai/o1",
     "routed": "openai/o1",
-    "slug": "unknown__openai_o1",
+    "slug": "openai_o1",
     "fields": {
      "family": "o",
      "generation": "1",
@@ -18549,7 +18549,7 @@
     "routes": [],
     "canonical": "openai/o1-mini",
     "routed": "openai/o1-mini",
-    "slug": "unknown__openai_o1-mini",
+    "slug": "openai_o1-mini",
     "fields": {
      "family": "o",
      "generation": "1",
@@ -18588,7 +18588,7 @@
     "routes": [],
     "canonical": "openai/o1-preview",
     "routed": "openai/o1-preview",
-    "slug": "unknown__openai_o1-preview",
+    "slug": "openai_o1-preview",
     "fields": {
      "family": "o",
      "generation": "1",
@@ -18625,7 +18625,7 @@
     "routes": [],
     "canonical": "openai/o1-pro",
     "routed": "openai/o1-pro",
-    "slug": "unknown__openai_o1-pro",
+    "slug": "openai_o1-pro",
     "fields": {
      "family": "o",
      "generation": "1",
@@ -18662,7 +18662,7 @@
     "routes": [],
     "canonical": "openai/o3",
     "routed": "openai/o3",
-    "slug": "unknown__openai_o3",
+    "slug": "openai_o3",
     "fields": {
      "family": "o",
      "generation": "3",
@@ -18701,7 +18701,7 @@
     "routes": [],
     "canonical": "openai/o3-deep-research",
     "routed": "openai/o3-deep-research",
-    "slug": "unknown__openai_o3-deep-research",
+    "slug": "openai_o3-deep-research",
     "fields": {
      "family": "o",
      "generation": "3",
@@ -18738,7 +18738,7 @@
     "routes": [],
     "canonical": "openai/o3-mini",
     "routed": "openai/o3-mini",
-    "slug": "unknown__openai_o3-mini",
+    "slug": "openai_o3-mini",
     "fields": {
      "family": "o",
      "generation": "3",
@@ -18777,7 +18777,7 @@
     "routes": [],
     "canonical": "openai/o3-mini-high",
     "routed": "openai/o3-mini-high",
-    "slug": "unknown__openai_o3-mini-high",
+    "slug": "openai_o3-mini-high",
     "fields": {
      "family": "o",
      "generation": "3",
@@ -18814,7 +18814,7 @@
     "routes": [],
     "canonical": "openai/o3-pro",
     "routed": "openai/o3-pro",
-    "slug": "unknown__openai_o3-pro",
+    "slug": "openai_o3-pro",
     "fields": {
      "family": "o",
      "generation": "3",
@@ -18853,7 +18853,7 @@
     "routes": [],
     "canonical": "openai/o4",
     "routed": "openai/o4",
-    "slug": "unknown__openai_o4",
+    "slug": "openai_o4",
     "fields": {
      "family": "o",
      "generation": "4",
@@ -18890,7 +18890,7 @@
     "routes": [],
     "canonical": "openai/o4-mini",
     "routed": "openai/o4-mini",
-    "slug": "unknown__openai_o4-mini",
+    "slug": "openai_o4-mini",
     "fields": {
      "family": "o",
      "generation": "4",
@@ -18927,7 +18927,7 @@
     "routes": [],
     "canonical": "openai/o4-mini-deep-research",
     "routed": "openai/o4-mini-deep-research",
-    "slug": "unknown__openai_o4-mini-deep-research",
+    "slug": "openai_o4-mini-deep-research",
     "fields": {
      "family": "o",
      "generation": "4",
@@ -18964,7 +18964,7 @@
     "routes": [],
     "canonical": "openai/o4-mini-high",
     "routed": "openai/o4-mini-high",
-    "slug": "unknown__openai_o4-mini-high",
+    "slug": "openai_o4-mini-high",
     "fields": {
      "family": "o",
      "generation": "4",
@@ -19018,7 +19018,7 @@
     "routes": [],
     "canonical": "openai/qwen-adapter",
     "routed": "openai/qwen-adapter",
-    "slug": "unknown__openai_qwen-adapter",
+    "slug": "openai_qwen-adapter",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -19055,7 +19055,7 @@
     "routes": [],
     "canonical": "openai/text-embedding-3-large",
     "routed": "openai/text-embedding-3-large",
-    "slug": "unknown__openai_text-embedding-3-large",
+    "slug": "openai_text-embedding-3-large",
     "fields": {
      "family": "text",
      "generation": "3",
@@ -19092,7 +19092,7 @@
     "routes": [],
     "canonical": "openai/text-embedding-3-small",
     "routed": "openai/text-embedding-3-small",
-    "slug": "unknown__openai_text-embedding-3-small",
+    "slug": "openai_text-embedding-3-small",
     "fields": {
      "family": "text",
      "generation": "3",
@@ -19129,7 +19129,7 @@
     "routes": [],
     "canonical": "openai/text-embedding-ada-002",
     "routed": "openai/text-embedding-ada-002",
-    "slug": "unknown__openai_text-embedding-ada-002",
+    "slug": "openai_text-embedding-ada-002",
     "fields": {
      "family": "text",
      "generation": "002",
@@ -19215,7 +19215,7 @@
     ],
     "canonical": "acme/agent-1",
     "routed": "openrouter/acme/agent-1",
-    "slug": "openrouter__acme_agent-1",
+    "slug": "acme_agent-1",
     "fields": {
      "family": "agent",
      "generation": "1",
@@ -19254,7 +19254,7 @@
     ],
     "canonical": "acme/replay-judge",
     "routed": "openrouter/acme/replay-judge",
-    "slug": "openrouter__acme_replay-judge",
+    "slug": "acme_replay-judge",
     "fields": {
      "family": "replay",
      "generation": null,
@@ -19310,7 +19310,7 @@
     ],
     "canonical": "amazon/nova-2-lite-v1",
     "routed": "openrouter/amazon/nova-2-lite-v1",
-    "slug": "openrouter__amazon_nova-2-lite-v1",
+    "slug": "amazon_nova-2-lite-v1",
     "fields": {
      "family": "nova",
      "generation": "2",
@@ -19349,7 +19349,7 @@
     ],
     "canonical": "anthropic/claude-3",
     "routed": "openrouter/anthropic/claude-3",
-    "slug": "openrouter__anthropic_claude-3",
+    "slug": "anthropic_claude-3",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -19388,7 +19388,7 @@
     ],
     "canonical": "anthropic/claude-3-haiku",
     "routed": "openrouter/anthropic/claude-3-haiku",
-    "slug": "openrouter__anthropic_claude-3-haiku",
+    "slug": "anthropic_claude-3-haiku",
     "fields": {
      "family": "claude",
      "generation": "3",
@@ -19427,7 +19427,7 @@
     ],
     "canonical": "anthropic/claude-fable-5.1",
     "routed": "openrouter/anthropic/claude-fable-5.1",
-    "slug": "openrouter__anthropic_claude-fable-5.1",
+    "slug": "anthropic_claude-fable-5.1",
     "fields": {
      "family": "claude",
      "generation": "5.1",
@@ -19466,7 +19466,7 @@
     ],
     "canonical": "anthropic/claude-opus-4.7",
     "routed": "openrouter/anthropic/claude-opus-4.7",
-    "slug": "openrouter__anthropic_claude-opus-4.7",
+    "slug": "anthropic_claude-opus-4.7",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -19507,7 +19507,7 @@
     ],
     "canonical": "anthropic/claude-opus-4.8",
     "routed": "openrouter/anthropic/claude-opus-4.8",
-    "slug": "openrouter__anthropic_claude-opus-4.8",
+    "slug": "anthropic_claude-opus-4.8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -19546,7 +19546,7 @@
     ],
     "canonical": "anthropic/claude-opus-4.9",
     "routed": "openrouter/anthropic/claude-opus-4.9",
-    "slug": "openrouter__anthropic_claude-opus-4.9",
+    "slug": "anthropic_claude-opus-4.9",
     "fields": {
      "family": "claude",
      "generation": "4.9",
@@ -19585,7 +19585,7 @@
     ],
     "canonical": "anthropic/claude-opus-5",
     "routed": "openrouter/anthropic/claude-opus-5",
-    "slug": "openrouter__anthropic_claude-opus-5",
+    "slug": "anthropic_claude-opus-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -19624,7 +19624,7 @@
     ],
     "canonical": "anthropic/claude-sonnet-4-6",
     "routed": "openrouter/anthropic/claude-sonnet-4-6",
-    "slug": "openrouter__anthropic_claude-sonnet-4-6",
+    "slug": "anthropic_claude-sonnet-4-6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -19665,7 +19665,7 @@
     ],
     "canonical": "anthropic/claude-sonnet-4.5",
     "routed": "openrouter/anthropic/claude-sonnet-4.5",
-    "slug": "openrouter__anthropic_claude-sonnet-4.5",
+    "slug": "anthropic_claude-sonnet-4.5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -19704,7 +19704,7 @@
     ],
     "canonical": "anthropic/claude-sonnet-4.6",
     "routed": "openrouter/anthropic/claude-sonnet-4.6",
-    "slug": "openrouter__anthropic_claude-sonnet-4.6",
+    "slug": "anthropic_claude-sonnet-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -19743,7 +19743,7 @@
     ],
     "canonical": "anthropic/claude-sonnet-4.7",
     "routed": "openrouter/anthropic/claude-sonnet-4.7",
-    "slug": "openrouter__anthropic_claude-sonnet-4.7",
+    "slug": "anthropic_claude-sonnet-4.7",
     "fields": {
      "family": "claude",
      "generation": "4.7",
@@ -19782,7 +19782,7 @@
     ],
     "canonical": "anthropic/claude-sonnet-5",
     "routed": "openrouter/anthropic/claude-sonnet-5",
-    "slug": "openrouter__anthropic_claude-sonnet-5",
+    "slug": "anthropic_claude-sonnet-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -19819,7 +19819,7 @@
     "routes": [],
     "canonical": "openrouter/auto",
     "routed": "openrouter/auto",
-    "slug": "unknown__openrouter_auto",
+    "slug": "openrouter_auto",
     "fields": {
      "family": "auto",
      "generation": null,
@@ -19858,7 +19858,7 @@
     ],
     "canonical": "azure_ai/cohere-command-a-plus-05-2026",
     "routed": "openrouter/azure_ai/cohere-command-a-plus-05-2026",
-    "slug": "openrouter__azure_ai_cohere-command-a-plus-05-2026",
+    "slug": "azure_ai_cohere-command-a-plus-05-2026",
     "fields": {
      "family": "command",
      "generation": "a",
@@ -19895,7 +19895,7 @@
     "routes": [],
     "canonical": "openrouter/bodybuilder",
     "routed": "openrouter/bodybuilder",
-    "slug": "unknown__openrouter_bodybuilder",
+    "slug": "openrouter_bodybuilder",
     "fields": {
      "family": "bodybuilder",
      "generation": null,
@@ -19934,7 +19934,7 @@
     ],
     "canonical": "deepseek/deepseek-v3.2-exp",
     "routed": "openrouter/deepseek/deepseek-v3.2-exp",
-    "slug": "openrouter__deepseek_deepseek-v3.2-exp",
+    "slug": "deepseek_deepseek-v3.2-exp",
     "fields": {
      "family": "deepseek",
      "generation": "v3.2",
@@ -19973,7 +19973,7 @@
     ],
     "canonical": "deepseek/deepseek-v4-flash",
     "routed": "openrouter/deepseek/deepseek-v4-flash",
-    "slug": "openrouter__deepseek_deepseek-v4-flash",
+    "slug": "deepseek_deepseek-v4-flash",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -20029,7 +20029,7 @@
     ],
     "canonical": "fake-vendor-xyz/muse-spark-9.9",
     "routed": "openrouter/fake-vendor-xyz/muse-spark-9.9",
-    "slug": "openrouter__fake-vendor-xyz_muse-spark-9.9",
+    "slug": "fake-vendor-xyz_muse-spark-9.9",
     "fields": {
      "family": "muse",
      "generation": "9.9",
@@ -20068,7 +20068,7 @@
     ],
     "canonical": "google/gemini-2.5-flash",
     "routed": "openrouter/google/gemini-2.5-flash",
-    "slug": "openrouter__google_gemini-2.5-flash",
+    "slug": "google_gemini-2.5-flash",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -20107,7 +20107,7 @@
     ],
     "canonical": "google/gemini-3-flash-preview",
     "routed": "openrouter/google/gemini-3-flash-preview",
-    "slug": "openrouter__google_gemini-3-flash-preview",
+    "slug": "google_gemini-3-flash-preview",
     "fields": {
      "family": "gemini",
      "generation": "3",
@@ -20146,7 +20146,7 @@
     ],
     "canonical": "google/gemini-3.1-pro",
     "routed": "openrouter/google/gemini-3.1-pro",
-    "slug": "openrouter__google_gemini-3.1-pro",
+    "slug": "google_gemini-3.1-pro",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -20185,7 +20185,7 @@
     ],
     "canonical": "google/gemini-3.1-pro-preview",
     "routed": "openrouter/google/gemini-3.1-pro-preview",
-    "slug": "openrouter__google_gemini-3.1-pro-preview",
+    "slug": "google_gemini-3.1-pro-preview",
     "fields": {
      "family": "gemini",
      "generation": "3.1",
@@ -20226,7 +20226,7 @@
     ],
     "canonical": "google/gemini-3.5-flash",
     "routed": "openrouter/google/gemini-3.5-flash",
-    "slug": "openrouter__google_gemini-3.5-flash",
+    "slug": "google_gemini-3.5-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.5",
@@ -20265,7 +20265,7 @@
     ],
     "canonical": "google/gemini-3.6-flash",
     "routed": "openrouter/google/gemini-3.6-flash",
-    "slug": "openrouter__google_gemini-3.6-flash",
+    "slug": "google_gemini-3.6-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.6",
@@ -20306,7 +20306,7 @@
     ],
     "canonical": "google/gemini-3.7-flash",
     "routed": "openrouter/google/gemini-3.7-flash",
-    "slug": "openrouter__google_gemini-3.7-flash",
+    "slug": "google_gemini-3.7-flash",
     "fields": {
      "family": "gemini",
      "generation": "3.7",
@@ -20345,7 +20345,7 @@
     ],
     "canonical": "meta-llama/llama-3.3-70b-instruct",
     "routed": "openrouter/meta-llama/llama-3.3-70b-instruct",
-    "slug": "openrouter__meta-llama_llama-3.3-70b-instruct",
+    "slug": "meta-llama_llama-3.3-70b-instruct",
     "fields": {
      "family": "llama",
      "generation": "3.3",
@@ -20384,7 +20384,7 @@
     ],
     "canonical": "meta/muse-glimmer-30b",
     "routed": "openrouter/meta/muse-glimmer-30b",
-    "slug": "openrouter__meta_muse-glimmer-30b",
+    "slug": "meta_muse-glimmer-30b",
     "fields": {
      "family": "muse",
      "generation": null,
@@ -20425,7 +20425,7 @@
     ],
     "canonical": "meta/muse-spark-1.1",
     "routed": "openrouter/meta/muse-spark-1.1",
-    "slug": "openrouter__meta_muse-spark-1.1",
+    "slug": "meta_muse-spark-1.1",
     "fields": {
      "family": "muse",
      "generation": "1.1",
@@ -20481,7 +20481,7 @@
     ],
     "canonical": "minimax/minimax-m3",
     "routed": "openrouter/minimax/minimax-m3",
-    "slug": "openrouter__minimax_minimax-m3",
+    "slug": "minimax_minimax-m3",
     "fields": {
      "family": "minimax",
      "generation": "m3",
@@ -20520,7 +20520,7 @@
     ],
     "canonical": "moonshotai/kimi-k2.6",
     "routed": "openrouter/moonshotai/kimi-k2.6",
-    "slug": "openrouter__moonshotai_kimi-k2.6",
+    "slug": "moonshotai_kimi-k2.6",
     "fields": {
      "family": "kimi",
      "generation": "k2.6",
@@ -20559,7 +20559,7 @@
     ],
     "canonical": "moonshotai/kimi-k2.7-code",
     "routed": "openrouter/moonshotai/kimi-k2.7-code",
-    "slug": "openrouter__moonshotai_kimi-k2.7-code",
+    "slug": "moonshotai_kimi-k2.7-code",
     "fields": {
      "family": "kimi",
      "generation": "k2.7",
@@ -20600,7 +20600,7 @@
     ],
     "canonical": "moonshotai/kimi-k3",
     "routed": "openrouter/moonshotai/kimi-k3",
-    "slug": "openrouter__moonshotai_kimi-k3",
+    "slug": "moonshotai_kimi-k3",
     "fields": {
      "family": "kimi",
      "generation": "k3",
@@ -20641,7 +20641,7 @@
     ],
     "canonical": "openai/gpt-4.1-mini",
     "routed": "openrouter/openai/gpt-4.1-mini",
-    "slug": "openrouter__openai_gpt-4.1-mini",
+    "slug": "openai_gpt-4.1-mini",
     "fields": {
      "family": "gpt",
      "generation": "4.1",
@@ -20680,7 +20680,7 @@
     ],
     "canonical": "openai/gpt-4o",
     "routed": "openrouter/openai/gpt-4o",
-    "slug": "openrouter__openai_gpt-4o",
+    "slug": "openai_gpt-4o",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -20719,7 +20719,7 @@
     ],
     "canonical": "openai/gpt-4o-mini",
     "routed": "openrouter/openai/gpt-4o-mini",
-    "slug": "openrouter__openai_gpt-4o-mini",
+    "slug": "openai_gpt-4o-mini",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -20758,7 +20758,7 @@
     ],
     "canonical": "openai/gpt-5",
     "routed": "openrouter/openai/gpt-5",
-    "slug": "openrouter__openai_gpt-5",
+    "slug": "openai_gpt-5",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -20797,7 +20797,7 @@
     ],
     "canonical": "openai/gpt-5-codex",
     "routed": "openrouter/openai/gpt-5-codex",
-    "slug": "openrouter__openai_gpt-5-codex",
+    "slug": "openai_gpt-5-codex",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -20836,7 +20836,7 @@
     ],
     "canonical": "openai/gpt-5-mini",
     "routed": "openrouter/openai/gpt-5-mini",
-    "slug": "openrouter__openai_gpt-5-mini",
+    "slug": "openai_gpt-5-mini",
     "fields": {
      "family": "gpt",
      "generation": "5",
@@ -20875,7 +20875,7 @@
     ],
     "canonical": "openai/gpt-5.4",
     "routed": "openrouter/openai/gpt-5.4",
-    "slug": "openrouter__openai_gpt-5.4",
+    "slug": "openai_gpt-5.4",
     "fields": {
      "family": "gpt",
      "generation": "5.4",
@@ -20914,7 +20914,7 @@
     ],
     "canonical": "openai/gpt-5.5",
     "routed": "openrouter/openai/gpt-5.5",
-    "slug": "openrouter__openai_gpt-5.5",
+    "slug": "openai_gpt-5.5",
     "fields": {
      "family": "gpt",
      "generation": "5.5",
@@ -20953,7 +20953,7 @@
     ],
     "canonical": "openai/gpt-5.6-sol",
     "routed": "openrouter/openai/gpt-5.6-sol",
-    "slug": "openrouter__openai_gpt-5.6-sol",
+    "slug": "openai_gpt-5.6-sol",
     "fields": {
      "family": "gpt",
      "generation": "5.6",
@@ -20994,7 +20994,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "openrouter/openai/gpt-6-astra",
-    "slug": "openrouter__openai_gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -21031,7 +21031,7 @@
     "routes": [],
     "canonical": "openrouter/pareto-code",
     "routed": "openrouter/pareto-code",
-    "slug": "unknown__openrouter_pareto-code",
+    "slug": "openrouter_pareto-code",
     "fields": {
      "family": "pareto",
      "generation": null,
@@ -21070,7 +21070,7 @@
     ],
     "canonical": "qwen/qwen3.7-max",
     "routed": "openrouter/qwen/qwen3.7-max",
-    "slug": "openrouter__qwen_qwen3.7-max",
+    "slug": "qwen_qwen3.7-max",
     "fields": {
      "family": "qwen",
      "generation": "3.7",
@@ -21126,7 +21126,7 @@
     ],
     "canonical": "vendor/model",
     "routed": "openrouter/vendor/model",
-    "slug": "openrouter__vendor_model",
+    "slug": "vendor_model",
     "fields": {
      "family": "model",
      "generation": null,
@@ -21165,7 +21165,7 @@
     ],
     "canonical": "x-ai/grok-4",
     "routed": "openrouter/x-ai/grok-4",
-    "slug": "openrouter__x-ai_grok-4",
+    "slug": "x-ai_grok-4",
     "fields": {
      "family": "grok",
      "generation": "4",
@@ -21204,7 +21204,7 @@
     ],
     "canonical": "x-ai/grok-4.3",
     "routed": "openrouter/x-ai/grok-4.3",
-    "slug": "openrouter__x-ai_grok-4.3",
+    "slug": "x-ai_grok-4.3",
     "fields": {
      "family": "grok",
      "generation": "4.3",
@@ -21243,7 +21243,7 @@
     ],
     "canonical": "x-ai/grok-4.5",
     "routed": "openrouter/x-ai/grok-4.5",
-    "slug": "openrouter__x-ai_grok-4.5",
+    "slug": "x-ai_grok-4.5",
     "fields": {
      "family": "grok",
      "generation": "4.5",
@@ -21284,7 +21284,7 @@
     ],
     "canonical": "z-ai/glm-5.3",
     "routed": "openrouter/z-ai/glm-5.3",
-    "slug": "openrouter__z-ai_glm-5.3",
+    "slug": "z-ai_glm-5.3",
     "fields": {
      "family": "glm",
      "generation": "5.3",
@@ -21323,7 +21323,7 @@
     ],
     "canonical": "z-ai/glm-5.3-fast",
     "routed": "openrouter/z-ai/glm-5.3-fast",
-    "slug": "openrouter__z-ai_glm-5.3-fast",
+    "slug": "z-ai_glm-5.3-fast",
     "fields": {
      "family": "glm",
      "generation": "5.3",
@@ -22307,7 +22307,7 @@
     "routes": [],
     "canonical": "perceptron/perceptron-mk1",
     "routed": "perceptron/perceptron-mk1",
-    "slug": "unknown__perceptron_perceptron-mk1",
+    "slug": "perceptron_perceptron-mk1",
     "fields": {
      "family": "perceptron",
      "generation": null,
@@ -22344,7 +22344,7 @@
     "routes": [],
     "canonical": "perplexity/sonar",
     "routed": "perplexity/sonar",
-    "slug": "unknown__perplexity_sonar",
+    "slug": "perplexity_sonar",
     "fields": {
      "family": "sonar",
      "generation": null,
@@ -22381,7 +22381,7 @@
     "routes": [],
     "canonical": "perplexity/sonar-deep-research",
     "routed": "perplexity/sonar-deep-research",
-    "slug": "unknown__perplexity_sonar-deep-research",
+    "slug": "perplexity_sonar-deep-research",
     "fields": {
      "family": "sonar",
      "generation": null,
@@ -22418,7 +22418,7 @@
     "routes": [],
     "canonical": "perplexity/sonar-pro",
     "routed": "perplexity/sonar-pro",
-    "slug": "unknown__perplexity_sonar-pro",
+    "slug": "perplexity_sonar-pro",
     "fields": {
      "family": "sonar",
      "generation": null,
@@ -22455,7 +22455,7 @@
     "routes": [],
     "canonical": "perplexity/sonar-pro-search",
     "routed": "perplexity/sonar-pro-search",
-    "slug": "unknown__perplexity_sonar-pro-search",
+    "slug": "perplexity_sonar-pro-search",
     "fields": {
      "family": "sonar",
      "generation": null,
@@ -22492,7 +22492,7 @@
     "routes": [],
     "canonical": "perplexity/sonar-reasoning-pro",
     "routed": "perplexity/sonar-reasoning-pro",
-    "slug": "unknown__perplexity_sonar-reasoning-pro",
+    "slug": "perplexity_sonar-reasoning-pro",
     "fields": {
      "family": "sonar",
      "generation": null,
@@ -22531,7 +22531,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "platform_openai/gpt-6-astra",
-    "slug": "platform_openai__gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -22570,7 +22570,7 @@
     "routes": [],
     "canonical": "prime-intellect/intellect-3",
     "routed": "prime-intellect/intellect-3",
-    "slug": "unknown__prime-intellect_intellect-3",
+    "slug": "prime-intellect_intellect-3",
     "fields": {
      "family": "intellect",
      "generation": "3",
@@ -22687,7 +22687,7 @@
     "routes": [],
     "canonical": "qwen/qwen-2.5-72b-instruct",
     "routed": "qwen/qwen-2.5-72b-instruct",
-    "slug": "unknown__qwen_qwen-2.5-72b-instruct",
+    "slug": "qwen_qwen-2.5-72b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "2.5",
@@ -22724,7 +22724,7 @@
     "routes": [],
     "canonical": "qwen/qwen-2.5-7b-instruct",
     "routed": "qwen/qwen-2.5-7b-instruct",
-    "slug": "unknown__qwen_qwen-2.5-7b-instruct",
+    "slug": "qwen_qwen-2.5-7b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "2.5",
@@ -22761,7 +22761,7 @@
     "routes": [],
     "canonical": "qwen/qwen-2.5-coder-32b-instruct",
     "routed": "qwen/qwen-2.5-coder-32b-instruct",
-    "slug": "unknown__qwen_qwen-2.5-coder-32b-instruct",
+    "slug": "qwen_qwen-2.5-coder-32b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "2.5",
@@ -22798,7 +22798,7 @@
     "routes": [],
     "canonical": "qwen/qwen-max",
     "routed": "qwen/qwen-max",
-    "slug": "unknown__qwen_qwen-max",
+    "slug": "qwen_qwen-max",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -22837,7 +22837,7 @@
     "routes": [],
     "canonical": "qwen/qwen-plus",
     "routed": "qwen/qwen-plus",
-    "slug": "unknown__qwen_qwen-plus",
+    "slug": "qwen_qwen-plus",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -22874,7 +22874,7 @@
     "routes": [],
     "canonical": "qwen/qwen-plus-2025-07-28",
     "routed": "qwen/qwen-plus-2025-07-28",
-    "slug": "unknown__qwen_qwen-plus-2025-07-28",
+    "slug": "qwen_qwen-plus-2025-07-28",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -22911,7 +22911,7 @@
     "routes": [],
     "canonical": "qwen/qwen-plus-2025-07-28:thinking",
     "routed": "qwen/qwen-plus-2025-07-28:thinking",
-    "slug": "unknown__qwen_qwen-plus-2025-07-28_thinking",
+    "slug": "qwen_qwen-plus-2025-07-28_thinking",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -22948,7 +22948,7 @@
     "routes": [],
     "canonical": "qwen/qwen-turbo",
     "routed": "qwen/qwen-turbo",
-    "slug": "unknown__qwen_qwen-turbo",
+    "slug": "qwen_qwen-turbo",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -22985,7 +22985,7 @@
     "routes": [],
     "canonical": "qwen/qwen-vl-max",
     "routed": "qwen/qwen-vl-max",
-    "slug": "unknown__qwen_qwen-vl-max",
+    "slug": "qwen_qwen-vl-max",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -23022,7 +23022,7 @@
     "routes": [],
     "canonical": "qwen/qwen-vl-plus",
     "routed": "qwen/qwen-vl-plus",
-    "slug": "unknown__qwen_qwen-vl-plus",
+    "slug": "qwen_qwen-vl-plus",
     "fields": {
      "family": "qwen",
      "generation": null,
@@ -23059,7 +23059,7 @@
     "routes": [],
     "canonical": "qwen/qwen2.5-vl-32b-instruct",
     "routed": "qwen/qwen2.5-vl-32b-instruct",
-    "slug": "unknown__qwen_qwen2.5-vl-32b-instruct",
+    "slug": "qwen_qwen2.5-vl-32b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "2.5",
@@ -23096,7 +23096,7 @@
     "routes": [],
     "canonical": "qwen/qwen2.5-vl-72b-instruct",
     "routed": "qwen/qwen2.5-vl-72b-instruct",
-    "slug": "unknown__qwen_qwen2.5-vl-72b-instruct",
+    "slug": "qwen_qwen2.5-vl-72b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "2.5",
@@ -23133,7 +23133,7 @@
     "routes": [],
     "canonical": "qwen/qwen3",
     "routed": "qwen/qwen3",
-    "slug": "unknown__qwen_qwen3",
+    "slug": "qwen_qwen3",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23170,7 +23170,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-14b",
     "routed": "qwen/qwen3-14b",
-    "slug": "unknown__qwen_qwen3-14b",
+    "slug": "qwen_qwen3-14b",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23207,7 +23207,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-235b-a22b",
     "routed": "qwen/qwen3-235b-a22b",
-    "slug": "unknown__qwen_qwen3-235b-a22b",
+    "slug": "qwen_qwen3-235b-a22b",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23244,7 +23244,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-235b-a22b-2507",
     "routed": "qwen/qwen3-235b-a22b-2507",
-    "slug": "unknown__qwen_qwen3-235b-a22b-2507",
+    "slug": "qwen_qwen3-235b-a22b-2507",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23281,7 +23281,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-235b-a22b-thinking-2507",
     "routed": "qwen/qwen3-235b-a22b-thinking-2507",
-    "slug": "unknown__qwen_qwen3-235b-a22b-thinking-2507",
+    "slug": "qwen_qwen3-235b-a22b-thinking-2507",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23318,7 +23318,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-30b-a3b",
     "routed": "qwen/qwen3-30b-a3b",
-    "slug": "unknown__qwen_qwen3-30b-a3b",
+    "slug": "qwen_qwen3-30b-a3b",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23355,7 +23355,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-30b-a3b-instruct-2507",
     "routed": "qwen/qwen3-30b-a3b-instruct-2507",
-    "slug": "unknown__qwen_qwen3-30b-a3b-instruct-2507",
+    "slug": "qwen_qwen3-30b-a3b-instruct-2507",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23392,7 +23392,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-30b-a3b-thinking-2507",
     "routed": "qwen/qwen3-30b-a3b-thinking-2507",
-    "slug": "unknown__qwen_qwen3-30b-a3b-thinking-2507",
+    "slug": "qwen_qwen3-30b-a3b-thinking-2507",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23429,7 +23429,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-32b",
     "routed": "qwen/qwen3-32b",
-    "slug": "unknown__qwen_qwen3-32b",
+    "slug": "qwen_qwen3-32b",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23466,7 +23466,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-8b",
     "routed": "qwen/qwen3-8b",
-    "slug": "unknown__qwen_qwen3-8b",
+    "slug": "qwen_qwen3-8b",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23503,7 +23503,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-coder",
     "routed": "qwen/qwen3-coder",
-    "slug": "unknown__qwen_qwen3-coder",
+    "slug": "qwen_qwen3-coder",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23542,7 +23542,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-coder-30b-a3b-instruct",
     "routed": "qwen/qwen3-coder-30b-a3b-instruct",
-    "slug": "unknown__qwen_qwen3-coder-30b-a3b-instruct",
+    "slug": "qwen_qwen3-coder-30b-a3b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23579,7 +23579,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-coder-flash",
     "routed": "qwen/qwen3-coder-flash",
-    "slug": "unknown__qwen_qwen3-coder-flash",
+    "slug": "qwen_qwen3-coder-flash",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23616,7 +23616,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-coder-next",
     "routed": "qwen/qwen3-coder-next",
-    "slug": "unknown__qwen_qwen3-coder-next",
+    "slug": "qwen_qwen3-coder-next",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23653,7 +23653,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-coder-plus",
     "routed": "qwen/qwen3-coder-plus",
-    "slug": "unknown__qwen_qwen3-coder-plus",
+    "slug": "qwen_qwen3-coder-plus",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23690,7 +23690,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-max",
     "routed": "qwen/qwen3-max",
-    "slug": "unknown__qwen_qwen3-max",
+    "slug": "qwen_qwen3-max",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23727,7 +23727,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-max-thinking",
     "routed": "qwen/qwen3-max-thinking",
-    "slug": "unknown__qwen_qwen3-max-thinking",
+    "slug": "qwen_qwen3-max-thinking",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23764,7 +23764,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-next",
     "routed": "qwen/qwen3-next",
-    "slug": "unknown__qwen_qwen3-next",
+    "slug": "qwen_qwen3-next",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23801,7 +23801,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-next-80b-a3b-instruct",
     "routed": "qwen/qwen3-next-80b-a3b-instruct",
-    "slug": "unknown__qwen_qwen3-next-80b-a3b-instruct",
+    "slug": "qwen_qwen3-next-80b-a3b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23838,7 +23838,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-next-80b-a3b-thinking",
     "routed": "qwen/qwen3-next-80b-a3b-thinking",
-    "slug": "unknown__qwen_qwen3-next-80b-a3b-thinking",
+    "slug": "qwen_qwen3-next-80b-a3b-thinking",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23875,7 +23875,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-vl-235b-a22b-instruct",
     "routed": "qwen/qwen3-vl-235b-a22b-instruct",
-    "slug": "unknown__qwen_qwen3-vl-235b-a22b-instruct",
+    "slug": "qwen_qwen3-vl-235b-a22b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23912,7 +23912,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-vl-235b-a22b-thinking",
     "routed": "qwen/qwen3-vl-235b-a22b-thinking",
-    "slug": "unknown__qwen_qwen3-vl-235b-a22b-thinking",
+    "slug": "qwen_qwen3-vl-235b-a22b-thinking",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23949,7 +23949,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-vl-30b-a3b-instruct",
     "routed": "qwen/qwen3-vl-30b-a3b-instruct",
-    "slug": "unknown__qwen_qwen3-vl-30b-a3b-instruct",
+    "slug": "qwen_qwen3-vl-30b-a3b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -23986,7 +23986,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-vl-30b-a3b-thinking",
     "routed": "qwen/qwen3-vl-30b-a3b-thinking",
-    "slug": "unknown__qwen_qwen3-vl-30b-a3b-thinking",
+    "slug": "qwen_qwen3-vl-30b-a3b-thinking",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -24023,7 +24023,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-vl-32b-instruct",
     "routed": "qwen/qwen3-vl-32b-instruct",
-    "slug": "unknown__qwen_qwen3-vl-32b-instruct",
+    "slug": "qwen_qwen3-vl-32b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -24060,7 +24060,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-vl-8b-instruct",
     "routed": "qwen/qwen3-vl-8b-instruct",
-    "slug": "unknown__qwen_qwen3-vl-8b-instruct",
+    "slug": "qwen_qwen3-vl-8b-instruct",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -24097,7 +24097,7 @@
     "routes": [],
     "canonical": "qwen/qwen3-vl-8b-thinking",
     "routed": "qwen/qwen3-vl-8b-thinking",
-    "slug": "unknown__qwen_qwen3-vl-8b-thinking",
+    "slug": "qwen_qwen3-vl-8b-thinking",
     "fields": {
      "family": "qwen",
      "generation": "3",
@@ -24134,7 +24134,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-122b-a10b",
     "routed": "qwen/qwen3.5-122b-a10b",
-    "slug": "unknown__qwen_qwen3.5-122b-a10b",
+    "slug": "qwen_qwen3.5-122b-a10b",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24171,7 +24171,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-27b",
     "routed": "qwen/qwen3.5-27b",
-    "slug": "unknown__qwen_qwen3.5-27b",
+    "slug": "qwen_qwen3.5-27b",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24208,7 +24208,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-35b-a3b",
     "routed": "qwen/qwen3.5-35b-a3b",
-    "slug": "unknown__qwen_qwen3.5-35b-a3b",
+    "slug": "qwen_qwen3.5-35b-a3b",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24245,7 +24245,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-397b-a17b",
     "routed": "qwen/qwen3.5-397b-a17b",
-    "slug": "unknown__qwen_qwen3.5-397b-a17b",
+    "slug": "qwen_qwen3.5-397b-a17b",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24282,7 +24282,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-9b",
     "routed": "qwen/qwen3.5-9b",
-    "slug": "unknown__qwen_qwen3.5-9b",
+    "slug": "qwen_qwen3.5-9b",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24319,7 +24319,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-flash-02-23",
     "routed": "qwen/qwen3.5-flash-02-23",
-    "slug": "unknown__qwen_qwen3.5-flash-02-23",
+    "slug": "qwen_qwen3.5-flash-02-23",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24356,7 +24356,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-plus-02-15",
     "routed": "qwen/qwen3.5-plus-02-15",
-    "slug": "unknown__qwen_qwen3.5-plus-02-15",
+    "slug": "qwen_qwen3.5-plus-02-15",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24393,7 +24393,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.5-plus-20260420",
     "routed": "qwen/qwen3.5-plus-20260420",
-    "slug": "unknown__qwen_qwen3.5-plus-20260420",
+    "slug": "qwen_qwen3.5-plus-20260420",
     "fields": {
      "family": "qwen",
      "generation": "3.5",
@@ -24430,7 +24430,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.6-27b",
     "routed": "qwen/qwen3.6-27b",
-    "slug": "unknown__qwen_qwen3.6-27b",
+    "slug": "qwen_qwen3.6-27b",
     "fields": {
      "family": "qwen",
      "generation": "3.6",
@@ -24467,7 +24467,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.6-35b-a3b",
     "routed": "qwen/qwen3.6-35b-a3b",
-    "slug": "unknown__qwen_qwen3.6-35b-a3b",
+    "slug": "qwen_qwen3.6-35b-a3b",
     "fields": {
      "family": "qwen",
      "generation": "3.6",
@@ -24504,7 +24504,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.6-flash",
     "routed": "qwen/qwen3.6-flash",
-    "slug": "unknown__qwen_qwen3.6-flash",
+    "slug": "qwen_qwen3.6-flash",
     "fields": {
      "family": "qwen",
      "generation": "3.6",
@@ -24543,7 +24543,7 @@
     ],
     "canonical": "qwen/qwen3.6-max-preview",
     "routed": "openrouter/qwen/qwen3.6-max-preview",
-    "slug": "openrouter__qwen_qwen3.6-max-preview",
+    "slug": "qwen_qwen3.6-max-preview",
     "fields": {
      "family": "qwen",
      "generation": "3.6",
@@ -24584,7 +24584,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.6-max-preview",
     "routed": "qwen/qwen3.6-max-preview",
-    "slug": "unknown__qwen_qwen3.6-max-preview",
+    "slug": "qwen_qwen3.6-max-preview",
     "fields": {
      "family": "qwen",
      "generation": "3.6",
@@ -24627,7 +24627,7 @@
     ],
     "canonical": "qwen/qwen3.6-plus",
     "routed": "openrouter/qwen/qwen3.6-plus",
-    "slug": "openrouter__qwen_qwen3.6-plus",
+    "slug": "qwen_qwen3.6-plus",
     "fields": {
      "family": "qwen",
      "generation": "3.6",
@@ -24672,7 +24672,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.6-plus",
     "routed": "qwen/qwen3.6-plus",
-    "slug": "unknown__qwen_qwen3.6-plus",
+    "slug": "qwen_qwen3.6-plus",
     "fields": {
      "family": "qwen",
      "generation": "3.6",
@@ -24719,7 +24719,7 @@
     ],
     "canonical": "qwen/qwen3.7-max",
     "routed": "openrouter/qwen/qwen3.7-max",
-    "slug": "openrouter__qwen_qwen3.7-max",
+    "slug": "qwen_qwen3.7-max",
     "fields": {
      "family": "qwen",
      "generation": "3.7",
@@ -24764,7 +24764,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.7-max",
     "routed": "qwen/qwen3.7-max",
-    "slug": "unknown__qwen_qwen3.7-max",
+    "slug": "qwen_qwen3.7-max",
     "fields": {
      "family": "qwen",
      "generation": "3.7",
@@ -24811,7 +24811,7 @@
     ],
     "canonical": "qwen/qwen3.8-max",
     "routed": "openrouter/qwen/qwen3.8-max",
-    "slug": "openrouter__qwen_qwen3.8-max",
+    "slug": "qwen_qwen3.8-max",
     "fields": {
      "family": "qwen",
      "generation": "3.8",
@@ -24856,7 +24856,7 @@
     "routes": [],
     "canonical": "qwen/qwen3.8-max",
     "routed": "qwen/qwen3.8-max",
-    "slug": "unknown__qwen_qwen3.8-max",
+    "slug": "qwen_qwen3.8-max",
     "fields": {
      "family": "qwen",
      "generation": "3.8",
@@ -24901,7 +24901,7 @@
     "routes": [],
     "canonical": "qwen/qwq-32b",
     "routed": "qwen/qwq-32b",
-    "slug": "unknown__qwen_qwq-32b",
+    "slug": "qwen_qwq-32b",
     "fields": {
      "family": "qwq",
      "generation": null,
@@ -25066,7 +25066,7 @@
     "routes": [],
     "canonical": "rekaai/reka-edge",
     "routed": "rekaai/reka-edge",
-    "slug": "unknown__rekaai_reka-edge",
+    "slug": "rekaai_reka-edge",
     "fields": {
      "family": "reka",
      "generation": null,
@@ -25103,7 +25103,7 @@
     "routes": [],
     "canonical": "rekaai/reka-flash-3",
     "routed": "rekaai/reka-flash-3",
-    "slug": "unknown__rekaai_reka-flash-3",
+    "slug": "rekaai_reka-flash-3",
     "fields": {
      "family": "reka",
      "generation": "3",
@@ -25140,7 +25140,7 @@
     "routes": [],
     "canonical": "relace/relace-apply-3",
     "routed": "relace/relace-apply-3",
-    "slug": "unknown__relace_relace-apply-3",
+    "slug": "relace_relace-apply-3",
     "fields": {
      "family": "relace",
      "generation": "3",
@@ -25177,7 +25177,7 @@
     "routes": [],
     "canonical": "relace/relace-search",
     "routed": "relace/relace-search",
-    "slug": "unknown__relace_relace-search",
+    "slug": "relace_relace-search",
     "fields": {
      "family": "relace",
      "generation": null,
@@ -25214,7 +25214,7 @@
     "routes": [],
     "canonical": "sao10k/l3-euryale-70b",
     "routed": "sao10k/l3-euryale-70b",
-    "slug": "unknown__sao10k_l3-euryale-70b",
+    "slug": "sao10k_l3-euryale-70b",
     "fields": {
      "family": "l",
      "generation": "3",
@@ -25251,7 +25251,7 @@
     "routes": [],
     "canonical": "sao10k/l3-lunaris-8b",
     "routed": "sao10k/l3-lunaris-8b",
-    "slug": "unknown__sao10k_l3-lunaris-8b",
+    "slug": "sao10k_l3-lunaris-8b",
     "fields": {
      "family": "l",
      "generation": "3",
@@ -25288,7 +25288,7 @@
     "routes": [],
     "canonical": "sao10k/l3.1-70b-hanami-x1",
     "routed": "sao10k/l3.1-70b-hanami-x1",
-    "slug": "unknown__sao10k_l3.1-70b-hanami-x1",
+    "slug": "sao10k_l3.1-70b-hanami-x1",
     "fields": {
      "family": "l",
      "generation": "3.1",
@@ -25327,7 +25327,7 @@
     "routes": [],
     "canonical": "sao10k/l3.1-euryale-70b",
     "routed": "sao10k/l3.1-euryale-70b",
-    "slug": "unknown__sao10k_l3.1-euryale-70b",
+    "slug": "sao10k_l3.1-euryale-70b",
     "fields": {
      "family": "l",
      "generation": "3.1",
@@ -25364,7 +25364,7 @@
     "routes": [],
     "canonical": "sao10k/l3.3-euryale-70b",
     "routed": "sao10k/l3.3-euryale-70b",
-    "slug": "unknown__sao10k_l3.3-euryale-70b",
+    "slug": "sao10k_l3.3-euryale-70b",
     "fields": {
      "family": "l",
      "generation": "3.3",
@@ -25476,7 +25476,7 @@
     "routes": [],
     "canonical": "stepfun/step-3.5-flash",
     "routed": "stepfun/step-3.5-flash",
-    "slug": "unknown__stepfun_step-3.5-flash",
+    "slug": "stepfun_step-3.5-flash",
     "fields": {
      "family": "step",
      "generation": "3.5",
@@ -25528,7 +25528,7 @@
     "routes": [],
     "canonical": "switchpoint/router",
     "routed": "switchpoint/router",
-    "slug": "unknown__switchpoint_router",
+    "slug": "switchpoint_router",
     "fields": {
      "family": "router",
      "generation": null,
@@ -25565,7 +25565,7 @@
     "routes": [],
     "canonical": "tencent/hunyuan-3",
     "routed": "tencent/hunyuan-3",
-    "slug": "unknown__tencent_hunyuan-3",
+    "slug": "tencent_hunyuan-3",
     "fields": {
      "family": "hunyuan",
      "generation": "3",
@@ -25602,7 +25602,7 @@
     "routes": [],
     "canonical": "tencent/hunyuan-3-preview",
     "routed": "tencent/hunyuan-3-preview",
-    "slug": "unknown__tencent_hunyuan-3-preview",
+    "slug": "tencent_hunyuan-3-preview",
     "fields": {
      "family": "hunyuan",
      "generation": "3",
@@ -25639,7 +25639,7 @@
     "routes": [],
     "canonical": "tencent/hunyuan-a13b-instruct",
     "routed": "tencent/hunyuan-a13b-instruct",
-    "slug": "unknown__tencent_hunyuan-a13b-instruct",
+    "slug": "tencent_hunyuan-a13b-instruct",
     "fields": {
      "family": "hunyuan",
      "generation": null,
@@ -25680,7 +25680,7 @@
     ],
     "canonical": "tencent/hy3",
     "routed": "openrouter/tencent/hy3",
-    "slug": "openrouter__tencent_hy3",
+    "slug": "tencent_hy3",
     "fields": {
      "family": "hy",
      "generation": "3",
@@ -25725,7 +25725,7 @@
     "routes": [],
     "canonical": "tencent/hy3",
     "routed": "tencent/hy3",
-    "slug": "unknown__tencent_hy3",
+    "slug": "tencent_hy3",
     "fields": {
      "family": "hy",
      "generation": "3",
@@ -25772,7 +25772,7 @@
     ],
     "canonical": "tencent/hy3-preview",
     "routed": "openrouter/tencent/hy3-preview",
-    "slug": "openrouter__tencent_hy3-preview",
+    "slug": "tencent_hy3-preview",
     "fields": {
      "family": "hy",
      "generation": "3",
@@ -25817,7 +25817,7 @@
     "routes": [],
     "canonical": "tencent/hy3-preview",
     "routed": "tencent/hy3-preview",
-    "slug": "unknown__tencent_hy3-preview",
+    "slug": "tencent_hy3-preview",
     "fields": {
      "family": "hy",
      "generation": "3",
@@ -25862,7 +25862,7 @@
     "routes": [],
     "canonical": "thedrummer/cydonia-24b-v4.1",
     "routed": "thedrummer/cydonia-24b-v4.1",
-    "slug": "unknown__thedrummer_cydonia-24b-v4.1",
+    "slug": "thedrummer_cydonia-24b-v4.1",
     "fields": {
      "family": "cydonia",
      "generation": "v4.1",
@@ -25899,7 +25899,7 @@
     "routes": [],
     "canonical": "thedrummer/rocinante-12b",
     "routed": "thedrummer/rocinante-12b",
-    "slug": "unknown__thedrummer_rocinante-12b",
+    "slug": "thedrummer_rocinante-12b",
     "fields": {
      "family": "rocinante",
      "generation": null,
@@ -25936,7 +25936,7 @@
     "routes": [],
     "canonical": "thedrummer/skyfall-36b-v2",
     "routed": "thedrummer/skyfall-36b-v2",
-    "slug": "unknown__thedrummer_skyfall-36b-v2",
+    "slug": "thedrummer_skyfall-36b-v2",
     "fields": {
      "family": "skyfall",
      "generation": "v2",
@@ -25973,7 +25973,7 @@
     "routes": [],
     "canonical": "thedrummer/unslopnemo-12b",
     "routed": "thedrummer/unslopnemo-12b",
-    "slug": "unknown__thedrummer_unslopnemo-12b",
+    "slug": "thedrummer_unslopnemo-12b",
     "fields": {
      "family": "unslopnemo",
      "generation": null,
@@ -26012,7 +26012,7 @@
     ],
     "canonical": "thinkingmachines/inkling",
     "routed": "openrouter/thinkingmachines/inkling",
-    "slug": "openrouter__thinkingmachines_inkling",
+    "slug": "thinkingmachines_inkling",
     "fields": {
      "family": "inkling",
      "generation": null,
@@ -26055,7 +26055,7 @@
     "routes": [],
     "canonical": "thinkingmachines/inkling",
     "routed": "thinkingmachines/inkling",
-    "slug": "unknown__thinkingmachines_inkling",
+    "slug": "thinkingmachines_inkling",
     "fields": {
      "family": "inkling",
      "generation": null,
@@ -26113,7 +26113,7 @@
     "routes": [],
     "canonical": "tngtech/deepseek-r1t2-chimera",
     "routed": "tngtech/deepseek-r1t2-chimera",
-    "slug": "unknown__tngtech_deepseek-r1t2-chimera",
+    "slug": "tngtech_deepseek-r1t2-chimera",
     "fields": {
      "family": "deepseek",
      "generation": null,
@@ -26150,7 +26150,7 @@
     "routes": [],
     "canonical": "undi95/remm-slerp-l2-13b",
     "routed": "undi95/remm-slerp-l2-13b",
-    "slug": "unknown__undi95_remm-slerp-l2-13b",
+    "slug": "undi95_remm-slerp-l2-13b",
     "fields": {
      "family": "remm",
      "generation": "l2",
@@ -26187,7 +26187,7 @@
     "routes": [],
     "canonical": "upstage/solar-pro-3",
     "routed": "upstage/solar-pro-3",
-    "slug": "unknown__upstage_solar-pro-3",
+    "slug": "upstage_solar-pro-3",
     "fields": {
      "family": "solar",
      "generation": "3",
@@ -26224,7 +26224,7 @@
     "routes": [],
     "canonical": "writer/palmyra-x5",
     "routed": "writer/palmyra-x5",
-    "slug": "unknown__writer_palmyra-x5",
+    "slug": "writer_palmyra-x5",
     "fields": {
      "family": "palmyra",
      "generation": "x5",
@@ -26261,7 +26261,7 @@
     "routes": [],
     "canonical": "x-ai/grok",
     "routed": "x-ai/grok",
-    "slug": "unknown__x-ai_grok",
+    "slug": "x-ai_grok",
     "fields": {
      "family": "grok",
      "generation": null,
@@ -26298,7 +26298,7 @@
     "routes": [],
     "canonical": "x-ai/grok-3",
     "routed": "x-ai/grok-3",
-    "slug": "unknown__x-ai_grok-3",
+    "slug": "x-ai_grok-3",
     "fields": {
      "family": "grok",
      "generation": "3",
@@ -26337,7 +26337,7 @@
     "routes": [],
     "canonical": "x-ai/grok-3-beta",
     "routed": "x-ai/grok-3-beta",
-    "slug": "unknown__x-ai_grok-3-beta",
+    "slug": "x-ai_grok-3-beta",
     "fields": {
      "family": "grok",
      "generation": "3",
@@ -26374,7 +26374,7 @@
     "routes": [],
     "canonical": "x-ai/grok-3-mini",
     "routed": "x-ai/grok-3-mini",
-    "slug": "unknown__x-ai_grok-3-mini",
+    "slug": "x-ai_grok-3-mini",
     "fields": {
      "family": "grok",
      "generation": "3",
@@ -26411,7 +26411,7 @@
     "routes": [],
     "canonical": "x-ai/grok-3-mini-beta",
     "routed": "x-ai/grok-3-mini-beta",
-    "slug": "unknown__x-ai_grok-3-mini-beta",
+    "slug": "x-ai_grok-3-mini-beta",
     "fields": {
      "family": "grok",
      "generation": "3",
@@ -26450,7 +26450,7 @@
     ],
     "canonical": "x-ai/grok-4",
     "routed": "openrouter/x-ai/grok-4",
-    "slug": "openrouter__x-ai_grok-4",
+    "slug": "x-ai_grok-4",
     "fields": {
      "family": "grok",
      "generation": "4",
@@ -26491,7 +26491,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4",
     "routed": "x-ai/grok-4",
-    "slug": "unknown__x-ai_grok-4",
+    "slug": "x-ai_grok-4",
     "fields": {
      "family": "grok",
      "generation": "4",
@@ -26532,7 +26532,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4-fast",
     "routed": "x-ai/grok-4-fast",
-    "slug": "unknown__x-ai_grok-4-fast",
+    "slug": "x-ai_grok-4-fast",
     "fields": {
      "family": "grok",
      "generation": "4",
@@ -26571,7 +26571,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.1",
     "routed": "x-ai/grok-4.1",
-    "slug": "unknown__x-ai_grok-4.1",
+    "slug": "x-ai_grok-4.1",
     "fields": {
      "family": "grok",
      "generation": "4.1",
@@ -26608,7 +26608,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.1-fast",
     "routed": "x-ai/grok-4.1-fast",
-    "slug": "unknown__x-ai_grok-4.1-fast",
+    "slug": "x-ai_grok-4.1-fast",
     "fields": {
      "family": "grok",
      "generation": "4.1",
@@ -26645,7 +26645,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.2",
     "routed": "x-ai/grok-4.2",
-    "slug": "unknown__x-ai_grok-4.2",
+    "slug": "x-ai_grok-4.2",
     "fields": {
      "family": "grok",
      "generation": "4.2",
@@ -26688,7 +26688,7 @@
     ],
     "canonical": "x-ai/grok-4.20",
     "routed": "openrouter/x-ai/grok-4.20",
-    "slug": "openrouter__x-ai_grok-4.20",
+    "slug": "x-ai_grok-4.20",
     "fields": {
      "family": "grok",
      "generation": "4.20",
@@ -26731,7 +26731,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.20",
     "routed": "x-ai/grok-4.20",
-    "slug": "unknown__x-ai_grok-4.20",
+    "slug": "x-ai_grok-4.20",
     "fields": {
      "family": "grok",
      "generation": "4.20",
@@ -26774,7 +26774,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.20-multi-agent",
     "routed": "x-ai/grok-4.20-multi-agent",
-    "slug": "unknown__x-ai_grok-4.20-multi-agent",
+    "slug": "x-ai_grok-4.20-multi-agent",
     "fields": {
      "family": "grok",
      "generation": "4.20",
@@ -26813,7 +26813,7 @@
     ],
     "canonical": "x-ai/grok-4.3",
     "routed": "openrouter/x-ai/grok-4.3",
-    "slug": "openrouter__x-ai_grok-4.3",
+    "slug": "x-ai_grok-4.3",
     "fields": {
      "family": "grok",
      "generation": "4.3",
@@ -26858,7 +26858,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.3",
     "routed": "x-ai/grok-4.3",
-    "slug": "unknown__x-ai_grok-4.3",
+    "slug": "x-ai_grok-4.3",
     "fields": {
      "family": "grok",
      "generation": "4.3",
@@ -26905,7 +26905,7 @@
     ],
     "canonical": "x-ai/grok-4.5",
     "routed": "openrouter/x-ai/grok-4.5",
-    "slug": "openrouter__x-ai_grok-4.5",
+    "slug": "x-ai_grok-4.5",
     "fields": {
      "family": "grok",
      "generation": "4.5",
@@ -26950,7 +26950,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.5",
     "routed": "x-ai/grok-4.5",
-    "slug": "unknown__x-ai_grok-4.5",
+    "slug": "x-ai_grok-4.5",
     "fields": {
      "family": "grok",
      "generation": "4.5",
@@ -26997,7 +26997,7 @@
     ],
     "canonical": "x-ai/grok-4.6",
     "routed": "openrouter/x-ai/grok-4.6",
-    "slug": "openrouter__x-ai_grok-4.6",
+    "slug": "x-ai_grok-4.6",
     "fields": {
      "family": "grok",
      "generation": "4.6",
@@ -27040,7 +27040,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.6",
     "routed": "x-ai/grok-4.6",
-    "slug": "unknown__x-ai_grok-4.6",
+    "slug": "x-ai_grok-4.6",
     "fields": {
      "family": "grok",
      "generation": "4.6",
@@ -27083,7 +27083,7 @@
     "routes": [],
     "canonical": "x-ai/grok-build-0.1",
     "routed": "x-ai/grok-build-0.1",
-    "slug": "unknown__x-ai_grok-build-0.1",
+    "slug": "x-ai_grok-build-0.1",
     "fields": {
      "family": "grok",
      "generation": "0.1",
@@ -27120,7 +27120,7 @@
     "routes": [],
     "canonical": "x-ai/grok-code-fast-1",
     "routed": "x-ai/grok-code-fast-1",
-    "slug": "unknown__x-ai_grok-code-fast-1",
+    "slug": "x-ai_grok-code-fast-1",
     "fields": {
      "family": "grok",
      "generation": "1",
@@ -27159,7 +27159,7 @@
     "routes": [],
     "canonical": "xai/grok-4.6",
     "routed": "xai/grok-4.6",
-    "slug": "unknown__xai_grok-4.6",
+    "slug": "xai_grok-4.6",
     "fields": {
      "family": "grok",
      "generation": "4.6",
@@ -27226,7 +27226,7 @@
     "routes": [],
     "canonical": "xiaomi/mimo",
     "routed": "xiaomi/mimo",
-    "slug": "unknown__xiaomi_mimo",
+    "slug": "xiaomi_mimo",
     "fields": {
      "family": "mimo",
      "generation": null,
@@ -27263,7 +27263,7 @@
     "routes": [],
     "canonical": "xiaomi/mimo-v2-flash",
     "routed": "xiaomi/mimo-v2-flash",
-    "slug": "unknown__xiaomi_mimo-v2-flash",
+    "slug": "xiaomi_mimo-v2-flash",
     "fields": {
      "family": "mimo",
      "generation": "v2",
@@ -27300,7 +27300,7 @@
     "routes": [],
     "canonical": "xiaomi/mimo-v2-omni",
     "routed": "xiaomi/mimo-v2-omni",
-    "slug": "unknown__xiaomi_mimo-v2-omni",
+    "slug": "xiaomi_mimo-v2-omni",
     "fields": {
      "family": "mimo",
      "generation": "v2",
@@ -27337,7 +27337,7 @@
     "routes": [],
     "canonical": "xiaomi/mimo-v2-pro",
     "routed": "xiaomi/mimo-v2-pro",
-    "slug": "unknown__xiaomi_mimo-v2-pro",
+    "slug": "xiaomi_mimo-v2-pro",
     "fields": {
      "family": "mimo",
      "generation": "v2",
@@ -27374,7 +27374,7 @@
     "routes": [],
     "canonical": "xiaomi/mimo-v2.5",
     "routed": "xiaomi/mimo-v2.5",
-    "slug": "unknown__xiaomi_mimo-v2.5",
+    "slug": "xiaomi_mimo-v2.5",
     "fields": {
      "family": "mimo",
      "generation": "v2.5",
@@ -27415,7 +27415,7 @@
     ],
     "canonical": "xiaomi/mimo-v2.5-pro",
     "routed": "openrouter/xiaomi/mimo-v2.5-pro",
-    "slug": "openrouter__xiaomi_mimo-v2.5-pro",
+    "slug": "xiaomi_mimo-v2.5-pro",
     "fields": {
      "family": "mimo",
      "generation": "v2.5",
@@ -27460,7 +27460,7 @@
     "routes": [],
     "canonical": "xiaomi/mimo-v2.5-pro",
     "routed": "xiaomi/mimo-v2.5-pro",
-    "slug": "unknown__xiaomi_mimo-v2.5-pro",
+    "slug": "xiaomi_mimo-v2.5-pro",
     "fields": {
      "family": "mimo",
      "generation": "v2.5",
@@ -27505,7 +27505,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4-32b",
     "routed": "z-ai/glm-4-32b",
-    "slug": "unknown__z-ai_glm-4-32b",
+    "slug": "z-ai_glm-4-32b",
     "fields": {
      "family": "glm",
      "generation": "4",
@@ -27542,7 +27542,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4.5",
     "routed": "z-ai/glm-4.5",
-    "slug": "unknown__z-ai_glm-4.5",
+    "slug": "z-ai_glm-4.5",
     "fields": {
      "family": "glm",
      "generation": "4.5",
@@ -27579,7 +27579,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4.5-air",
     "routed": "z-ai/glm-4.5-air",
-    "slug": "unknown__z-ai_glm-4.5-air",
+    "slug": "z-ai_glm-4.5-air",
     "fields": {
      "family": "glm",
      "generation": "4.5",
@@ -27616,7 +27616,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4.5v",
     "routed": "z-ai/glm-4.5v",
-    "slug": "unknown__z-ai_glm-4.5v",
+    "slug": "z-ai_glm-4.5v",
     "fields": {
      "family": "glm",
      "generation": "4.5v",
@@ -27653,7 +27653,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4.6",
     "routed": "z-ai/glm-4.6",
-    "slug": "unknown__z-ai_glm-4.6",
+    "slug": "z-ai_glm-4.6",
     "fields": {
      "family": "glm",
      "generation": "4.6",
@@ -27690,7 +27690,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4.6v",
     "routed": "z-ai/glm-4.6v",
-    "slug": "unknown__z-ai_glm-4.6v",
+    "slug": "z-ai_glm-4.6v",
     "fields": {
      "family": "glm",
      "generation": "4.6v",
@@ -27727,7 +27727,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4.7",
     "routed": "z-ai/glm-4.7",
-    "slug": "unknown__z-ai_glm-4.7",
+    "slug": "z-ai_glm-4.7",
     "fields": {
      "family": "glm",
      "generation": "4.7",
@@ -27764,7 +27764,7 @@
     "routes": [],
     "canonical": "z-ai/glm-4.7-flash",
     "routed": "z-ai/glm-4.7-flash",
-    "slug": "unknown__z-ai_glm-4.7-flash",
+    "slug": "z-ai_glm-4.7-flash",
     "fields": {
      "family": "glm",
      "generation": "4.7",
@@ -27801,7 +27801,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5",
     "routed": "z-ai/glm-5",
-    "slug": "unknown__z-ai_glm-5",
+    "slug": "z-ai_glm-5",
     "fields": {
      "family": "glm",
      "generation": "5",
@@ -27840,7 +27840,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5-turbo",
     "routed": "z-ai/glm-5-turbo",
-    "slug": "unknown__z-ai_glm-5-turbo",
+    "slug": "z-ai_glm-5-turbo",
     "fields": {
      "family": "glm",
      "generation": "5",
@@ -27881,7 +27881,7 @@
     ],
     "canonical": "z-ai/glm-5.1",
     "routed": "openrouter/z-ai/glm-5.1",
-    "slug": "openrouter__z-ai_glm-5.1",
+    "slug": "z-ai_glm-5.1",
     "fields": {
      "family": "glm",
      "generation": "5.1",
@@ -27926,7 +27926,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5.1",
     "routed": "z-ai/glm-5.1",
-    "slug": "unknown__z-ai_glm-5.1",
+    "slug": "z-ai_glm-5.1",
     "fields": {
      "family": "glm",
      "generation": "5.1",
@@ -27973,7 +27973,7 @@
     ],
     "canonical": "z-ai/glm-5.2",
     "routed": "openrouter/z-ai/glm-5.2",
-    "slug": "openrouter__z-ai_glm-5.2",
+    "slug": "z-ai_glm-5.2",
     "fields": {
      "family": "glm",
      "generation": "5.2",
@@ -28018,7 +28018,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5.2",
     "routed": "z-ai/glm-5.2",
-    "slug": "unknown__z-ai_glm-5.2",
+    "slug": "z-ai_glm-5.2",
     "fields": {
      "family": "glm",
      "generation": "5.2",
@@ -28065,7 +28065,7 @@
     ],
     "canonical": "z-ai/glm-5.3",
     "routed": "openrouter/z-ai/glm-5.3",
-    "slug": "openrouter__z-ai_glm-5.3",
+    "slug": "z-ai_glm-5.3",
     "fields": {
      "family": "glm",
      "generation": "5.3",
@@ -28108,7 +28108,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5.3",
     "routed": "z-ai/glm-5.3",
-    "slug": "unknown__z-ai_glm-5.3",
+    "slug": "z-ai_glm-5.3",
     "fields": {
      "family": "glm",
      "generation": "5.3",
@@ -28151,7 +28151,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5.3-fast",
     "routed": "z-ai/glm-5.3-fast",
-    "slug": "unknown__z-ai_glm-5.3-fast",
+    "slug": "z-ai_glm-5.3-fast",
     "fields": {
      "family": "glm",
      "generation": "5.3",
@@ -28188,7 +28188,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5.3-turbo",
     "routed": "z-ai/glm-5.3-turbo",
-    "slug": "unknown__z-ai_glm-5.3-turbo",
+    "slug": "z-ai_glm-5.3-turbo",
     "fields": {
      "family": "glm",
      "generation": "5.3",
@@ -28225,7 +28225,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5.3.1",
     "routed": "z-ai/glm-5.3.1",
-    "slug": "unknown__z-ai_glm-5.3.1",
+    "slug": "z-ai_glm-5.3.1",
     "fields": {
      "family": "glm",
      "generation": "5.3.1",
@@ -28262,7 +28262,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5.30",
     "routed": "z-ai/glm-5.30",
-    "slug": "unknown__z-ai_glm-5.30",
+    "slug": "z-ai_glm-5.30",
     "fields": {
      "family": "glm",
      "generation": "5.30",
@@ -28299,7 +28299,7 @@
     "routes": [],
     "canonical": "z-ai/glm-5v-turbo",
     "routed": "z-ai/glm-5v-turbo",
-    "slug": "unknown__z-ai_glm-5v-turbo",
+    "slug": "z-ai_glm-5v-turbo",
     "fields": {
      "family": "glm",
      "generation": "5v",
@@ -28489,7 +28489,7 @@
     "routes": [],
     "canonical": "openrouter/auto",
     "routed": "openrouter/auto",
-    "slug": "unknown__openrouter_auto",
+    "slug": "openrouter_auto",
     "fields": {
      "family": "auto",
      "generation": null,
@@ -28528,7 +28528,7 @@
     ],
     "canonical": "openrouter/auto",
     "routed": "openrouter/auto",
-    "slug": "openrouter__auto",
+    "slug": "openrouter_auto",
     "fields": {
      "family": "auto",
      "generation": null,
@@ -28568,7 +28568,7 @@
     ],
     "canonical": "openrouter/auto",
     "routed": "litellm/openrouter/auto",
-    "slug": "litellm__openrouter_auto",
+    "slug": "openrouter_auto",
     "fields": {
      "family": "auto",
      "generation": null,
@@ -28607,7 +28607,7 @@
     ],
     "canonical": "nova/Nova Pro v3",
     "routed": "nova/Nova Pro v3",
-    "slug": "nova__Nova_Pro_v3",
+    "slug": "nova_Nova_Pro_v3",
     "fields": {
      "family": "nova",
      "generation": "v3",
@@ -28644,7 +28644,7 @@
     "routes": [],
     "canonical": "nova/Nova Pro v3.4 (Suez)",
     "routed": "nova/Nova Pro v3.4 (Suez)",
-    "slug": "unknown__nova_Nova_Pro_v3.4_Suez",
+    "slug": "nova_Nova_Pro_v3.4_Suez",
     "fields": {
      "family": "nova",
      "generation": "v3.4",
@@ -28683,7 +28683,7 @@
     ],
     "canonical": "Meta/Muse-Spark-1.2",
     "routed": "openrouter/Meta/Muse-Spark-1.2",
-    "slug": "openrouter__Meta_Muse-Spark-1.2",
+    "slug": "Meta_Muse-Spark-1.2",
     "fields": {
      "family": "muse",
      "generation": "1.2",
@@ -28720,7 +28720,7 @@
     "routes": [],
     "canonical": "OpenAI/GPT-6-Astra",
     "routed": "OpenAI/GPT-6-Astra",
-    "slug": "unknown__OpenAI_GPT-6-Astra",
+    "slug": "OpenAI_GPT-6-Astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -28910,7 +28910,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.7-sonnet:thinking",
     "routed": "anthropic/claude-3.7-sonnet:thinking",
-    "slug": "unknown__anthropic_claude-3.7-sonnet_thinking",
+    "slug": "anthropic_claude-3.7-sonnet_thinking",
     "fields": {
      "family": "claude",
      "generation": "3.7",
@@ -28947,7 +28947,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4:nitro",
     "routed": "x-ai/grok-4:nitro",
-    "slug": "unknown__x-ai_grok-4_nitro",
+    "slug": "x-ai_grok-4_nitro",
     "fields": {
      "family": "grok",
      "generation": "4",
@@ -28984,7 +28984,7 @@
     "routes": [],
     "canonical": "anthropic/claude-3.5-sonnet:beta",
     "routed": "anthropic/claude-3.5-sonnet:beta",
-    "slug": "unknown__anthropic_claude-3.5-sonnet_beta",
+    "slug": "anthropic_claude-3.5-sonnet_beta",
     "fields": {
      "family": "claude",
      "generation": "3.5",
@@ -29021,7 +29021,7 @@
     "routes": [],
     "canonical": "x-ai/grok-4.1-fast-non-reasoning",
     "routed": "x-ai/grok-4.1-fast-non-reasoning",
-    "slug": "unknown__x-ai_grok-4.1-fast-non-reasoning",
+    "slug": "x-ai_grok-4.1-fast-non-reasoning",
     "fields": {
      "family": "grok",
      "generation": "4.1",
@@ -29092,7 +29092,7 @@
     "routes": [],
     "canonical": "openai/gpt-6-astra-2026-13-45",
     "routed": "openai/gpt-6-astra-2026-13-45",
-    "slug": "unknown__openai_gpt-6-astra-2026-13-45",
+    "slug": "openai_gpt-6-astra-2026-13-45",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -29131,7 +29131,7 @@
     "routes": [],
     "canonical": "google/gemini-2.0-001-002",
     "routed": "google/gemini-2.0-001-002",
-    "slug": "unknown__google_gemini-2.0-001-002",
+    "slug": "google_gemini-2.0-001-002",
     "fields": {
      "family": "gemini",
      "generation": "2.0",
@@ -29207,7 +29207,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "litellm/openrouter/openai/gpt-6-astra",
-    "slug": "litellm__openai_gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -29244,7 +29244,7 @@
     "routes": [],
     "canonical": "openai/gpt-6-astra",
     "routed": "openai/gpt-6-astra",
-    "slug": "unknown__openai_gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -29283,7 +29283,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "openai/gpt-6-astra",
-    "slug": "openai__gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -29322,7 +29322,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "openai/gpt-6-astra",
-    "slug": "openai__gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -29359,7 +29359,7 @@
     "routes": [],
     "canonical": "openrouter/auto",
     "routed": "openrouter/auto",
-    "slug": "unknown__openrouter_auto",
+    "slug": "openrouter_auto",
     "fields": {
      "family": "auto",
      "generation": null,
@@ -29398,7 +29398,7 @@
     ],
     "canonical": "openrouter/auto",
     "routed": "openrouter/auto",
-    "slug": "openrouter__auto",
+    "slug": "openrouter_auto",
     "fields": {
      "family": "auto",
      "generation": null,
@@ -29437,7 +29437,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "platform_openai/gpt-6-astra",
-    "slug": "platform_openai__gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -29491,7 +29491,7 @@
     "routes": [],
     "canonical": "deepseek/deepseek-v4",
     "routed": "deepseek/deepseek-v4",
-    "slug": "unknown__deepseek_deepseek-v4",
+    "slug": "deepseek_deepseek-v4",
     "fields": {
      "family": "deepseek",
      "generation": "v4",
@@ -29565,7 +29565,7 @@
     ],
     "canonical": "anthropic/claude-opus-5",
     "routed": "litellm/openrouter/anthropic/claude-opus-5",
-    "slug": "litellm__anthropic_claude-opus-5",
+    "slug": "anthropic_claude-opus-5",
     "fields": {
      "family": "claude",
      "generation": "5",
@@ -29604,7 +29604,7 @@
     ],
     "canonical": "openai/gpt-6-astra",
     "routed": "litellm/openai/gpt-6-astra",
-    "slug": "litellm__openai_gpt-6-astra",
+    "slug": "openai_gpt-6-astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -29643,7 +29643,7 @@
     ],
     "canonical": "meta/muse-spark-1.2",
     "routed": "meta/muse-spark-1.2",
-    "slug": "meta__muse-spark-1.2",
+    "slug": "meta_muse-spark-1.2",
     "fields": {
      "family": "muse",
      "generation": "1.2",
@@ -29682,7 +29682,7 @@
     ],
     "canonical": "x-ai/grok-4",
     "routed": "xai/x-ai/grok-4",
-    "slug": "xai__x-ai_grok-4",
+    "slug": "x-ai_grok-4",
     "fields": {
      "family": "grok",
      "generation": "4",
@@ -29721,7 +29721,7 @@
     ],
     "canonical": "google/gemini-2.5-flash",
     "routed": "gemini/gemini-2.5-flash",
-    "slug": "gemini__gemini-2.5-flash",
+    "slug": "google_gemini-2.5-flash",
     "fields": {
      "family": "gemini",
      "generation": "2.5",
@@ -29758,7 +29758,7 @@
     "routes": [],
     "canonical": "nova/nova-pro-v1",
     "routed": "nova/nova-pro-v1",
-    "slug": "unknown__nova_nova-pro-v1",
+    "slug": "nova_nova-pro-v1",
     "fields": {
      "family": "nova",
      "generation": "v1",
@@ -29797,7 +29797,7 @@
     ],
     "canonical": "nova/nova-pro-v1",
     "routed": "nova/nova-pro-v1",
-    "slug": "nova__nova-pro-v1",
+    "slug": "nova_nova-pro-v1",
     "fields": {
      "family": "nova",
      "generation": "v1",
@@ -29900,7 +29900,7 @@
     "routes": [],
     "canonical": "openai/gpt-4o",
     "routed": "openai/gpt-4o",
-    "slug": "unknown__openai_gpt-4o",
+    "slug": "openai_gpt-4o",
     "fields": {
      "family": "gpt",
      "generation": "4o",
@@ -29941,7 +29941,7 @@
     "routes": [],
     "canonical": "meta/muse-spark-1.1",
     "routed": "meta/muse-spark-1.1",
-    "slug": "unknown__meta_muse-spark-1.1",
+    "slug": "meta_muse-spark-1.1",
     "fields": {
      "family": "muse",
      "generation": "1.1",

@@ -10,7 +10,7 @@
 # overrides live only in [lookup], each with a `why`.
 
 schema_version = 1        # the rule primitives this file uses; the library states which versions it reads
-version = "2026.09.12"    # this rule set's own version, recorded by every consumer next to its values
+version = "2026.09.12.1"  # this rule set's own version, recorded by every consumer next to its values
 
 # --- routes ------------------------------------------------------------------------------------------------
 # A route is a transport namespace that may prefix a model name on the wire, or the `provider` of the
@@ -70,7 +70,7 @@ fields = "best_effort"                    # "strict" raises on any unresolved to
 route_sep = "__"
 unsafe = "[^A-Za-z0-9._-]+"
 unsafe_replacement = "_"
-route_less = "unknown"                    # unknown__<wire name> when the value has no route; "omit" drops the route part
+route_in_slug = false                     # slug is <vendor>_<model>; true: <route>__<wire name> like the engine's model_id_slug
 
 # --- fields ------------------------------------------------------------------------------------------------
 

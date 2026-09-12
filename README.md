@@ -11,8 +11,8 @@ Status: alpha, not yet published. Design, survey and golden corpus: the workspac
 
 A model is spelled many ways across a stack: `openai/gpt-6-astra` in a pricing table,
 `openrouter/openai/gpt-6-astra` on the wire, `platform_openai/gpt-6-astra` on a gateway, `(openrouter,
-openai/gpt-6-astra)` as a provider-plus-name pair in a run config, `openrouter__openai_gpt-6-astra` as a
-filesystem slug. The library gives all of them one identity, `ModelName(vendor, model, route)`, and derives
+openai/gpt-6-astra)` as a provider-plus-name pair in a run config, `openrouter__openai_gpt-6-astra` as the
+engine's output directory name. The library gives all of them one identity, `ModelName(vendor, model, route)`, and derives
 descriptive fields from the name by rule:
 
 | Group | Fields |
@@ -34,7 +34,7 @@ norm = Normalizer(Rules.default())
 name = norm.parse_pair("openrouter", "openai/gpt-6-astra")  # the task.yaml form, never lossy
 name.canonical  # "openai/gpt-6-astra"
 name.routed  # "openrouter/openai/gpt-6-astra"
-name.slug  # "openrouter__openai_gpt-6-astra"
+name.slug  # "openai_gpt-6-astra"; the route is a property, not part of the slug
 name.family, name.generation, name.variant  # "gpt", "6", "astra"
 name.tags()  # ["model:openai/gpt-6-astra", "model_vendor:openai", "model_family:gpt"]
 name.fields()  # every descriptive field with an explicit None
