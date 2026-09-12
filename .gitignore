@@ -8,3 +8,9 @@ build/
 .ruff_cache/
 .pytest_cache/
 uv.lock
+# local package-index configuration and credentials never belong in the repository
+uv.toml
+.netrc
+.pypirc
+.env
+.env.*
