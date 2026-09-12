@@ -134,6 +134,15 @@ uv run ruff check . && uv run ruff format --check .
 uv run mypy
 ```
 
+To eyeball what the library makes of any input (identity, fields, renderings or the error), run the demo script,
+with the built-in list or your own inputs (`pair:<provider>:<name>`, `canonical:<text>`, `routed:<text>`, or a
+plain string for the generic entry point; `--markdown` for a table):
+
+```bash
+PYTHONPATH=src python3 scripts/show_outputs.py
+PYTHONPATH=src python3 scripts/show_outputs.py x-ai/grok-4.6 "pair:meta:muse-spark-1.2"
+```
+
 `tests/data/golden.json` is the golden corpus generated from the survey (every raw string with its input kind
 and expectation); the test suite asserts every field of every row. Regenerate it from
 `docs/model-name-canonicaliser/fixtures/` in the workspace when the rules change, and review the diff.
