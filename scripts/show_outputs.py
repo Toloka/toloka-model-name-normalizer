@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Show what the normalizer makes of a list of inputs: identity, descriptive fields, renderings, or the error.
 
-Run from the repository root (any Python 3.10+, no dependencies beyond the library):
+Run from the repository root with any Python 3.10+. The sources next to this script are used when the package
+is not installed, so no PYTHONPATH and no network are needed; with uv, --no-sync skips the dependency sync:
 
-    PYTHONPATH=src python3 scripts/show_outputs.py                 # the built-in inputs, plain text
-    PYTHONPATH=src python3 scripts/show_outputs.py --markdown      # the same as a Markdown table
-    PYTHONPATH=src python3 scripts/show_outputs.py x-ai/grok-4.6 "pair:meta:muse-spark-1.2" "routed:openai/o3"
+    python3 scripts/show_outputs.py                                # the built-in inputs, plain text
+    python3 scripts/show_outputs.py --markdown                     # the same as a Markdown table
+    python3 scripts/show_outputs.py x-ai/grok-4.6 "pair:meta:muse-spark-1.2" "routed:openai/o3"
+    uv run --no-sync python scripts/show_outputs.py
 
 Input syntax on the command line: a plain string goes through ``parse()``; ``pair:<provider>:<name>``
 through ``parse_pair()``; ``canonical:<text>`` and ``routed:<text>`` through those entry points.
@@ -17,9 +19,15 @@ from __future__ import annotations
 import argparse
 import sys
 from collections.abc import Iterable, Sequence
+from pathlib import Path
 
-from toloka_model_name_normalizer import ModelName, ModelNameError, Normalizer, Rules
-from toloka_model_name_normalizer.model import DESCRIPTIVE_FIELDS
+try:
+    import toloka_model_name_normalizer  # noqa: F401  (installed package)
+except ImportError:  # a checkout without an installed package: use the sources next to this script
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from toloka_model_name_normalizer import ModelName, ModelNameError, Normalizer, Rules  # noqa: E402
+from toloka_model_name_normalizer.model import DESCRIPTIVE_FIELDS  # noqa: E402
 
 # (kind, provider or None, input); one line per case, grouped the way the design discusses them
 BUILT_IN: list[tuple[str, str | None, str]] = [

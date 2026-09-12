@@ -136,11 +136,13 @@ uv run mypy
 
 To eyeball what the library makes of any input (identity, fields, renderings or the error), run the demo script,
 with the built-in list or your own inputs (`pair:<provider>:<name>`, `canonical:<text>`, `routed:<text>`, or a
-plain string for the generic entry point; `--markdown` for a table):
+plain string for the generic entry point; `--markdown` for a table). It falls back to the sources next to it
+when the package is not installed, so it needs no `PYTHONPATH`, no `uv sync` and no network:
 
 ```bash
-PYTHONPATH=src python3 scripts/show_outputs.py
-PYTHONPATH=src python3 scripts/show_outputs.py x-ai/grok-4.6 "pair:meta:muse-spark-1.2"
+python3 scripts/show_outputs.py
+python3 scripts/show_outputs.py x-ai/grok-4.6 "pair:meta:muse-spark-1.2"
+uv run --no-sync python scripts/show_outputs.py       # with uv, without syncing the dev dependencies
 ```
 
 `tests/data/golden.json` is the golden corpus generated from the survey (every raw string with its input kind
