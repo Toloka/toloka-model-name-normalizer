@@ -194,7 +194,12 @@ class Rules:
     fields: FieldRules
     identity_fingerprint: str
     fields_fingerprint: str
-    document: Mapping[str, Any]
+    _document: Mapping[str, Any]
+
+    @property
+    def document(self) -> dict[str, Any]:
+        """A deep copy of the merged rules document; mutating it never touches the rule set."""
+        return copy.deepcopy(dict(self._document))
 
     @classmethod
     def default(cls) -> Rules:
@@ -317,7 +322,7 @@ class Rules:
             fields=fields,
             identity_fingerprint=identity_fp,
             fields_fingerprint=fields_fp,
-            document=MappingProxyType(copy.deepcopy(dict(doc))),
+            _document=copy.deepcopy(dict(doc)),
         )
 
 
@@ -549,6 +554,11 @@ def _merge(base: Mapping[str, Any], override: Mapping[str, Any]) -> dict[str, An
 # ---------------------------------------------------------------------------
 
 
+def _is_peelable_route(routes: Mapping[str, Any], name: str) -> bool:
+    spec = routes.get(name.lower())
+    return spec is not None and spec.get("implies_vendor") != name.lower()
+
+
 def _compile(pattern: str, where: str) -> re.Pattern[str]:
     try:
         return re.compile(pattern)
@@ -591,12 +601,20 @@ def _validate(doc: Mapping[str, Any]) -> None:
             f"vendor_aliases.{alias} must map a vendor segment to a vendor segment",
         )
         _require(alias not in routes, f"vendor_aliases.{alias} is also a route")
+        _require(
+            not _is_peelable_route(routes, vendor),
+            f"vendor_aliases.{alias} maps to {vendor!r}, which is a peelable route and never a vendor",
+        )
     for pattern, vendor in doc.get("bare_names", {}).items():
         _require(
             "*" in pattern or "?" in pattern,
             f"bare_names pattern {pattern!r} has no wildcard; use lookup for an exact name",
         )
         _require(SEGMENT_RE.match(vendor) is not None, f"bare_names.{pattern} must name a vendor segment")
+        _require(
+            not _is_peelable_route(routes, vendor),
+            f"bare_names.{pattern} maps to {vendor!r}, which is a peelable route and never a vendor",
+        )
 
     render = doc["render"]
     for key in _RENDER_KEYS:
@@ -610,10 +628,7 @@ def _validate(doc: Mapping[str, Any]) -> None:
     _require(unsafe.search("") is None, "render.unsafe must not match the empty string")
 
     for key, spec in doc.get("lookup", {}).items():
-        _require(
-            bool(key) and key == key.strip() and "/" in key,
-            f"lookup key {key!r} must be a non-empty vendor/model or route/name string",
-        )
+        _require(bool(key) and key == key.strip(), f"lookup key {key!r} must be a non-empty string")
         _require(bool(spec.get("why")), f"lookup.{key} needs a non-empty why")
         _require(("vendor" in spec) == ("model" in spec), f"lookup.{key} must set vendor and model together")
         _require(

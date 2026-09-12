@@ -113,7 +113,7 @@ class TestMalformed:
         ],
     )
     def test_generic_parser_rejects(self, norm: Normalizer, text: str) -> None:
-        with pytest.raises((MalformedName, UnknownVendor)):
+        with pytest.raises(MalformedName):
             norm.parse(text)
 
     @pytest.mark.parametrize(

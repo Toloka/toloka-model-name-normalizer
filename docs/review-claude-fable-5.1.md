@@ -434,3 +434,75 @@ Ran (Python 3.12.13, interpreter of the `tolokaforge` venv, from the library roo
   3.10 branch type-check; the `tomli` import itself has never executed (F9). Not checked: CORPUS.md and INVENTORY.md
   in full, a real PyPI upload, `uv sync` against the lock (no network), behaviour of the console script when
   installed (only `main(argv)` was called).
+
+## Re-check of f3e82b8
+
+Date: 2026-09-12. Commit re-checked: `f3e82b8` ("fix: adopt the first code review's findings"), diffed against
+`1cb34ff`. Method: every original probe input re-run against the new code (`/tmp/fable-code-review/recheck_*.txt`,
+`recheck_findings.py`, `recheck_new.py`), the acceptance tests in `tests/test_review_findings.py` read but not relied
+on, toolchain and offline build repeated.
+
+Toolchain: `pytest` all green (every golden row plus the new `test_review_findings.py`); `ruff check` clean;
+`ruff format --check` 18 files formatted; `mypy` strict clean. Offline hatchling build: the dynamic version resolves
+to `0.1.0` from `__init__.py`, the wheel still ships `rules.toml`, `py.typed` and the console script; METADATA still
+has no licence and the sdist keeps `tests/` (both by the owner's decision). `.github/workflows/ci.yml` runs ruff,
+mypy, pytest and the CLI on 3.10 through 3.13; the 3.10 job is what finally exercises the `tomli` branch, and it has
+not run yet in this checkout.
+
+| Finding | Status | Evidence on the original inputs |
+|---|---|---|
+| F1 closed schema for `fields` overrides | FIXED | all six typo documents raise `RulesError: unknown key(s) [...] in fields` / `fields.vocab`; `fields = "x"` and `fields.vocab = "x"` raise "must be a table"; `vocab.tier = "giga"` and `remove_routes = "mock"` raise "must be a list of strings" (`rules.py:363-477`, `_check_shape` on the override before the merge) |
+| F2 compound substring match, NUL byte | FIXED in the library | `openai/o3-deep-researcher` gives `capability=None, variant='deep-researcher'`; `x-ai/grok-5-multi-agents` gives `variant='multi-agents'`; `x-ai/grok-encode-faster` gives `variant='encode-faster'`; no NUL byte in any `to_dict()` output; `o3-deep-research`, `grok-code-fast-1`, `non-reasoning` unchanged (`fields.py` `_extract_compounds`, whole-token windows). Residual: `docs/model-name-canonicaliser/fixtures/proto.py` lines 435-441 still carry the substring loop, so a future fixture regeneration would encode the old behaviour for such names |
+| F3 peelable route as vendor in `parse_pair` | FIXED | `parse_pair("openrouter", "platform_openai/gpt-6-astra")`, `("openrouter", "litellm/gpt-6-astra")`, `("xai", "openrouter/x")` and the resolver candidates `openrouter/gpt-x`, `platform_openai/gpt` all raise `MalformedName: '<route>' is a route, not a vendor`; the check lives in `_finish` as proposed; the `provider_as_vendor` exception is scoped to `_resolve_bare` only (`litellm/agent-model` under that policy gives vendor `litellm`, which is what the policy asks for) |
+| F4 fingerprint blind to `bare_names` order | FIXED | the two reversed `bare_names` documents now hash differently and still resolve `deepseek-r1-distill-llama-70b` to `meta-llama` / `deepseek`; `acme/x` and `ACME/X` lookup keys, `nebius` / `Nebius` routes, `gpt*` / `GPT*` patterns hash identically. Note: the default `identity_fingerprint` moved from `sha256:19bda543...` to `sha256:e0ef9c18...` because the canonical form changed; nothing had been recorded against the old value |
+| F5 raw exceptions from rules loading | FIXED | `extends = false` with only `fields.separators` builds and parses; `routes = "openrouter"`, `policy = "fold"`, `lookup = "x"`, `fields.vendor.acme = "x"`, `fields.vocab.compounds = "x"`, `remove_routes = 5`, `schema_version = true` / `1.0` all raise `RulesError`; malformed TOML raises `RulesError: <path>: not valid TOML: ...`; the CLI returns 2 with `rules error:` for the malformed file and for `routes = "x"`. A missing file stays `FileNotFoundError` (an `OSError`, exit 2 in the CLI), which is reasonable |
+| F6 route names not case-folded | FIXED | `{"routes": {"OpenRouter": {"nestable": true}}}` yields the single key `openrouter` with `nestable is True`; `{"routes": {"acme": {"implies_vendor": "Acme"}}}` gives `peelable is False`, `implies_vendor == "acme"`; `{"routes": {"openai": {"implies_vendor": "OpenAI"}}}` now loads (folded to itself); `nebius` + `Nebius` in one document is a `RulesError` (`rules.py:388-389`, `_fold_names` at 489-506) |
+| F7 two-segment lookup in `parse_routed` | FIXED | with `lookup."openrouter/acme/thing"`, `parse`, `parse_pair`, `parse_routed("openrouter/acme/thing")` and `parse_routed("litellm/openrouter/acme/thing")` all give `acme/thing-x` with `lookup=True`; the nested one keeps `routes == ("litellm", "openrouter")` |
+| F8 empty or non-alphabetic `family` | FIXED (option a, judged acceptable) | `openai/-`, `openai/(`, `openai/:thinking` raise `MalformedName: no letter or digit before the suffix`; `openai/2024` gives family `2024` as documented in DESIGN.md 365-369; a lookup `family = ""` is a `RulesError`; the acceptance test walks every golden row for a non-empty tag. DESIGN.md line 121 still states the value grammar `[a-z]+`, which `2024`, `gpt.4`, `a_b` and `ölçek` do not satisfy; relax that cell to "first token" |
+| F9 release readiness | PARTIAL (owner's decision) | done: `dynamic = ["version"]` from `__init__.py` (verified in the built METADATA), CI matrix 3.10-3.13. Open: no licence in METADATA, no `[project.urls]`, `README.md:7-8` and `134-136` still point at `docs/model-name-canonicaliser/` in the workspace, no CHANGELOG |
+| F10 dash minor version swallows a snapshot | FIXED | `anthropic/claude-3-20240229` gives generation `3`, snapshot `20240229`; `mistralai/mistral-small-3-2512` gives `3` / `2512`; `claude-3-5-sonnet-20241022`, `mistral-medium-3-5`, `claude-sonnet-4-6`, `claude-2-1` unchanged |
+| F11 lookup bypasses grammar and case policy | FIXED | `model = "a/b"`, `"Y z/w"`, `vendor = "~x"`, `tier = 5`, key `""`, fields-only key `openrouter/openai/gpt-6-astra` all raise `RulesError` at load; under `case = "fold"` the entry `X/Y` parses as `x/y`; under `reject` it raises `MalformedName` at parse time (a load-time `RulesError` would be friendlier, nit) |
+| F12 regex layout and degenerate regexes | FIXED (ReDoS documented, accepted) | `snapshot8 = ['^\d{6}$']`, `snapshot4 = ['^\d{3}$']`, `api3 = ['^v\d{2}$']`, `separators = "x*"`, `unsafe = ""` and `unsafe = "[^a-z]*"` all raise `RulesError`; stricter legitimate patterns (`^(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])$`) still load; `^(a+)+$` still loads and takes 2.05 s on 27 characters, which the README now states as the trust boundary |
+| F13 edges | FIXED (one residual) | `parse_routed("openrouter")` -> `MalformedName: empty model name after route`; `openrouter/openrouter/openai/gpt` -> "repeated route"; `parse_pair("/openrouter", ...)` and `("//openai", ...)` -> segment-grammar `MalformedName`; outer whitespace and a trailing U+00A0 are `MalformedName` on every carrier (deliberate, consistent with DESIGN.md 365 and 598); `grok-4:nitro:free` -> "more than one colon suffix"; a resolver without `fingerprint` works with `resolver_fingerprint=None`; `CallableResolver` returning a `str` -> `TypeError`; messages carry the grammar and the declared routes. Residual: `parse_routed("")` and `parse_routed("/")` still raise `UnknownRoute: first segment '' is not a declared route` where `parse("")` raises `MalformedName: empty model name` |
+| F14 test gaps | PARTIAL | added: nested-schema negatives, pair route-as-vendor, two-segment lookup, policy flips over the fixture, slugs on three carriers, `coverage.json` fill and error counters, `second-snapshot` pinned, docstring aligned. Remaining: `tests/test_identity.py:115-117` still accepts `(MalformedName, UnknownVendor)`; `tests/test_review_findings.py:365` adds another such tuple although `parse_canonical("acme/<slug>")` can only raise `MalformedName` (the `__` check runs first); the policy-flip test (321-355) skips every row that raises, so a flip that breaks parsing wholesale would still pass. DESIGN.md 390 still says a second single-valued token "goes to variant", the code and its docstring now say a second snapshot or API version is only reported |
+| F15 code quality | FIXED (one residual) | `FIELD_NAMES` gone, `DESCRIPTIVE_FIELDS` the single source; `SEGMENT_RE` public; `_split` removes the duplicated vendor/model logic; `_default_document` cached (`lru_cache`, deep-copied per `Rules.default()`, no sharing observed); `LookupEntry.key`, `Suffix.name` removed; the `rules` subcommand no longer builds a `Normalizer`; `Route`, `Policy`, `LookupEntry` and friends exported. Residual: the `MappingProxyType` around `document` (`rules.py:320`) is shallow, see N2 |
+
+Regressions: none found. Re-confirmed on `f3e82b8`: equality and hash on `(vendor, model, route)`, `same_wire` against a
+shorter chain, the `routed` round trip for `openrouter/auto`, `litellm/openrouter/auto`, `openai/gpt-6-astra`,
+`platform_openai/gpt-6-astra`, `litellm/openrouter/anthropic/claude-opus-5`, `meta/muse-spark-1.2`,
+`gemini/gemini-2.5-flash`; lookup on all four carriers for `openrouter/auto`; the pair guards; the implied-vendor
+mismatch on pair and routed plus `name_wins`; `preserve`, `fold`, `reject` (routes stay case-insensitive under
+`reject`); slugs refused by `parse` and `parse_pair`; `TypeError` for `None`, `int`, `bytes`; both `leading_slash`
+values on text carriers; `remove_routes`; `implies_vendor` at a removed route; the alias-is-a-route rejection; `why`
+and `version` excluded from both fingerprints; the module-level default built once under 16 threads; `bare_names`
+file order; nested chains; `mock/x/y`; ZWSP, tab and inner U+00A0 handling; `a__b` versus `a_b`; resolver single,
+ambiguous and empty-candidate paths. Intended behaviour changes seen: outer whitespace is now an error on every
+carrier; the golden row `openrouter/*` moved from `UnknownVendor` to `MalformedName` (no letter or digit); the default
+identity fingerprint changed (F4).
+
+New findings from the re-check (all P3):
+
+- N1 `rules.py:588-593`: a `vendor_aliases` target that is a peelable route is accepted at load and can never parse.
+  `Rules.from_dict({"vendor_aliases": {"goog": "gemini"}}, base=Rules.default())` builds;
+  `Normalizer(rules).parse("goog/x")` -> `MalformedName: 'gemini' is a route, not a vendor: 'goog/x'`. Validate alias
+  targets the way alias keys are validated.
+- N2 `rules.py:320`: `MappingProxyType(copy.deepcopy(dict(doc)))` freezes one level only.
+  `d = Rules.default(); d.document["policy"]["case"] = "fold"` succeeds; afterwards `d.policy.case == "preserve"`
+  while `d.with_policy().policy.case == "fold"` (the fresh `Rules.default()` is unaffected, so the cache is safe).
+  Freeze recursively or document that `document` is a read-only view of a copy only at the top level.
+- N3 `identity.py` (`parse_routed`, first-segment check): `parse_routed("")` and `parse_routed("/")` raise
+  `UnknownRoute: first segment '' is not a declared route (...)`; `parse("")` raises `MalformedName: empty model
+  name`. Check for an empty input before the route check.
+- N4 `rules.py:612-616`: bare (slash-less) lookup keys are now refused: `{"lookup": {"auto": {"vendor":
+  "openrouter", "model": "auto", "why": "t"}}}` -> `RulesError: lookup key 'auto' must be a non-empty vendor/model or
+  route/name string`. Before f3e82b8 such a key resolved `parse("auto")`. DESIGN.md 380 still says the lookup consumes
+  "the whole input string"; either allow bare keys or state the restriction there.
+- N5 tests: the two loose `(MalformedName, UnknownVendor)` tuples and the skip-on-error policy-flip test listed
+  under F14 above.
+- N6 (workspace documents, outside this repository): `fixtures/proto.py:435-441` still has the substring compound
+  loop (F2), DESIGN.md 121 still `[a-z]+` for `family` (F8), DESIGN.md 390 still "goes to variant" for a second
+  single-valued token (F14). None of them changes a golden row today.
+
+Verdict after the re-check: the three P1 findings and the P2 findings F4 to F8 are fixed on my inputs with no
+regression; F9 stays open on the owner's decisions (licence, URLs, README), F14 and F15 have small residuals. Mergeable
+as a first alpha; the P2 list for the first release is now F9 plus N1 to N4 as polish.

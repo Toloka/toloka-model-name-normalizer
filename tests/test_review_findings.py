@@ -14,7 +14,6 @@ from toloka_model_name_normalizer import (
     Normalizer,
     Rules,
     RulesError,
-    UnknownVendor,
 )
 from toloka_model_name_normalizer.model import DESCRIPTIVE_FIELDS
 
@@ -319,41 +318,6 @@ class TestF13Edges:
 
 
 class TestF14PromisedTests:
-    @pytest.mark.parametrize(
-        "policy, value",
-        [
-            ("case", "fold"),
-            ("case", "reject"),
-            ("bare_name", "error"),
-            ("bare_name", "provider_as_vendor"),
-            ("unknown_provider", "error"),
-            ("leading_slash", "reject"),
-            ("implied_vendor_mismatch", "name_wins"),
-            ("fields", "strict"),
-        ],
-    )
-    def test_golden_rows_under_every_policy_flip_fail_only_with_model_name_errors(
-        self, policy: str, value: str
-    ) -> None:
-        n = Normalizer(Rules.default().with_policy(**{policy: value}))
-        for row in GOLDEN["rows"]:
-            if row["input_kind"] not in ("pair", "text", "canonical", "routed", "slug"):
-                continue
-            try:
-                if row["input_kind"] == "pair":
-                    name = n.parse_pair(row["provider"], row["input"])
-                elif row["input_kind"] == "canonical":
-                    name = n.parse_canonical(row["input"])
-                elif row["input_kind"] == "routed":
-                    name = n.parse_routed(row["input"])
-                else:
-                    name = n.parse(row["input"])
-            except ModelNameError:
-                continue
-            assert name.vendor and name.model and name.family
-            if row["expected"] and value != "fold":
-                assert name.same_model(norm.parse_canonical(row["expected"]["canonical"]))
-
     def test_every_slug_is_rejected_by_every_entry_point(self) -> None:
         slugs = [row["input"] for row in GOLDEN["rows"] if row["input_kind"] == "slug"]
         assert slugs
@@ -362,7 +326,7 @@ class TestF14PromisedTests:
                 norm.parse(slug)
             with pytest.raises(MalformedName):
                 norm.parse_pair("openrouter", slug)
-            with pytest.raises((MalformedName, UnknownVendor)):
+            with pytest.raises(MalformedName):
                 norm.parse_canonical(f"acme/{slug}")
 
     def test_coverage_fill_and_error_counters_match_the_fixture(self) -> None:

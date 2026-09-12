@@ -155,6 +155,8 @@ def parse_routed(rules: Rules, text: str, resolver: Resolver | None = None) -> I
     """The wire form: the first segment must be a declared route, direct-vendor routes included. The lookup
     runs on ``innermost_route/remainder`` after peeling, so a lookup identity keeps its route."""
     value = _text(rules, text, what="model reference", allow_leading_slash=True)
+    if not value:
+        raise MalformedName(f"empty model reference: {text!r}")
     parts = value.split("/")
     first = _route(rules, parts[0])
     if first is None:
