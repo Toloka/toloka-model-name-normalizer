@@ -21,6 +21,11 @@ import sys
 from collections.abc import Iterable, Sequence
 from pathlib import Path
 
+# Deliberately below the declared minimum: an older interpreter must get this message instead of a TypeError
+# from the kw_only dataclass fields in model.py.
+if sys.version_info < (3, 10):  # noqa: UP036
+    sys.exit("toloka-model-name-normalizer needs Python 3.10 or later; this is " + sys.version.split()[0])
+
 try:
     import toloka_model_name_normalizer  # noqa: F401  (installed package)
 except ImportError:  # a checkout without an installed package: use the sources next to this script
@@ -50,7 +55,7 @@ BUILT_IN: list[tuple[str, str | None, str]] = [
     ("pair", "openrouter", "tencent/hy3"),
     ("pair", "openrouter", "openai/gpt-oss-120b"),
     ("pair", "openrouter", "amazon/nova-2-lite-v1"),
-    ("pair", "nova", "Nova Pro v3.4 (Suez)"),
+    ("pair", "nova", "nova-pro-v1"),
     ("pair", "xai", "x-ai/grok-4"),
     # the same identity on different carriers
     ("text", None, "openai/gpt-6-astra"),

@@ -1,4 +1,4 @@
-"""The golden corpus: every raw string of the survey (docs/model-name-canonicaliser/CORPUS.md) with its input
+"""The golden corpus: every raw string of the survey (tests/data/golden.json) with its input
 kind and the hand-verified or reviewed expectation. Every row, every field."""
 
 from __future__ import annotations

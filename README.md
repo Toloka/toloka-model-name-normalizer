@@ -4,8 +4,8 @@ One identity and rule-derived descriptive fields for every LLM model reference. 
 configuration: the wheel ships one default rule set (Toloka's), and any deployment overrides it from outside
 without a release of the library.
 
-Status: alpha, not yet published. Design, survey and golden corpus: the workspace documents under
-`docs/model-name-canonicaliser/` (`DESIGN.md`, `CORPUS.md`, `INVENTORY.md`, two design reviews).
+Status: alpha, not yet published on PyPI. The design notes and the survey behind the golden corpus are being
+prepared for publication in this repository.
 
 ## What it does
 
@@ -147,8 +147,7 @@ uv run --no-sync python scripts/show_outputs.py       # with uv, without syncing
 ```
 
 `tests/data/golden.json` is the golden corpus generated from the survey (every raw string with its input kind
-and expectation); the test suite asserts every field of every row. Regenerate it from
-`docs/model-name-canonicaliser/fixtures/` in the workspace when the rules change, and review the diff.
+and expectation); the test suite asserts every field of every row. The maintainers regenerate it
+from the survey corpus when the rules change and review the diff together with the change.
 
-Python 3.10 and later; `tomli` is the single dependency below 3.11. Licence: to be decided before the first
-release (Apache-2.0 proposed).
+Python 3.10 and later; `tomli` is the single dependency below 3.11. Licence: Apache-2.0, see `LICENSE`.

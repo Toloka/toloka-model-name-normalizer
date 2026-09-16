@@ -3,8 +3,8 @@
 # Every parsing decision of the library is read from a file of this shape. Override it from outside with
 # Rules.load(path) or the environment variable TOLOKA_MODEL_NAME_NORMALIZER_RULES; an override merges over
 # this file (tables replace entry by entry, vocabulary lists extend, scalars overwrite) unless it declares
-# `extends = false`. Design and the survey behind every entry: the workspace document
-# docs/model-name-canonicaliser/DESIGN.md and the golden corpus CORPUS.md.
+# `extends = false`. Design and the survey behind every entry: README.md and the golden corpus
+# in tests/data/golden.json (every entry is exercised by at least one row).
 #
 # Never in this file: a model catalogue, prices, capabilities, effort variants, config stems. Per-name
 # overrides live only in [lookup], each with a `why`.

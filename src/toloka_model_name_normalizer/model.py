@@ -1,5 +1,5 @@
 """The value object. Identity is ``vendor``, ``model``, ``route``; everything else is descriptive and
-excluded from equality and hashing. Design: docs/model-name-canonicaliser/DESIGN.md in the workspace."""
+excluded from equality and hashing. Design: README.md, section "What it does"."""
 
 from __future__ import annotations
 

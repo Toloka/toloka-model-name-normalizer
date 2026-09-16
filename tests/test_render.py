@@ -93,9 +93,9 @@ def test_slug_documented_divergences_from_model_id_slug() -> None:
 
 
 def test_unsafe_characters_collapse() -> None:
-    assert norm.parse_pair("nova", "Nova Pro v3.4 (Suez)").slug == "nova_Nova_Pro_v3.4_Suez"
+    assert norm.parse_pair("nova", "Nova Pro v3.4 (Preview)").slug == "nova_Nova_Pro_v3.4_Preview"
     assert norm.parse("anthropic/claude-3.7-sonnet:thinking").slug == "anthropic_claude-3.7-sonnet_thinking"
-    assert ENGINE.parse_pair("nova", "Nova Pro v3.4 (Suez)").slug == "nova__Nova_Pro_v3.4_Suez"
+    assert ENGINE.parse_pair("nova", "Nova Pro v3.4 (Preview)").slug == "nova__Nova_Pro_v3.4_Preview"
 
 
 def test_slugs_are_never_parsed() -> None:

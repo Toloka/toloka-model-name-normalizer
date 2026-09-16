@@ -3,12 +3,14 @@ name = "toloka-model-name-normalizer"
 dynamic = ["version"]
 description = "One identity and rule-derived descriptive fields for every LLM model reference. Every parsing rule is configuration."
 readme = "README.md"
+license = {text = "Apache-2.0"}
 requires-python = ">=3.10"
 authors = [{ name = "Toloka" }]
 keywords = ["llm", "model-name", "normalizer", "canonical", "langfuse", "tolokaforge"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.10",
@@ -21,6 +23,12 @@ dependencies = [
     # tomllib is in the standard library from 3.11; this is the single dependency below that.
     "tomli>=2.0; python_version < '3.11'",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Toloka/toloka-model-name-normalizer"
+Repository = "https://github.com/Toloka/toloka-model-name-normalizer"
+Issues = "https://github.com/Toloka/toloka-model-name-normalizer/issues"
+Changelog = "https://github.com/Toloka/toloka-model-name-normalizer/blob/main/CHANGELOG.md"
 
 [project.scripts]
 toloka-model-name-normalizer = "toloka_model_name_normalizer.__main__:main"

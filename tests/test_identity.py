@@ -148,7 +148,7 @@ class TestMalformed:
             norm.parse_pair(None, "x/y")  # type: ignore[arg-type]
 
     def test_inner_spaces_and_parentheses_stay_legal(self, norm: Normalizer) -> None:
-        assert norm.parse_canonical("nova/Nova Pro v3.4 (Suez)").model == "Nova Pro v3.4 (Suez)"
+        assert norm.parse_canonical("nova/Nova Pro v3.4 (Preview)").model == "Nova Pro v3.4 (Preview)"
 
 
 class TestResolver:
