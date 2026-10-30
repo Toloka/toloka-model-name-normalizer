@@ -60,8 +60,9 @@ class Normalizer:
             suffix=fields.suffix,
             transport_suffix=fields.transport_suffix,
             unresolved=fields.unresolved,
-            routed=_routed(self.rules, ident.vendor, ident.model, ident.routes),
-            slug=_slug(self.rules, ident.vendor, ident.model, ident.route),
+            wire=ident.wire,
+            routed=_routed(ident.routes, ident.wire),
+            slug=_slug(self.rules, ident.vendor, ident.model, ident.routes, ident.wire),
             provenance=Provenance(
                 input_kind=input_kind,
                 rules_version=self.rules.version,
@@ -69,6 +70,7 @@ class Normalizer:
                 fields_fingerprint=self.rules.fields_fingerprint,
                 resolver_fingerprint=resolver_fingerprint,
                 lookup=ident.lookup or fields.lookup,
+                vendor_source=ident.vendor_source,
             ),
         )
 

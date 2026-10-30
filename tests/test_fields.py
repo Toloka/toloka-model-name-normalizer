@@ -148,13 +148,29 @@ class TestStrict:
 
 
 class TestLookupFields:
+    LOOKUP = Normalizer(
+        Rules.from_dict(
+            {
+                "lookup": {
+                    "openai/gpt-6-astra": {"variant": "", "tier": "flagship", "why": "a fields-only entry"}
+                }
+            },
+            base=Rules.default(),
+        )
+    )
+
     def test_empty_string_clears_a_computed_value(self) -> None:
-        name = norm.parse("azure_ai/cohere-command-a-plus-05-2026")
+        assert norm.parse("openai/gpt-6-astra").variant == "astra"
+        name = self.LOOKUP.parse("openai/gpt-6-astra")
         assert name.variant is None and name.provenance.lookup is True
 
     def test_lookup_fields_apply_to_every_carrier(self) -> None:
-        pair = norm.parse_pair("azure_ai", "cohere-command-a-plus-05-2026")
-        assert (pair.family, pair.generation) == ("command", "a")
+        for name in (
+            self.LOOKUP.parse_pair("openrouter", "openai/gpt-6-astra"),
+            self.LOOKUP.parse_routed("openrouter/openai/gpt-6-astra"),
+            self.LOOKUP.parse_canonical("openai/gpt-6-astra"),
+        ):
+            assert (name.tier, name.variant) == ("flagship", None)
 
 
 def test_value_is_frozen() -> None:

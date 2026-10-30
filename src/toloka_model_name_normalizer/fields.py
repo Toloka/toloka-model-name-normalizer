@@ -7,9 +7,9 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from toloka_model_name_normalizer.family import tokens as family_tokens
 from toloka_model_name_normalizer.rules import DateLayout, Rules, VendorSwitches
 
-_GLUED_RE = re.compile(r"^([a-z]+)(\d.*)$")
 _LETTER_SIZE_RE = re.compile(r"^([a-z])(\d+(?:\.\d+)?[bt])$")
 _DIGITS_RE = re.compile(r"^\d+$")
 _TWO_DIGITS_RE = re.compile(r"^\d{2}$")
@@ -146,17 +146,20 @@ def _extract_compounds(rules: Rules, rest: list[str], draft: _Draft) -> list[str
 
 
 def classify(rules: Rules, vendor: str, model: str) -> FieldSet:
-    """Decompose ``model`` (of ``vendor``) into descriptive fields under ``rules``."""
-    switches = rules.fields.switches(vendor)
-    lower = model.lower()
-    base, _, suffix = lower.partition(":")
-    raw = [token for token in rules.fields.separators.split(base) if token]
+    """Decompose ``model`` (of ``vendor``) into descriptive fields under ``rules``. The family and its tokens
+    come from :mod:`~toloka_model_name_normalizer.family`; an identity kept under a deployment route as its
+    vendor (a lookup such as ``azure_ai/cohere-…``) reads with the switches of its family's vendor."""
+    suffix = model.lower().partition(":")[2]
+    tokens = family_tokens(rules, model)
     draft = _Draft()
-    if not raw:  # unreachable through the parsers, whose grammar requires a letter or digit before the suffix
+    if (
+        not tokens
+    ):  # unreachable through the parsers, whose grammar requires a letter or digit before the suffix
         draft.unresolved.append("empty")
         return _freeze(draft, rules, vendor, model)
-    glued = _GLUED_RE.match(raw[0])
-    tokens = ([glued.group(1), glued.group(2)] + raw[1:]) if glued else raw
+    route = rules.routes.get(vendor.lower())
+    deployment = route is not None and route.peelable and vendor.lower() not in rules.fields.vendor
+    switches = rules.fields.switches(rules.families.get(tokens[0], "") if deployment else vendor)
     draft.family = tokens[0]
     rest = _extract_compounds(rules, tokens[1:], draft)
     index = 0

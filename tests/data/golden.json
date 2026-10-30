@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-12",
- "rules_draft": "DESIGN.md, section The Toloka default",
+ "generated": "2026-10-30",
+ "rules_draft": "rules.toml 2026.10.30.1",
  "rows": [
   {
    "input_kind": "text",
@@ -1038,12 +1038,12 @@
    "input": "anthropic/claude-3-5-sonnet",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-3-5-sonnet",
+    "model": "claude-3.5-sonnet",
     "route": null,
     "routes": [],
-    "canonical": "anthropic/claude-3-5-sonnet",
+    "canonical": "anthropic/claude-3.5-sonnet",
     "routed": "anthropic/claude-3-5-sonnet",
-    "slug": "anthropic_claude-3-5-sonnet",
+    "slug": "anthropic_claude-3.5-sonnet",
     "fields": {
      "family": "claude",
      "generation": "3.5",
@@ -1709,12 +1709,12 @@
    "input": "anthropic/claude-haiku-4-5",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-haiku-4-5",
+    "model": "claude-haiku-4.5",
     "route": null,
     "routes": [],
-    "canonical": "anthropic/claude-haiku-4-5",
+    "canonical": "anthropic/claude-haiku-4.5",
     "routed": "anthropic/claude-haiku-4-5",
-    "slug": "anthropic_claude-haiku-4-5",
+    "slug": "anthropic_claude-haiku-4.5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -1822,12 +1822,12 @@
    "input": "anthropic/claude-opus-4-8",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-opus-4-8",
+    "model": "claude-opus-4.8",
     "route": null,
     "routes": [],
-    "canonical": "anthropic/claude-opus-4-8",
+    "canonical": "anthropic/claude-opus-4.8",
     "routed": "anthropic/claude-opus-4-8",
-    "slug": "anthropic_claude-opus-4-8",
+    "slug": "anthropic_claude-opus-4.8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -2601,12 +2601,12 @@
    "input": "anthropic/claude-sonnet-4-5",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-sonnet-4-5",
+    "model": "claude-sonnet-4.5",
     "route": null,
     "routes": [],
-    "canonical": "anthropic/claude-sonnet-4-5",
+    "canonical": "anthropic/claude-sonnet-4.5",
     "routed": "anthropic/claude-sonnet-4-5",
-    "slug": "anthropic_claude-sonnet-4-5",
+    "slug": "anthropic_claude-sonnet-4.5",
     "fields": {
      "family": "claude",
      "generation": "4.5",
@@ -2640,12 +2640,12 @@
    "input": "anthropic/claude-sonnet-4-6",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-sonnet-4-6",
+    "model": "claude-sonnet-4.6",
     "route": null,
     "routes": [],
-    "canonical": "anthropic/claude-sonnet-4-6",
+    "canonical": "anthropic/claude-sonnet-4.6",
     "routed": "anthropic/claude-sonnet-4-6",
-    "slug": "anthropic_claude-sonnet-4-6",
+    "slug": "anthropic_claude-sonnet-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -3516,13 +3516,15 @@
    "provider": null,
    "input": "azure_ai/cohere-command-a-plus-05-2026",
    "expected": {
-    "vendor": "azure_ai",
+    "vendor": "cohere",
     "model": "cohere-command-a-plus-05-2026",
-    "route": null,
-    "routes": [],
-    "canonical": "azure_ai/cohere-command-a-plus-05-2026",
+    "route": "azure_ai",
+    "routes": [
+     "azure_ai"
+    ],
+    "canonical": "cohere/cohere-command-a-plus-05-2026",
     "routed": "azure_ai/cohere-command-a-plus-05-2026",
-    "slug": "azure_ai_cohere-command-a-plus-05-2026",
+    "slug": "cohere_cohere-command-a-plus-05-2026",
     "fields": {
      "family": "command",
      "generation": "a",
@@ -3535,7 +3537,7 @@
      "api_version": null
     },
     "unresolved": [],
-    "lookup": true
+    "lookup": false
    },
    "error": null,
    "classes": [
@@ -3959,35 +3961,75 @@
    "input_kind": "text",
    "provider": null,
    "input": "claude-3-haiku-20240307",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-3-haiku-20240307' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-3-haiku-20240307",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-3-haiku-20240307",
+    "routed": "claude-3-haiku-20240307",
+    "slug": "anthropic_claude-3-haiku-20240307",
+    "fields": {
+     "family": "claude",
+     "generation": "3",
+     "tier": "haiku",
+     "variant": null,
+     "snapshot": "20240307",
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "tools: benchmark-analyzer README example"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "claude-3-sonnet",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-3-sonnet' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-3-sonnet",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-3-sonnet",
+    "routed": "claude-3-sonnet",
+    "slug": "anthropic_claude-3-sonnet",
+    "fields": {
+     "family": "claude",
+     "generation": "3",
+     "tier": "sonnet",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "slug",
@@ -4010,18 +4052,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "claude-haiku-4-5",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-haiku-4-5' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-haiku-4.5",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-haiku-4.5",
+    "routed": "claude-haiku-4-5",
+    "slug": "anthropic_claude-haiku-4.5",
+    "fields": {
+     "family": "claude",
+     "generation": "4.5",
+     "tier": "haiku",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "pair",
@@ -4029,14 +4091,14 @@
    "input": "claude-opus-4-6",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-opus-4-6",
+    "model": "claude-opus-4.6",
     "route": "anthropic",
     "routes": [
      "anthropic"
     ],
-    "canonical": "anthropic/claude-opus-4-6",
+    "canonical": "anthropic/claude-opus-4.6",
     "routed": "anthropic/claude-opus-4-6",
-    "slug": "anthropic_claude-opus-4-6",
+    "slug": "anthropic_claude-opus-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -4066,18 +4128,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "claude-opus-4-7",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-opus-4-7' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-opus-4.7",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-opus-4.7",
+    "routed": "claude-opus-4-7",
+    "slug": "anthropic_claude-opus-4.7",
+    "fields": {
+     "family": "claude",
+     "generation": "4.7",
+     "tier": "opus",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "pair",
@@ -4085,14 +4167,14 @@
    "input": "claude-opus-4-8",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-opus-4-8",
+    "model": "claude-opus-4.8",
     "route": "anthropic",
     "routes": [
      "anthropic"
     ],
-    "canonical": "anthropic/claude-opus-4-8",
+    "canonical": "anthropic/claude-opus-4.8",
     "routed": "anthropic/claude-opus-4-8",
-    "slug": "anthropic_claude-opus-4-8",
+    "slug": "anthropic_claude-opus-4.8",
     "fields": {
      "family": "claude",
      "generation": "4.8",
@@ -4122,11 +4204,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "claude-opus-4.6",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-opus-4.6' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-opus-4.6",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-opus-4.6",
+    "routed": "claude-opus-4.6",
+    "slug": "anthropic_claude-opus-4.6",
+    "fields": {
+     "family": "claude",
+     "generation": "4.6",
+     "tier": "opus",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -4139,85 +4239,185 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "claude-opus-4.7",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-opus-4.7' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-opus-4.7",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-opus-4.7",
+    "routed": "claude-opus-4.7",
+    "slug": "anthropic_claude-opus-4.7",
+    "fields": {
+     "family": "claude",
+     "generation": "4.7",
+     "tier": "opus",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "claude-opus-5",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-opus-5' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-opus-5",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-opus-5",
+    "routed": "claude-opus-5",
+    "slug": "anthropic_claude-opus-5",
+    "fields": {
+     "family": "claude",
+     "generation": "5",
+     "tier": "opus",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "claude-sonnet-4-6",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-sonnet-4-6' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-4.6",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-sonnet-4.6",
+    "routed": "claude-sonnet-4-6",
+    "slug": "anthropic_claude-sonnet-4.6",
+    "fields": {
+     "family": "claude",
+     "generation": "4.6",
+     "tier": "sonnet",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "claude-sonnet-4.5",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-sonnet-4.5' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-4.5",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-sonnet-4.5",
+    "routed": "claude-sonnet-4.5",
+    "slug": "anthropic_claude-sonnet-4.5",
+    "fields": {
+     "family": "claude",
+     "generation": "4.5",
+     "tier": "sonnet",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "claude-sonnet-4.6",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-sonnet-4.6' and no resolver"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-sonnet-4.6",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-sonnet-4.6",
+    "routed": "claude-sonnet-4.6",
+    "slug": "anthropic_claude-sonnet-4.6",
+    "fields": {
+     "family": "claude",
+     "generation": "4.6",
+     "tier": "sonnet",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -4230,7 +4430,9 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -4251,18 +4453,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "codestral-2508",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'codestral-2508' and no resolver"
+   "expected": {
+    "vendor": "mistralai",
+    "model": "codestral-2508",
+    "route": null,
+    "routes": [],
+    "canonical": "mistralai/codestral-2508",
+    "routed": "codestral-2508",
+    "slug": "mistralai_codestral-2508",
+    "fields": {
+     "family": "codestral",
+     "generation": null,
+     "tier": null,
+     "variant": null,
+     "snapshot": "2508",
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
@@ -4643,18 +4865,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "deepseek-r1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'deepseek-r1' and no resolver"
+   "expected": {
+    "vendor": "deepseek",
+    "model": "deepseek-r1",
+    "route": null,
+    "routes": [],
+    "canonical": "deepseek/deepseek-r1",
+    "routed": "deepseek-r1",
+    "slug": "deepseek_deepseek-r1",
+    "fields": {
+     "family": "deepseek",
+     "generation": "r1",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -5699,18 +5941,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "devstral-small",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'devstral-small' and no resolver"
+   "expected": {
+    "vendor": "mistralai",
+    "model": "devstral-small",
+    "route": null,
+    "routes": [],
+    "canonical": "mistralai/devstral-small",
+    "routed": "devstral-small",
+    "slug": "mistralai_devstral-small",
+    "fields": {
+     "family": "devstral",
+     "generation": null,
+     "tier": "small",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
@@ -5921,45 +6183,103 @@
    "input_kind": "text",
    "provider": null,
    "input": "gemini-2.5-flash",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gemini-2.5-flash' and no resolver"
+   "expected": {
+    "vendor": "google",
+    "model": "gemini-2.5-flash",
+    "route": null,
+    "routes": [],
+    "canonical": "google/gemini-2.5-flash",
+    "routed": "gemini-2.5-flash",
+    "slug": "google_gemini-2.5-flash",
+    "fields": {
+     "family": "gemini",
+     "generation": "2.5",
+     "tier": "flash",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gemini-2.5-pro",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gemini-2.5-pro' and no resolver"
+   "expected": {
+    "vendor": "google",
+    "model": "gemini-2.5-pro",
+    "route": null,
+    "routes": [],
+    "canonical": "google/gemini-2.5-pro",
+    "routed": "gemini-2.5-pro",
+    "slug": "google_gemini-2.5-pro",
+    "fields": {
+     "family": "gemini",
+     "generation": "2.5",
+     "tier": "pro",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gemini-3.0-flash",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gemini-3.0-flash' and no resolver"
+   "expected": {
+    "vendor": "google",
+    "model": "gemini-3.0-flash",
+    "route": null,
+    "routes": [],
+    "canonical": "google/gemini-3.0-flash",
+    "routed": "gemini-3.0-flash",
+    "slug": "google_gemini-3.0-flash",
+    "fields": {
+     "family": "gemini",
+     "generation": "3.0",
+     "tier": "flash",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -5972,17 +6292,37 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gemini-3.1-pro",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gemini-3.1-pro' and no resolver"
+   "expected": {
+    "vendor": "google",
+    "model": "gemini-3.1-pro",
+    "route": null,
+    "routes": [],
+    "canonical": "google/gemini-3.1-pro",
+    "routed": "gemini-3.1-pro",
+    "slug": "google_gemini-3.1-pro",
+    "fields": {
+     "family": "gemini",
+     "generation": "3.1",
+     "tier": "pro",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -5995,41 +6335,83 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gemini-3.1-pro-preview",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gemini-3.1-pro-preview' and no resolver"
+   "expected": {
+    "vendor": "google",
+    "model": "gemini-3.1-pro-preview",
+    "route": null,
+    "routes": [],
+    "canonical": "google/gemini-3.1-pro-preview",
+    "routed": "gemini-3.1-pro-preview",
+    "slug": "google_gemini-3.1-pro-preview",
+    "fields": {
+     "family": "gemini",
+     "generation": "3.1",
+     "tier": "pro",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": "preview",
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gemini-3.6-flash",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gemini-3.6-flash' and no resolver"
+   "expected": {
+    "vendor": "google",
+    "model": "gemini-3.6-flash",
+    "route": null,
+    "routes": [],
+    "canonical": "google/gemini-3.6-flash",
+    "routed": "gemini-3.6-flash",
+    "slug": "google_gemini-3.6-flash",
+    "fields": {
+     "family": "gemini",
+     "generation": "3.6",
+     "tier": "flash",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -6231,18 +6613,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "gemma-3-27b-it",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gemma-3-27b-it' and no resolver"
+   "expected": {
+    "vendor": "google",
+    "model": "gemma-3-27b-it",
+    "route": null,
+    "routes": [],
+    "canonical": "google/gemma-3-27b-it",
+    "routed": "gemma-3-27b-it",
+    "slug": "google_gemma-3-27b-it",
+    "fields": {
+     "family": "gemma",
+     "generation": "3",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": "27b",
+     "stage": null,
+     "capability": "it",
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -6331,18 +6733,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "glm-5.1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'glm-5.1' and no resolver"
+   "expected": {
+    "vendor": "z-ai",
+    "model": "glm-5.1",
+    "route": null,
+    "routes": [],
+    "canonical": "z-ai/glm-5.1",
+    "routed": "glm-5.1",
+    "slug": "z-ai_glm-5.1",
+    "fields": {
+     "family": "glm",
+     "generation": "5.1",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -8291,62 +8713,142 @@
    "input_kind": "text",
    "provider": null,
    "input": "gpt-4",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-4' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-4",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-4",
+    "routed": "gpt-4",
+    "slug": "openai_gpt-4",
+    "fields": {
+     "family": "gpt",
+     "generation": "4",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gpt-4o",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-4o' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-4o",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-4o",
+    "routed": "gpt-4o",
+    "slug": "openai_gpt-4o",
+    "fields": {
+     "family": "gpt",
+     "generation": "4o",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gpt-4o-2026-nightly",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-4o-2026-nightly' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-4o-2026-nightly",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-4o-2026-nightly",
+    "routed": "gpt-4o-2026-nightly",
+    "slug": "openai_gpt-4o-2026-nightly",
+    "fields": {
+     "family": "gpt",
+     "generation": "4o",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": "nightly",
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [
+     "bad-date:2026"
+    ],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gpt-4o-mini",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-4o-mini' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-4o-mini",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-4o-mini",
+    "routed": "gpt-4o-mini",
+    "slug": "openai_gpt-4o-mini",
+    "fields": {
+     "family": "gpt",
+     "generation": "4o",
+     "tier": "mini",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
@@ -8354,51 +8856,111 @@
     "engine: tests (normalize_model_name, nova, presets)",
     "tools: benchmark-analyzer default --model"
    ],
-   "count": 2
+   "count": 2,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gpt-5-codex",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-5-codex' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-5-codex",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-5-codex",
+    "routed": "gpt-5-codex",
+    "slug": "openai_gpt-5-codex",
+    "fields": {
+     "family": "gpt",
+     "generation": "5",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": "codex",
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gpt-5-mini",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-5-mini' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-5-mini",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-5-mini",
+    "routed": "gpt-5-mini",
+    "slug": "openai_gpt-5-mini",
+    "fields": {
+     "family": "gpt",
+     "generation": "5",
+     "tier": "mini",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "gpt-5.4",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-5.4' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-5.4",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-5.4",
+    "routed": "gpt-5.4",
+    "slug": "openai_gpt-5.4",
+    "fields": {
+     "family": "gpt",
+     "generation": "5.4",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -8411,7 +8973,9 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -8498,11 +9062,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "gpt-5.4-xhigh",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-5.4-xhigh' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-5.4-xhigh",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-5.4-xhigh",
+    "routed": "gpt-5.4-xhigh",
+    "slug": "openai_gpt-5.4-xhigh",
+    "fields": {
+     "family": "gpt",
+     "generation": "5.4",
+     "tier": null,
+     "variant": "xhigh",
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -8515,7 +9097,9 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -8537,18 +9121,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "gpt-5.5",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-5.5' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-5.5",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-5.5",
+    "routed": "gpt-5.5",
+    "slug": "openai_gpt-5.5",
+    "fields": {
+     "family": "gpt",
+     "generation": "5.5",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -8585,18 +9189,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "gpt-5.6",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'gpt-5.6' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "gpt-5.6",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/gpt-5.6",
+    "routed": "gpt-5.6",
+    "slug": "openai_gpt-5.6",
+    "fields": {
+     "family": "gpt",
+     "generation": "5.6",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -9124,11 +9748,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "grok-4.2",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'grok-4.2' and no resolver"
+   "expected": {
+    "vendor": "x-ai",
+    "model": "grok-4.2",
+    "route": null,
+    "routes": [],
+    "canonical": "x-ai/grok-4.2",
+    "routed": "grok-4.2",
+    "slug": "x-ai_grok-4.2",
+    "fields": {
+     "family": "grok",
+     "generation": "4.2",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -9141,7 +9783,9 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -9326,11 +9970,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "hy3",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'hy3' and no resolver"
+   "expected": {
+    "vendor": "tencent",
+    "model": "hy3",
+    "route": null,
+    "routes": [],
+    "canonical": "tencent/hy3",
+    "routed": "hy3",
+    "slug": "tencent_hy3",
+    "fields": {
+     "family": "hy",
+     "generation": "3",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "report_model_list",
@@ -9348,7 +10010,9 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES key (eval branch)",
     "tasks:config/<domain>/<stem>.yaml"
    ],
-   "count": 110
+   "count": 110,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -9787,45 +10451,103 @@
    "input_kind": "text",
    "provider": null,
    "input": "kimi-k2",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'kimi-k2' and no resolver"
+   "expected": {
+    "vendor": "moonshotai",
+    "model": "kimi-k2",
+    "route": null,
+    "routes": [],
+    "canonical": "moonshotai/kimi-k2",
+    "routed": "kimi-k2",
+    "slug": "moonshotai_kimi-k2",
+    "fields": {
+     "family": "kimi",
+     "generation": "k2",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "kimi-k2-moonshotai-pinned",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'kimi-k2-moonshotai-pinned' and no resolver"
+   "expected": {
+    "vendor": "moonshotai",
+    "model": "kimi-k2-moonshotai-pinned",
+    "route": null,
+    "routes": [],
+    "canonical": "moonshotai/kimi-k2-moonshotai-pinned",
+    "routed": "kimi-k2-moonshotai-pinned",
+    "slug": "moonshotai_kimi-k2-moonshotai-pinned",
+    "fields": {
+     "family": "kimi",
+     "generation": "k2",
+     "tier": null,
+     "variant": "moonshotai-pinned",
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "kimi-k2.5",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'kimi-k2.5' and no resolver"
+   "expected": {
+    "vendor": "moonshotai",
+    "model": "kimi-k2.5",
+    "route": null,
+    "routes": [],
+    "canonical": "moonshotai/kimi-k2.5",
+    "routed": "kimi-k2.5",
+    "slug": "moonshotai_kimi-k2.5",
+    "fields": {
+     "family": "kimi",
+     "generation": "k2.5",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -9838,7 +10560,9 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -10045,35 +10769,75 @@
    "input_kind": "text",
    "provider": null,
    "input": "llama-3.3-70b-instruct",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'llama-3.3-70b-instruct' and no resolver"
+   "expected": {
+    "vendor": "meta-llama",
+    "model": "llama-3.3-70b-instruct",
+    "route": null,
+    "routes": [],
+    "canonical": "meta-llama/llama-3.3-70b-instruct",
+    "routed": "llama-3.3-70b-instruct",
+    "slug": "meta-llama_llama-3.3-70b-instruct",
+    "fields": {
+     "family": "llama",
+     "generation": "3.3",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": "70b",
+     "stage": null,
+     "capability": "instruct",
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "magistral-medium-2506",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'magistral-medium-2506' and no resolver"
+   "expected": {
+    "vendor": "mistralai",
+    "model": "magistral-medium-2506",
+    "route": null,
+    "routes": [],
+    "canonical": "mistralai/magistral-medium-2506",
+    "routed": "magistral-medium-2506",
+    "slug": "mistralai_magistral-medium-2506",
+    "fields": {
+     "family": "magistral",
+     "generation": null,
+     "tier": "medium",
+     "variant": null,
+     "snapshot": "2506",
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -11123,11 +11887,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "minimax-m2.7",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'minimax-m2.7' and no resolver"
+   "expected": {
+    "vendor": "minimax",
+    "model": "minimax-m2.7",
+    "route": null,
+    "routes": [],
+    "canonical": "minimax/minimax-m2.7",
+    "routed": "minimax-m2.7",
+    "slug": "minimax_minimax-m2.7",
+    "fields": {
+     "family": "minimax",
+     "generation": "m2.7",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -11140,7 +11922,9 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
@@ -11687,31 +12471,51 @@
    "input_kind": "text",
    "provider": null,
    "input": "mistral-large",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'mistral-large' and no resolver"
+   "expected": {
+    "vendor": "mistralai",
+    "model": "mistral-large",
+    "route": null,
+    "routes": [],
+    "canonical": "mistralai/mistral-large",
+    "routed": "mistral-large",
+    "slug": "mistralai_mistral-large",
+    "fields": {
+     "family": "mistral",
+     "generation": null,
+     "tier": "large",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "mistral/mistral-large",
    "expected": {
-    "vendor": "mistral",
+    "vendor": "mistralai",
     "model": "mistral-large",
     "route": null,
     "routes": [],
-    "canonical": "mistral/mistral-large",
+    "canonical": "mistralai/mistral-large",
     "routed": "mistral/mistral-large",
-    "slug": "mistral_mistral-large",
+    "slug": "mistralai_mistral-large",
     "fields": {
      "family": "mistral",
      "generation": null,
@@ -13026,13 +13830,13 @@
    "provider": null,
    "input": "moonshot/kimi-k2.5",
    "expected": {
-    "vendor": "moonshot",
+    "vendor": "moonshotai",
     "model": "kimi-k2.5",
     "route": null,
     "routes": [],
-    "canonical": "moonshot/kimi-k2.5",
+    "canonical": "moonshotai/kimi-k2.5",
     "routed": "moonshot/kimi-k2.5",
-    "slug": "moonshot_kimi-k2.5",
+    "slug": "moonshotai_kimi-k2.5",
     "fields": {
      "family": "kimi",
      "generation": "k2.5",
@@ -13835,11 +14639,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "muse-spark-1.1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'muse-spark-1.1' and no resolver"
+   "expected": {
+    "vendor": "meta",
+    "model": "muse-spark-1.1",
+    "route": null,
+    "routes": [],
+    "canonical": "meta/muse-spark-1.1",
+    "routed": "muse-spark-1.1",
+    "slug": "meta_muse-spark-1.1",
+    "fields": {
+     "family": "muse",
+     "generation": "1.1",
+     "tier": null,
+     "variant": "spark",
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "config_name"
@@ -13848,7 +14670,9 @@
     "tasks:config/<domain>/muse_11.yaml models.agent",
     "tools: langfuse-uploader tests + tasks config muse_11 (provider meta)"
    ],
-   "count": 3
+   "count": 3,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "pair",
@@ -13895,11 +14719,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "muse-spark-1.2",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'muse-spark-1.2' and no resolver"
+   "expected": {
+    "vendor": "meta",
+    "model": "muse-spark-1.2",
+    "route": null,
+    "routes": [],
+    "canonical": "meta/muse-spark-1.2",
+    "routed": "muse-spark-1.2",
+    "slug": "meta_muse-spark-1.2",
+    "fields": {
+     "family": "muse",
+     "generation": "1.2",
+     "tier": null,
+     "variant": "spark",
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "config_name"
@@ -13908,7 +14750,9 @@
     "engine: tests (normalize_model_name, nova, presets)",
     "tasks:config/<domain>/muse_12.yaml models.agent"
    ],
-   "count": 29
+   "count": 29,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -14272,11 +15116,29 @@
    "input_kind": "text",
    "provider": null,
    "input": "nova-2-lite",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-2-lite' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-2-lite",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-2-lite",
+    "routed": "nova-2-lite",
+    "slug": "amazon_nova-2-lite",
+    "fields": {
+     "family": "nova",
+     "generation": "2",
+     "tier": "lite",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name",
     "display_legacy",
@@ -14289,126 +15151,268 @@
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value",
     "tasks:collector reporter.py MODEL_DISPLAY_NAMES value (eval branch)"
    ],
-   "count": 5
+   "count": 5,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "nova-2-lite-v1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-2-lite-v1' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-2-lite-v1",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-2-lite-v1",
+    "routed": "nova-2-lite-v1",
+    "slug": "amazon_nova-2-lite-v1",
+    "fields": {
+     "family": "nova",
+     "generation": "2",
+     "tier": "lite",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": "v1"
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "nova-lite-v2",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-lite-v2' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-lite-v2",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-lite-v2",
+    "routed": "nova-lite-v2",
+    "slug": "amazon_nova-lite-v2",
+    "fields": {
+     "family": "nova",
+     "generation": null,
+     "tier": "lite",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": "v2"
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "nova-micro-1.0",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-micro-1.0' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-micro-1.0",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-micro-1.0",
+    "routed": "nova-micro-1.0",
+    "slug": "amazon_nova-micro-1.0",
+    "fields": {
+     "family": "nova",
+     "generation": "1.0",
+     "tier": "micro",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "nova-orchestrator-v1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-orchestrator-v1' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-orchestrator-v1",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-orchestrator-v1",
+    "routed": "nova-orchestrator-v1",
+    "slug": "amazon_nova-orchestrator-v1",
+    "fields": {
+     "family": "nova",
+     "generation": null,
+     "tier": null,
+     "variant": "orchestrator",
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": "v1"
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "nova-premier-v1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-premier-v1' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-premier-v1",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-premier-v1",
+    "routed": "nova-premier-v1",
+    "slug": "amazon_nova-premier-v1",
+    "fields": {
+     "family": "nova",
+     "generation": null,
+     "tier": "premier",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": "v1"
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "nova-pro",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-pro' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-pro",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-pro",
+    "routed": "nova-pro",
+    "slug": "amazon_nova-pro",
+    "fields": {
+     "family": "nova",
+     "generation": null,
+     "tier": "pro",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "nova-pro-v1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'nova-pro-v1' and no resolver"
+   "expected": {
+    "vendor": "amazon",
+    "model": "nova-pro-v1",
+    "route": null,
+    "routes": [],
+    "canonical": "amazon/nova-pro-v1",
+    "routed": "nova-pro-v1",
+    "slug": "amazon_nova-pro-v1",
+    "fields": {
+     "family": "nova",
+     "generation": null,
+     "tier": "pro",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": "v1"
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
@@ -14949,10 +15953,10 @@
     "routed": "nova/some-nova-model",
     "slug": "nova_some-nova-model",
     "fields": {
-     "family": "some",
+     "family": "nova",
      "generation": null,
      "tier": null,
-     "variant": "nova-model",
+     "variant": "model",
      "snapshot": null,
      "size": null,
      "stage": null,
@@ -15443,69 +16447,149 @@
    "input_kind": "text",
    "provider": null,
    "input": "o1",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'o1' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "o1",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/o1",
+    "routed": "o1",
+    "slug": "openai_o1",
+    "fields": {
+     "family": "o",
+     "generation": "1",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "o1-mini",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'o1-mini' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "o1-mini",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/o1-mini",
+    "routed": "o1-mini",
+    "slug": "openai_o1-mini",
+    "fields": {
+     "family": "o",
+     "generation": "1",
+     "tier": "mini",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "o3",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'o3' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "o3",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/o3",
+    "routed": "o3",
+    "slug": "openai_o3",
+    "fields": {
+     "family": "o",
+     "generation": "3",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "o3-pro",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'o3-pro' and no resolver"
+   "expected": {
+    "vendor": "openai",
+    "model": "o3-pro",
+    "route": null,
+    "routes": [],
+    "canonical": "openai/o3-pro",
+    "routed": "o3-pro",
+    "slug": "openai_o3-pro",
+    "fields": {
+     "family": "o",
+     "generation": "3",
+     "tier": "pro",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
@@ -19617,14 +20701,14 @@
    "input": "openrouter/anthropic/claude-sonnet-4-6",
    "expected": {
     "vendor": "anthropic",
-    "model": "claude-sonnet-4-6",
+    "model": "claude-sonnet-4.6",
     "route": "openrouter",
     "routes": [
      "openrouter"
     ],
-    "canonical": "anthropic/claude-sonnet-4-6",
+    "canonical": "anthropic/claude-sonnet-4.6",
     "routed": "openrouter/anthropic/claude-sonnet-4-6",
-    "slug": "anthropic_claude-sonnet-4-6",
+    "slug": "anthropic_claude-sonnet-4.6",
     "fields": {
      "family": "claude",
      "generation": "4.6",
@@ -19849,31 +20933,11 @@
    "input_kind": "text",
    "provider": null,
    "input": "openrouter/azure_ai/cohere-command-a-plus-05-2026",
-   "expected": {
-    "vendor": "azure_ai",
-    "model": "cohere-command-a-plus-05-2026",
-    "route": "openrouter",
-    "routes": [
-     "openrouter"
-    ],
-    "canonical": "azure_ai/cohere-command-a-plus-05-2026",
-    "routed": "openrouter/azure_ai/cohere-command-a-plus-05-2026",
-    "slug": "azure_ai_cohere-command-a-plus-05-2026",
-    "fields": {
-     "family": "command",
-     "generation": "a",
-     "tier": "plus",
-     "variant": null,
-     "snapshot": "2026-05",
-     "size": null,
-     "stage": null,
-     "capability": null,
-     "api_version": null
-    },
-    "unresolved": [],
-    "lookup": true
+   "expected": null,
+   "error": {
+    "type": "MalformedName",
+    "message": "'azure_ai' is a route, not a vendor: 'openrouter/azure_ai/cohere-command-a-plus-05-2026'"
    },
-   "error": null,
    "classes": [
     "engine_literal"
    ],
@@ -20455,18 +21519,40 @@
    "input_kind": "text",
    "provider": null,
    "input": "openrouter/minimax-m3",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'minimax-m3' and no resolver"
+   "expected": {
+    "vendor": "minimax",
+    "model": "minimax-m3",
+    "route": "openrouter",
+    "routes": [
+     "openrouter"
+    ],
+    "canonical": "minimax/minimax-m3",
+    "routed": "openrouter/minimax-m3",
+    "slug": "minimax_minimax-m3",
+    "fields": {
+     "family": "minimax",
+     "generation": "m3",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "engine_literal"
    ],
    "sources": [
     "engine: tests/docs/code literal"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
@@ -22663,18 +23749,38 @@
    "input_kind": "text",
    "provider": null,
    "input": "qwen-max",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'qwen-max' and no resolver"
+   "expected": {
+    "vendor": "qwen",
+    "model": "qwen-max",
+    "route": null,
+    "routes": [],
+    "canonical": "qwen/qwen-max",
+    "routed": "qwen-max",
+    "slug": "qwen_qwen-max",
+    "fields": {
+     "family": "qwen",
+     "generation": null,
+     "tier": "max",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
@@ -24931,35 +26037,75 @@
    "input_kind": "text",
    "provider": null,
    "input": "qwen3-32b",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'qwen3-32b' and no resolver"
+   "expected": {
+    "vendor": "qwen",
+    "model": "qwen3-32b",
+    "route": null,
+    "routes": [],
+    "canonical": "qwen/qwen3-32b",
+    "routed": "qwen3-32b",
+    "slug": "qwen_qwen3-32b",
+    "fields": {
+     "family": "qwen",
+     "generation": "3",
+     "tier": null,
+     "variant": null,
+     "snapshot": null,
+     "size": "32b",
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text",
    "provider": null,
    "input": "qwen3-max",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'qwen3-max' and no resolver"
+   "expected": {
+    "vendor": "qwen",
+    "model": "qwen3-max",
+    "route": null,
+    "routes": [],
+    "canonical": "qwen/qwen3-max",
+    "routed": "qwen3-max",
+    "slug": "qwen_qwen3-max",
+    "fields": {
+     "family": "qwen",
+     "generation": "3",
+     "tier": "max",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "classes": [
     "bare_name"
    ],
    "sources": [
     "engine: tests (normalize_model_name, nova, presets)"
    ],
-   "count": 1
+   "count": 1,
+   "tier": "B",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "label",
@@ -27153,13 +28299,13 @@
    "provider": null,
    "input": "xai/grok-4.6",
    "expected": {
-    "vendor": "xai",
+    "vendor": "x-ai",
     "model": "grok-4.6",
     "route": null,
     "routes": [],
-    "canonical": "xai/grok-4.6",
+    "canonical": "x-ai/grok-4.6",
     "routed": "xai/grok-4.6",
-    "slug": "xai_grok-4.6",
+    "slug": "x-ai_grok-4.6",
     "fields": {
      "family": "grok",
      "generation": "4.6",
@@ -28349,7 +29495,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~anthropic/claude-haiku-latest'"
+    "message": "vendor '~anthropic' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~anthropic/claude-haiku-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28366,7 +29512,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~anthropic/claude-opus-latest'"
+    "message": "vendor '~anthropic' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~anthropic/claude-opus-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28383,7 +29529,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~anthropic/claude-sonnet-latest'"
+    "message": "vendor '~anthropic' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~anthropic/claude-sonnet-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28400,7 +29546,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~google/gemini-flash-latest'"
+    "message": "vendor '~google' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~google/gemini-flash-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28417,7 +29563,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~google/gemini-pro-latest'"
+    "message": "vendor '~google' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~google/gemini-pro-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28434,7 +29580,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~moonshotai/kimi-latest'"
+    "message": "vendor '~moonshotai' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~moonshotai/kimi-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28451,7 +29597,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~openai/gpt-latest'"
+    "message": "vendor '~openai' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~openai/gpt-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28468,7 +29614,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "vendor charset: '~openai/gpt-mini-latest'"
+    "message": "vendor '~openai' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~openai/gpt-mini-latest'"
    },
    "classes": [
     "pricing_key"
@@ -28675,15 +29821,15 @@
    "provider": "openrouter",
    "input": "Meta/Muse-Spark-1.2",
    "expected": {
-    "vendor": "Meta",
+    "vendor": "meta",
     "model": "Muse-Spark-1.2",
     "route": "openrouter",
     "routes": [
      "openrouter"
     ],
-    "canonical": "Meta/Muse-Spark-1.2",
+    "canonical": "meta/Muse-Spark-1.2",
     "routed": "openrouter/Meta/Muse-Spark-1.2",
-    "slug": "Meta_Muse-Spark-1.2",
+    "slug": "meta_Muse-Spark-1.2",
     "fields": {
      "family": "muse",
      "generation": "1.2",
@@ -28714,13 +29860,13 @@
    "provider": null,
    "input": "OpenAI/GPT-6-Astra",
    "expected": {
-    "vendor": "OpenAI",
+    "vendor": "openai",
     "model": "GPT-6-Astra",
     "route": null,
     "routes": [],
-    "canonical": "OpenAI/GPT-6-Astra",
+    "canonical": "openai/GPT-6-Astra",
     "routed": "OpenAI/GPT-6-Astra",
-    "slug": "OpenAI_GPT-6-Astra",
+    "slug": "openai_GPT-6-Astra",
     "fields": {
      "family": "gpt",
      "generation": "6",
@@ -28804,7 +29950,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "provider charset: 'openrouter/'"
+    "message": "provider 'openrouter/' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: 'openrouter/'"
    },
    "classes": [
     "review_f1"
@@ -28821,7 +29967,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "provider charset: 'Open Router'"
+    "message": "provider 'Open Router' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: 'Open Router'"
    },
    "classes": [
     "review_f1"
@@ -28838,7 +29984,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "provider charset: '~openai'"
+    "message": "provider '~openai' breaks the segment grammar [A-Za-z0-9][A-Za-z0-9._-]*: '~openai'"
    },
    "classes": [
     "review_f1"
@@ -28851,11 +29997,11 @@
   {
    "input_kind": "canonical",
    "provider": null,
-   "input": "openai/gpt-6-astra\u200b",
+   "input": "openai/gpt-6-astra​",
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "control or format character: 'openai/gpt-6-astra\\u200b'"
+    "message": "control or format character in the model name: 'openai/gpt-6-astra\\u200b'"
    },
    "classes": [
     "review_f1"
@@ -29054,7 +30200,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "provider 'openai' implies vendor 'openai' but the name says 'anthropic'"
+    "message": "route 'openai' implies vendor 'openai' but the name says 'anthropic': 'anthropic/claude-opus-4-6'"
    },
    "classes": [
     "review_f1"
@@ -29071,7 +30217,7 @@
    "expected": null,
    "error": {
     "type": "MalformedName",
-    "message": "provider 'platform_openai' implies vendor 'openai' but the name says 'anthropic'"
+    "message": "route 'platform_openai' implies vendor 'openai' but the name says 'anthropic': 'anthropic/claude-opus-5'"
    },
    "classes": [
     "review_f1"
@@ -29541,7 +30687,7 @@
    "expected": null,
    "error": {
     "type": "UnknownRoute",
-    "message": "first segment is not a declared route: 'deepseek/deepseek-v4'"
+    "message": "first segment 'deepseek' is not a declared route (amazon-nova, amazon_nova, anthropic, anyscale, azure, azure_ai, baseten, bedrock, bedrock_mantle, cerebras, chatgpt, cloudflare, codestral, cohere_chat, crusoe, darkbloom, dashscope, databricks, deepinfra, featherless_ai, fireworks_ai, friendliai, gemini, github, github_copilot, gmi, gradient_ai, groq, heroku, hosted_vllm, huggingface, hyperbolic, lambda_ai, lemonade, libertai, litellm, litellm_proxy, llamagate, meta, meta_llama, mock, nebius, nlp_cloud, nova, novita, nscale, nvidia_nim, oci, ollama, ollama_chat, openai, openrouter, ovhcloud, palm, perplexity, pinstripes, platform_openai, publicai, replicate, sagemaker, sambanova, scaleway, snowflake, tencent, tensormesh, text-completion-codestral, text-completion-openai, together_ai, v0, vercel_ai_gateway, vertex_ai, vertex_ai_beta, vllm, volcengine, wandb, watsonx): 'deepseek/deepseek-v4'"
    },
    "classes": [
     "review_f1"
@@ -29830,7 +30976,7 @@
    "expected": null,
    "error": {
     "type": "AmbiguousModelName",
-    "message": "bare name 'kimi-k2.5': ('moonshot', 'moonshotai')"
+    "message": "bare name 'kimi-k2.5' is ambiguous: moonshot, moonshotai"
    },
    "resolver": "pricing.json keys by model part",
    "candidates": [
@@ -29852,7 +30998,7 @@
    "expected": null,
    "error": {
     "type": "AmbiguousModelName",
-    "message": "bare name 'nova-lite-v1': ('amazon', 'nova')"
+    "message": "bare name 'nova-lite-v1' is ambiguous: amazon, nova"
    },
    "resolver": "pricing.json keys by model part",
    "candidates": [
@@ -29874,7 +31020,7 @@
    "expected": null,
    "error": {
     "type": "AmbiguousModelName",
-    "message": "bare name 'nova-pro-v1': ('amazon', 'nova')"
+    "message": "bare name 'nova-pro-v1' is ambiguous: amazon, nova"
    },
    "resolver": "pricing.json keys by model part",
    "candidates": [
@@ -29899,7 +31045,7 @@
     "route": null,
     "routes": [],
     "canonical": "openai/gpt-4o",
-    "routed": "openai/gpt-4o",
+    "routed": "gpt-4o",
     "slug": "openai_gpt-4o",
     "fields": {
      "family": "gpt",
@@ -29940,7 +31086,7 @@
     "route": null,
     "routes": [],
     "canonical": "meta/muse-spark-1.1",
-    "routed": "meta/muse-spark-1.1",
+    "routed": "muse-spark-1.1",
     "slug": "meta_muse-spark-1.1",
     "fields": {
      "family": "muse",
@@ -29975,11 +31121,29 @@
    "input_kind": "text+resolver",
    "provider": null,
    "input": "claude-opus-4-6",
-   "expected": null,
-   "error": {
-    "type": "UnknownVendor",
-    "message": "bare name 'claude-opus-4-6': resolver has no candidate"
+   "expected": {
+    "vendor": "anthropic",
+    "model": "claude-opus-4.6",
+    "route": null,
+    "routes": [],
+    "canonical": "anthropic/claude-opus-4.6",
+    "routed": "claude-opus-4-6",
+    "slug": "anthropic_claude-opus-4.6",
+    "fields": {
+     "family": "claude",
+     "generation": "4.6",
+     "tier": "opus",
+     "variant": null,
+     "snapshot": null,
+     "size": null,
+     "stage": null,
+     "capability": null,
+     "api_version": null
+    },
+    "unresolved": [],
+    "lookup": false
    },
+   "error": null,
    "resolver": "pricing.json keys by model part",
    "candidates": [],
    "classes": [
@@ -29988,7 +31152,9 @@
    "sources": [
     "review-gpt-6-astra.md F3"
    ],
-   "count": 0
+   "count": 0,
+   "tier": "A",
+   "review_status": "regenerated 2026-10-30, classified in the change's PR"
   },
   {
    "input_kind": "text+resolver",
@@ -29997,7 +31163,7 @@
    "expected": null,
    "error": {
     "type": "UnknownVendor",
-    "message": "bare name 'some-unknown-model': resolver has no candidate"
+    "message": "bare name 'some-unknown-model': the resolver has no candidate"
    },
    "resolver": "pricing.json keys by model part",
    "candidates": [],
