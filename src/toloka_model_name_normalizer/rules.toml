@@ -3,36 +3,49 @@
 # Every parsing decision of the library is read from a file of this shape. Override it from outside with
 # Rules.load(path) or the environment variable TOLOKA_MODEL_NAME_NORMALIZER_RULES; an override merges over
 # this file (tables replace entry by entry, vocabulary lists extend, scalars overwrite) unless it declares
-# `extends = false`. Design and the survey behind every entry: README.md and the golden corpus
-# in tests/data/golden.json (every entry is exercised by at least one row).
+# `extends = false`. Design and the survey behind the entries: README.md, the golden corpus in
+# tests/data/golden.json and the LiteLLM catalogue in tests/data/litellm_catalogue.json.
 #
-# Never in this file: a model catalogue, prices, capabilities, effort variants, config stems. Per-name
-# overrides live only in [lookup], each with a `why`.
+# Never in this file: a model catalogue, prices, capabilities, effort variants, config stems. The families
+# table names model lines, not models. Per-name overrides live only in [lookup], each with a `why`.
 
-schema_version = 1        # the rule primitives this file uses; the library states which versions it reads
-version = "2026.09.12.1"  # this rule set's own version, recorded by every consumer next to its values
+schema_version = 2        # the rule primitives this file uses; the library states which versions it reads
+version = "2026.10.30.1"  # this rule set's own version, recorded by every consumer next to its values
 
 # --- routes ------------------------------------------------------------------------------------------------
 # A route is a transport namespace that may prefix a model name on the wire, or the `provider` of the
 # pair form. `implies_vendor`: the wire name omits the vendor, so a bare name after this route belongs to
 # that vendor. A route whose name equals its implied vendor is a direct-vendor route: valid as a provider,
 # never peeled from a string (`openai/gpt-6-astra` keeps reading as canonical vendor/model).
+# `nestable`: another route may follow it (a proxy). `also_vendor`: the name is a vendor too, so
+# `route/name` reads as a route only when the name's family belongs to another vendor. `dotted_vendor`: a
+# name spells its vendor as `[region.]vendor.model`. `skip_segments` / `skip_paths`: leading path segments
+# of deployment detail (fnmatch, segment by segment). `strip`: regexes removed from the canonical model.
+# `decimal_p`: `5p1` is `5.1` in the canonical model. None of them changes the wire.
+#
+# The route names follow LiteLLM's provider names, the de-facto wire convention; a provider that serves one
+# vendor implies it, every other one leaves the vendor to the name or to the families table.
 
 [routes.openrouter]                       # peelable: openrouter/x/y is the wire form of (openrouter, x/y)
 
 [routes.litellm]
 nestable = true                           # litellm/openrouter/x/y keeps the chain ("litellm", "openrouter")
 
+[routes.litellm_proxy]
+nestable = true                           # a LiteLLM proxy in front of any route: litellm_proxy/bedrock/...
+
 [routes.mock]                             # the engine's mock provider
 
 [routes.platform_openai]
 implies_vendor = "openai"                 # LiteLLM gateway route for the direct OpenAI API
+nestable = true
 
 [routes.gemini]
 implies_vendor = "google"                 # the engine's provider binding for the direct Google API
 
 [routes.openai]
 implies_vendor = "openai"                 # direct API: the pair (openai, gpt-6-astra)
+nestable = true                           # and the OpenAI-compatible proxy: the pair (openai, azure_ai/<model>)
 
 [routes.anthropic]
 implies_vendor = "anthropic"              # direct API: the pair (anthropic, claude-opus-4-6)
@@ -43,14 +56,276 @@ implies_vendor = "meta"                   # Muse on its own API: the pair (meta,
 [routes.nova]
 implies_vendor = "nova"                   # the engine's own Nova namespace: the pair (nova, nova-pro-v1)
 
+# Native APIs that serve one vendor.
+[routes.codestral]
+implies_vendor = "mistralai"              # codestral/codestral-2405
+[routes.text-completion-codestral]
+implies_vendor = "mistralai"
+[routes.chatgpt]
+implies_vendor = "openai"                 # chatgpt/gpt-5.2
+[routes.text-completion-openai]
+implies_vendor = "openai"
+[routes.cohere_chat]
+implies_vendor = "cohere"                 # (cohere_chat, command-r-plus)
+[routes.amazon-nova]
+implies_vendor = "amazon"                 # amazon-nova/nova-pro-v1
+[routes.amazon_nova]
+implies_vendor = "amazon"
+[routes.palm]
+implies_vendor = "google"
+[routes.v0]
+implies_vendor = "vercel"                 # v0/v0-1.5-md
+
+# Cloud platforms.
+[routes.azure]                            # Azure OpenAI: azure/<deployment>, data-zone segments in pricing keys
+skip_segments = ["eu", "us", "global", "global-standard"]
+
+[routes.azure_ai]                         # Azure AI Foundry: azure_ai/Llama-4-Scout-17B-16E-Instruct
+skip_segments = ["global"]
+
+[routes.bedrock]                          # bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+nestable = true
+dotted_vendor = true
+regions = ["us", "eu", "apac", "global", "us-gov", "jp", "au", "ca"]
+skip_segments = ["converse", "invoke", "*-*-[0-9]", "*-month-commitment", "[*]"]
+strip = [':0$']                           # the default revision; anthropic.claude-v2:1 is Claude 2.1 and stays
+
+[routes.bedrock_mantle]                   # bedrock_mantle/openai.gpt-oss-120b
+dotted_vendor = true
+
+[routes.sagemaker]
+
+[routes.oci]                              # Oracle Cloud: oci/meta.llama-3.1-405b-instruct
+dotted_vendor = true
+
+[routes.vertex_ai]                        # vertex_ai/claude-opus-4-7@default, vertex_ai/meta/llama-...-maas
+strip = ['@default$', '-maas$']
+
+[routes.vertex_ai_beta]
+strip = ['@default$', '-maas$']
+
+[routes.watsonx]                          # watsonx/ibm/granite-3-8b-instruct
+
+[routes.snowflake]                        # snowflake/claude-sonnet-4-5, and Snowflake's own Arctic
+also_vendor = true
+
+[routes.databricks]                       # databricks/databricks-claude-sonnet-4-1, and Databricks' own DBRX
+also_vendor = true
+strip = ['^databricks-']
+
+[routes.cloudflare]                       # cloudflare/@cf/meta/llama-3.1-8b-instruct
+skip_segments = ["@cf"]
+
+# OpenAI-compatible hosts: route/vendor/model or route/<bare name>.
+[routes.fireworks_ai]                     # fireworks_ai/accounts/fireworks/models/glm-5p1
+skip_paths = ["accounts/*/models", "accounts/*/routers"]
+decimal_p = true
+
+[routes.together_ai]
+[routes.deepinfra]
+[routes.groq]
+[routes.novita]
+[routes.nebius]
+[routes.hyperbolic]
+[routes.replicate]
+[routes.vercel_ai_gateway]
+[routes.anyscale]
+[routes.sambanova]
+[routes.cerebras]
+[routes.lambda_ai]
+[routes.ollama]
+[routes.ollama_chat]
+[routes.hosted_vllm]
+[routes.vllm]
+[routes.huggingface]
+[routes.github]
+[routes.github_copilot]
+[routes.baseten]
+[routes.nscale]
+[routes.featherless_ai]
+[routes.friendliai]
+[routes.gmi]
+[routes.wandb]
+[routes.ovhcloud]
+[routes.scaleway]
+[routes.llamagate]
+[routes.gradient_ai]
+[routes.publicai]
+[routes.crusoe]
+[routes.lemonade]
+[routes.heroku]
+[routes.libertai]
+[routes.tensormesh]
+[routes.darkbloom]
+[routes.nlp_cloud]
+[routes.nvidia_nim]
+[routes.dashscope]                        # Alibaba Model Studio serves Qwen and other vendors' models
+[routes.volcengine]                       # ByteDance's Volcano Engine: Doubao and other vendors' models
+[routes.meta_llama]                       # Meta's Llama API: Llama and Muse
+
+[routes.pinstripes]
+skip_segments = ["ps"]
+
+[routes.perplexity]                       # perplexity/anthropic/claude-opus-4-7, and Perplexity's own Sonar
+also_vendor = true
+
+[routes.tencent]                          # tencent/deepseek-v4-flash, and Tencent's own Hunyuan
+also_vendor = true
+
 # --- vendor aliases and bare names ----------------------------------------------------------------------
-# Empty by decision: a spelling fold changes identity, so a deployment declares it consciously. The engine's
-# transition override carries xai = "x-ai", moonshot = "moonshotai", mistral = "mistralai" and today's
-# prefix heuristics as ordered bare-name patterns (first match in file order, fnmatch wildcards).
+# A vendor alias folds a spelling into the vendor's OpenRouter slug, the identity the pricing keys use:
+# native API names and Hugging Face organisations. A family-scoped alias folds a spelled vendor for one
+# family only: Meta publishes Llama as meta-llama, while Muse stays meta. Bare-name patterns (ordered,
+# fnmatch) are for deployments; the default infers a bare name's vendor from the families table below.
 
 [vendor_aliases]
+xai = "x-ai"                              # xai/grok-4, the native API
+moonshot = "moonshotai"                   # moonshot/kimi-k2.5
+mistral = "mistralai"                     # mistral/mistral-large-2512
+zai = "z-ai"                              # zai/glm-4.7
+zai-org = "z-ai"                          # together_ai/zai-org/GLM-4.7
+thudm = "z-ai"
+deepseek-ai = "deepseek"                  # together_ai/deepseek-ai/DeepSeek-R1
+ibm = "ibm-granite"                       # watsonx/ibm/granite-3-8b-instruct
+minimaxai = "minimax"                     # baseten/MiniMaxAI/MiniMax-M2.5
+ai21labs = "ai21"
+coherelabs = "cohere"
+cohereforai = "cohere"
+xiaomimimo = "xiaomi"                     # novita/xiaomimimo/mimo-v2-flash
+stepfun-ai = "stepfun"
+codellama = "meta-llama"                  # anyscale/codellama/CodeLlama-34b-Instruct-hf
+sarvam = "sarvamai"                       # sarvam/sarvam-m
+
+[family_vendor_aliases]
+"meta/llama" = "meta-llama"               # replicate/meta/llama-3-70b, Bedrock meta.llama3-70b-instruct-v1:0
+"meta/codellama" = "meta-llama"
+"meta/llamaguard" = "meta-llama"
 
 [bare_names]
+
+# --- families ----------------------------------------------------------------------------------------------
+# The vendor of a model line, for a name that spells no vendor (azure/gpt-5.5, claude-opus-4-7). One row per
+# family token, the first token after the separators and the glued-letter split (qwen3-max is family qwen,
+# o3-mini family o). The table also decides the vendor-token skip: a first token that is no family is
+# dropped when the second is one (meta-llama-3.1, cohere-command-a, openai-gpt-5). A naming convention, not a
+# catalogue: no model is listed. Vendors are OpenRouter slugs, or the publisher's own organisation where
+# OpenRouter carries none.
+
+[families]
+claude = "anthropic"
+gpt = "openai"
+o = "openai"                              # o1, o3-mini, o4-mini
+chatgpt = "openai"
+codex = "openai"
+davinci = "openai"
+babbage = "openai"
+computer = "openai"                       # computer-use-preview
+gemini = "google"
+gemma = "google"
+codegemma = "google"
+paligemma = "google"
+learnlm = "google"
+medlm = "google"
+grok = "x-ai"
+deepseek = "deepseek"
+qwen = "qwen"
+qwq = "qwen"
+qvq = "qwen"
+glm = "z-ai"
+codegeex = "z-ai"
+kimi = "moonshotai"
+moonshot = "moonshotai"
+mistral = "mistralai"
+mixtral = "mistralai"
+codestral = "mistralai"
+ministral = "mistralai"
+magistral = "mistralai"
+devstral = "mistralai"
+pixtral = "mistralai"
+voxtral = "mistralai"
+mathstral = "mistralai"
+llama = "meta-llama"
+codellama = "meta-llama"
+llamaguard = "meta-llama"
+muse = "meta"
+command = "cohere"
+c4ai = "cohere"
+aya = "cohere"
+jamba = "ai21"
+j2 = "ai21"
+nova = "amazon"
+titan = "amazon"
+phi = "microsoft"
+mai = "microsoft"
+wizardlm = "microsoft"
+nemotron = "nvidia"
+granite = "ibm-granite"
+minimax = "minimax"
+mimo = "xiaomi"
+hunyuan = "tencent"
+hy = "tencent"                            # hy3, Hunyuan 3
+ernie = "baidu"
+seed = "bytedance-seed"
+doubao = "bytedance-seed"
+sonar = "perplexity"
+palmyra = "writer"
+olmo = "allenai"
+tulu = "allenai"
+molmo = "allenai"
+hermes = "nousresearch"
+step = "stepfun"
+ling = "inclusionai"
+ring = "inclusionai"
+lfm = "liquid"
+solar = "upstage"
+reka = "rekaai"
+dbrx = "databricks"
+mpt = "databricks"                        # MosaicML's MPT
+arctic = "snowflake"
+mythomax = "gryphe"
+pegasus = "twelvelabs"
+marengo = "twelvelabs"
+cogito = "deepcogito"
+yi = "01-ai"
+kat = "kwaipilot"
+starcoder = "bigcode"
+internvl = "opengvlab"
+internlm = "internlm"
+phind = "phind"
+firefunction = "fireworks"
+firellava = "fireworks"
+firesearch = "fireworks"
+jais = "core42"
+sarvam = "sarvamai"
+gigachat = "gigachat"
+v0 = "vercel"
+mercury = "inception"
+morph = "morph"
+allam = "sdaia"
+apertus = "swiss-ai"
+salamandra = "bsc-lt"
+alia = "bsc-lt"
+pythia = "eleutherai"
+zephyr = "huggingfaceh4"
+stablecode = "stabilityai"
+baichuan = "baichuan"
+skywork = "skywork"
+paddleocr = "paddlepaddle"
+rolmocr = "reducto"
+rolm = "reducto"                          # rolm-ocr
+holo = "hcompany"
+qwerky = "featherless-ai"
+dolphin = "cognitivecomputations"
+longcat = "meituan"
+intellect = "prime-intellect"
+
+# --- canonical spelling ------------------------------------------------------------------------------------
+# The vendors whose OpenRouter ids write a minor version with a dot: their dash spelling (claude-opus-4-6,
+# glm-4-7) is the same model, so the canonical model takes the dot. Mistral is not listed: its ids mix both
+# (mistral-medium-3-5, mistral-medium-3.1).
+
+[canonical]
+minor_dot = ["anthropic", "z-ai", "ai21"]
 
 # --- policy ------------------------------------------------------------------------------------------------
 
@@ -61,6 +336,8 @@ case = "preserve"                         # the engine looks pricing keys up by 
 leading_slash = "tolerate"                # /openrouter/openai/gpt-6-astra
 implied_vendor_mismatch = "error"         # (openai, anthropic/claude-opus-4-6) is a config error, not a parse
 fields = "best_effort"                    # "strict" raises on any unresolved token
+vendor_case = "fold"                      # Qwen/Qwen3-32B and NousResearch/... are vendors qwen and nousresearch
+family_vendor = "infer"                   # a bare name takes its family's vendor; "off": a bare name is never guessed
 
 # --- render ------------------------------------------------------------------------------------------------
 # The slug follows the engine's model_id_slug: unsafe runs collapse to one underscore, ends stripped,
@@ -75,7 +352,7 @@ route_in_slug = false                     # slug is <vendor>_<model>; true: <rou
 # --- fields ------------------------------------------------------------------------------------------------
 
 [fields]
-separators = '[-/\s()]+'                  # identity-side: family depends on it; ':' introduces a suffix instead
+separators = '[-/\s()@]+'                 # identity-side: family depends on it; ':' introduces a suffix instead; '@' is Vertex's snapshot
 
 # OpenRouter ':suffix' variants stay in the identity (they are priced, distinct ids) and are classified here.
 # A suffix never reaches `stage`; an unknown suffix lands in `variant` and in `unresolved`.
@@ -213,11 +490,3 @@ why = "pricing.json key; OpenRouter's own router model, no upstream vendor"
 vendor = "openrouter"
 model = "pareto-code"
 why = "pricing.json key; OpenRouter's own router model, no upstream vendor"
-
-[lookup."azure_ai/cohere-command-a-plus-05-2026"]
-family = "command"
-generation = "a"
-tier = "plus"
-variant = ""
-snapshot = "2026-05"
-why = "Azure deployment name embeds the upstream vendor as the first token"

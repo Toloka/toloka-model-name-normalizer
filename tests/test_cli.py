@@ -27,7 +27,7 @@ def test_pair_and_modes(capsys: pytest.CaptureFixture[str]) -> None:
 
 
 def test_parse_error_exits_1(capsys: pytest.CaptureFixture[str]) -> None:
-    assert main(["parse", "muse-spark-1.1"]) == 1
+    assert main(["parse", "some-unknown-model"]) == 1
     assert "UnknownVendor" in capsys.readouterr().err
 
 

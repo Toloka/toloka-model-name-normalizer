@@ -21,8 +21,39 @@ descriptive fields from the name by rule:
 | static, always filled | `vendor`, `family` |
 | dynamic, `None` when absent | `generation`, `tier`, `variant`, `snapshot`, `size`, `stage`, `capability`, `api_version` |
 
-The library carries no model catalogue: a bare name (`muse-spark-1.1`) is never guessed, it resolves only
-through a caller-supplied resolver or the pair form, and fails loudly otherwise.
+`model` is the canonical spelling: the vendors that write a minor version with a dot get it also when a name
+spells a dash (`claude-opus-4-6` is `claude-opus-4.6`), and deployment detail (a Bedrock region, a Vertex
+`@default`, a LiteLLM path segment) is no part of it. `wire` keeps the name exactly as it was sent after the
+route chain, so `routed` reproduces the input and a provider gets what it expects.
+
+The library carries no model catalogue. A bare name (`claude-opus-4-7`, `azure/gpt-5.5`) takes the vendor of
+its family from the `[families]` table, one row per model line, after the caller's resolver has had its say;
+`provenance.vendor_source` records where every vendor came from (`spelled`, `alias`, `route`, `lookup`,
+`pattern`, `resolver`, `family`), and `policy.family_vendor = "off"` restores the strict reading in which a
+bare name resolves only through a resolver or the pair form. The guess is a family's vendor, so a third-party
+fine-tune named after its base model (`airoboros-llama-2-70b`) reads as the base model's vendor; a consumer that
+attributes cost or rank counts `vendor_source = "family"` rows apart.
+
+## Providers the default reads
+
+The default rules follow LiteLLM's provider names, the de-facto wire convention, and fold every vendor
+spelling into its OpenRouter slug. With no override and no code:
+
+| Shape | Example | Identity |
+|---|---|---|
+| native API | `(anthropic, claude-opus-4-6)`, `xai/grok-4`, `zai/glm-4.7` | `anthropic/claude-opus-4.6`, `x-ai/grok-4`, `z-ai/glm-4.7` |
+| OpenRouter and other hosts | `together_ai/deepseek-ai/DeepSeek-R1`, `deepinfra/Qwen/Qwen3-32B` | `deepseek/DeepSeek-R1`, `qwen/Qwen3-32B` |
+| Azure OpenAI and AI Foundry | `azure/gpt-5.5`, `azure_ai/Llama-4-Scout-17B-16E-Instruct` | `openai/gpt-5.5`, `meta-llama/Llama-4-Scout-17B-16E-Instruct` |
+| AWS Bedrock, OCI | `(bedrock, us.anthropic.claude-sonnet-4-5-20250929-v1:0)`, `oci/meta.llama-3.1-405b-instruct` | `anthropic/claude-sonnet-4.5-20250929-v1`, `meta-llama/llama-3.1-405b-instruct` |
+| Vertex AI | `vertex_ai/claude-opus-4-7@default`, `vertex_ai/zai-org/glm-5-maas` | `anthropic/claude-opus-4.7`, `z-ai/glm-5` |
+| host paths | `fireworks_ai/accounts/fireworks/models/glm-5p1`, `cloudflare/@cf/meta/llama-3.1-8b-instruct` | `z-ai/glm-5.1`, `meta-llama/llama-3.1-8b-instruct` |
+| a proxy in front of a route | `(openai, openrouter/anthropic/claude-opus-4.7)`, `(litellm_proxy, bedrock/…)` | the inner route continues the chain |
+
+The test suite measures this against the LiteLLM 1.93.0 model catalogue (`tests/data/litellm_catalogue.json`):
+at least 97% of its chat models read with an allowed vendor and a real family, and every id that does not is
+named with its reason. The model's case and a vendor token inside the name stay as spelled
+(`snowflake/openai-gpt-5-mini` is `openai/openai-gpt-5-mini`), and a glued family and version
+(`llama3-3-70b`) stays apart from the dashed one (`llama-3.3-70b`).
 
 ## Quick start
 
@@ -33,6 +64,7 @@ norm = Normalizer(Rules.default())
 
 name = norm.parse_pair("openrouter", "openai/gpt-6-astra")  # the task.yaml form, never lossy
 name.canonical  # "openai/gpt-6-astra"
+name.wire  # "openai/gpt-6-astra", as sent after the route chain
 name.routed  # "openrouter/openai/gpt-6-astra"
 name.slug  # "openai_gpt-6-astra"; the route is a property, not part of the slug
 name.family, name.generation, name.variant  # "gpt", "6", "astra"
@@ -94,8 +126,15 @@ model = "thing-1"
 why = "the one name the grammar cannot read"
 ```
 
-Rule groups: `routes`, `vendor_aliases`, `bare_names`, `lookup`, `policy`, `render`, `fields.separators`,
-`fields.suffixes`, `fields.shapes`, `fields.dates`, `fields.vocab`, `fields.vendor.<vendor>`. The schema is
+Rule groups: `routes`, `vendor_aliases`, `family_vendor_aliases`, `families`, `bare_names`, `lookup`,
+`canonical`, `policy`, `render`, `fields.separators`, `fields.suffixes`, `fields.shapes`, `fields.dates`,
+`fields.vocab`, `fields.vendor.<vendor>`. A route carries `implies_vendor`, `nestable`, `also_vendor`,
+`dotted_vendor`, `regions`, `skip_segments`, `skip_paths`, `strip` and `decimal_p`; `rules.toml` says what each
+one does. Schema 2 added `families`, `family_vendor_aliases`, `canonical`, the route keys after `nestable` and
+the policies `vendor_case` and `family_vendor`; a schema-1 file still loads, and without these keys it reads as
+schema 1 did. To go back to the strict reading of release 0.1 over the new default: `policy.family_vendor =
+"off"`, `canonical.minor_dot = []`, `policy.vendor_case = "preserve"`, a route restated or removed with
+`remove_routes`, an alias mapped to itself (`xai = "xai"`). The schema is
 closed and checked on the override file itself: an unknown key at any level, a wrong type, an unsupported
 `schema_version`, a `lookup` entry without `why`, a regex that matches the empty string or a shape regex that
 does not fit its kind's token layout is a `RulesError`. Rules files are trusted input all the same: a pathological
@@ -115,8 +154,9 @@ catalogue = CallableResolver(
 Normalizer(Rules.default(), resolver=catalogue).parse("muse-spark-1.1").canonical  # "meta/muse-spark-1.1"
 ```
 
-Zero candidates raise `UnknownVendor`, several raise `AmbiguousModelName`; the resolver's fingerprint lands in
-the provenance.
+The resolver answers before the families table. One candidate resolves, several raise `AmbiguousModelName`,
+none falls through to the families table, which raises `UnknownVendor` when it has no row for the family (or
+always, under `policy.family_vendor = "off"`); the resolver's fingerprint lands in the provenance.
 
 ## Command line
 

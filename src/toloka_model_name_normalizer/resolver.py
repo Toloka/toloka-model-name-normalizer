@@ -1,5 +1,5 @@
-"""The resolver contract for bare names. The library never guesses a vendor; the caller's catalogue does,
-and says which version of itself answered."""
+"""The resolver contract for bare names. The caller's catalogue answers before the rules' families table, and
+says which version of itself answered."""
 
 from __future__ import annotations
 
@@ -13,7 +13,8 @@ class Resolver(Protocol):
     """A catalogue that names the vendors a bare model name may belong to.
 
     ``candidates`` returns canonical ``vendor/model`` strings (or bare vendor names) for an exact model
-    match; zero means unknown, one resolves, more than one is ambiguous and the parse fails closed.
+    match; zero means unknown to the catalogue and leaves the name to the families table, one resolves, more
+    than one is ambiguous and the parse fails closed.
     ``fingerprint`` identifies the catalogue version and is recorded in the value's provenance.
     """
 

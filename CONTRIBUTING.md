@@ -20,7 +20,8 @@ branch, so run it locally when you touch rule loading.
 2. Add or adjust tests with every behaviour change. A rule change regenerates `tests/data/golden.json`; review the
    fixture diff together with the rule change and explain it in the PR.
 3. Never add a model catalogue, prices, capabilities or per-deployment names to `rules.toml`: the shipped default is
-   the grammar plus stable route conventions. Per-name exceptions go to `[lookup]` with a `why`.
+   the grammar plus stable route and naming conventions (a `[families]` row names a model line, never a model).
+   Per-name exceptions go to `[lookup]` with a `why`.
 4. Update `README.md` when user-facing behaviour changes.
 5. Do not include private or internal data (deployment names, internal hostnames, credentials) in this repository.
 6. Use [Conventional Commits](https://www.conventionalcommits.org/) for commit and PR titles (`feat(scope): ...`,

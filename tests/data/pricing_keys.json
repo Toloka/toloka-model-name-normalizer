@@ -1,0 +1,3785 @@
+{
+ "source": "Toloka/tolokaforge main 5bcdbd2 (2026-10-30), tolokaforge_models/src/tolokaforge_models/data/pricing.json; identity from parse_canonical under the 2026.09.12.1 default rules of release 0.1.0",
+ "rows": [
+  {
+   "key": "ai21/jamba-large-1.7",
+   "vendor": "ai21",
+   "model": "jamba-large-1.7",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-1.0",
+   "vendor": "aion-labs",
+   "model": "aion-1.0",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-1.0-mini",
+   "vendor": "aion-labs",
+   "model": "aion-1.0-mini",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-2.0",
+   "vendor": "aion-labs",
+   "model": "aion-2.0",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-3.0",
+   "vendor": "aion-labs",
+   "model": "aion-3.0",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-3.0-mini",
+   "vendor": "aion-labs",
+   "model": "aion-3.0-mini",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-3.5",
+   "vendor": "aion-labs",
+   "model": "aion-3.5",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-3.5-mini",
+   "vendor": "aion-labs",
+   "model": "aion-3.5-mini",
+   "error": null
+  },
+  {
+   "key": "aion-labs/aion-rp-llama-3.1-8b",
+   "vendor": "aion-labs",
+   "model": "aion-rp-llama-3.1-8b",
+   "error": null
+  },
+  {
+   "key": "alfredpros/codellama-7b-instruct-solidity",
+   "vendor": "alfredpros",
+   "model": "codellama-7b-instruct-solidity",
+   "error": null
+  },
+  {
+   "key": "alibaba/tongyi-deepresearch-30b-a3b",
+   "vendor": "alibaba",
+   "model": "tongyi-deepresearch-30b-a3b",
+   "error": null
+  },
+  {
+   "key": "allenai/olmo-3-32b-think",
+   "vendor": "allenai",
+   "model": "olmo-3-32b-think",
+   "error": null
+  },
+  {
+   "key": "allenai/olmo-3.1-32b-instruct",
+   "vendor": "allenai",
+   "model": "olmo-3.1-32b-instruct",
+   "error": null
+  },
+  {
+   "key": "alpindale/goliath-120b",
+   "vendor": "alpindale",
+   "model": "goliath-120b",
+   "error": null
+  },
+  {
+   "key": "amazon/nova-2-lite-v1",
+   "vendor": "amazon",
+   "model": "nova-2-lite-v1",
+   "error": null
+  },
+  {
+   "key": "amazon/nova-lite-v1",
+   "vendor": "amazon",
+   "model": "nova-lite-v1",
+   "error": null
+  },
+  {
+   "key": "amazon/nova-micro-v1",
+   "vendor": "amazon",
+   "model": "nova-micro-v1",
+   "error": null
+  },
+  {
+   "key": "amazon/nova-premier-v1",
+   "vendor": "amazon",
+   "model": "nova-premier-v1",
+   "error": null
+  },
+  {
+   "key": "amazon/nova-pro-v1",
+   "vendor": "amazon",
+   "model": "nova-pro-v1",
+   "error": null
+  },
+  {
+   "key": "anthracite-org/magnum-v4-72b",
+   "vendor": "anthracite-org",
+   "model": "magnum-v4-72b",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3-haiku",
+   "vendor": "anthropic",
+   "model": "claude-3-haiku",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3-haiku-20240307",
+   "vendor": "anthropic",
+   "model": "claude-3-haiku-20240307",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3-opus",
+   "vendor": "anthropic",
+   "model": "claude-3-opus",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3-opus-20240229",
+   "vendor": "anthropic",
+   "model": "claude-3-opus-20240229",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3-sonnet-20240229",
+   "vendor": "anthropic",
+   "model": "claude-3-sonnet-20240229",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3.5-haiku",
+   "vendor": "anthropic",
+   "model": "claude-3.5-haiku",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3.5-haiku-20241022",
+   "vendor": "anthropic",
+   "model": "claude-3.5-haiku-20241022",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3.5-sonnet",
+   "vendor": "anthropic",
+   "model": "claude-3.5-sonnet",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3.5-sonnet-20240620",
+   "vendor": "anthropic",
+   "model": "claude-3.5-sonnet-20240620",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3.7-sonnet",
+   "vendor": "anthropic",
+   "model": "claude-3.7-sonnet",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-3.7-sonnet:thinking",
+   "vendor": "anthropic",
+   "model": "claude-3.7-sonnet:thinking",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-fable-5",
+   "vendor": "anthropic",
+   "model": "claude-fable-5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-fable-5.1",
+   "vendor": "anthropic",
+   "model": "claude-fable-5.1",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-fable-5.1:batch",
+   "vendor": "anthropic",
+   "model": "claude-fable-5.1:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-fable-5:batch",
+   "vendor": "anthropic",
+   "model": "claude-fable-5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-haiku-4.5",
+   "vendor": "anthropic",
+   "model": "claude-haiku-4.5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-haiku-4.5:batch",
+   "vendor": "anthropic",
+   "model": "claude-haiku-4.5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-haiku-5.5",
+   "vendor": "anthropic",
+   "model": "claude-haiku-5.5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-haiku-5.5:batch",
+   "vendor": "anthropic",
+   "model": "claude-haiku-5.5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4",
+   "vendor": "anthropic",
+   "model": "claude-opus-4",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.1",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.1",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.1:batch",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.1:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.5",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.5:batch",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.6",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.6",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.6-fast",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.6-fast",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.6:batch",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.6:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.7",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.7",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.7-fast",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.7-fast",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.7:batch",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.7:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.8",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.8",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-4.8:batch",
+   "vendor": "anthropic",
+   "model": "claude-opus-4.8:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-5",
+   "vendor": "anthropic",
+   "model": "claude-opus-5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-5.5",
+   "vendor": "anthropic",
+   "model": "claude-opus-5.5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-5.5:batch",
+   "vendor": "anthropic",
+   "model": "claude-opus-5.5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-opus-5:batch",
+   "vendor": "anthropic",
+   "model": "claude-opus-5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-4",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-4",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-4-5",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-4-5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-4-6",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-4-6",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-4.5",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-4.5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-4.5:batch",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-4.5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-4.6",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-4.6",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-4.6:batch",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-4.6:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-5",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-5.5",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-5.5",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-5.5:batch",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-5.5:batch",
+   "error": null
+  },
+  {
+   "key": "anthropic/claude-sonnet-5:batch",
+   "vendor": "anthropic",
+   "model": "claude-sonnet-5:batch",
+   "error": null
+  },
+  {
+   "key": "arcee-ai/coder-large",
+   "vendor": "arcee-ai",
+   "model": "coder-large",
+   "error": null
+  },
+  {
+   "key": "arcee-ai/maestro-reasoning",
+   "vendor": "arcee-ai",
+   "model": "maestro-reasoning",
+   "error": null
+  },
+  {
+   "key": "arcee-ai/spotlight",
+   "vendor": "arcee-ai",
+   "model": "spotlight",
+   "error": null
+  },
+  {
+   "key": "arcee-ai/trinity-large-preview",
+   "vendor": "arcee-ai",
+   "model": "trinity-large-preview",
+   "error": null
+  },
+  {
+   "key": "arcee-ai/trinity-large-thinking",
+   "vendor": "arcee-ai",
+   "model": "trinity-large-thinking",
+   "error": null
+  },
+  {
+   "key": "arcee-ai/trinity-mini",
+   "vendor": "arcee-ai",
+   "model": "trinity-mini",
+   "error": null
+  },
+  {
+   "key": "arcee-ai/virtuoso-large",
+   "vendor": "arcee-ai",
+   "model": "virtuoso-large",
+   "error": null
+  },
+  {
+   "key": "azure_ai/cohere-command-a-plus-05-2026",
+   "vendor": "azure_ai",
+   "model": "cohere-command-a-plus-05-2026",
+   "error": null
+  },
+  {
+   "key": "baidu/ernie-4.5-21b-a3b",
+   "vendor": "baidu",
+   "model": "ernie-4.5-21b-a3b",
+   "error": null
+  },
+  {
+   "key": "baidu/ernie-4.5-21b-a3b-thinking",
+   "vendor": "baidu",
+   "model": "ernie-4.5-21b-a3b-thinking",
+   "error": null
+  },
+  {
+   "key": "baidu/ernie-4.5-300b-a47b",
+   "vendor": "baidu",
+   "model": "ernie-4.5-300b-a47b",
+   "error": null
+  },
+  {
+   "key": "baidu/ernie-4.5-vl-28b-a3b",
+   "vendor": "baidu",
+   "model": "ernie-4.5-vl-28b-a3b",
+   "error": null
+  },
+  {
+   "key": "baidu/ernie-4.5-vl-424b-a47b",
+   "vendor": "baidu",
+   "model": "ernie-4.5-vl-424b-a47b",
+   "error": null
+  },
+  {
+   "key": "baidu/qianfan-ocr-fast",
+   "vendor": "baidu",
+   "model": "qianfan-ocr-fast",
+   "error": null
+  },
+  {
+   "key": "bytedance-seed/seed-1.6",
+   "vendor": "bytedance-seed",
+   "model": "seed-1.6",
+   "error": null
+  },
+  {
+   "key": "bytedance-seed/seed-1.6-flash",
+   "vendor": "bytedance-seed",
+   "model": "seed-1.6-flash",
+   "error": null
+  },
+  {
+   "key": "bytedance-seed/seed-2-1-turbo",
+   "vendor": "bytedance-seed",
+   "model": "seed-2-1-turbo",
+   "error": null
+  },
+  {
+   "key": "bytedance-seed/seed-2.0-code",
+   "vendor": "bytedance-seed",
+   "model": "seed-2.0-code",
+   "error": null
+  },
+  {
+   "key": "bytedance-seed/seed-2.0-lite",
+   "vendor": "bytedance-seed",
+   "model": "seed-2.0-lite",
+   "error": null
+  },
+  {
+   "key": "bytedance-seed/seed-2.0-mini",
+   "vendor": "bytedance-seed",
+   "model": "seed-2.0-mini",
+   "error": null
+  },
+  {
+   "key": "bytedance/ui-tars-1.5-7b",
+   "vendor": "bytedance",
+   "model": "ui-tars-1.5-7b",
+   "error": null
+  },
+  {
+   "key": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
+   "vendor": "cognitivecomputations",
+   "model": "dolphin-mistral-24b-venice-edition",
+   "error": null
+  },
+  {
+   "key": "cohere/command-a",
+   "vendor": "cohere",
+   "model": "command-a",
+   "error": null
+  },
+  {
+   "key": "cohere/command-a-plus",
+   "vendor": "cohere",
+   "model": "command-a-plus",
+   "error": null
+  },
+  {
+   "key": "cohere/command-r-08-2024",
+   "vendor": "cohere",
+   "model": "command-r-08-2024",
+   "error": null
+  },
+  {
+   "key": "cohere/command-r-plus-08-2024",
+   "vendor": "cohere",
+   "model": "command-r-plus-08-2024",
+   "error": null
+  },
+  {
+   "key": "cohere/command-r7b-12-2024",
+   "vendor": "cohere",
+   "model": "command-r7b-12-2024",
+   "error": null
+  },
+  {
+   "key": "deepcogito/cogito-v2.1-671b",
+   "vendor": "deepcogito",
+   "model": "cogito-v2.1-671b",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-chat",
+   "vendor": "deepseek",
+   "model": "deepseek-chat",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-chat-v3-0324",
+   "vendor": "deepseek",
+   "model": "deepseek-chat-v3-0324",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-chat-v3.1",
+   "vendor": "deepseek",
+   "model": "deepseek-chat-v3.1",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-prover-v2",
+   "vendor": "deepseek",
+   "model": "deepseek-prover-v2",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-r1",
+   "vendor": "deepseek",
+   "model": "deepseek-r1",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-r1-0528",
+   "vendor": "deepseek",
+   "model": "deepseek-r1-0528",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-r1-distill-llama-70b",
+   "vendor": "deepseek",
+   "model": "deepseek-r1-distill-llama-70b",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-r1-distill-qwen-32b",
+   "vendor": "deepseek",
+   "model": "deepseek-r1-distill-qwen-32b",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v3.1-terminus",
+   "vendor": "deepseek",
+   "model": "deepseek-v3.1-terminus",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v3.2",
+   "vendor": "deepseek",
+   "model": "deepseek-v3.2",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v3.2-exp",
+   "vendor": "deepseek",
+   "model": "deepseek-v3.2-exp",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v3.2-speciale",
+   "vendor": "deepseek",
+   "model": "deepseek-v3.2-speciale",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-flash",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-flash",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-flash-0731",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-flash-0731",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-flash-0731:batch",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-flash-0731:batch",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-flash-vision-exp",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-flash-vision-exp",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-flash-vision-exp:batch",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-flash-vision-exp:batch",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-pro",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-pro",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-pro-0813",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-pro-0813",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4-pro-0813:batch",
+   "vendor": "deepseek",
+   "model": "deepseek-v4-pro-0813:batch",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4.1-flash",
+   "vendor": "deepseek",
+   "model": "deepseek-v4.1-flash",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4.1-flash-1017",
+   "vendor": "deepseek",
+   "model": "deepseek-v4.1-flash-1017",
+   "error": null
+  },
+  {
+   "key": "deepseek/deepseek-v4.1-flash:batch",
+   "vendor": "deepseek",
+   "model": "deepseek-v4.1-flash:batch",
+   "error": null
+  },
+  {
+   "key": "elorian/glimpse",
+   "vendor": "elorian",
+   "model": "glimpse",
+   "error": null
+  },
+  {
+   "key": "essentialai/rnj-1-instruct",
+   "vendor": "essentialai",
+   "model": "rnj-1-instruct",
+   "error": null
+  },
+  {
+   "key": "fireworks/ember-1",
+   "vendor": "fireworks",
+   "model": "ember-1",
+   "error": null
+  },
+  {
+   "key": "google/gemini-1.5-flash",
+   "vendor": "google",
+   "model": "gemini-1.5-flash",
+   "error": null
+  },
+  {
+   "key": "google/gemini-1.5-pro",
+   "vendor": "google",
+   "model": "gemini-1.5-pro",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.0-flash-001",
+   "vendor": "google",
+   "model": "gemini-2.0-flash-001",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.0-flash-lite-001",
+   "vendor": "google",
+   "model": "gemini-2.0-flash-lite-001",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-flash",
+   "vendor": "google",
+   "model": "gemini-2.5-flash",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-flash-image",
+   "vendor": "google",
+   "model": "gemini-2.5-flash-image",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-flash-lite",
+   "vendor": "google",
+   "model": "gemini-2.5-flash-lite",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-flash-lite-preview-09-2025",
+   "vendor": "google",
+   "model": "gemini-2.5-flash-lite-preview-09-2025",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-flash-lite:batch",
+   "vendor": "google",
+   "model": "gemini-2.5-flash-lite:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-flash:batch",
+   "vendor": "google",
+   "model": "gemini-2.5-flash:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-pro",
+   "vendor": "google",
+   "model": "gemini-2.5-pro",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-pro-preview",
+   "vendor": "google",
+   "model": "gemini-2.5-pro-preview",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-pro-preview-05-06",
+   "vendor": "google",
+   "model": "gemini-2.5-pro-preview-05-06",
+   "error": null
+  },
+  {
+   "key": "google/gemini-2.5-pro:batch",
+   "vendor": "google",
+   "model": "gemini-2.5-pro:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3-flash-preview",
+   "vendor": "google",
+   "model": "gemini-3-flash-preview",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3-flash-preview:batch",
+   "vendor": "google",
+   "model": "gemini-3-flash-preview:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3-pro-image",
+   "vendor": "google",
+   "model": "gemini-3-pro-image",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3-pro-image-preview",
+   "vendor": "google",
+   "model": "gemini-3-pro-image-preview",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.0-flash",
+   "vendor": "google",
+   "model": "gemini-3.0-flash",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-flash-image",
+   "vendor": "google",
+   "model": "gemini-3.1-flash-image",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-flash-image-preview",
+   "vendor": "google",
+   "model": "gemini-3.1-flash-image-preview",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-flash-lite",
+   "vendor": "google",
+   "model": "gemini-3.1-flash-lite",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-flash-lite-image",
+   "vendor": "google",
+   "model": "gemini-3.1-flash-lite-image",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-flash-lite-preview",
+   "vendor": "google",
+   "model": "gemini-3.1-flash-lite-preview",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-flash-lite:batch",
+   "vendor": "google",
+   "model": "gemini-3.1-flash-lite:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-pro",
+   "vendor": "google",
+   "model": "gemini-3.1-pro",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-pro-preview",
+   "vendor": "google",
+   "model": "gemini-3.1-pro-preview",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-pro-preview-customtools",
+   "vendor": "google",
+   "model": "gemini-3.1-pro-preview-customtools",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.1-pro-preview:batch",
+   "vendor": "google",
+   "model": "gemini-3.1-pro-preview:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.5-flash",
+   "vendor": "google",
+   "model": "gemini-3.5-flash",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.5-flash-lite",
+   "vendor": "google",
+   "model": "gemini-3.5-flash-lite",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.5-flash-lite:batch",
+   "vendor": "google",
+   "model": "gemini-3.5-flash-lite:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.5-flash:batch",
+   "vendor": "google",
+   "model": "gemini-3.5-flash:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.6-flash",
+   "vendor": "google",
+   "model": "gemini-3.6-flash",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.6-flash:batch",
+   "vendor": "google",
+   "model": "gemini-3.6-flash:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.7-flash",
+   "vendor": "google",
+   "model": "gemini-3.7-flash",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.7-flash:batch",
+   "vendor": "google",
+   "model": "gemini-3.7-flash:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.8-flash",
+   "vendor": "google",
+   "model": "gemini-3.8-flash",
+   "error": null
+  },
+  {
+   "key": "google/gemini-3.8-flash:batch",
+   "vendor": "google",
+   "model": "gemini-3.8-flash:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-4-argon",
+   "vendor": "google",
+   "model": "gemini-4-argon",
+   "error": null
+  },
+  {
+   "key": "google/gemini-4-argon:batch",
+   "vendor": "google",
+   "model": "gemini-4-argon:batch",
+   "error": null
+  },
+  {
+   "key": "google/gemini-nano-banana-2.1",
+   "vendor": "google",
+   "model": "gemini-nano-banana-2.1",
+   "error": null
+  },
+  {
+   "key": "google/gemini-pro",
+   "vendor": "google",
+   "model": "gemini-pro",
+   "error": null
+  },
+  {
+   "key": "google/gemma-2-27b-it",
+   "vendor": "google",
+   "model": "gemma-2-27b-it",
+   "error": null
+  },
+  {
+   "key": "google/gemma-2-9b-it",
+   "vendor": "google",
+   "model": "gemma-2-9b-it",
+   "error": null
+  },
+  {
+   "key": "google/gemma-3-12b-it",
+   "vendor": "google",
+   "model": "gemma-3-12b-it",
+   "error": null
+  },
+  {
+   "key": "google/gemma-3-27b-it",
+   "vendor": "google",
+   "model": "gemma-3-27b-it",
+   "error": null
+  },
+  {
+   "key": "google/gemma-3-4b-it",
+   "vendor": "google",
+   "model": "gemma-3-4b-it",
+   "error": null
+  },
+  {
+   "key": "google/gemma-3n-e4b-it",
+   "vendor": "google",
+   "model": "gemma-3n-e4b-it",
+   "error": null
+  },
+  {
+   "key": "google/gemma-4-26b-a4b-it",
+   "vendor": "google",
+   "model": "gemma-4-26b-a4b-it",
+   "error": null
+  },
+  {
+   "key": "google/gemma-4-31b-it",
+   "vendor": "google",
+   "model": "gemma-4-31b-it",
+   "error": null
+  },
+  {
+   "key": "gryphe/mythomax-l2-13b",
+   "vendor": "gryphe",
+   "model": "mythomax-l2-13b",
+   "error": null
+  },
+  {
+   "key": "ibm-granite/granite-4.0-h-micro",
+   "vendor": "ibm-granite",
+   "model": "granite-4.0-h-micro",
+   "error": null
+  },
+  {
+   "key": "ibm-granite/granite-4.1-8b",
+   "vendor": "ibm-granite",
+   "model": "granite-4.1-8b",
+   "error": null
+  },
+  {
+   "key": "ibm-granite/granite-4.2-8b",
+   "vendor": "ibm-granite",
+   "model": "granite-4.2-8b",
+   "error": null
+  },
+  {
+   "key": "inception/mercury-2",
+   "vendor": "inception",
+   "model": "mercury-2",
+   "error": null
+  },
+  {
+   "key": "inception/mercury-2.5",
+   "vendor": "inception",
+   "model": "mercury-2.5",
+   "error": null
+  },
+  {
+   "key": "inception/mercury-3",
+   "vendor": "inception",
+   "model": "mercury-3",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ling-1t",
+   "vendor": "inclusionai",
+   "model": "ling-1t",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ling-2.6-1t",
+   "vendor": "inclusionai",
+   "model": "ling-2.6-1t",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ling-2.6-flash",
+   "vendor": "inclusionai",
+   "model": "ling-2.6-flash",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ling-3.0-flash",
+   "vendor": "inclusionai",
+   "model": "ling-3.0-flash",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ling-3.0-flash-fin",
+   "vendor": "inclusionai",
+   "model": "ling-3.0-flash-fin",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ling-3.0-flash-vl",
+   "vendor": "inclusionai",
+   "model": "ling-3.0-flash-vl",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ling-3.1-flash",
+   "vendor": "inclusionai",
+   "model": "ling-3.1-flash",
+   "error": null
+  },
+  {
+   "key": "inclusionai/ring-2.6-1t",
+   "vendor": "inclusionai",
+   "model": "ring-2.6-1t",
+   "error": null
+  },
+  {
+   "key": "inference-net/schematron-v2-small",
+   "vendor": "inference-net",
+   "model": "schematron-v2-small",
+   "error": null
+  },
+  {
+   "key": "inference-net/schematron-v2-turbo",
+   "vendor": "inference-net",
+   "model": "schematron-v2-turbo",
+   "error": null
+  },
+  {
+   "key": "inflection/inflection-3-pi",
+   "vendor": "inflection",
+   "model": "inflection-3-pi",
+   "error": null
+  },
+  {
+   "key": "inflection/inflection-3-productivity",
+   "vendor": "inflection",
+   "model": "inflection-3-productivity",
+   "error": null
+  },
+  {
+   "key": "kwaipilot/kat-coder-pro-v2",
+   "vendor": "kwaipilot",
+   "model": "kat-coder-pro-v2",
+   "error": null
+  },
+  {
+   "key": "kwaipilot/kat-coder-pro-v2.5",
+   "vendor": "kwaipilot",
+   "model": "kat-coder-pro-v2.5",
+   "error": null
+  },
+  {
+   "key": "liquid/lfm-2-24b-a2b",
+   "vendor": "liquid",
+   "model": "lfm-2-24b-a2b",
+   "error": null
+  },
+  {
+   "key": "liquid/lfm-2.5-2.6b",
+   "vendor": "liquid",
+   "model": "lfm-2.5-2.6b",
+   "error": null
+  },
+  {
+   "key": "liquid/lfm-2.5-24b-a2b",
+   "vendor": "liquid",
+   "model": "lfm-2.5-24b-a2b",
+   "error": null
+  },
+  {
+   "key": "mancer/weaver",
+   "vendor": "mancer",
+   "model": "weaver",
+   "error": null
+  },
+  {
+   "key": "meituan/longcat-2.0",
+   "vendor": "meituan",
+   "model": "longcat-2.0",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3-70b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3-70b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3-8b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3-8b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.1-405b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.1-405b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.1-70b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.1-70b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.1-8b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.1-8b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.2-11b-vision-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.2-11b-vision-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.2-1b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.2-1b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.2-3b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.2-3b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.2-90b-vision-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.2-90b-vision-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-3.3-70b-instruct",
+   "vendor": "meta-llama",
+   "model": "llama-3.3-70b-instruct",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-4-maverick",
+   "vendor": "meta-llama",
+   "model": "llama-4-maverick",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-4-scout",
+   "vendor": "meta-llama",
+   "model": "llama-4-scout",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-guard-3-8b",
+   "vendor": "meta-llama",
+   "model": "llama-guard-3-8b",
+   "error": null
+  },
+  {
+   "key": "meta-llama/llama-guard-4-12b",
+   "vendor": "meta-llama",
+   "model": "llama-guard-4-12b",
+   "error": null
+  },
+  {
+   "key": "meta/muse-glimmer-30b",
+   "vendor": "meta",
+   "model": "muse-glimmer-30b",
+   "error": null
+  },
+  {
+   "key": "meta/muse-glimmer-30b:batch",
+   "vendor": "meta",
+   "model": "muse-glimmer-30b:batch",
+   "error": null
+  },
+  {
+   "key": "meta/muse-spark-1.1",
+   "vendor": "meta",
+   "model": "muse-spark-1.1",
+   "error": null
+  },
+  {
+   "key": "meta/muse-spark-1.2",
+   "vendor": "meta",
+   "model": "muse-spark-1.2",
+   "error": null
+  },
+  {
+   "key": "meta/muse-spark-1.2-contributor",
+   "vendor": "meta",
+   "model": "muse-spark-1.2-contributor",
+   "error": null
+  },
+  {
+   "key": "meta/muse-spark-1.3",
+   "vendor": "meta",
+   "model": "muse-spark-1.3",
+   "error": null
+  },
+  {
+   "key": "meta/muse-spark-1.3-contributor",
+   "vendor": "meta",
+   "model": "muse-spark-1.3-contributor",
+   "error": null
+  },
+  {
+   "key": "meta/muse-spark-open",
+   "vendor": "meta",
+   "model": "muse-spark-open",
+   "error": null
+  },
+  {
+   "key": "meta/muse-wonder",
+   "vendor": "meta",
+   "model": "muse-wonder",
+   "error": null
+  },
+  {
+   "key": "microsoft/phi-4",
+   "vendor": "microsoft",
+   "model": "phi-4",
+   "error": null
+  },
+  {
+   "key": "microsoft/phi-4-mini-instruct",
+   "vendor": "microsoft",
+   "model": "phi-4-mini-instruct",
+   "error": null
+  },
+  {
+   "key": "microsoft/wizardlm-2-8x22b",
+   "vendor": "microsoft",
+   "model": "wizardlm-2-8x22b",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-01",
+   "vendor": "minimax",
+   "model": "minimax-01",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m1",
+   "vendor": "minimax",
+   "model": "minimax-m1",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m2",
+   "vendor": "minimax",
+   "model": "minimax-m2",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m2-her",
+   "vendor": "minimax",
+   "model": "minimax-m2-her",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m2.1",
+   "vendor": "minimax",
+   "model": "minimax-m2.1",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m2.5",
+   "vendor": "minimax",
+   "model": "minimax-m2.5",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m2.7",
+   "vendor": "minimax",
+   "model": "minimax-m2.7",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m3",
+   "vendor": "minimax",
+   "model": "minimax-m3",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m3.1-flash",
+   "vendor": "minimax",
+   "model": "minimax-m3.1-flash",
+   "error": null
+  },
+  {
+   "key": "minimax/minimax-m3:batch",
+   "vendor": "minimax",
+   "model": "minimax-m3:batch",
+   "error": null
+  },
+  {
+   "key": "mistralai/codestral-2508",
+   "vendor": "mistralai",
+   "model": "codestral-2508",
+   "error": null
+  },
+  {
+   "key": "mistralai/codestral-2508:batch",
+   "vendor": "mistralai",
+   "model": "codestral-2508:batch",
+   "error": null
+  },
+  {
+   "key": "mistralai/devstral-2512",
+   "vendor": "mistralai",
+   "model": "devstral-2512",
+   "error": null
+  },
+  {
+   "key": "mistralai/devstral-medium",
+   "vendor": "mistralai",
+   "model": "devstral-medium",
+   "error": null
+  },
+  {
+   "key": "mistralai/devstral-small",
+   "vendor": "mistralai",
+   "model": "devstral-small",
+   "error": null
+  },
+  {
+   "key": "mistralai/magistral-medium-2506",
+   "vendor": "mistralai",
+   "model": "magistral-medium-2506",
+   "error": null
+  },
+  {
+   "key": "mistralai/magistral-small-2506",
+   "vendor": "mistralai",
+   "model": "magistral-small-2506",
+   "error": null
+  },
+  {
+   "key": "mistralai/ministral-14b-2512",
+   "vendor": "mistralai",
+   "model": "ministral-14b-2512",
+   "error": null
+  },
+  {
+   "key": "mistralai/ministral-3b",
+   "vendor": "mistralai",
+   "model": "ministral-3b",
+   "error": null
+  },
+  {
+   "key": "mistralai/ministral-3b-2512",
+   "vendor": "mistralai",
+   "model": "ministral-3b-2512",
+   "error": null
+  },
+  {
+   "key": "mistralai/ministral-8b",
+   "vendor": "mistralai",
+   "model": "ministral-8b",
+   "error": null
+  },
+  {
+   "key": "mistralai/ministral-8b-2512",
+   "vendor": "mistralai",
+   "model": "ministral-8b-2512",
+   "error": null
+  },
+  {
+   "key": "mistralai/ministral-8b-2512:batch",
+   "vendor": "mistralai",
+   "model": "ministral-8b-2512:batch",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-7b-instruct-v0.1",
+   "vendor": "mistralai",
+   "model": "mistral-7b-instruct-v0.1",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-large",
+   "vendor": "mistralai",
+   "model": "mistral-large",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-large-2407",
+   "vendor": "mistralai",
+   "model": "mistral-large-2407",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-large-2411",
+   "vendor": "mistralai",
+   "model": "mistral-large-2411",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-large-2512",
+   "vendor": "mistralai",
+   "model": "mistral-large-2512",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-large-2512:batch",
+   "vendor": "mistralai",
+   "model": "mistral-large-2512:batch",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-large-4-0",
+   "vendor": "mistralai",
+   "model": "mistral-large-4-0",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-medium-3",
+   "vendor": "mistralai",
+   "model": "mistral-medium-3",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-medium-3-5",
+   "vendor": "mistralai",
+   "model": "mistral-medium-3-5",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-medium-3-5:batch",
+   "vendor": "mistralai",
+   "model": "mistral-medium-3-5:batch",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-medium-3.1",
+   "vendor": "mistralai",
+   "model": "mistral-medium-3.1",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-medium-3.1:batch",
+   "vendor": "mistralai",
+   "model": "mistral-medium-3.1:batch",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-nemo",
+   "vendor": "mistralai",
+   "model": "mistral-nemo",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-saba",
+   "vendor": "mistralai",
+   "model": "mistral-saba",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-small",
+   "vendor": "mistralai",
+   "model": "mistral-small",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-small-24b-instruct-2501",
+   "vendor": "mistralai",
+   "model": "mistral-small-24b-instruct-2501",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-small-2603",
+   "vendor": "mistralai",
+   "model": "mistral-small-2603",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-small-2603:batch",
+   "vendor": "mistralai",
+   "model": "mistral-small-2603:batch",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-small-3.1-24b-instruct",
+   "vendor": "mistralai",
+   "model": "mistral-small-3.1-24b-instruct",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-small-3.2-24b-instruct",
+   "vendor": "mistralai",
+   "model": "mistral-small-3.2-24b-instruct",
+   "error": null
+  },
+  {
+   "key": "mistralai/mistral-small-creative",
+   "vendor": "mistralai",
+   "model": "mistral-small-creative",
+   "error": null
+  },
+  {
+   "key": "mistralai/mixtral-8x22b-instruct",
+   "vendor": "mistralai",
+   "model": "mixtral-8x22b-instruct",
+   "error": null
+  },
+  {
+   "key": "mistralai/mixtral-8x7b-instruct",
+   "vendor": "mistralai",
+   "model": "mixtral-8x7b-instruct",
+   "error": null
+  },
+  {
+   "key": "mistralai/pixtral-large-2411",
+   "vendor": "mistralai",
+   "model": "pixtral-large-2411",
+   "error": null
+  },
+  {
+   "key": "mistralai/voxtral-small-24b-2507",
+   "vendor": "mistralai",
+   "model": "voxtral-small-24b-2507",
+   "error": null
+  },
+  {
+   "key": "moondream/moondream3-preview",
+   "vendor": "moondream",
+   "model": "moondream3-preview",
+   "error": null
+  },
+  {
+   "key": "moondream/moondream3.1-9b-a2b",
+   "vendor": "moondream",
+   "model": "moondream3.1-9b-a2b",
+   "error": null
+  },
+  {
+   "key": "moonshot/kimi-k2.5",
+   "vendor": "moonshot",
+   "model": "kimi-k2.5",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k2",
+   "vendor": "moonshotai",
+   "model": "kimi-k2",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k2-0905",
+   "vendor": "moonshotai",
+   "model": "kimi-k2-0905",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k2-thinking",
+   "vendor": "moonshotai",
+   "model": "kimi-k2-thinking",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k2.5",
+   "vendor": "moonshotai",
+   "model": "kimi-k2.5",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k2.6",
+   "vendor": "moonshotai",
+   "model": "kimi-k2.6",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k2.7-code",
+   "vendor": "moonshotai",
+   "model": "kimi-k2.7-code",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k3",
+   "vendor": "moonshotai",
+   "model": "kimi-k3",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k3.1-pro",
+   "vendor": "moonshotai",
+   "model": "kimi-k3.1-pro",
+   "error": null
+  },
+  {
+   "key": "moonshotai/kimi-k3:batch",
+   "vendor": "moonshotai",
+   "model": "kimi-k3:batch",
+   "error": null
+  },
+  {
+   "key": "morph/morph-v3-fast",
+   "vendor": "morph",
+   "model": "morph-v3-fast",
+   "error": null
+  },
+  {
+   "key": "morph/morph-v3-large",
+   "vendor": "morph",
+   "model": "morph-v3-large",
+   "error": null
+  },
+  {
+   "key": "nex-agi/deepseek-v3.1-nex-n1",
+   "vendor": "nex-agi",
+   "model": "deepseek-v3.1-nex-n1",
+   "error": null
+  },
+  {
+   "key": "nex-agi/nex-n2.5-mini",
+   "vendor": "nex-agi",
+   "model": "nex-n2.5-mini",
+   "error": null
+  },
+  {
+   "key": "nex-agi/nex-n2.5-pro",
+   "vendor": "nex-agi",
+   "model": "nex-n2.5-pro",
+   "error": null
+  },
+  {
+   "key": "nousresearch/hermes-2-pro-llama-3-8b",
+   "vendor": "nousresearch",
+   "model": "hermes-2-pro-llama-3-8b",
+   "error": null
+  },
+  {
+   "key": "nousresearch/hermes-3-llama-3.1-405b",
+   "vendor": "nousresearch",
+   "model": "hermes-3-llama-3.1-405b",
+   "error": null
+  },
+  {
+   "key": "nousresearch/hermes-3-llama-3.1-70b",
+   "vendor": "nousresearch",
+   "model": "hermes-3-llama-3.1-70b",
+   "error": null
+  },
+  {
+   "key": "nousresearch/hermes-4-405b",
+   "vendor": "nousresearch",
+   "model": "hermes-4-405b",
+   "error": null
+  },
+  {
+   "key": "nousresearch/hermes-4-70b",
+   "vendor": "nousresearch",
+   "model": "hermes-4-70b",
+   "error": null
+  },
+  {
+   "key": "nova/Nova Pro v3",
+   "vendor": "nova",
+   "model": "Nova Pro v3",
+   "error": null
+  },
+  {
+   "key": "nova/Nova Pro v3.4.1",
+   "vendor": "nova",
+   "model": "Nova Pro v3.4.1",
+   "error": null
+  },
+  {
+   "key": "nova/nova-2-lite",
+   "vendor": "nova",
+   "model": "nova-2-lite",
+   "error": null
+  },
+  {
+   "key": "nova/nova-lite-v1",
+   "vendor": "nova",
+   "model": "nova-lite-v1",
+   "error": null
+  },
+  {
+   "key": "nova/nova-lite-v2",
+   "vendor": "nova",
+   "model": "nova-lite-v2",
+   "error": null
+  },
+  {
+   "key": "nova/nova-micro-v1",
+   "vendor": "nova",
+   "model": "nova-micro-v1",
+   "error": null
+  },
+  {
+   "key": "nova/nova-orchestrator-v1",
+   "vendor": "nova",
+   "model": "nova-orchestrator-v1",
+   "error": null
+  },
+  {
+   "key": "nova/nova-premier-v1",
+   "vendor": "nova",
+   "model": "nova-premier-v1",
+   "error": null
+  },
+  {
+   "key": "nova/nova-pro-v1",
+   "vendor": "nova",
+   "model": "nova-pro-v1",
+   "error": null
+  },
+  {
+   "key": "nvidia/llama-3.1-nemotron-70b-instruct",
+   "vendor": "nvidia",
+   "model": "llama-3.1-nemotron-70b-instruct",
+   "error": null
+  },
+  {
+   "key": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+   "vendor": "nvidia",
+   "model": "llama-3.3-nemotron-super-49b-v1.5",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-3-nano-30b-a3b",
+   "vendor": "nvidia",
+   "model": "nemotron-3-nano-30b-a3b",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-3-super-120b-a12b",
+   "vendor": "nvidia",
+   "model": "nemotron-3-super-120b-a12b",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-3-ultra-550b-a55b",
+   "vendor": "nvidia",
+   "model": "nemotron-3-ultra-550b-a55b",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-3.5-content-safety",
+   "vendor": "nvidia",
+   "model": "nemotron-3.5-content-safety",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-3.5-lightning",
+   "vendor": "nvidia",
+   "model": "nemotron-3.5-lightning",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-3.5-super-vl",
+   "vendor": "nvidia",
+   "model": "nemotron-3.5-super-vl",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-nano-12b-v2-vl",
+   "vendor": "nvidia",
+   "model": "nemotron-nano-12b-v2-vl",
+   "error": null
+  },
+  {
+   "key": "nvidia/nemotron-nano-9b-v2",
+   "vendor": "nvidia",
+   "model": "nemotron-nano-9b-v2",
+   "error": null
+  },
+  {
+   "key": "nvidia/switchyard",
+   "vendor": "nvidia",
+   "model": "switchyard",
+   "error": null
+  },
+  {
+   "key": "openai/chatgpt-4o-latest",
+   "vendor": "openai",
+   "model": "chatgpt-4o-latest",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-3.5-turbo",
+   "vendor": "openai",
+   "model": "gpt-3.5-turbo",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-3.5-turbo-0613",
+   "vendor": "openai",
+   "model": "gpt-3.5-turbo-0613",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-3.5-turbo-16k",
+   "vendor": "openai",
+   "model": "gpt-3.5-turbo-16k",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-3.5-turbo-instruct",
+   "vendor": "openai",
+   "model": "gpt-3.5-turbo-instruct",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-3.5-turbo:batch",
+   "vendor": "openai",
+   "model": "gpt-3.5-turbo:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4",
+   "vendor": "openai",
+   "model": "gpt-4",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4-0314",
+   "vendor": "openai",
+   "model": "gpt-4-0314",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4-1106-preview",
+   "vendor": "openai",
+   "model": "gpt-4-1106-preview",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4-turbo",
+   "vendor": "openai",
+   "model": "gpt-4-turbo",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4-turbo-preview",
+   "vendor": "openai",
+   "model": "gpt-4-turbo-preview",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4-turbo:batch",
+   "vendor": "openai",
+   "model": "gpt-4-turbo:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4.1",
+   "vendor": "openai",
+   "model": "gpt-4.1",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4.1-mini",
+   "vendor": "openai",
+   "model": "gpt-4.1-mini",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4.1-mini:batch",
+   "vendor": "openai",
+   "model": "gpt-4.1-mini:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4.1-nano",
+   "vendor": "openai",
+   "model": "gpt-4.1-nano",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4.1-nano:batch",
+   "vendor": "openai",
+   "model": "gpt-4.1-nano:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4.1:batch",
+   "vendor": "openai",
+   "model": "gpt-4.1:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o",
+   "vendor": "openai",
+   "model": "gpt-4o",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-2024-05-13",
+   "vendor": "openai",
+   "model": "gpt-4o-2024-05-13",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-2024-08-06",
+   "vendor": "openai",
+   "model": "gpt-4o-2024-08-06",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-2024-11-20",
+   "vendor": "openai",
+   "model": "gpt-4o-2024-11-20",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-audio-preview",
+   "vendor": "openai",
+   "model": "gpt-4o-audio-preview",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-mini",
+   "vendor": "openai",
+   "model": "gpt-4o-mini",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-mini-2024-07-18",
+   "vendor": "openai",
+   "model": "gpt-4o-mini-2024-07-18",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-mini-search-preview",
+   "vendor": "openai",
+   "model": "gpt-4o-mini-search-preview",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-mini:batch",
+   "vendor": "openai",
+   "model": "gpt-4o-mini:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o-search-preview",
+   "vendor": "openai",
+   "model": "gpt-4o-search-preview",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-4o:batch",
+   "vendor": "openai",
+   "model": "gpt-4o:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5",
+   "vendor": "openai",
+   "model": "gpt-5",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-chat",
+   "vendor": "openai",
+   "model": "gpt-5-chat",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-codex",
+   "vendor": "openai",
+   "model": "gpt-5-codex",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-image",
+   "vendor": "openai",
+   "model": "gpt-5-image",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-image-mini",
+   "vendor": "openai",
+   "model": "gpt-5-image-mini",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-mini",
+   "vendor": "openai",
+   "model": "gpt-5-mini",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-mini:batch",
+   "vendor": "openai",
+   "model": "gpt-5-mini:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-nano",
+   "vendor": "openai",
+   "model": "gpt-5-nano",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-nano:batch",
+   "vendor": "openai",
+   "model": "gpt-5-nano:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-pro",
+   "vendor": "openai",
+   "model": "gpt-5-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-5-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.1",
+   "vendor": "openai",
+   "model": "gpt-5.1",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.1-chat",
+   "vendor": "openai",
+   "model": "gpt-5.1-chat",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.1-codex",
+   "vendor": "openai",
+   "model": "gpt-5.1-codex",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.1-codex-max",
+   "vendor": "openai",
+   "model": "gpt-5.1-codex-max",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.1-codex-mini",
+   "vendor": "openai",
+   "model": "gpt-5.1-codex-mini",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.1:batch",
+   "vendor": "openai",
+   "model": "gpt-5.1:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.2",
+   "vendor": "openai",
+   "model": "gpt-5.2",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.2-chat",
+   "vendor": "openai",
+   "model": "gpt-5.2-chat",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.2-codex",
+   "vendor": "openai",
+   "model": "gpt-5.2-codex",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.2-pro",
+   "vendor": "openai",
+   "model": "gpt-5.2-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.2-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-5.2-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.2:batch",
+   "vendor": "openai",
+   "model": "gpt-5.2:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.3-chat",
+   "vendor": "openai",
+   "model": "gpt-5.3-chat",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.3-codex",
+   "vendor": "openai",
+   "model": "gpt-5.3-codex",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4",
+   "vendor": "openai",
+   "model": "gpt-5.4",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-image-2",
+   "vendor": "openai",
+   "model": "gpt-5.4-image-2",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-mini",
+   "vendor": "openai",
+   "model": "gpt-5.4-mini",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-mini:batch",
+   "vendor": "openai",
+   "model": "gpt-5.4-mini:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-nano",
+   "vendor": "openai",
+   "model": "gpt-5.4-nano",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-nano:batch",
+   "vendor": "openai",
+   "model": "gpt-5.4-nano:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-pro",
+   "vendor": "openai",
+   "model": "gpt-5.4-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-5.4-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4-xhigh",
+   "vendor": "openai",
+   "model": "gpt-5.4-xhigh",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.4:batch",
+   "vendor": "openai",
+   "model": "gpt-5.4:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.5",
+   "vendor": "openai",
+   "model": "gpt-5.5",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.5-pro",
+   "vendor": "openai",
+   "model": "gpt-5.5-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.5-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-5.5-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.5:batch",
+   "vendor": "openai",
+   "model": "gpt-5.5:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-luna",
+   "vendor": "openai",
+   "model": "gpt-5.6-luna",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-luna-pro",
+   "vendor": "openai",
+   "model": "gpt-5.6-luna-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-luna-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-5.6-luna-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-luna:batch",
+   "vendor": "openai",
+   "model": "gpt-5.6-luna:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-sol",
+   "vendor": "openai",
+   "model": "gpt-5.6-sol",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-sol-pro",
+   "vendor": "openai",
+   "model": "gpt-5.6-sol-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-sol-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-5.6-sol-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-sol:batch",
+   "vendor": "openai",
+   "model": "gpt-5.6-sol:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-terra",
+   "vendor": "openai",
+   "model": "gpt-5.6-terra",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-terra-pro",
+   "vendor": "openai",
+   "model": "gpt-5.6-terra-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-terra-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-5.6-terra-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5.6-terra:batch",
+   "vendor": "openai",
+   "model": "gpt-5.6-terra:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-5:batch",
+   "vendor": "openai",
+   "model": "gpt-5:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-astra",
+   "vendor": "openai",
+   "model": "gpt-6-astra",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-astra-pro",
+   "vendor": "openai",
+   "model": "gpt-6-astra-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-astra-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-6-astra-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-astra:batch",
+   "vendor": "openai",
+   "model": "gpt-6-astra:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-luna",
+   "vendor": "openai",
+   "model": "gpt-6-luna",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-luna-pro",
+   "vendor": "openai",
+   "model": "gpt-6-luna-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-luna-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-6-luna-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-luna:batch",
+   "vendor": "openai",
+   "model": "gpt-6-luna:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-sol",
+   "vendor": "openai",
+   "model": "gpt-6-sol",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-sol-pro",
+   "vendor": "openai",
+   "model": "gpt-6-sol-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-sol-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-6-sol-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6-sol:batch",
+   "vendor": "openai",
+   "model": "gpt-6-sol:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-sol",
+   "vendor": "openai",
+   "model": "gpt-6.1-sol",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-sol-pro",
+   "vendor": "openai",
+   "model": "gpt-6.1-sol-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-sol-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-6.1-sol-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-sol:batch",
+   "vendor": "openai",
+   "model": "gpt-6.1-sol:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-terra",
+   "vendor": "openai",
+   "model": "gpt-6.1-terra",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-terra-pro",
+   "vendor": "openai",
+   "model": "gpt-6.1-terra-pro",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-terra-pro:batch",
+   "vendor": "openai",
+   "model": "gpt-6.1-terra-pro:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-6.1-terra:batch",
+   "vendor": "openai",
+   "model": "gpt-6.1-terra:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-audio",
+   "vendor": "openai",
+   "model": "gpt-audio",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-audio-mini",
+   "vendor": "openai",
+   "model": "gpt-audio-mini",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-chat-latest",
+   "vendor": "openai",
+   "model": "gpt-chat-latest",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-oss-120b",
+   "vendor": "openai",
+   "model": "gpt-oss-120b",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-oss-120b:batch",
+   "vendor": "openai",
+   "model": "gpt-oss-120b:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-oss-20b",
+   "vendor": "openai",
+   "model": "gpt-oss-20b",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-oss-20b:batch",
+   "vendor": "openai",
+   "model": "gpt-oss-20b:batch",
+   "error": null
+  },
+  {
+   "key": "openai/gpt-oss-safeguard-20b",
+   "vendor": "openai",
+   "model": "gpt-oss-safeguard-20b",
+   "error": null
+  },
+  {
+   "key": "openai/o1",
+   "vendor": "openai",
+   "model": "o1",
+   "error": null
+  },
+  {
+   "key": "openai/o1-mini",
+   "vendor": "openai",
+   "model": "o1-mini",
+   "error": null
+  },
+  {
+   "key": "openai/o1-pro",
+   "vendor": "openai",
+   "model": "o1-pro",
+   "error": null
+  },
+  {
+   "key": "openai/o3",
+   "vendor": "openai",
+   "model": "o3",
+   "error": null
+  },
+  {
+   "key": "openai/o3-deep-research",
+   "vendor": "openai",
+   "model": "o3-deep-research",
+   "error": null
+  },
+  {
+   "key": "openai/o3-mini",
+   "vendor": "openai",
+   "model": "o3-mini",
+   "error": null
+  },
+  {
+   "key": "openai/o3-mini-high",
+   "vendor": "openai",
+   "model": "o3-mini-high",
+   "error": null
+  },
+  {
+   "key": "openai/o3-mini:batch",
+   "vendor": "openai",
+   "model": "o3-mini:batch",
+   "error": null
+  },
+  {
+   "key": "openai/o3-pro",
+   "vendor": "openai",
+   "model": "o3-pro",
+   "error": null
+  },
+  {
+   "key": "openai/o3:batch",
+   "vendor": "openai",
+   "model": "o3:batch",
+   "error": null
+  },
+  {
+   "key": "openai/o4-mini",
+   "vendor": "openai",
+   "model": "o4-mini",
+   "error": null
+  },
+  {
+   "key": "openai/o4-mini-deep-research",
+   "vendor": "openai",
+   "model": "o4-mini-deep-research",
+   "error": null
+  },
+  {
+   "key": "openai/o4-mini-high",
+   "vendor": "openai",
+   "model": "o4-mini-high",
+   "error": null
+  },
+  {
+   "key": "openai/o4-mini:batch",
+   "vendor": "openai",
+   "model": "o4-mini:batch",
+   "error": null
+  },
+  {
+   "key": "openai/text-embedding-3-large",
+   "vendor": "openai",
+   "model": "text-embedding-3-large",
+   "error": null
+  },
+  {
+   "key": "openai/text-embedding-3-small",
+   "vendor": "openai",
+   "model": "text-embedding-3-small",
+   "error": null
+  },
+  {
+   "key": "openai/text-embedding-ada-002",
+   "vendor": "openai",
+   "model": "text-embedding-ada-002",
+   "error": null
+  },
+  {
+   "key": "openrouter/auto",
+   "vendor": "openrouter",
+   "model": "auto",
+   "error": null
+  },
+  {
+   "key": "openrouter/auto-beta",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "openrouter/bodybuilder",
+   "vendor": "openrouter",
+   "model": "bodybuilder",
+   "error": null
+  },
+  {
+   "key": "openrouter/fusion",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "openrouter/pareto-code",
+   "vendor": "openrouter",
+   "model": "pareto-code",
+   "error": null
+  },
+  {
+   "key": "perceptron/perceptron-mk1",
+   "vendor": "perceptron",
+   "model": "perceptron-mk1",
+   "error": null
+  },
+  {
+   "key": "perceptron/perceptron-mk1.5",
+   "vendor": "perceptron",
+   "model": "perceptron-mk1.5",
+   "error": null
+  },
+  {
+   "key": "perplexity/sonar",
+   "vendor": "perplexity",
+   "model": "sonar",
+   "error": null
+  },
+  {
+   "key": "perplexity/sonar-deep-research",
+   "vendor": "perplexity",
+   "model": "sonar-deep-research",
+   "error": null
+  },
+  {
+   "key": "perplexity/sonar-pro",
+   "vendor": "perplexity",
+   "model": "sonar-pro",
+   "error": null
+  },
+  {
+   "key": "perplexity/sonar-pro-search",
+   "vendor": "perplexity",
+   "model": "sonar-pro-search",
+   "error": null
+  },
+  {
+   "key": "perplexity/sonar-reasoning-pro",
+   "vendor": "perplexity",
+   "model": "sonar-reasoning-pro",
+   "error": null
+  },
+  {
+   "key": "poolside/laguna-s-2.1",
+   "vendor": "poolside",
+   "model": "laguna-s-2.1",
+   "error": null
+  },
+  {
+   "key": "poolside/laguna-xs-2.1",
+   "vendor": "poolside",
+   "model": "laguna-xs-2.1",
+   "error": null
+  },
+  {
+   "key": "prime-intellect/intellect-3",
+   "vendor": "prime-intellect",
+   "model": "intellect-3",
+   "error": null
+  },
+  {
+   "key": "prism-ml/ternary-bonsai-2-27b",
+   "vendor": "prism-ml",
+   "model": "ternary-bonsai-2-27b",
+   "error": null
+  },
+  {
+   "key": "prism-ml/ternary-bonsai-2-9b",
+   "vendor": "prism-ml",
+   "model": "ternary-bonsai-2-9b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-2.5-72b-instruct",
+   "vendor": "qwen",
+   "model": "qwen-2.5-72b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-2.5-7b-instruct",
+   "vendor": "qwen",
+   "model": "qwen-2.5-7b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-2.5-coder-32b-instruct",
+   "vendor": "qwen",
+   "model": "qwen-2.5-coder-32b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-max",
+   "vendor": "qwen",
+   "model": "qwen-max",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-plus",
+   "vendor": "qwen",
+   "model": "qwen-plus",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-plus-2025-07-28",
+   "vendor": "qwen",
+   "model": "qwen-plus-2025-07-28",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-plus-2025-07-28:thinking",
+   "vendor": "qwen",
+   "model": "qwen-plus-2025-07-28:thinking",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-turbo",
+   "vendor": "qwen",
+   "model": "qwen-turbo",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-vl-max",
+   "vendor": "qwen",
+   "model": "qwen-vl-max",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen-vl-plus",
+   "vendor": "qwen",
+   "model": "qwen-vl-plus",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen2.5-vl-32b-instruct",
+   "vendor": "qwen",
+   "model": "qwen2.5-vl-32b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen2.5-vl-72b-instruct",
+   "vendor": "qwen",
+   "model": "qwen2.5-vl-72b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-14b",
+   "vendor": "qwen",
+   "model": "qwen3-14b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-235b-a22b",
+   "vendor": "qwen",
+   "model": "qwen3-235b-a22b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-235b-a22b-2507",
+   "vendor": "qwen",
+   "model": "qwen3-235b-a22b-2507",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-235b-a22b-thinking-2507",
+   "vendor": "qwen",
+   "model": "qwen3-235b-a22b-thinking-2507",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-30b-a3b",
+   "vendor": "qwen",
+   "model": "qwen3-30b-a3b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-30b-a3b-instruct-2507",
+   "vendor": "qwen",
+   "model": "qwen3-30b-a3b-instruct-2507",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-30b-a3b-thinking-2507",
+   "vendor": "qwen",
+   "model": "qwen3-30b-a3b-thinking-2507",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-32b",
+   "vendor": "qwen",
+   "model": "qwen3-32b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-8b",
+   "vendor": "qwen",
+   "model": "qwen3-8b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-coder",
+   "vendor": "qwen",
+   "model": "qwen3-coder",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-coder-30b-a3b-instruct",
+   "vendor": "qwen",
+   "model": "qwen3-coder-30b-a3b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-coder-flash",
+   "vendor": "qwen",
+   "model": "qwen3-coder-flash",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-coder-next",
+   "vendor": "qwen",
+   "model": "qwen3-coder-next",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-coder-plus",
+   "vendor": "qwen",
+   "model": "qwen3-coder-plus",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-max",
+   "vendor": "qwen",
+   "model": "qwen3-max",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-max-thinking",
+   "vendor": "qwen",
+   "model": "qwen3-max-thinking",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-next-80b-a3b-instruct",
+   "vendor": "qwen",
+   "model": "qwen3-next-80b-a3b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-next-80b-a3b-thinking",
+   "vendor": "qwen",
+   "model": "qwen3-next-80b-a3b-thinking",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-vl-235b-a22b-instruct",
+   "vendor": "qwen",
+   "model": "qwen3-vl-235b-a22b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-vl-235b-a22b-thinking",
+   "vendor": "qwen",
+   "model": "qwen3-vl-235b-a22b-thinking",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-vl-30b-a3b-instruct",
+   "vendor": "qwen",
+   "model": "qwen3-vl-30b-a3b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-vl-30b-a3b-thinking",
+   "vendor": "qwen",
+   "model": "qwen3-vl-30b-a3b-thinking",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-vl-32b-instruct",
+   "vendor": "qwen",
+   "model": "qwen3-vl-32b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-vl-8b-instruct",
+   "vendor": "qwen",
+   "model": "qwen3-vl-8b-instruct",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3-vl-8b-thinking",
+   "vendor": "qwen",
+   "model": "qwen3-vl-8b-thinking",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-122b-a10b",
+   "vendor": "qwen",
+   "model": "qwen3.5-122b-a10b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-27b",
+   "vendor": "qwen",
+   "model": "qwen3.5-27b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-35b-a3b",
+   "vendor": "qwen",
+   "model": "qwen3.5-35b-a3b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-397b-a17b",
+   "vendor": "qwen",
+   "model": "qwen3.5-397b-a17b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-9b",
+   "vendor": "qwen",
+   "model": "qwen3.5-9b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-9b:batch",
+   "vendor": "qwen",
+   "model": "qwen3.5-9b:batch",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-flash-02-23",
+   "vendor": "qwen",
+   "model": "qwen3.5-flash-02-23",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-plus-02-15",
+   "vendor": "qwen",
+   "model": "qwen3.5-plus-02-15",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.5-plus-20260420",
+   "vendor": "qwen",
+   "model": "qwen3.5-plus-20260420",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.6-27b",
+   "vendor": "qwen",
+   "model": "qwen3.6-27b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.6-35b-a3b",
+   "vendor": "qwen",
+   "model": "qwen3.6-35b-a3b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.6-flash",
+   "vendor": "qwen",
+   "model": "qwen3.6-flash",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.6-max-preview",
+   "vendor": "qwen",
+   "model": "qwen3.6-max-preview",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.6-plus",
+   "vendor": "qwen",
+   "model": "qwen3.6-plus",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.7-flash",
+   "vendor": "qwen",
+   "model": "qwen3.7-flash",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.7-max",
+   "vendor": "qwen",
+   "model": "qwen3.7-max",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.7-plus",
+   "vendor": "qwen",
+   "model": "qwen3.7-plus",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.7-plus:batch",
+   "vendor": "qwen",
+   "model": "qwen3.7-plus:batch",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-2.4t-a95b",
+   "vendor": "qwen",
+   "model": "qwen3.8-2.4t-a95b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-2.4t-a95b:batch",
+   "vendor": "qwen",
+   "model": "qwen3.8-2.4t-a95b:batch",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-27b",
+   "vendor": "qwen",
+   "model": "qwen3.8-27b",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-flash",
+   "vendor": "qwen",
+   "model": "qwen3.8-flash",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-max",
+   "vendor": "qwen",
+   "model": "qwen3.8-max",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-max-0902",
+   "vendor": "qwen",
+   "model": "qwen3.8-max-0902",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-max-prime",
+   "vendor": "qwen",
+   "model": "qwen3.8-max-prime",
+   "error": null
+  },
+  {
+   "key": "qwen/qwen3.8-omni-flash",
+   "vendor": "qwen",
+   "model": "qwen3.8-omni-flash",
+   "error": null
+  },
+  {
+   "key": "qwen/qwq-32b",
+   "vendor": "qwen",
+   "model": "qwq-32b",
+   "error": null
+  },
+  {
+   "key": "reflection/beam-1.0-501b-a23b",
+   "vendor": "reflection",
+   "model": "beam-1.0-501b-a23b",
+   "error": null
+  },
+  {
+   "key": "rekaai/reka-edge",
+   "vendor": "rekaai",
+   "model": "reka-edge",
+   "error": null
+  },
+  {
+   "key": "rekaai/reka-flash-3",
+   "vendor": "rekaai",
+   "model": "reka-flash-3",
+   "error": null
+  },
+  {
+   "key": "relace/relace-apply-3",
+   "vendor": "relace",
+   "model": "relace-apply-3",
+   "error": null
+  },
+  {
+   "key": "relace/relace-search",
+   "vendor": "relace",
+   "model": "relace-search",
+   "error": null
+  },
+  {
+   "key": "sakana/fugu-max",
+   "vendor": "sakana",
+   "model": "fugu-max",
+   "error": null
+  },
+  {
+   "key": "sakana/fugu-ultra",
+   "vendor": "sakana",
+   "model": "fugu-ultra",
+   "error": null
+  },
+  {
+   "key": "sakana/fugu-ultra-v2",
+   "vendor": "sakana",
+   "model": "fugu-ultra-v2",
+   "error": null
+  },
+  {
+   "key": "sakana/sakana-namazu",
+   "vendor": "sakana",
+   "model": "sakana-namazu",
+   "error": null
+  },
+  {
+   "key": "sao10k/l3-euryale-70b",
+   "vendor": "sao10k",
+   "model": "l3-euryale-70b",
+   "error": null
+  },
+  {
+   "key": "sao10k/l3-lunaris-8b",
+   "vendor": "sao10k",
+   "model": "l3-lunaris-8b",
+   "error": null
+  },
+  {
+   "key": "sao10k/l3.1-70b-hanami-x1",
+   "vendor": "sao10k",
+   "model": "l3.1-70b-hanami-x1",
+   "error": null
+  },
+  {
+   "key": "sao10k/l3.1-euryale-70b",
+   "vendor": "sao10k",
+   "model": "l3.1-euryale-70b",
+   "error": null
+  },
+  {
+   "key": "sao10k/l3.3-euryale-70b",
+   "vendor": "sao10k",
+   "model": "l3.3-euryale-70b",
+   "error": null
+  },
+  {
+   "key": "scaledown/extract",
+   "vendor": "scaledown",
+   "model": "extract",
+   "error": null
+  },
+  {
+   "key": "scaledown/summarize",
+   "vendor": "scaledown",
+   "model": "summarize",
+   "error": null
+  },
+  {
+   "key": "stepfun/step-3.5-flash",
+   "vendor": "stepfun",
+   "model": "step-3.5-flash",
+   "error": null
+  },
+  {
+   "key": "stepfun/step-3.7-flash",
+   "vendor": "stepfun",
+   "model": "step-3.7-flash",
+   "error": null
+  },
+  {
+   "key": "stepfun/step-5-preview",
+   "vendor": "stepfun",
+   "model": "step-5-preview",
+   "error": null
+  },
+  {
+   "key": "switchpoint/router",
+   "vendor": "switchpoint",
+   "model": "router",
+   "error": null
+  },
+  {
+   "key": "tencent/hunyuan-a13b-instruct",
+   "vendor": "tencent",
+   "model": "hunyuan-a13b-instruct",
+   "error": null
+  },
+  {
+   "key": "tencent/hy-mt2-1.8b",
+   "vendor": "tencent",
+   "model": "hy-mt2-1.8b",
+   "error": null
+  },
+  {
+   "key": "tencent/hy-mt2-30b-a3b",
+   "vendor": "tencent",
+   "model": "hy-mt2-30b-a3b",
+   "error": null
+  },
+  {
+   "key": "tencent/hy-mt2-7b",
+   "vendor": "tencent",
+   "model": "hy-mt2-7b",
+   "error": null
+  },
+  {
+   "key": "tencent/hy3",
+   "vendor": "tencent",
+   "model": "hy3",
+   "error": null
+  },
+  {
+   "key": "tencent/hy3-preview",
+   "vendor": "tencent",
+   "model": "hy3-preview",
+   "error": null
+  },
+  {
+   "key": "tencent/hy4-preview",
+   "vendor": "tencent",
+   "model": "hy4-preview",
+   "error": null
+  },
+  {
+   "key": "thedrummer/cydonia-24b-v4.1",
+   "vendor": "thedrummer",
+   "model": "cydonia-24b-v4.1",
+   "error": null
+  },
+  {
+   "key": "thedrummer/rocinante-12b",
+   "vendor": "thedrummer",
+   "model": "rocinante-12b",
+   "error": null
+  },
+  {
+   "key": "thedrummer/skyfall-36b-v2",
+   "vendor": "thedrummer",
+   "model": "skyfall-36b-v2",
+   "error": null
+  },
+  {
+   "key": "thedrummer/unslopnemo-12b",
+   "vendor": "thedrummer",
+   "model": "unslopnemo-12b",
+   "error": null
+  },
+  {
+   "key": "thinkingmachines/inkling",
+   "vendor": "thinkingmachines",
+   "model": "inkling",
+   "error": null
+  },
+  {
+   "key": "thinkingmachines/inkling-small",
+   "vendor": "thinkingmachines",
+   "model": "inkling-small",
+   "error": null
+  },
+  {
+   "key": "thinkingmachines/inkling:batch",
+   "vendor": "thinkingmachines",
+   "model": "inkling:batch",
+   "error": null
+  },
+  {
+   "key": "tngtech/deepseek-r1t2-chimera",
+   "vendor": "tngtech",
+   "model": "deepseek-r1t2-chimera",
+   "error": null
+  },
+  {
+   "key": "typesafe/jev-router",
+   "vendor": "typesafe",
+   "model": "jev-router",
+   "error": null
+  },
+  {
+   "key": "unbiased/pareto",
+   "vendor": "unbiased",
+   "model": "pareto",
+   "error": null
+  },
+  {
+   "key": "unbiased/pareto-26.10",
+   "vendor": "unbiased",
+   "model": "pareto-26.10",
+   "error": null
+  },
+  {
+   "key": "unbiased/pareto-26.9",
+   "vendor": "unbiased",
+   "model": "pareto-26.9",
+   "error": null
+  },
+  {
+   "key": "undi95/remm-slerp-l2-13b",
+   "vendor": "undi95",
+   "model": "remm-slerp-l2-13b",
+   "error": null
+  },
+  {
+   "key": "upstage/solar-mini4",
+   "vendor": "upstage",
+   "model": "solar-mini4",
+   "error": null
+  },
+  {
+   "key": "upstage/solar-pro-3",
+   "vendor": "upstage",
+   "model": "solar-pro-3",
+   "error": null
+  },
+  {
+   "key": "upstage/solar-pro4",
+   "vendor": "upstage",
+   "model": "solar-pro4",
+   "error": null
+  },
+  {
+   "key": "writer/palmyra-x5",
+   "vendor": "writer",
+   "model": "palmyra-x5",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-3",
+   "vendor": "x-ai",
+   "model": "grok-3",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-3-beta",
+   "vendor": "x-ai",
+   "model": "grok-3-beta",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-3-mini",
+   "vendor": "x-ai",
+   "model": "grok-3-mini",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-3-mini-beta",
+   "vendor": "x-ai",
+   "model": "grok-3-mini-beta",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4",
+   "vendor": "x-ai",
+   "model": "grok-4",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4-fast",
+   "vendor": "x-ai",
+   "model": "grok-4-fast",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.1-fast",
+   "vendor": "x-ai",
+   "model": "grok-4.1-fast",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.2",
+   "vendor": "x-ai",
+   "model": "grok-4.2",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.20",
+   "vendor": "x-ai",
+   "model": "grok-4.20",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.20-multi-agent",
+   "vendor": "x-ai",
+   "model": "grok-4.20-multi-agent",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.3",
+   "vendor": "x-ai",
+   "model": "grok-4.3",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.3:batch",
+   "vendor": "x-ai",
+   "model": "grok-4.3:batch",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.5",
+   "vendor": "x-ai",
+   "model": "grok-4.5",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.6",
+   "vendor": "x-ai",
+   "model": "grok-4.6",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-4.7",
+   "vendor": "x-ai",
+   "model": "grok-4.7",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-build-0.1",
+   "vendor": "x-ai",
+   "model": "grok-build-0.1",
+   "error": null
+  },
+  {
+   "key": "x-ai/grok-code-fast-1",
+   "vendor": "x-ai",
+   "model": "grok-code-fast-1",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2-flash",
+   "vendor": "xiaomi",
+   "model": "mimo-v2-flash",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2-omni",
+   "vendor": "xiaomi",
+   "model": "mimo-v2-omni",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2-pro",
+   "vendor": "xiaomi",
+   "model": "mimo-v2-pro",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2.5",
+   "vendor": "xiaomi",
+   "model": "mimo-v2.5",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2.5-pro",
+   "vendor": "xiaomi",
+   "model": "mimo-v2.5-pro",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2.6-flash",
+   "vendor": "xiaomi",
+   "model": "mimo-v2.6-flash",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2.6-pro",
+   "vendor": "xiaomi",
+   "model": "mimo-v2.6-pro",
+   "error": null
+  },
+  {
+   "key": "xiaomi/mimo-v2.6-pro-ultraspeed",
+   "vendor": "xiaomi",
+   "model": "mimo-v2.6-pro-ultraspeed",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4-32b",
+   "vendor": "z-ai",
+   "model": "glm-4-32b",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4.5",
+   "vendor": "z-ai",
+   "model": "glm-4.5",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4.5-air",
+   "vendor": "z-ai",
+   "model": "glm-4.5-air",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4.5v",
+   "vendor": "z-ai",
+   "model": "glm-4.5v",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4.6",
+   "vendor": "z-ai",
+   "model": "glm-4.6",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4.6v",
+   "vendor": "z-ai",
+   "model": "glm-4.6v",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4.7",
+   "vendor": "z-ai",
+   "model": "glm-4.7",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-4.7-flash",
+   "vendor": "z-ai",
+   "model": "glm-4.7-flash",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5",
+   "vendor": "z-ai",
+   "model": "glm-5",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5-turbo",
+   "vendor": "z-ai",
+   "model": "glm-5-turbo",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.1",
+   "vendor": "z-ai",
+   "model": "glm-5.1",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.2",
+   "vendor": "z-ai",
+   "model": "glm-5.2",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.2:batch",
+   "vendor": "z-ai",
+   "model": "glm-5.2:batch",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.3",
+   "vendor": "z-ai",
+   "model": "glm-5.3",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.3-flash",
+   "vendor": "z-ai",
+   "model": "glm-5.3-flash",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.3-flash:batch",
+   "vendor": "z-ai",
+   "model": "glm-5.3-flash:batch",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.3-flashx",
+   "vendor": "z-ai",
+   "model": "glm-5.3-flashx",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.3-prime",
+   "vendor": "z-ai",
+   "model": "glm-5.3-prime",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5.3:batch",
+   "vendor": "z-ai",
+   "model": "glm-5.3:batch",
+   "error": null
+  },
+  {
+   "key": "z-ai/glm-5v-turbo",
+   "vendor": "z-ai",
+   "model": "glm-5v-turbo",
+   "error": null
+  },
+  {
+   "key": "~anthropic/claude-fable-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~anthropic/claude-haiku-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~anthropic/claude-opus-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~anthropic/claude-sonnet-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~deepseek/deepseek-flash-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~deepseek/deepseek-pro-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~deepseek/deepseek-v4-flash-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~google/gemini-flash-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~google/gemini-pro-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~moonshotai/kimi-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~openai/gpt-astra-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~openai/gpt-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~openai/gpt-luna-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~openai/gpt-mini-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~openai/gpt-sol-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~openai/gpt-terra-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~unbiased/pareto-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~x-ai/grok-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~z-ai/glm-flash-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  },
+  {
+   "key": "~z-ai/glm-latest",
+   "vendor": null,
+   "model": null,
+   "error": "MalformedName"
+  }
+ ]
+}

@@ -92,7 +92,10 @@ class TestCarriers:
 
     def test_case_is_preserved_by_default(self, norm: Normalizer) -> None:
         assert norm.parse_pair("nova", "Nova Pro v3").canonical == "nova/Nova Pro v3"
-        assert norm.parse("OpenAI/GPT-6-Astra").vendor == "OpenAI"
+        name = norm.parse("OpenAI/GPT-6-Astra")
+        assert (name.vendor, name.model) == ("openai", "GPT-6-Astra"), (
+            "the vendor folds, the model keeps its case"
+        )
         assert norm.parse_pair("OpenRouter", "openai/gpt-6-astra").route == "openrouter"
 
 
@@ -154,7 +157,7 @@ class TestMalformed:
 class TestResolver:
     def test_bare_name_without_resolver(self, norm: Normalizer) -> None:
         with pytest.raises(UnknownVendor):
-            norm.parse("muse-spark-1.1")
+            norm.parse("some-unknown-model")
 
     def test_single_candidate_resolves_and_records_the_fingerprint(self) -> None:
         resolver = CallableResolver(
@@ -231,7 +234,10 @@ class TestOverrideTables:
         norm = Normalizer(rules)
         assert norm.parse("deepseek-r1-distill-llama-70b").vendor == "meta-llama"
         assert norm.parse("gpt-4o").canonical == "openai/gpt-4o"
-        assert norm.parse_pair("openrouter", "gpt-4o").routed == "openrouter/openai/gpt-4o"
+        assert norm.parse_pair("openrouter", "gpt-4o").canonical == "openai/gpt-4o"
+        assert norm.parse_pair("openrouter", "gpt-4o").routed == "openrouter/gpt-4o", (
+            "routed keeps what was sent"
+        )
 
     def test_vendor_aliases_fold_the_vendor_only(self) -> None:
         rules = Rules.from_dict(
@@ -248,3 +254,54 @@ class TestOverrideTables:
             norm.parse("openrouter/openai/gpt-6-astra").to_dict()
             == norm.parse("openrouter/openai/gpt-6-astra").to_dict()
         )
+
+
+class TestProxyPairs:
+    """A proxy provider (``openai``, ``litellm_proxy``, ``litellm``) in front of a name that starts with a
+    route: the inner route is the next link of the chain, and the pair reads exactly like its routed form."""
+
+    @pytest.mark.parametrize(
+        "provider, name, routes, canonical",
+        [
+            (
+                "openai",
+                "azure_ai/cohere-command-a-plus-05-2026",
+                ("openai", "azure_ai"),
+                "cohere/cohere-command-a-plus-05-2026",
+            ),
+            (
+                "openai",
+                "openrouter/anthropic/claude-opus-4.7",
+                ("openai", "openrouter"),
+                "anthropic/claude-opus-4.7",
+            ),
+            (
+                "litellm_proxy",
+                "bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0",
+                ("litellm_proxy", "bedrock"),
+                "anthropic/claude-sonnet-4.5-20250929-v1",
+            ),
+        ],
+    )
+    def test_the_inner_route_continues_the_chain(
+        self, norm: Normalizer, provider: str, name: str, routes: tuple[str, ...], canonical: str
+    ) -> None:
+        value = norm.parse_pair(provider, name)
+        assert (value.canonical, value.route, value.routes) == (canonical, provider, routes)
+        assert value.routed == f"{provider}/{name}"
+        again = norm.parse_routed(value.routed)
+        assert again == value
+        assert (again.routes, again.routed) == (value.routes, value.routed)
+
+    @pytest.mark.parametrize(
+        "provider, name",
+        [("openai", "anthropic/claude-opus-4-6"), ("openai", "perplexity/sonar-pro")],
+    )
+    def test_a_vendor_behind_a_vendor_implying_proxy_is_still_a_mismatch(
+        self, norm: Normalizer, provider: str, name: str
+    ) -> None:
+        assert norm.rules.routes["perplexity"].also_vendor is True, "perplexity is a route and a vendor"
+        with pytest.raises(MalformedName):
+            norm.parse_pair(provider, name)
+        with pytest.raises(MalformedName):
+            norm.parse_routed(f"{provider}/{name}")

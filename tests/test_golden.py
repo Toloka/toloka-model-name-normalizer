@@ -84,4 +84,5 @@ def test_every_tier_a_identity_has_vendor_and_family(normalizer: Normalizer) -> 
         name = run(normalizer, row)
         assert name.vendor and name.family, row["input"]
         seen.add(name.canonical)
-    assert len(seen) == 60
+    # 60 spellings of the survey, 59 models: the version dot reads claude-opus-4-8 as claude-opus-4.8
+    assert len(seen) == 59

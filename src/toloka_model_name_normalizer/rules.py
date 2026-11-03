@@ -28,7 +28,7 @@ else:  # pragma: no cover - exercised only on Python 3.10
     import tomli as tomllib
 
 RULES_ENV_VAR = "TOLOKA_MODEL_NAME_NORMALIZER_RULES"
-SUPPORTED_SCHEMA_VERSIONS: tuple[int, ...] = (1,)
+SUPPORTED_SCHEMA_VERSIONS: tuple[int, ...] = (1, 2)
 SHAPE_KINDS: tuple[str, ...] = ("size", "snapshot8", "snapshot4", "api3", "context", "generation")
 DATE_TOKENS: tuple[str, ...] = ("YYYY", "YY", "MM", "DD")
 
@@ -43,7 +43,15 @@ _POLICY_VALUES: dict[str, tuple[str, ...]] = {
     "leading_slash": ("tolerate", "reject"),
     "implied_vendor_mismatch": ("error", "name_wins"),
     "fields": ("best_effort", "strict"),
+    "vendor_case": ("fold", "preserve"),
+    "family_vendor": ("infer", "off"),
 }
+# schema 2 policy keys; absent, they read as schema 1 did
+_POLICY_DEFAULTS: dict[str, str] = {"vendor_case": "preserve", "family_vendor": "off"}
+_ROUTE_BOOLS = ("nestable", "also_vendor", "dotted_vendor", "decimal_p")
+_ROUTE_LISTS = ("regions", "skip_segments", "skip_paths", "strip")
+_ROUTE_KEYS = ("implies_vendor", *_ROUTE_BOOLS, *_ROUTE_LISTS)
+_CANONICAL_KEYS = ("minor_dot",)
 _RENDER_KEYS = ("route_sep", "unsafe", "unsafe_replacement", "route_in_slug")
 _VENDOR_SWITCHES = (
     "dash_minor_version",
@@ -64,6 +72,9 @@ _TOP_KEYS = (
     "policy",
     "render",
     "fields",
+    "families",
+    "family_vendor_aliases",
+    "canonical",
 )
 _FIELDS_KEYS = ("separators", "suffixes", "shapes", "dates", "vocab", "vendor")
 _VOCAB_LISTS = ("tier", "stage", "capability")
@@ -100,9 +111,22 @@ def check_model_grammar(model: str, route_sep: str) -> str | None:
 
 @dataclass(frozen=True)
 class Route:
+    """A transport namespace. ``also_vendor``: the name is a vendor too, so ``route/name`` reads as a route
+    only when the name's family belongs to another vendor. ``dotted_vendor``: a bare name spells its vendor as
+    ``[region.]vendor.model``. ``skip_segments`` and ``skip_paths`` match leading path segments of deployment
+    detail; ``strip`` removes deployment detail from the canonical model; ``decimal_p`` reads ``5p1`` as
+    ``5.1``. None of them touches the wire."""
+
     name: str
     implies_vendor: str | None
     nestable: bool
+    also_vendor: bool = False
+    dotted_vendor: bool = False
+    regions: tuple[str, ...] = ()
+    skip_segments: tuple[str, ...] = ()
+    skip_paths: tuple[tuple[str, ...], ...] = ()
+    strip: tuple[re.Pattern[str], ...] = ()
+    decimal_p: bool = False
 
     @property
     def peelable(self) -> bool:
@@ -119,6 +143,8 @@ class Policy:
     leading_slash: str
     implied_vendor_mismatch: str
     fields: str
+    vendor_case: str = "preserve"
+    family_vendor: str = "off"
 
 
 @dataclass(frozen=True)
@@ -192,6 +218,9 @@ class Rules:
     policy: Policy
     render: Render
     fields: FieldRules
+    families: Mapping[str, str]
+    family_vendor_aliases: Mapping[str, str]
+    minor_dot: frozenset[str]
     identity_fingerprint: str
     fields_fingerprint: str
     _document: Mapping[str, Any]
@@ -248,6 +277,13 @@ class Rules:
                 name=name,
                 implies_vendor=spec.get("implies_vendor"),
                 nestable=bool(spec.get("nestable", False)),
+                also_vendor=bool(spec.get("also_vendor", False)),
+                dotted_vendor=bool(spec.get("dotted_vendor", False)),
+                regions=tuple(region.lower() for region in spec.get("regions", [])),
+                skip_segments=tuple(segment.lower() for segment in spec.get("skip_segments", [])),
+                skip_paths=tuple(tuple(path.lower().split("/")) for path in spec.get("skip_paths", [])),
+                strip=tuple(re.compile(pattern) for pattern in spec.get("strip", [])),
+                decimal_p=bool(spec.get("decimal_p", False)),
             )
             for name, spec in doc.get("routes", {}).items()
         }
@@ -264,7 +300,7 @@ class Rules:
             )
             for key, spec in doc.get("lookup", {}).items()
         }
-        policy_doc = doc["policy"]
+        policy_doc = {**_POLICY_DEFAULTS, **doc["policy"]}
         policy = Policy(**{key: policy_doc[key] for key in _POLICY_VALUES})
         render_doc = doc["render"]
         render = Render(
@@ -320,6 +356,9 @@ class Rules:
             policy=policy,
             render=render,
             fields=fields,
+            families=MappingProxyType(dict(doc.get("families", {}))),
+            family_vendor_aliases=MappingProxyType(dict(doc.get("family_vendor_aliases", {}))),
+            minor_dot=frozenset(doc.get("canonical", {}).get("minor_dot", [])),
             identity_fingerprint=identity_fp,
             fields_fingerprint=fields_fp,
             _document=copy.deepcopy(dict(doc)),
@@ -383,18 +422,26 @@ def _check_shape(doc: Mapping[str, Any]) -> None:
     if "remove_routes" in doc:
         _str_list(doc["remove_routes"], "remove_routes")
     for name, spec in _table(doc.get("routes", {}), "routes").items():
-        _check_keys(_table(spec, f"routes.{name}"), ("implies_vendor", "nestable"), f"routes.{name}")
+        _check_keys(_table(spec, f"routes.{name}"), _ROUTE_KEYS, f"routes.{name}")
         if "implies_vendor" in spec:
             _require(
                 isinstance(spec["implies_vendor"], str), f"routes.{name}.implies_vendor must be a string"
             )
-        if "nestable" in spec:
-            _require(isinstance(spec["nestable"], bool), f"routes.{name}.nestable must be a boolean")
+        for key in _ROUTE_BOOLS:
+            if key in spec:
+                _require(isinstance(spec[key], bool), f"routes.{name}.{key} must be a boolean")
+        for key in _ROUTE_LISTS:
+            if key in spec:
+                _str_list(spec[key], f"routes.{name}.{key}")
     folded = [name.lower() for name in doc.get("routes", {})]
     _require(len(folded) == len(set(folded)), "routes: two names collide after case folding")
-    for table in ("vendor_aliases", "bare_names"):
+    for table in ("vendor_aliases", "bare_names", "families", "family_vendor_aliases"):
         for key, value in _table(doc.get(table, {}), table).items():
             _require(isinstance(value, str), f"{table}.{key} must be a string")
+    canonical = _table(doc.get("canonical", {}), "canonical")
+    _check_keys(canonical, _CANONICAL_KEYS, "canonical")
+    if "minor_dot" in canonical:
+        _str_list(canonical["minor_dot"], "canonical.minor_dot")
     for key, spec in _table(doc.get("lookup", {}), "lookup").items():
         _check_keys(
             _table(spec, f"lookup.{key}"), ("vendor", "model", "why", *DESCRIPTIVE_FIELDS), f"lookup.{key}"
@@ -506,25 +553,40 @@ def _fold_names(doc: dict[str, Any]) -> dict[str, Any]:
             }
             for name, spec in doc["routes"].items()
         }
-    for table in ("vendor_aliases", "bare_names", "lookup"):
+    for table in ("vendor_aliases", "bare_names", "lookup", "families", "family_vendor_aliases"):
         if table in doc:
             doc[table] = {key.lower(): value for key, value in doc[table].items()}
+    if "minor_dot" in doc.get("canonical", {}):
+        doc["canonical"]["minor_dot"] = [vendor.lower() for vendor in doc["canonical"]["minor_dot"]]
     if "fields" in doc and "vendor" in doc["fields"]:
         doc["fields"]["vendor"] = {name.lower(): spec for name, spec in doc["fields"]["vendor"].items()}
     return doc
 
 
 def _merge(base: Mapping[str, Any], override: Mapping[str, Any]) -> dict[str, Any]:
-    """Later wins. Tables keyed by name replace entry by entry, vocabulary lists extend, scalars overwrite,
-    ``remove_routes`` drops default routes. ``override`` has passed :func:`_check_shape`."""
+    """Later wins. Tables keyed by name replace entry by entry (a route entry whole), vocabulary lists extend,
+    ``canonical`` keys and scalars overwrite, ``remove_routes`` drops default routes; the schema version is
+    the higher of the two, since a schema-1 file merged over a schema-2 default still reads schema-2 rules.
+    ``override`` has passed :func:`_check_shape`."""
     merged: dict[str, Any] = copy.deepcopy(dict(base))
     over = _fold_names(_strip_merge_keys(override))
-    for key in ("schema_version", "version"):
-        if key in over:
-            merged[key] = over[key]
+    if "schema_version" in over:
+        merged["schema_version"] = max(over["schema_version"], merged.get("schema_version", 0))
+    if "version" in over:
+        merged["version"] = over["version"]
     for name in override.get("remove_routes", []):
         merged.get("routes", {}).pop(name.lower(), None)
-    for table in ("routes", "vendor_aliases", "bare_names", "lookup", "policy", "render"):
+    for table in (
+        "routes",
+        "vendor_aliases",
+        "bare_names",
+        "lookup",
+        "policy",
+        "render",
+        "families",
+        "family_vendor_aliases",
+        "canonical",
+    ):
         if table in over:
             merged.setdefault(table, {}).update(over[table])
     if "fields" in over:
@@ -558,8 +620,19 @@ def _merge(base: Mapping[str, Any], override: Mapping[str, Any]) -> dict[str, An
 
 
 def _is_peelable_route(routes: Mapping[str, Any], name: str) -> bool:
+    """A route that can never be a vendor: peelable and not ``also_vendor``."""
     spec = routes.get(name.lower())
-    return spec is not None and spec.get("implies_vendor") != name.lower()
+    return (
+        spec is not None and spec.get("implies_vendor") != name.lower() and not spec.get("also_vendor", False)
+    )
+
+
+def _check_target(routes: Mapping[str, Any], vendor: str, where: str) -> None:
+    _require(SEGMENT_RE.match(vendor) is not None, f"{where} must name a vendor segment")
+    _require(
+        not _is_peelable_route(routes, vendor),
+        f"{where} maps to {vendor!r}, which is a peelable route and never a vendor",
+    )
 
 
 def _compile(pattern: str, where: str) -> re.Pattern[str]:
@@ -598,6 +671,14 @@ def _validate(doc: Mapping[str, Any]) -> None:
                 implied == name or other is None or other.get("implies_vendor") == implied,
                 f"routes.{name}.implies_vendor names {implied!r}, which is itself a peelable route",
             )
+        for pattern in spec.get("strip", []):
+            compiled = _compile(pattern, f"routes.{name}.strip")
+            _require(
+                compiled.search("") is None,
+                f"routes.{name}.strip: {pattern!r} must not match the empty string",
+            )
+        for key in ("regions", "skip_segments", "skip_paths"):
+            _require(all(spec.get(key, [])), f"routes.{name}.{key} must not hold an empty string")
     for alias, vendor in doc.get("vendor_aliases", {}).items():
         _require(
             SEGMENT_RE.match(alias) is not None and SEGMENT_RE.match(vendor) is not None,
@@ -613,11 +694,17 @@ def _validate(doc: Mapping[str, Any]) -> None:
             "*" in pattern or "?" in pattern,
             f"bare_names pattern {pattern!r} has no wildcard; use lookup for an exact name",
         )
-        _require(SEGMENT_RE.match(vendor) is not None, f"bare_names.{pattern} must name a vendor segment")
+        _check_target(routes, vendor, f"bare_names.{pattern}")
+    for family, vendor in doc.get("families", {}).items():
+        _require(bool(family) and "/" not in family, f"families.{family} must be one family token")
+        _check_target(routes, vendor, f"families.{family}")
+    for key, vendor in doc.get("family_vendor_aliases", {}).items():
+        spelled, _, family = key.partition("/")
         _require(
-            not _is_peelable_route(routes, vendor),
-            f"bare_names.{pattern} maps to {vendor!r}, which is a peelable route and never a vendor",
+            SEGMENT_RE.match(spelled) is not None and bool(family) and "/" not in family,
+            f"family_vendor_aliases.{key} must be keyed by <vendor>/<family>",
         )
+        _check_target(routes, vendor, f"family_vendor_aliases.{key}")
 
     render = doc["render"]
     for key in _RENDER_KEYS:
@@ -654,7 +741,7 @@ def _validate(doc: Mapping[str, Any]) -> None:
 
     policy = doc["policy"]
     for key in _POLICY_VALUES:
-        _require(key in policy, f"policy.{key} is required")
+        _require(key in policy or key in _POLICY_DEFAULTS, f"policy.{key} is required")
 
     fields = doc["fields"]
     _require("separators" in fields, "fields.separators is required")
@@ -689,7 +776,8 @@ def fingerprints(doc: Mapping[str, Any]) -> tuple[str, str]:
 
     The identity side is what decides ``vendor``, ``model``, ``route`` and ``family``: routes, aliases, the
     ordered bare-name patterns (a list, because their order is a rule), the identity half of lookup, the
-    policy and the separator set. The fields side is everything else. Names are hashed case-folded, as they
+    policy, the separator set, the families tables and the canonical spelling. The fields side is everything
+    else. Names are hashed case-folded, as they
     are matched. ``why``, ``version``, comments and merge keys never participate; ``schema_version`` does.
     """
     lookup = doc.get("lookup", {})
@@ -706,6 +794,10 @@ def fingerprints(doc: Mapping[str, Any]) -> tuple[str, str]:
         "policy": doc["policy"],
         "separators": doc["fields"]["separators"],
     }
+    # schema-2 groups join only when present, so a schema-1 rule set keeps its fingerprint
+    identity.update(
+        {key: doc[key] for key in ("families", "family_vendor_aliases", "canonical") if key in doc}
+    )
     fields = {
         "schema_version": doc["schema_version"],
         "render": doc["render"],

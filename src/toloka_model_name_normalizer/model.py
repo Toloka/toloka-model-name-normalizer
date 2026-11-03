@@ -41,7 +41,9 @@ def generation_key(generation: str | None) -> tuple[int, tuple[int, ...], str, s
 
 @dataclass(frozen=True)
 class Provenance:
-    """Which rules, resolver and entry point produced a value."""
+    """Which rules, resolver and entry point produced a value. ``vendor_source`` says where the vendor came
+    from: ``spelled``, ``alias``, ``route``, ``lookup``, ``pattern``, ``resolver`` or ``family`` (inferred
+    from the families table, the one guess the default makes)."""
 
     input_kind: str
     rules_version: str
@@ -49,6 +51,7 @@ class Provenance:
     fields_fingerprint: str
     resolver_fingerprint: str | None
     lookup: bool
+    vendor_source: str = "spelled"
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -58,6 +61,7 @@ class Provenance:
             "fields_fingerprint": self.fields_fingerprint,
             "resolver_fingerprint": self.resolver_fingerprint,
             "lookup": self.lookup,
+            "vendor_source": self.vendor_source,
         }
 
 
@@ -66,6 +70,8 @@ class ModelName:
     """One model reference: identity plus rule-derived descriptive fields.
 
     Equality and hashing use ``vendor``, ``model`` and ``route`` only, with ``None`` a regular value.
+    ``model`` is the canonical spelling; ``wire`` is the name as it was sent after the route chain (the
+    spelled ``vendor/model`` when there is no route), so ``routed`` reproduces the input.
     ``routes`` is the whole route chain as peeled, outermost first; ``route`` is its first element.
     ``routed`` and ``slug`` are renderings computed by the normalizer from the rules that parsed the value.
     """
@@ -86,6 +92,7 @@ class ModelName:
     suffix: str | None = field(compare=False, kw_only=True, default=None)
     transport_suffix: bool = field(compare=False, kw_only=True, default=False)
     unresolved: tuple[str, ...] = field(compare=False, kw_only=True, default=())
+    wire: str = field(compare=False, kw_only=True)
     routed: str = field(compare=False, kw_only=True)
     slug: str = field(compare=False, kw_only=True)
     provenance: Provenance = field(compare=False, kw_only=True)
@@ -108,8 +115,8 @@ class ModelName:
         return self.vendor == other.vendor and self.model == other.model
 
     def same_wire(self, other: ModelName) -> bool:
-        """Equal and the same route chain, so the same ``routed`` rendering."""
-        return self == other and self.routes == other.routes
+        """Equal and sent the same way: the same route chain and the same spelling, so the same ``routed``."""
+        return self == other and self.routed == other.routed
 
     def generation_key(self) -> tuple[int, tuple[int, ...], str, str, str]:
         return generation_key(self.generation)
@@ -144,6 +151,7 @@ class ModelName:
             "route": self.route,
             "routes": list(self.routes),
             "canonical": self.canonical,
+            "wire": self.wire,
             "routed": self.routed,
             "slug": self.slug,
             "fields": self.fields(),
